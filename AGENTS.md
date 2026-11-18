@@ -1,54 +1,80 @@
-# AGENTS.md - Laravel Game Template
+# AGENTS.md — Laravel Game Template v3
 
-Work only inside this independent repository. Never modify PixelSurvivor, game-base,
-sibling projects or Windows settings. Communicate in Russian; English code and
-identifiers are appropriate. The current user task takes precedence over historical
-Pixel Survivor plans and reports, including their old prohibitions against Laravel.
+Работайте только в текущем репозитории. Не меняйте PixelSurvivor, game-base,
+соседние проекты и системные настройки. Общайтесь на русском. Исторический
+`PLAN.md` описывает исходную игру. Текущую архитектуру задают эти правила.
 
-## Architecture
-- Laravel is the primary application at the repository root. Keep one application.
-- Phaser and its Vue game interface live in `game/`, never `packages/game/`.
-- Website UI lives in `resources/`; Phaser owns gameplay, collision and scene timing.
-- Preserve `PlatformPort`: game -> platform adapter -> session-authenticated internal
-  Laravel routes -> existing services. No database access from the game.
-- Browser JSON routes live under `/internal`, using the web middleware stack,
-  existing authorization, verification, validation, throttling and CSRF protection.
-  There is no public versioned API or separate mobile backend.
-- Keep external payment webhook URLs, signature checks and CSRF exceptions intact.
-- Use one Node dependency installation and lockfile. Keep Phaser out of website SSR.
-- Serve approved runtime assets from `public/game-assets/`; preserve their bytes.
+## Laravel и Phaser
 
-## Implementation and verification
-- Read the current task, relevant architecture documentation and `docs/PROGRESS.md`.
-  `PLAN.md` is historical gameplay context, not the current architecture mandate.
-- Implement autonomously; record material choices in `docs/DECISIONS.md`.
-- Preserve business functionality, financial history formats, exactly-once grants,
-  inventory consistency, idempotency and recovery. Do not rewrite financial services
-  or change gameplay balance during structural work.
-- Never use production/development databases for destructive tests. Use isolated
-  SQLite or explicitly guarded MySQL test databases. Never copy credentials or
-  private runtime data into Git.
-- Run relevant tests after meaningful changes, fix type/lint/build failures, and
-  report actual evidence and limitations. Never disable assertions to pass a check.
-- Mandatory QA covers all current frontend/game runtime and active tests with
-  `npm run typecheck`, `npm run test:runtime`, PHP checks, builds and browser smoke.
-  Frozen PixelSurvivor artistic/UI acceptance lives in `tests/historical/` and runs
-  explicitly via historical scripts. Preserve its original assertions, fixtures
-  and hashes; never treat an active CI pass as proof of old replay compatibility.
-- Diagnose after at most three failed repetitions of an approach.
-- Update `docs/PROGRESS.md` with changes, checks, screenshots, blockers and next work.
-- Verify Canvas visually with screenshots, not only DOM snapshots. Preserve bounded
-  entity counts, event snapshots and explicit scene/input/listener cleanup.
-- Do not create task completion markers before all acceptance criteria pass.
-- Do not commit, push, deploy, request admin rights/credentials/payments, or invoke
-  `--yolo` without explicit user authorization. Do not send messages externally.
+- Laravel находится в корне. Phaser и его Vue-интерфейс находятся в `game/`, сайт Vue/Inertia — в
+  `resources/`. Сохраняйте одну установку npm и один Node lockfile. Phaser не должен попадать в SSR
+  сайта.
+- Сохраняйте `PlatformPort`. Запросы идут из игры через платформенный адаптер во внутренние
+  `/internal` маршруты Laravel и существующие сервисы. Сохраняйте сессии, авторизацию, проверку
+  владения, верификацию, ограничения запросов, CSRF и серверную валидацию. У игры нет прямого
+  доступа к БД. Не добавляйте публичный версионированный или мобильный API, второй Laravel backend и
+  `packages/game/`.
+- Phaser управляет симуляцией, коллизиями и временем сцены. Vue показывает снимки состояния с
+  ограниченной частотой. Сохраняйте лимиты сущностей и явную очистку сцены, ввода и обработчиков.
 
-## Art provenance
-- Do not regenerate assets during an architecture refactor. Keep historical art
-  approvals, prompts, seeds, job IDs and source references unchanged.
-- Maintain `docs/art/PIXELLAB_PROMPT_JOURNAL.md`: append accepted prompts only after
-  explicit user approval; distinguish programmatic assets and rejected trials.
-- Before Warrior generation read `docs/art/PIXELLAB_GENERATION_GUIDE.md`. Preserve
-  the accepted SOUTH Whirlwind 12-frame PixMiniMax + Enhance recipe. Northern source
-  is cell 4 of `art/warrior/8-proections.png`: N/NE direct, NW mirrored. New clips
-  require user selection; the shield-facing-camera reference remains rejected.
+## Игровой контент
+
+- Добавляйте героев, врагов, навыки, карты, волны и правила победы через типизированные определения
+  в `game/content/`. Переиспользуйте существующие реализации поведения. Обычная настройка контента
+  не требует правок `World` и `GameScene`.
+- Laravel фиксирует доверенный снимок выбранной версии каталога при старте забега и валидирует забег
+  по этой версии. Сохраняйте опубликованные версии каталога и их хеши. При изменении правил
+  выпускайте новую версию, обновляйте серверный экспорт и проверки. См.
+  [Game Content System](docs/template/GAME_CONTENT_SYSTEM.md).
+
+## Пакеты оформления и брендинг
+
+- Описывайте новые текстуры, спрайты, анимации, VFX и аудио в `game/art/packs/`, а runtime-файлы
+  размещайте в `public/game-assets/`. Сохраняйте исходные файлы и облик Pixel Survivor как эталон.
+  Primitive и Training Foundry демонстрируют смену оформления. Training Foundry доступен для
+  разработки и тестов.
+- Пакет оформления не меняет урон, хитбоксы, кулдауны, игровой RNG и результаты. Рескин сам по себе
+  не повышает версию Game Content. Сохраняйте происхождение и историю приёмки ассетов. Фиксируйте
+  приёмку только по явному одобрению. См.
+  [Asset Packs](docs/template/ASSET_PACKS.md#происхождение-и-приёмка).
+- Настраивайте название, брендинг, темы сайта, Filament и меню через `config/project.php` и
+  существующую систему тем. Переиспользуйте публичную конфигурацию в компонентах и проверяйте
+  экспорт standalone. См. [настройку проекта](docs/template/TEMPLATE_CONFIGURATION.md) и
+  [чек-лист нового проекта](docs/template/NEW_PROJECT_CHECKLIST.md).
+
+## Безопасность и изменения
+
+- Начисления и расходы проводите через существующие сервисы. Сохраняйте транзакции, идемпотентность,
+  однократное начисление, согласованность инвентаря, историю операций и восстановление после сбоев.
+  Сохраняйте URL платёжных вебхуков, проверку подписей и их точечные исключения CSRF. При
+  структурных изменениях сохраняйте поведение и баланс игры.
+- Не выполняйте разрушительные операции с БД. Запускайте тесты на изолированной SQLite или MySQL с
+  действующей проверкой тестового окружения. Секреты, приватные данные и локальные настройки
+  оставляйте вне Git.
+- Сохраняйте пользовательские изменения. Коммит, push и деплой требуют явного разрешения. Не
+  отправляйте сообщения внешним получателям. Для запроса прав администратора, учётных данных или
+  оплаты и для запуска `--yolo` требуется явное разрешение.
+
+## Проверки
+
+Обязательные команды для проверки приложения и контента входят в [Active CI](docs/architecture/ACTIVE_CI.md).
+
+```sh
+php artisan project:sync --check
+npm run test:project
+npm run check:assets
+npm run typecheck
+npm run test:runtime
+composer ci:check
+```
+
+- Запускайте проверки по мере изменений. `test:project` объединяет проверку конфигурации, каталогов
+  и ассетов, а `composer ci:check` запускает полный Active CI. Не отключайте тесты и не ослабляйте
+  утверждения. Сохраняйте активные тесты, контрольные хеши симуляции и исходные файлы
+  `tests/historical/`. Активный CI и историческая совместимость проверяются отдельно.
+- Проверяйте изменения Canvas по скриншотам. Перед отметкой о завершении подтвердите критерии
+  приёмки. Если подход трижды не сработал, разберите причину и смените подход или зафиксируйте
+  блокер.
+- Детали храните в `docs/template/`. Изучайте руководство по задаче и
+  [прогресс проекта](docs/PROGRESS.md). Существенные решения записывайте в
+  [DECISIONS.md](docs/DECISIONS.md), результаты проверок и ограничения — в `docs/PROGRESS.md`.

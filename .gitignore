@@ -75,3 +75,10 @@ __pycache__/
 !/docs/PROGRESS.md
 !/docs/DECISIONS.md
 !/docs/BLOCKERS.md
+
+# Keep the provenance records referenced by the template guide.
+!/docs/art/
+/docs/art/*
+!/docs/art/PIXELLAB_GENERATION_GUIDE.md
+!/docs/art/PIXELLAB_PROMPT_JOURNAL.md
+!/docs/art/PIXELLAB_ACCEPTED_GENERATIONS.json

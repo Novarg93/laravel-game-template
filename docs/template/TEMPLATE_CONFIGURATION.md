@@ -139,28 +139,19 @@ Standalone Vite читает один экспорт для HTML title, meta des
 `project:sync`. Используйте `PROJECT_NAME="Dawn Watch"`, если окружение всё ещё
 задаёт старое имя Laravel.
 
-## Согласованность каталога и следующий этап
+## Игровой контент и пакеты оформления
 
-`scripts/export-upgrade-catalog.mjs --check` пересобирает JSON в памяти и
-сравнивает его с `resources/game/upgrade-catalog.json`. Дополнительная проверка
-сверяет `CHARACTERS` и `isPublicCharacter` с PHP, `AVAILABLE_MAPS` с
-`progression.maps`, `ABILITIES` и character skill pools с
-`progression.character_abilities`. Проверяются дубли, существование ID,
-пять рангов умения, десять постоянных уровней, привязки Shop и Premium к
-инвентарю и связь premium consumables с Run Items. `UpgradePool` и
-`RunAssessmentService` продолжают валидировать реальные защищённые запросы.
+`config/project.php` задаёт брендинг и темы. Герои, навыки, враги, карты,
+волны и условия победы определяются пресетом в `game/content/`. Laravel
+проверяет забеги по версии доверенного `resources/game/content-catalog.json`.
+`npm run export:upgrades` синхронизирует версионированный каталог и
+`upgrade-catalog.json`, который сохраняет контракт Pixel Survivor.
+Проверку конфигурации, обоих каталогов и ассетов запускает `npm run test:project`.
+[Game Content System](GAME_CONTENT_SYSTEM.md#синхронизация-и-версии)
 
-| Изменение | Совместно обновить и проверить |
-| --- | --- |
-| Герой | `game/config/characters.ts`, `game/bootstrap/publicCharacters.ts`, `game/abilities/definitions.ts`, выбор и описание героев в `game/ui/components/MainMenu.vue`, `resources/js/pages/Welcome.vue`, `resources/js/pages/Guide.vue`, `config/progression.php`, server validation и тесты нового героя |
-| Навык / умение | `game/abilities/types.ts`, `definitions.ts`, реализацию и `tickAbilities.ts` под `game/abilities/`, `game/systems/UpgradeSystem.ts`, `config/progression.php`, `app/Services/UpgradePool.php`, если меняются caps или starter rules. Пересобрать `npm run export:upgrades` |
-| Враг | `game/config/enemyDefinitions.ts`, столкновения и поведение в `game/systems/EnemySystem.ts`, расписание в `game/systems/DifficultyDirector.ts` / `EncounterDirector.ts`, арт в `game/art/`, серверные очки и группы `config/run_review.php`, `app/Runs/RunRecordValidator.php`, `app/Services/RunAssessmentService.php` |
-| Карта | `game/config/biomes.ts`, определения фаз и terrain pack, `game/scenes/GameScene.ts` при новом рендеринге, `config/progression.php`, проверку начала забега в `app/Services/ProgressionService.php` и run validation |
-| Условие победы | `game/config/finalBoss.ts`, `game/systems/FinalEncounter.ts`, `game/systems/World.ts`, сериализацию `game/services/storage.ts`, `app/Runs/RunRecordValidator.php`, `app/Services/RunAssessmentService.php`, Guide и тесты результатов |
-
-Новые ID и иная логика результатов могут потребовать версионирования
-`config/progression.php`, схемы DTO и совместимости с уже сохранёнными run
-records. Все такие изменения относятся к следующему этапу.
+Спрайты, эффекты, игровое окружение и звуки задаются пакетами в
+`game/art/packs/`. Смена оформления сохраняет версию игровых правил.
+[Asset Packs](ASSET_PACKS.md)
 
 ## Проверки и границы v1
 
