@@ -1,0 +1,48 @@
+/* Alternative project theme. Import after the base tokens. */
+:root {
+    --site-bg: #15172b;
+    --site-panel: #212641;
+    --site-raised: #303a5c;
+    --site-inset: #101326;
+    --site-edge: #57658c;
+    --site-edge-bright: #8299bd;
+    --site-text: #e9edff;
+    --site-muted: #b8c5e6;
+    --site-gold: #edc187;
+    --site-mint: #a2e9e3;
+    --site-accent: #93b9ff;
+    --site-heading: #f1eaff;
+    --site-hero-heading: #f1eaff;
+    --site-hero-shadow: 0 4px #384266;
+    --site-danger: #ffafc0;
+    --site-success: #c5f5e6;
+    --site-success-bg: #17343c;
+    --site-success-edge: #4c7c83;
+    --site-tokens: #bfafff;
+    --site-run-gold: var(--site-gold);
+    --site-shadow: 0 4px 0 #0d1024, inset 0 1px 0 #d4d9ff14;
+    --site-solid-shadow: #0d1024;
+    --site-button-text: #14213b;
+    --site-button-edge: #c7dbff;
+    --site-button-hover: #b7d0ff;
+    --site-button-light: #d6e4ff;
+    --site-button-shadow: #3e5386;
+    --site-button-radius: 4px;
+    --site-radius: 5px;
+    --site-header-bg: #191d34;
+    --site-header-shadow: 0 4px 0 #0d102455;
+    --site-glow-primary: #6775bd45;
+    --site-glow-secondary: #826fbf28;
+    --site-nav-bg: #273956;
+    --site-nav-edge: #6079ad;
+    --site-muted-bg: #303657;
+    --site-selected-bg: #354a6e;
+    --site-destructive-bg: #8d4358;
+    --site-chrome: #191e35;
+    --site-label: #dde1f7;
+    --site-active: #334670;
+    --site-capture-bg: #242d48;
+    --site-strip-bg: #202741;
+    --site-selection-bg: #a8c9ff;
+    --site-selection-fg: #101326;
+}

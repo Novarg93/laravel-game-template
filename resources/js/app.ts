@@ -5,11 +5,16 @@ import AccountLayout from '@/layouts/AccountLayout.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
 import { initializeFlashToast } from '@/lib/flashToast';
-
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+import type { ProjectPresentation } from '@/types/project';
 
 void createInertiaApp({
-    title: (title) => (title ? `${title} - ${appName}` : appName),
+    // Inertia 3 passes the current page to the title callback, including during SSR.
+    title: (title, page) => {
+        const project = page?.props.project as ProjectPresentation | undefined;
+        const name = project?.name ?? import.meta.env.VITE_APP_NAME ?? 'Laravel';
+        const escaped = name.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+        return title ? `${title} - ${escaped}` : escaped;
+    },
     layout: (name) => {
         switch (true) {
             case ['Welcome', 'Faq', 'Contact', 'Legal'].includes(name):

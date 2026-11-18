@@ -60,7 +60,7 @@ jobs:
           npm run typecheck
           npm run lint
           npm run test:runtime
-          npm run test:catalog
+          npm run test:project
       - name: Client, SSR and standalone game builds
         run: |
           npm run build:ssr
@@ -68,7 +68,9 @@ jobs:
       - name: Install pinned Chromium and OS dependencies
         run: npx playwright install --with-deps chromium
       - name: Production SSR website and authenticated browser smoke
-        run: npm run test:browser
+        run: |
+          npm run test:browser
+          npm run test:browser:branding
       - name: Standalone development game smoke
         run: npm run test:e2e
       - name: Standalone production game smoke
@@ -80,6 +82,7 @@ jobs:
           name: active-browser-evidence
           path: |
             screenshots/laravel-first/
+            screenshots/project-branding/
             test-results/
             playwright-report/
           if-no-files-found: ignore

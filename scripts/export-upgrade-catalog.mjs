@@ -1,4 +1,5 @@
 import { createServer } from 'vite';
+import { execFileSync } from 'node:child_process';
 import process from 'node:process';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import {fileURLToPath,URL} from 'node:url';
@@ -26,5 +27,8 @@ try {
   }, null, 2) + '\n';
   if(process.argv.includes('--check')){
     if(await readFile('resources/game/upgrade-catalog.json','utf8')!==json)throw new Error('Upgrade catalog is stale. Run npm run export:upgrades.');
+    const { checkGameCatalog } = await server.ssrLoadModule('/scripts/check-game-catalog.ts');
+    const definitions = execFileSync(process.env.PHP_BINARY ?? 'php', ['scripts/read-game-catalog.php'], { encoding: 'utf8' });
+    checkGameCatalog(JSON.parse(definitions));
   }else await writeFile('resources/game/upgrade-catalog.json',json);
 } finally { await server.close(); }

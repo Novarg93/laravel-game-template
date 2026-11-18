@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
+import { splitWordmark, type GamePresentation } from '../../presentation';
 import { vPad } from '../gamepadNavigation';
 import { useInputDevice } from '../inputDevice';
 const inputDevice = useInputDevice();
@@ -12,15 +13,19 @@ function chooseCharacter(value: CharacterId) {
   if (!isPublicCharacter(value)) { unavailable.value = true; return; }
   unavailable.value = false; emit('character', value);
 }
-defineProps<{ best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+const props = defineProps<{ presentation: GamePresentation; best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+const wordmark = computed(() => splitWordmark(props.presentation.title));
 const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; help: []; settings: []; records: []; premium: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
 <template>
- <div class="menu-shell">
+ <div class="menu-shell" :data-menu-theme="presentation.theme" :style="{ '--menu-accent': presentation.accent ?? undefined }">
   <section class="menu-content">
-   <div class="eyebrow"><span class="spark">✦</span> ONE SPARK AGAINST AN ENTIRE GROVE</div>
-   <h1 class="wordmark">PIXEL<br><span>SURVIVOR</span><i>✦</i></h1>
-   <p class="menu-description">The grove awakens.<br>Move. Gather magic. Survive another minute.</p>
+   <div class="eyebrow"><span class="spark">✦</span> {{ presentation.tagline.replace(/\.$/, '').toUpperCase() }}</div>
+   <h1 class="wordmark" :aria-label="presentation.title">
+    <img v-if="presentation.logo" :src="presentation.logo" alt="" class="menu-brand-image">
+    <span v-else class="menu-wordmark-text"><template v-if="wordmark[0]">{{ wordmark[0] }}<br></template><span class="menu-wordmark-accent">{{ wordmark[1] }}</span><i aria-hidden="true">✦</i></span>
+   </h1>
+   <p class="menu-description">{{ presentation.subtitle }}<br>{{ presentation.description }}</p>
    <div class="run-selection" aria-label="Character"><button :aria-pressed="character === 'mage'" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · magic</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>150 HP · sword and shield</small></button></div>
    <p v-if="unavailable" class="character-notice" role="status">Warrior is in development</p>
    <div class="run-selection" aria-label="Location"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
@@ -38,6 +43,12 @@ const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; hel
  </div>
 </template>
 <style scoped>
+.menu-shell[data-menu-theme='aurora']{--menu-accent:#93b9ff;background:linear-gradient(90deg,#15152cf5 5%,#222448cf 36%,#24263e4d 63%,#24263e1a)}
+.menu-shell .wordmark{overflow-wrap:anywhere}
+.menu-shell .wordmark .menu-wordmark-text{display:inline-block;position:relative;max-width:calc(100% - 56px);color:inherit}
+.menu-wordmark-text i{inset-inline-start:100%}
+.menu-shell .wordmark .menu-wordmark-accent,.menu-shell .eyebrow{color:var(--menu-accent,#d8b476)}
+.menu-brand-image{display:block;max-width:min(100%,360px);max-height:clamp(60px,18vh,150px);object-fit:contain}
 .menu-shell{align-items:safe center}.menu-shell .wordmark{font-size:clamp(48px,5.3vw,68px);margin:12px 0 16px}.menu-shell .menu-description{margin:10px 0 14px;font-size:13px;line-height:1.7}.menu-shell .run-selection{margin-bottom:12px}
 .menu-shell .best{margin:4px 0 0}.menu-shell .menu-footer{bottom:12px}
 .menu-shell:has(.best) .records-link{margin-bottom:0}

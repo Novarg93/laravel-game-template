@@ -84,6 +84,14 @@ raw payload, idempotency and CSRF exceptions. They do not require browser sessio
 Existing payment providers and sandbox/DEV guards are retained; this refactor does
 not introduce live payment support.
 
+## Customize a new project
+
+Set public identity, site and menu themes, homepage copy and brand assets in
+`config/project.php`. Start with the [new project checklist](docs/template/NEW_PROJECT_CHECKLIST.md)
+and see the [configuration reference](docs/template/TEMPLATE_CONFIGURATION.md).
+Run `php artisan project:sync` after changing the source defaults and verify
+the result with `npm run test:project`.
+
 ## Validation
 
 The mandatory [Active CI](.github/workflows/active-ci.yml) runs on pull requests,
@@ -101,10 +109,11 @@ npm run typecheck:runtime           # optional source-only diagnostic
 npm run lint
 npm run test:suites                 # archive integrity + active TypeScript coverage
 npm test                            # active runtime/integration Vitest (test:runtime)
-npm run test:catalog
+npm run test:project                 # project validation, standalone sync and catalog parity
 npm run build:ssr
 npm run build:game
 npm run test:browser                # isolated SQLite, owned Laravel + production SSR
+npm run test:browser:branding       # alternate project identity and Aurora theme
 npm run test:e2e                    # current standalone development smoke
 npm run test:e2e:production         # current standalone production smoke
 ```

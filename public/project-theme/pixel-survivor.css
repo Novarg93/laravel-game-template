@@ -1,0 +1,53 @@
+/* Base project palette, also used by Filament. */
+:root {
+    color-scheme: dark;
+    --site-bg: #0c171f;
+    --site-panel: #162832;
+    --site-raised: #203740;
+    --site-inset: #0a151d;
+    --site-edge: #3e5961;
+    --site-edge-bright: #69868a;
+    --site-text: #e7ebdf;
+    --site-muted: #adc0c0;
+    --site-gold: #d8b476;
+    --site-mint: #9bdccc;
+    --site-danger: #f0a4af;
+    --site-shadow: 0 4px 0 #061017, inset 0 1px 0 #bfdedb0a;
+    --site-heading: #f1e5cb;
+    --site-hero-heading: #f0ead9;
+    --site-hero-shadow: 0 4px #344947;
+    --site-accent: var(--site-gold);
+    --site-secondary: var(--site-mint);
+    --site-success: #cae4d8;
+    --site-success-bg: #17312f;
+    --site-success-edge: #44685f;
+    --site-tokens: #c7f3dd;
+    --site-run-gold: var(--site-muted);
+    --site-font-heading: Georgia, serif;
+    --site-font-body: 'Segoe UI', system-ui, sans-serif;
+    --site-radius: 2px;
+    --site-button-radius: 0;
+    --site-button-text: #14222c;
+    --site-button-edge: #eed19d;
+    --site-button-hover: #efce98;
+    --site-button-light: #ffe9bd;
+    --site-button-shadow: #70583b;
+    --site-header-bg: #0c171ff5;
+    --site-header-shadow: 0 4px 0 #06101755;
+    --site-glow-primary: #28504e35;
+    --site-glow-secondary: #2542511c;
+    --site-nav-bg: #1c343b;
+    --site-nav-edge: #43605f;
+    --site-muted-bg: #1d333c;
+    --site-selected-bg: #28464b;
+    --site-destructive-bg: #9d3f55;
+    --site-chrome: #10212b;
+    --site-solid-shadow: #061017;
+    --site-label: #d2dfd7;
+    --site-active: #25443f;
+    --site-capture-bg: #14242b;
+    --site-strip-bg: #14252c;
+    --site-selection-bg: #84cbbd;
+    --site-selection-fg: #0b1720;
+}
+html { background-color: var(--site-bg); }

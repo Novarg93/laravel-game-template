@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@php($project = $page['props']['project'])
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  @class(['dark' => ($appearance ?? 'system') == 'dark'])>
     <head>
         <meta charset="utf-8">
@@ -20,21 +21,19 @@
             })();
         </script>
 
-        {{-- Match the game theme before the application stylesheet loads. --}}
-        <style>
-            html, html.dark {
-                background-color: #0c171f;
-                color-scheme: dark;
-            }
-        </style>
-
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        @include('project.theme')
+        @include('project.icons', $project)
+        <meta name="description" content="{{ $project['description'] }}">
+        <meta property="og:site_name" content="{{ $project['name'] }}">
+        <meta property="og:title" content="{{ $project['game']['title'] }}">
+        <meta property="og:description" content="{{ $project['description'] }}">
+        @if ($project['socialImage'])
+            <meta property="og:image" content="{{ url($project['socialImage']) }}">
+        @endif
 
         @vite(['resources/css/app.css', 'resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
         <x-inertia::head>
-            <title>{{ config('app.name', 'Laravel') }}</title>
+            <title>{{ $project['name'] }}</title>
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">

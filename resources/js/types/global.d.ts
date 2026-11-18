@@ -18,6 +18,7 @@ declare module '@inertiajs/core' {
     export interface InertiaConfig {
         sharedPageProps: {
             name: string;
+            project: import('./project').ProjectPresentation;
             csrfToken: string;
             currencies: import('./currency').CurrencySnapshot;
             auth: Auth;

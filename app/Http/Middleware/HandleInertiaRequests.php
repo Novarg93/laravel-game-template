@@ -3,7 +3,9 @@
 namespace App\Http\Middleware;
 
 use App\Services\CurrencyService;
+use App\Support\ProjectPresentation;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -38,7 +40,8 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            'name' => config('app.name'),
+            'name' => app(ProjectPresentation::class)->name(),
+            'project' => Inertia::always(fn () => app(ProjectPresentation::class)->website()),
             'csrfToken' => csrf_token(),
             'currencies' => fn () => app(CurrencyService::class)->snapshot($request->user(), $request->session()->get('display_currency')),
             'auth' => [

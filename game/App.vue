@@ -28,6 +28,8 @@ import { isPublicCharacter, PUBLIC_CHARACTER } from '@game/bootstrap/publicChara
 import { mobileViewport, MobileFullscreen } from './ui/mobileViewport';
 import { platformPort } from '@game/platform/port';
 import type { RunRecord } from '@game/services/storage';
+import type { GamePresentation } from './presentation';
+defineProps<{ presentation: GamePresentation }>();
 const platform = platformPort(), starting = ref(false), sending = ref(false), platformMessage = ref('');
 const inventoryOpen = ref(false);
 function inventoryModal(open: boolean) { inventoryOpen.value = open; commands.emit({ type: 'ui-screen', screen: open ? 'inventory' : 'game' }); }
@@ -145,7 +147,7 @@ onUnmounted(() => { alive = false; platform?.destroy(); off(); offMetrics(); off
    <button v-if="pendingResult && !sending" class="small-button" @click="sendResult">Retry saving</button>
   </aside>
   <div v-if="debug && debugState" class="debug-hud">FPS {{ debugState.fps.toFixed(1) }} · update {{ debugState.updateMs.toFixed(2) }}ms<br>mobs {{ debugState.enemies }} / bullets {{ debugState.projectiles }} / XP {{ debugState.orbs }} / bosses {{ debugState.bosses }}<br>chunks {{ debugState.chunks }} / sprites {{ debugState.sprites }} + {{ debugState.pooledSprites }} pooled</div>
-  <MainMenu v-if="state?.status === 'menu'" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" :premium-available="!!platform?.commerce" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @guardian-practice="startGuardianPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" @premium="screen = 'premium'" />
+  <MainMenu v-if="state?.status === 'menu'" :presentation="presentation" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" :premium-available="!!platform?.commerce" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @guardian-practice="startGuardianPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" @premium="screen = 'premium'" />
   <template v-if="state && state.status !== 'menu'">
    <InGameInventory v-if="platform?.commerce && state.serverEconomy" :state="state" :port="platform.commerce" @modal="inventoryModal" />
    <UltimateControl :state="state" @activate="commands.emit({ type: 'ultimate' })" />

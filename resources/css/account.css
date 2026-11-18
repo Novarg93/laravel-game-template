@@ -16,12 +16,12 @@
 .account-balances { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin: 28px 0 14px; }
 .account-balance { display: flex; flex-direction: column; gap: 14px; padding: 24px 20px; background: linear-gradient(130deg,#315a4e33,transparent 90%),var(--site-panel); border: 1px solid #52776b; box-shadow: var(--site-shadow); min-width: 0; }
 .account-balance small { color: var(--site-mint); font: 10px/1.7 monospace; letter-spacing: .08em; }
-.account-balance strong { color: #c7f3dd; font: 38px/1.1 monospace; font-variant-numeric: tabular-nums; }
+.account-balance strong { color: var(--site-tokens); font: 38px/1.1 monospace; font-variant-numeric: tabular-nums; }
 .account-balance span { color: var(--site-muted); font-size: 11px; line-height: 1.7; }
 .pending-balance { background: linear-gradient(130deg,#72593622,transparent 90%),var(--site-panel); border-color: #7d6d4c; }
 .pending-balance small, .pending-balance strong { color: var(--site-gold); }
 .gold-balance { border-color: var(--site-edge); background: var(--site-panel); }
-.gold-balance small, .gold-balance strong { color: var(--site-muted); }
+.gold-balance small, .gold-balance strong { color: var(--site-run-gold); }
 .account-note { color: var(--site-muted); font-size: 12px; line-height: 1.9; margin: 14px 0 24px; max-width: 900px; }
 .account-recent { margin: 35px 0; }
 .account-paper, .account-empty { padding: 24px; margin: 20px 0; background: var(--site-panel); border: 1px solid var(--site-edge); box-shadow: var(--site-shadow); }

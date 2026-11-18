@@ -71,6 +71,7 @@ __pycache__/
 # Historical local art reports are not part of the reusable template delivery.
 /docs/*
 !/docs/architecture/
+!/docs/template/
 !/docs/PROGRESS.md
 !/docs/DECISIONS.md
 !/docs/BLOCKERS.md

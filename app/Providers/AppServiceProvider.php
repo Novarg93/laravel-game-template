@@ -32,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
             MySqlTestDatabase::assertSafe();
         }
         $this->configureDefaults();
+        if (config('mail.from.name') === null) {
+            config(['mail.from.name' => config('project.environment.name') ?? config('project.name')]);
+        }
         User::created(fn (User $user) => app(ProgressionService::class)->initialize($user->id));
     }
 

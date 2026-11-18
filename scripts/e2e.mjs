@@ -7,9 +7,9 @@ async function existing() {
   try { const r=await globalThis.fetch(base,{signal:globalThis.AbortSignal.timeout(700)}); return r.ok ? await r.text() : null; } catch { return null; }
 }
 const previous=await existing();
-if(previous && !previous.includes('<title>Pixel Survivor</title>'))throw new Error(`Port ${port} belongs to a different application`);
+if(previous && !previous.includes('name="template-entry" content="standalone-game"'))throw new Error(`Port ${port} belongs to a different application`);
 const server=previous?undefined:spawn(process.execPath,['node_modules/vite/bin/vite.js',...(production?['preview']:[]),'--mode','game','--host','127.0.0.1','--port',port,'--strictPort'],{stdio:'inherit',windowsHide:true});
-if(previous)globalThis.console.log(`Reusing existing Pixel Survivor server on ${port}; it will remain running.`);
+if(previous)globalThis.console.log(`Reusing existing standalone game server on ${port}.`);
 let serverExited=false;server?.on('exit',()=>{serverExited=true;});
 try {
   let ready=!!previous;

@@ -1,3 +1,30 @@
+# 2026-11-18 — Project Configuration, Branding и темы v1
+
+Внедрена Laravel-конфигурация проекта: публичное имя, metadata, логотипы,
+favicon, маркетинговые секции, Slug, контакты, Filament и меню игры. Сайт
+использует Inertia и `useProject()`, отдельный `/play` получает только игровой
+DTO. Standalone использует проверяемый `project:sync --check` экспорт.
+Темы Pixel Survivor и Aurora обслуживают сайт и Filament. Меню игры
+выбирает свою тему, игровой Canvas сохраняет прежнее оформление.
+
+Финальный локальный `composer ci:check` завершён с кодом 0. Laravel 28/468,
+Vitest 1054 в 144 файлах, PHPStan/Pint/ESLint/TypeScript, catalog, client/SSR/game
+builds и Chromium 5+2+2+1 прошли. В отдельной standalone-копии также прошёл
+production smoke с альтернативным названием, логотипом и favicon.
+SHA-256 всех 216 архивных файлов совпадают. Игровая симуляция, результаты,
+серверные политики, Ledger, Wallet, БД и контракты платежей не менялись.
+
+Скриншоты `screenshots/project-branding/{pixel-survivor,aurora}/` покрывают
+desktop/mobile, Guide, auth, кабинет, Shop, Filament, меню и HUD.
+Standalone и mobile landscape сохранены в `screenshots/laravel-first/`.
+Все пиксели первого экрана главной 1280×720 совпали с предыдущим QA-снимком
+с допуском 3 из 255 на канал. Обновлены название в Guide и уточняющий текст
+маркетинга. GitHub Actions для этих изменений ещё не выполнялся.
+
+См. [справочник конфигурации](template/TEMPLATE_CONFIGURATION.md) и
+[чек-лист](template/NEW_PROJECT_CHECKLIST.md). Следующий этап для новых героев,
+карт и условий победы требует совместных изменений игры и PHP-валидации.
+
 # 2026-11-18 — Active QA / воспроизводимый CI
 
 Полный `composer ci:check` выполнен в чистой source-копии и завершён exit 0

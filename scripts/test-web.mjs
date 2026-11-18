@@ -41,6 +41,14 @@ const port = process.env.TEMPLATE_BROWSER_PORT ?? '8037';
 await requireFreePort(Number(port));
 await requireFreePort(13714); // Existing Inertia configuration, not a second application.
 const env = { ...process.env, APP_ENV: 'testing', APP_KEY: 'base64:YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE=', APP_DEBUG: 'false', APP_URL: `http://127.0.0.1:${port}`, DB_CONNECTION: 'sqlite', DB_DATABASE: database, DB_URL: '', CACHE_STORE: 'database', SESSION_DRIVER: 'database', SESSION_COOKIE: 'template-browser-' + randomUUID(), QUEUE_CONNECTION: 'sync', MAIL_MAILER: 'array', PAYMENTS_PROVIDER: 'test', PAYMENTS_TEST_ENABLED: 'true', APP_CONFIG_CACHE: resolve(directory, 'config.php'), APP_ROUTES_CACHE: resolve(directory, 'routes.php'), PLAYWRIGHT_BROWSERS_PATH: process.env.PLAYWRIGHT_BROWSERS_PATH ?? resolve('.browsers'), TEMPLATE_BROWSER_PORT: port };
+const brandingPreview = process.argv.includes('--branding-preview');
+if (brandingPreview) Object.assign(env, {
+    PROJECT_NAME: 'Aurora Trial',
+    PROJECT_THEME: 'aurora',
+    PROJECT_GAME_TITLE: 'Aurora Grove',
+    PROJECT_GAME_THEME: 'aurora',
+    TEMPLATE_BRANDING_PREVIEW: '1',
+});
 const php = process.env.PHP_BINARY ?? 'php';
 for (const args of [['artisan', 'migrate', '--force'], ['tests/fixtures/browser-template.php']]) {
     const result = spawnSync(php, args, { env, encoding: 'utf8', windowsHide: true });
@@ -58,7 +66,7 @@ const server = spawn(php, ['-S', `127.0.0.1:${port}`, resolve('vendor/laravel/fr
 const ssr = spawn(process.execPath, ['bootstrap/ssr/app.js'], { env, stdio: 'inherit', windowsHide: true });
 try {
     await Promise.all([waitFor(server, `http://127.0.0.1:${port}/up`), waitFor(ssr, 'http://127.0.0.1:13714/health')]);
-    const child = spawn(process.execPath, ['node_modules/@playwright/test/cli.js', 'test', '--config=playwright.laravel.config.ts', ...process.argv.slice(2)], { env, stdio: 'inherit', windowsHide: true });
+    const child = spawn(process.execPath, ['node_modules/@playwright/test/cli.js', 'test', '--config=playwright.laravel.config.ts', ...process.argv.slice(2).filter(arg => arg !== '--branding-preview')], { env, stdio: 'inherit', windowsHide: true });
     process.exitCode = await new Promise(resolve => child.once('exit', code => resolve(code ?? 1)));
 } finally {
     await Promise.all([stop(server), stop(ssr)]);

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+@php($projectName = config('project.brand') ?? config('project.environment.name') ?? config('project.name'))
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title') · Pixel Survivor</title>
+        <title>@yield('title') · {{ $projectName }}</title>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <style>
             * { box-sizing: border-box; }
@@ -25,7 +26,7 @@
     <body>
         <main>
             <section class="error-panel" aria-labelledby="error-title">
-                <a href="/" class="brand"><span aria-hidden="true">✦</span>PIXEL SURVIVOR</a>
+                <a href="/" class="brand"><span aria-hidden="true">✦</span>{{ is_string($projectName) ? mb_strtoupper($projectName) : "Home" }}</a>
                 <p class="error-code">@yield('code')</p>
                 <h1 id="error-title">@yield('message')</h1>
                 <p>Return home and try again.</p>

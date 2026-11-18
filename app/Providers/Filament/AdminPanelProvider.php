@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Support\ProjectPresentation;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -28,11 +29,13 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(fn () => redirect()->route('login'))
-            ->brandName('Pixel Survivor · Treasury')
+            ->brandName(fn () => app(ProjectPresentation::class)->admin()['name'])
+            ->brandLogo(fn () => app(ProjectPresentation::class)->admin()['logo'])
+            ->favicon(fn () => app(ProjectPresentation::class)->favicon())
             ->darkMode(true, isForced: true)
             ->renderHook(PanelsRenderHook::HEAD_END, fn () => view('filament.chronicle-theme'))
-            ->colors([
-                'primary' => Color::hex('#d8b476'),
+            ->colors(fn () => [
+                'primary' => Color::hex(app(ProjectPresentation::class)->admin()['primary']),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')

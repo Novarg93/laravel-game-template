@@ -12,8 +12,10 @@ import {ARMAGEDDON,FROST_NOVA,frostNovaStats} from '@game/config/mageAbilities';
 import {WARRIOR_CAST} from '@game/config/warriorAbilities';
 import {lootIcon} from '@game/art/lootPixels';
 import type {PremiumSettings} from '@game/platform/premium';
+import { useProject } from '@/composables/useProject';
 defineOptions({name:'GameGuide'});
 defineProps<{premium:PremiumSettings}>();
+const project = useProject();
 const number=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
 const sections=[['start','Getting Started'],['rules','Game Rules'],['heroes','Heroes'],['skills','Skills & Abilities'],['enemies','Enemies & Bosses'],['inventory','Inventory'],['resources','Tokens & Gold'],['premium','Premium Features'],['tips','Tips & Strategies']];
 const enemyNotes:Record<EnemyKind,string>={grunt:'A melee enemy that forms the core of early waves.',runner:'A fast pursuer with low HP.',tank:'Slow, with high HP and heavy contact damage.',caster:'Keeps its distance and shoots.',rusher:'Winds up a directional dash; move out of its attack line.',splitter:'Spawns new threats on death.',charger:'A miniboss with dashes and melee attacks.',sorcerer:'A miniboss with runes, teleportation and danger zones.',eclipse:'A miniboss with phases and ranged attacks.',guardian:'A rare guarded reward; combat begins on discovery.',ashGuard:'The final boss. Guardians, shields, dashes, a sword and meteor phases.'};
@@ -22,9 +24,9 @@ const consumables=['healing_potion','movement_boost','damage_boost'] as const;
 const icons={healing_potion:lootIcon('healing'),movement_boost:lootIcon('haste'),damage_boost:lootIcon('fury')};
 </script>
 <template>
-  <Head title="Guide — Cursed Chronicle"/>
+  <Head title="Guide"/>
   <section class="site-section guide-page">
-    <p class="overline">CURSED CHRONICLE · FIELD GUIDE</p><h1>One spark. Twenty minutes.</h1>
+    <p class="overline">{{ project.game.title }} · FIELD GUIDE</p><h1>One spark. Twenty minutes.</h1>
     <p class="guide-lead">Survive to the final phase and defeat the Ash Grove Warden. Time unlocks the battle; the final blow wins it.</p>
     <nav class="guide-nav" aria-label="Guide sections"><a v-for="[id,title] in sections" :key="id" :href="`#${id}`">{{title}}</a></nav>
     <section id="start"><h2>Getting Started</h2><p>Choose Mage or Warrior and start a regular run. Move with WASD / arrow keys or the on-screen joystick. Attacks automatically target eligible enemies. Space activates your chosen movement specialization; the ultimate becomes available after selection. Escape opens the pause menu. Gamepad is supported.</p><p>HP is your health. Crystals grant XP within the run: leveling up pauses the world and offers a free choice of three cards (mouse / touch / 1–3). Permanent Character XP is awarded separately after the server checks the result.</p></section>
