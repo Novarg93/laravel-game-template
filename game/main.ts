@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import { selectAssetPack } from './art/packs/registry';
 import { gameDefinition } from './content/registry';
 import { gamePresentation } from './presentation';
 import './style.css';
@@ -13,6 +14,17 @@ if (root) {
     if (root.dataset.contentVersion && root.dataset.contentVersion !== content.version) {
         root.textContent = 'Game content was updated. Reload the page to play.';
     } else {
-        createApp(App, { presentation: gamePresentation(root), content }).mount(root);
+        try {
+            const query = new URLSearchParams(location.search);
+            const allowDevelopment = root.dataset.contentPreset ? root.dataset.assetPackPreview === '1' : import.meta.env.DEV;
+            const requested = allowDevelopment ? query.get('pack') : null;
+            const configured = root.dataset.assetPack || import.meta.env.VITE_GAME_ASSET_PACK;
+            const assetPack = selectAssetPack(content, requested ?? configured, allowDevelopment);
+            root.dataset.activeAssetPack = assetPack.id;
+            createApp(App, { presentation: gamePresentation(root), content, assetPack }).mount(root);
+        } catch (error) {
+            root.setAttribute('role', 'alert');
+            root.textContent = error instanceof Error ? error.message : 'Game assets are unavailable.';
+        }
     }
 }

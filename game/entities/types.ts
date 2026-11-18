@@ -6,7 +6,7 @@ export interface BossState { late?: { index: number; movement: number; frequency
 export type EliteModifier = 'frenzy' | 'shielded' | 'volatile';
 export interface EnemyIdentity {
   contentId?: string;
-  visual?: EnemyKind;
+  visual?: string;
 }
 export interface Enemy extends Point, EnemyIdentity { finalRole?: 'boss' | 'guardian'; ultimateFreeze?: { until: number; updated: number; visualAt: number }; deathSource?: DamageSource; guardianProfile?: { index: number; factor: number; slow: number; fast: number; turn: number; lifetime: number }; discovered?: boolean; id: number; kind: EnemyKind; hp: number; maxHp: number; radius: number; hitUntil: number; slowUntil: number; slowFactor: number; mobilitySlowUntil?: number; novaSlowUntil?: number; novaResistUntil?: number; frostEvolutionReadyAt?: number; elite: boolean; speed: number; damage: number; score: number; xp: number; shootAt: number; shootingAt: number; aim?: Point; frostStacks?: number; frostUntil?: number; freezeUntil?: number; freezeImmuneUntil?: number; born: number; modifier?: EliteModifier; rush?: BossState; offspring?: boolean; boss: BossState | null }
 export interface HomingOrb { variant: 'slow' | 'fast'; lifetime?: number; speed: number; turnRate: number; travelled: number; maxDistance: number }

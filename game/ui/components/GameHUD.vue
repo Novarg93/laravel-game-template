@@ -13,7 +13,7 @@ import { useInputDevice } from '../inputDevice';
 import EventTimeline from './EventTimeline.vue';
 import BiomePhaseNotice from './BiomePhaseNotice.vue';
 const inputDevice = useInputDevice();
-defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
+defineProps<{ state: Snapshot; buffIcons?: Partial<Record<'haste' | 'fury', string>> }>(); const emit = defineEmits<{ pause: [] }>();
 </script>
 <template>
   <header class="hud">
@@ -32,7 +32,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <p v-if="state.objective && state.status !== 'over'" class="content-objective">{{ state.objective.description }}</p>
   <EventTimeline v-else-if="!state.practice && state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
   <BiomePhaseNotice v-if="!state.practice" :state="state" />
-  <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
+  <div class="run-extras"><BuffDock :state="state" :pack-icons="buffIcons" /><RunArtifacts :state="state" /></div>
   <GameRadar />
   <MobilityControl :state="state" @activate="commands.emit({ type: 'mobility' })" />
   <div class="skill-dock" role="list" aria-label="Abilities">

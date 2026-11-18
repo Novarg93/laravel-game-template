@@ -23,7 +23,8 @@ test('Guide and play use the server-selected content preset', async ({ page, bro
     mkdirSync(folder, { recursive: true });
     const mobile = await browser.newPage({ viewport: { width: 844, height: 390 }, isMobile: true, hasTouch: true });
     try {
-        await mobile.goto('/play');
+        await mobile.goto('/play?pack=training-reskin');
+        await expect(mobile.locator('#app')).toHaveAttribute('data-active-asset-pack', 'training-reskin');
         await expect(mobile.getByRole('button', { name: /^Scout/ })).toBeVisible();
         await mobile.getByRole('button', { name: /^Start run/ }).tap();
         await expect(mobile.locator('.hud')).toBeVisible();
@@ -38,7 +39,8 @@ test('Guide and play use the server-selected content preset', async ({ page, bro
     await page.locator('#password').fill('Template-test-only-2026!');
     await page.locator('button[type=submit]').last().click();
     await expect(page).toHaveURL(/\/dashboard/);
-    await page.goto('/play');
+    await page.goto('/play?pack=training-reskin');
+    await expect(page.locator('#app')).toHaveAttribute('data-active-asset-pack', 'training-reskin');
     await expect(page.getByRole('button', { name: /^Scout/ })).toHaveAttribute('aria-pressed', 'true');
     await expect(page.getByRole('button', { name: /Fight the Warden/ })).toHaveCount(0);
     const registered = page.waitForResponse(response => response.url().endsWith('/internal/runs') && response.request().method() === 'POST');
@@ -46,7 +48,7 @@ test('Guide and play use the server-selected content preset', async ({ page, bro
     await page.getByRole('button', { name: /^Start run/ }).click();
     expect(await (await registered).json()).toMatchObject({ content_version: 'training-grove-v1', economy: { enabled: false } });
     await expect(page.locator('.content-objective')).toHaveText('Survive until 0:20.');
-    await expect(page.locator('.skill-dock')).toContainText('✦');
+    await expect(page.getByRole('listitem', { name: /Trail Spark · Rank 1/ })).toContainText('⟫');
     await page.addLocatorHandler(page.getByRole('dialog', { name: 'Level up', exact: true }), async (dialog) => {
         await page.keyboard.up('d');
         await dialog.locator('.choice').first().click();

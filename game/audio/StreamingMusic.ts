@@ -32,7 +32,8 @@ export class StreamingMusic {
   private failed = new Set<MusicTrackId>();
   private crossfades = 0;
   private repeats = 0;
-  constructor(private context: AudioContext, destination: AudioNode) {
+  constructor(private context: AudioContext, destination: AudioNode,
+    private trackFile: (id: MusicTrackId) => { url: string; gain: number } = id => ({ url: musicTrackUrl(id), gain: MUSIC_TRACKS[id].gain })) {
     try {
       for(let i=0;i<2;i++){
         const audio=new Audio();audio.preload='auto';audio.loop=false;
@@ -50,7 +51,7 @@ export class StreamingMusic {
   }
   private prepare(deck:Deck,track:MusicTrackId){
     if(deck.track===track)return;
-    this.halt(deck);deck.track=track;deck.audio.src=musicTrackUrl(track);deck.audio.load();
+    this.halt(deck);deck.track=track;deck.audio.src=this.trackFile(track).url;deck.audio.load();
   }
   private start(deck:Deck,track:MusicTrackId,repeat=false){
     this.prepare(deck,track);this.halt(deck);deck.audio.currentTime=0;
@@ -60,7 +61,7 @@ export class StreamingMusic {
       deck.pending=false;
       if(this.dead||this.target!==track){this.halt(deck);return;}
       const now=this.context.currentTime,old=this.current,fade=old&&old!==deck?MUSIC_CROSSFADE:.5;
-      deck.gain.gain.cancelScheduledValues(now);deck.gain.gain.setValueAtTime(0,now);deck.gain.gain.linearRampToValueAtTime(MUSIC_TRACKS[track].gain,now+fade);
+      deck.gain.gain.cancelScheduledValues(now);deck.gain.gain.setValueAtTime(0,now);deck.gain.gain.linearRampToValueAtTime(this.trackFile(track).gain,now+fade);
       if(old&&old!==deck){
         old.gain.gain.cancelScheduledValues(now);old.gain.gain.setValueAtTime(old.gain.gain.value,now);old.gain.gain.linearRampToValueAtTime(0,now+fade);old.retireAt=now+fade;this.crossfades++;
       }

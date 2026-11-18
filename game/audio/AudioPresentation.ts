@@ -74,6 +74,7 @@ export class AudioPresentation {
       else if(cue==='ultimate-fire')add('ultimate.fire');
       else if(cue==='ultimate-embers')add('ultimate.embers');
       else if(cue==='ultimate-singe')add('ultimate.singe');
+      else if (cue === 'kill' && this.audio.overrides('enemy.death')) add('enemy.death');
       else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
       else if (cue === 'shield') add(w.hero.combat==='warrior'?'ironSkin.trigger':'arcaneShield.trigger');
       else if (cue === 'charge'&&!pending.has('mini.briarCharge')) add('encounter.charge');

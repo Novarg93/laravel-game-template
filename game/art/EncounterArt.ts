@@ -51,7 +51,7 @@ export function drawMobility(g: Phaser.GameObjects.Graphics, w: World, mobility:
   if(w.hero.visual==='mage'&&!PLAYER_VISUALS.legacyArcaneBlink)return;
   const t = (w.elapsed - mobility.started) / MOBILITY.visualDuration;
   if (t < 0 || t >= 1 || w.status === 'over') return;
-  const alpha = (1 - t) * Math.max(.25, intensity), color = MOBILITY[w.hero.visual].color;
+  const alpha = (1 - t) * Math.max(.25, intensity), color = MOBILITY[w.hero.visual === 'warrior' ? 'warrior' : 'mage'].color;
   const { from, to } = mobility;
   if (w.hero.visual === 'mage') {
     for (const p of [from, to]) {

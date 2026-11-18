@@ -12,7 +12,8 @@ test('standalone production loads shipped atlases and restarts without a develop
         expect(response.status()).toBe(200);
         expect(createHash('sha256').update(await response.body()).digest('hex')).toBe(atlas.sha256);
     }
-    await page.goto('/');
+    await page.goto('/?content=training-grove&pack=training-reskin');
+    await expect(page.locator('#app')).toHaveAttribute('data-active-asset-pack', 'pixel-survivor');
     await expect(page).toHaveTitle(presentation.title);
     await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', presentation.description);
     await expect(page.getByRole('heading', { name: presentation.title, exact: true })).toBeVisible();

@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { gameDefinitions } from '../game/content/registry';
+import { contentFingerprintInput } from '../game/content/definitionFingerprint';
 import { MOBILITY_MAX_RANK, MOBILITY_SPECIALIZATION_LEVEL, MOBILITY_UPGRADES } from '../game/config/mobilityUpgrades';
 import { ULTIMATE, ultimateDefinitions } from '../game/config/ultimates';
 import { SUPPLIES, upgradesFor } from '../game/systems/UpgradeSystem';
@@ -19,7 +20,7 @@ export function contentCatalogs() {
         };
         const scoreStep = content.enemies.filter(enemy => enemy.elite).reduce((step, enemy) => gcd(step, 2 * enemy.score), 0) || 1;
         return {
-            definitionHash: createHash('sha256').update(JSON.stringify(content)).digest('hex'),
+            definitionHash: createHash('sha256').update(JSON.stringify(contentFingerprintInput(content))).digest('hex'),
             id: content.id, version: content.version, experimental: content.experimental, practice: content.practice,
             heroes: Object.fromEntries(content.heroes.map(hero => [hero.id, { name: hero.name, public: hero.public,
                 skills: hero.skills, starting: hero.startingSkills, combat: hero.combat,

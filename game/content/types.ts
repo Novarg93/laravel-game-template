@@ -15,14 +15,14 @@ export interface HeroDefinition {
     combat: HeroArchetype;
     mobility: 'blink' | 'dash';
     ultimate: HeroArchetype;
-    visual: HeroArchetype;
+    visual: string;
     public: boolean;
 }
 
 export interface SkillDefinition extends Omit<AbilityDefinition, 'id' | 'character'> {
     id: string;
     behavior: AbilityId;
-    visual: AbilityId;
+    visual: string;
     maxRank: number;
     unlockable: boolean;
     damageMultiplier?: number;
@@ -41,7 +41,7 @@ export interface EnemyDefinition {
     score: number;
     color: number;
     behavior: EnemyKind;
-    visual: EnemyKind;
+    visual: string;
     category: 'regular' | 'guardian' | 'miniboss' | 'final-boss';
     elite: boolean;
     spawn?: { maps?: readonly string[]; from?: number };

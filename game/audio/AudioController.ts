@@ -25,6 +25,7 @@ export class AudioController {
     if (this.muted || !s.volume) this.stop();
     else if(!this.volumes.music)this.backend.music?.(null);
   }
+  overrides(event: SoundEvent) { return !!this.backend.overrides?.(event); }
   play(event: SoundEvent, strength = 1) {
     this.requested[event] = (this.requested[event] ?? 0) + 1;
     const c = SOUND_CATALOG[event], now = this.backend.now;
@@ -44,7 +45,7 @@ export class AudioController {
     const id = ++this.serial;
     try {
       const rate = 1 + (this.random() - .5) * .06, gain = c.gain * Math.max(.1, Math.min(1, strength)) * (1 + (this.random() - .5) * .08);
-      const voice = this.backend.start(c.asset, c.bus, gain, rate, false, () => this.voices.delete(id), audioSampleForEvent(event), audioSampleRange(event));
+      const voice = this.backend.start(c.asset, c.bus, gain, rate, false, () => this.voices.delete(id), audioSampleForEvent(event), audioSampleRange(event), event);
       if (!voice) { this.rejected.unavailable++; return false; }
       this.voices.set(id, { voice, bus: c.bus, priority: c.priority, event }); this.last.set(event, now); this.last.set(group, now); this.played[event] = (this.played[event] ?? 0) + 1;
       this.peakVoices = Math.max(this.peakVoices, this.voices.size); return true;
@@ -65,7 +66,7 @@ export class AudioController {
     for(const id of Object.keys(SILENT_MINIBOSSES) as MinibossAmbienceId[]){
       const level=audible&&this.volumes.sfx?Math.max(0,Math.min(id==='beast-walking'?.12:.14,ambience[id])):0,entry=this.ambience.get(id);
       if(!level){if(entry){entry.voice.stop(.12);this.ambience.delete(id);}continue;}
-      if(entry){if(Math.abs(entry.level-level)>.001){entry.voice.gain(level*audioSampleGain(id),.16);entry.level=level;}continue;}
+      if(entry){if(Math.abs(entry.level-level)>.001){entry.voice.gain(level*(this.backend.loopSampleGain?.(id)??audioSampleGain(id)),.16);entry.level=level;}continue;}
       try{const voice=this.backend.start(id==='beast-walking'?'stone':'threat','sfx',level,1,true,()=>{if(this.ambience.get(id)?.voice===voice)this.ambience.delete(id);},id);if(voice)this.ambience.set(id,{voice,level});}catch{this.rejected.unavailable++;}
     }
     this.peakLoops = Math.max(this.peakLoops, this.backend.diagnostics().loops);

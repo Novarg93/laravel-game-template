@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import type { Snapshot } from '@game/systems/World';
 import { lootIcon } from '@game/art/lootPixels';
-defineProps<{ state: Snapshot }>();
+defineProps<{ state: Snapshot; packIcons?: Partial<Record<string, string>> }>();
 const icons = { haste: lootIcon('haste'), fury: lootIcon('fury'), 'arcane-sprint': lootIcon('haste'), berserk: lootIcon('fury') };
 </script>
 
 <template>
   <aside class="buff-dock" aria-label="Temporary buffs">
     <div v-for="buff in state.buffs" :key="buff.id" :class="['buff-slot', buff.id, {ending:buff.remaining <= 2}]" :data-buff="buff.id" :aria-label="`${buff.name}: ${Math.ceil(buff.remaining)} seconds`" :title="`${buff.name} · ${buff.id === 'haste' || buff.id === 'fury' ? '?' + buff.multiplier + ' ' + (buff.id === 'haste' ? 'speed' : 'damage') : buff.id === 'berserk' ? 'damage, new cooldown and movement speed bonuses' : 'movement speed boost'}`">
-      <img :src="icons[buff.id]" alt="" width="32" height="32" />
+      <span v-if="packIcons?.[buff.id]" aria-hidden="true">{{ packIcons[buff.id] }}</span><img v-else :src="icons[buff.id]" alt="" width="32" height="32" />
       <span>{{ buff.name }}<b>{{ Math.ceil(buff.remaining) }}s</b></span>
     </div>
     <small v-if="state.lootNotice" class="loot-notice" role="status">{{ state.lootNotice }}</small>

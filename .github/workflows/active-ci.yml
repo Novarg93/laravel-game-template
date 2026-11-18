@@ -84,6 +84,7 @@ jobs:
           path: |
             screenshots/laravel-first/
             screenshots/project-branding/
+            screenshots/asset-packs/
             test-results/
             playwright-report/
           if-no-files-found: ignore

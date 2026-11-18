@@ -10,7 +10,10 @@ import { useInputDevice } from '../inputDevice';
 import UpgradeEmblem from './UpgradeEmblem.vue';
 import { upgradeCard } from '../upgradeCards';
 const inputDevice = useInputDevice();
-const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number; disabled?: boolean; loading?: boolean }>();
+const props = defineProps<{ choices: Snapshot['choices']; level: number; offer: number; disabled?: boolean; loading?: boolean; skillIcons?: Readonly<Record<string, string>> }>();
+function packIcon(id: string) {
+  return props.skillIcons?.[id.replace(/^(?:unlock|rank|evolve)-/, '')];
+}
 const specializationChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.category && c.tier === 1));
 const ultimateChoice = computed(() => props.choices.length === 3 && props.choices.every(c => c.id.startsWith('ultimate-')));
 const emit = defineEmits<{ choose: [id: string, offer: number] }>();
@@ -88,7 +91,7 @@ function key(event: KeyboardEvent) {
           @pointerdown="beginTouch($event, choice.id)" @pointerup="confirmTouch($event, choice.id)" @pointercancel="cancelTouch">
           <small class="choice-rank">{{ choice.category ? choice.category + ' · ' : '' }}RANK {{ choice.tier }}</small>
           <span class="choice-key">0{{ i + 1 }}</span>
-          <span class="emblem-socket"><UpgradeEmblem :icon="upgradeCard(choice).icon" /></span>
+          <span class="emblem-socket"><span v-if="packIcon(choice.id)" aria-hidden="true">{{ packIcon(choice.id) }}</span><UpgradeEmblem v-else :icon="upgradeCard(choice).icon" /></span>
           <span class="choice-family">{{ upgradeCard(choice).label }}</span><b class="choice-title">{{ choice.name }}</b>
           <span class="choice-bonus">{{ upgradeCard(choice).value }}<span class="bonus-caption">{{ upgradeCard(choice).caption }}</span></span>
           <span class="choice-description" :title="choice.description">{{ upgradeCard(choice).summary }}</span>

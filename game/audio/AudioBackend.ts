@@ -1,4 +1,4 @@
-import type { AssetId, AudioBus } from './catalog';
+import type { AssetId, AudioBus, SoundEvent } from './catalog';
 import type { AudioSampleId, SampleRange } from './samples';
 import type {MusicTrackId} from './musicTracks';
 import type {MusicDiagnostics} from './StreamingMusic';
@@ -8,8 +8,10 @@ export interface AudioBackend {
   unlock(): Promise<boolean>;
   bus(bus: AudioBus, value: number): void;
   music?(track: MusicTrackId | null): boolean;
-  start(asset: AssetId, bus: Exclude<AudioBus, 'master'>, gain: number, rate: number, loop: boolean, ended: () => void, sample?: AudioSampleId, range?: SampleRange): AudioVoice | undefined;
-  diagnostics(): { nodes: number; sources: number; loops: number; decodedBytes: number; rms: number; failedAssets?: number; samplesLoaded?: number; samplesPending?: number; sampleFallbacks?: number; samplePlays?: Partial<Record<AudioSampleId, number>>; music?: MusicDiagnostics };
+  start(asset: AssetId, bus: Exclude<AudioBus, 'master'>, gain: number, rate: number, loop: boolean, ended: () => void, sample?: AudioSampleId, range?: SampleRange, event?: SoundEvent): AudioVoice | undefined;
+  diagnostics(): { nodes: number; sources: number; loops: number; decodedBytes: number; rms: number; failedAssets?: number; samplesLoaded?: number; samplesPending?: number; sampleFallbacks?: number; samplePlays?: Partial<Record<AudioSampleId, number>>; packPlays?: number; music?: MusicDiagnostics };
+  overrides?(event: SoundEvent): boolean;
+  loopSampleGain?(id: AudioSampleId): number;
   stopAll(): void;
   destroy(): void;
 }

@@ -14,6 +14,7 @@ export type PatchId = keyof typeof PATCHES;
 export type AssetId = PatchId | 'grove' | 'forest' | 'underscore';
 function cue(asset: PatchId, bus: 'ui' | 'sfx', priority: number, gap: number, gain = .55, group = asset) { return { asset, bus, priority, gap, gain, group }; }
 export const SOUND_CATALOG = {
+  'enemy.death': { asset: 'death', bus: 'sfx', gain: .16, gap: .1, priority: 2, group: 'enemy' },
   'mini.runeCast':cue('shield','sfx',9,.1,.6),
   'mini.astralCast':cue('shield','sfx',9,.1,.6),
   'mini.teleport':cue('blink','sfx',10,.1,.6),

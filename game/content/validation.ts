@@ -36,7 +36,7 @@ export function validateGameDefinition(content: GameDefinition) {
     for (const hero of heroes.values()) {
         requireRule(Object.hasOwn(HEROES, hero.id), `Unsupported hero registration: ${hero.id}.`);
         requireRule(number(hero.hp, 1, 10000) && number(hero.speed, 1, 1500) && number(hero.armor, 0, .95), `Invalid hero stats: ${hero.id}.`);
-        requireRule(['mage', 'warrior'].includes(hero.combat) && ['mage', 'warrior'].includes(hero.ultimate) && ['mage', 'warrior'].includes(hero.visual)
+        requireRule(['mage', 'warrior'].includes(hero.combat) && ['mage', 'warrior'].includes(hero.ultimate) && idPattern.test(hero.visual)
             && (hero.combat === 'mage' ? hero.mobility === 'blink' : hero.mobility === 'dash'), `Unsupported hero capability: ${hero.id}.`);
         requireRule(hero.skills.length > 0 && hero.skills.length <= 5 && hero.skills.length === new Set(hero.skills).size, `Invalid ability pool: ${hero.id}.`);
         const behaviors = new Set<string>();
@@ -55,16 +55,16 @@ export function validateGameDefinition(content: GameDefinition) {
     }
     for (const skill of skills.values()) {
         const behavior = ABILITIES.find(def => def.id === skill.behavior);
-        requireRule(behavior && skill.visual === skill.behavior, `Unsupported ability behavior or visual: ${skill.id}.`);
+        requireRule(behavior && idPattern.test(skill.visual), `Unsupported ability behavior or visual: ${skill.id}.`);
         requireRule(number(skill.cooldown, .05, 300) && integer(skill.maxRank, 1, 5)
             && number(skill.damageMultiplier ?? 1, .1, 10)
             && (skill.radiusMultiplier === undefined || ['frost', 'meteor'].includes(skill.behavior) && number(skill.radiusMultiplier, .1, 3))
             && (skill.evolutionRank === undefined || (!behavior.character && integer(skill.evolutionRank, 1, skill.maxRank))), `Invalid rank or cooldown: ${skill.id}.`);
     }
     for (const enemy of enemies.values()) {
-        requireRule(Object.hasOwn(ENEMIES, enemy.behavior) && Object.hasOwn(ENEMIES, enemy.visual), `Unsupported enemy behavior or visual: ${enemy.id}.`);
+        requireRule(Object.hasOwn(ENEMIES, enemy.behavior) && idPattern.test(enemy.visual), `Unsupported enemy behavior or visual: ${enemy.id}.`);
         const category = enemy.behavior === 'ashGuard' ? 'final-boss' : enemy.behavior === 'guardian' ? 'guardian' : isBossKind(enemy.behavior) ? 'miniboss' : 'regular';
-        requireRule(enemy.category === category && (category === 'regular' ? !isBossKind(enemy.visual) && enemy.visual !== 'guardian' : (category === 'miniboss' || enemy.id === enemy.behavior) && enemy.visual === enemy.behavior && !enemy.elite), `Unsupported enemy category or special encounter: ${enemy.id}.`);
+        requireRule(enemy.category === category && (category === 'regular' || (category === 'miniboss' || enemy.id === enemy.behavior) && !enemy.elite), `Unsupported enemy category or special encounter: ${enemy.id}.`);
         if (enemy.spawn) {
             const allowedMaps = enemy.spawn.maps ?? [...maps.keys()];
             requireRule(category === 'regular' && allowedMaps.length > 0 && new Set(allowedMaps).size === allowedMaps.length
@@ -74,7 +74,7 @@ export function validateGameDefinition(content: GameDefinition) {
             && number(enemy.radius, 1, 128) && integer(enemy.xp, 0, 2000) && integer(enemy.score, 1, 100000), `Invalid enemy stats: ${enemy.id}.`);
     }
     requireRule(![...enemies.values()].some(enemy => enemy.behavior === 'splitter') || enemies.get('grunt')?.category === 'regular', 'Splitter behavior requires a grunt offspring definition.');
-    requireRule([...maps.values()].every(map => map.presentation.artPack === 'grove'), 'Unsupported map art pack.');
+    requireRule([...maps.values()].every(map => idPattern.test(map.presentation.artPack)), 'Invalid map visual reference.');
     requireRule(integer(content.limits.maxLevel, 1, 70) && integer(content.limits.regularCap, 1, BALANCE.regularCap), 'Invalid gameplay limits.');
     requireRule(['grove', 'fixed'].includes(content.pacing) && content.waves[0]?.from === 0, 'Invalid pacing or initial wave.');
     for (const curve of [content.scaling.hp, content.scaling.damage]) {

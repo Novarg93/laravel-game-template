@@ -8,7 +8,7 @@ import type { CharacterId } from '@game/config/characters';
 import type { BiomeId } from '@game/config/biomes';
 import { describeVictory, gameDefinition, publicHeroes } from '../../content/registry';
 import type { GameDefinition } from '../../content/types';
-const props = defineProps<{ presentation: GamePresentation; content?: GameDefinition; best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+const props = defineProps<{ presentation: GamePresentation; content?: GameDefinition; best: number; heroIcons?: Readonly<Record<string, string>>; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
 const content = computed(() => props.content ?? gameDefinition());
 const heroes = computed(() => publicHeroes(content.value));
 const wordmark = computed(() => splitWordmark(props.presentation.title));
@@ -23,7 +23,7 @@ const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; hel
     <span v-else class="menu-wordmark-text"><template v-if="wordmark[0]">{{ wordmark[0] }}<br></template><span class="menu-wordmark-accent">{{ wordmark[1] }}</span><i aria-hidden="true">✦</i></span>
    </h1>
    <p class="menu-description">{{ presentation.subtitle }}<br>{{ presentation.description }}</p>
-   <div class="run-selection" aria-label="Character"><button v-for="hero in heroes" :key="hero.id" :aria-pressed="character === hero.id" v-pad="() => emit('character', hero.id)" @click="emit('character', hero.id)">{{ hero.name }} <small>{{ hero.hp }} HP · {{ hero.combat === 'mage' ? 'magic' : 'sword and shield' }}</small></button></div>
+   <div class="run-selection" aria-label="Character"><button v-for="hero in heroes" :key="hero.id" :aria-pressed="character === hero.id" v-pad="() => emit('character', hero.id)" @click="emit('character', hero.id)"><span v-if="heroIcons?.[hero.id]" aria-hidden="true">{{ heroIcons[hero.id] }} </span>{{ hero.name }} <small>{{ hero.hp }} HP · {{ hero.combat === 'mage' ? 'magic' : 'sword and shield' }}</small></button></div>
    <div class="run-selection" aria-label="Location"><button v-for="map in content.maps" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Start run</span><span>→</span></button>
    <button v-if="content.practice" class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Fight the Warden</b><small>Practice · Mage 54 · Heavenly Wrath</small></span><span aria-hidden="true">↗</span></button>
