@@ -1,0 +1,124 @@
+import {RUNE_ACCEPTED_TEXTURE} from './runeWardenAccepted';
+import { WARDEN,wardenTexture } from './ashWardenPack';
+import {FIREBALL_TEXTURE,FIREBALL_VFX,FIREBALL_MANIFEST} from './fireballPack';
+import { RUNE_WARDEN_TEXTURE, runeBodyFrame } from './runeWardenPack';
+import { BRIAR_BEAST_TEXTURE, briarBodyFrame } from './briarBeastPack';
+import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
+import {ASTRAL_VFX} from '../config/astralRevenant';
+import {ASTRAL_PROJECTILE as AP,ASTRAL_PROJECTILE_TEXTURE} from './astralProjectilePixellabPack';
+import { ARCANE_VOLLEY } from '../config/runeWarden';
+import type { CharacterId } from '../config/characters';
+import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
+import type { AbilityId } from '../abilities/types';
+import type { LootKind } from '../loot/types';
+import { HD_CORE_TEXTURE } from './hdCoreLayout';
+import { RUNNER_TEXTURE, RUNNER_CLIPS, runnerFrame, type RunnerPlayback } from './runnerPack';
+import {MAGE_HERO,MAGE_HERO_ORIGIN,mageHeroSelection,mageHeroTexture} from './mageHeroPack';
+import {MAGE_IDLE} from './mageIdlePack';
+import {WARRIOR_HERO,warriorHeroTexture,warriorHeroSelection} from './warriorHeroPack';
+import {WARRIOR_SKILLS,warriorSkillsTexture} from './warriorSkillsPack';
+import {MAGE_RUN_V2} from './mageRunPackV2';
+import {MAGE_BLINK,MAGE_BLINK_TEXTURE} from './mageBlinkPack';
+import { ENEMY_TEXTURE, ENEMY_CLIPS, isHdEnemy, packedEnemyFrame } from './enemyPack';
+import { GUARDIAN_TEXTURE, guardianFrame } from './guardianPack';
+import { BOSS_TEXTURE, BOSS_CLIPS, isHdBoss, type BossFacing, type BossPose } from './bossPack';
+import { LOOT_TEXTURE } from './lootPack';
+import {MAGE_SHIELD_NOVA as SHIELD_NOVA,MAGE_SHIELD_NOVA_TEXTURE} from './mageShieldNovaPack';
+import {MAGE_METEOR,MAGE_METEOR_TEXTURE} from './mageMeteorPack';
+import type { ArtifactId } from '../loot/ArtifactSystem';
+import {MAGE_PHANTOM,MAGE_PHANTOM_TEXTURE} from './magePhantomPack';
+
+export interface AssetSpec {
+  status: 'hd-integrated' | 'legacy';
+  category: 'actor' | 'pickup' | 'projectile' | 'effect' | 'terrain' | 'ui';
+  source: { kind: 'atlas' | 'texture'; key: string; width: number; height: number } | { kind: 'graphics' | 'dom'; key: string };
+  logicalSize: { width: number; height: number } | null;
+  origin: { x: number; y: number };
+  worldScale: number;
+  clips: { idle: number; walk: number; run?:number; runStart?:number; runStop?:number; hurt: number; death: number };
+  adornment?: string;
+  retainedReason?: string;
+}
+const origin = { x: 0.5, y: 0.5 }, single = { idle: 1, walk: 0, hurt: 0, death: 0 };
+function hd(width: number, height: number, worldScale: number, category: AssetSpec['category'], clips = single): AssetSpec {
+  return { status: 'hd-integrated', category, source: { kind: 'atlas', key: HD_CORE_TEXTURE, width: width * 4, height: height * 4 }, logicalSize: { width, height }, origin, worldScale, clips };
+}
+function drawn(key: string, category: AssetSpec['category'] = 'effect'): AssetSpec {
+  return { status: 'legacy', category, source: { kind: category === 'ui' ? 'dom' : 'graphics', key }, logicalSize: null, origin, worldScale: 1, clips: { ...single } };
+}
+function packedActor(worldScale = 1) {
+  return { ...hd(16, 16, worldScale, 'actor'), source: { kind: 'atlas' as const, key: ENEMY_TEXTURE, width: 64, height: 64 }, clips: { idle: ENEMY_CLIPS.idle.frames, walk: ENEMY_CLIPS.walk.frames, hurt: ENEMY_CLIPS.hurt.frames, death: ENEMY_CLIPS.death.frames } };
+}
+function runnerActor(worldScale = 1) { return { ...hd(16, 16, worldScale, 'actor'), source: { kind: 'atlas' as const, key: RUNNER_TEXTURE, width: 64, height: 64 }, clips: { idle: RUNNER_CLIPS.idle.frames, walk: RUNNER_CLIPS.walk.frames, hurt: RUNNER_CLIPS.hurt.frames, death: RUNNER_CLIPS.death.frames } }; }
+function bossActor(multiplier=1) { return { ...hd(32, 32, 1.8*multiplier, 'actor'), source: { kind: 'atlas' as const, key: BOSS_TEXTURE, width: 128, height: 128 }, clips: { idle: BOSS_CLIPS.idle.frames, walk: BOSS_CLIPS.walk.frames, hurt: BOSS_CLIPS.hurt.frames, death: BOSS_CLIPS.death.frames } }; }
+function lootAsset(size = 16, scale = 1): AssetSpec { return { ...hd(size, size, scale, 'pickup'), source: { kind: 'atlas', key: LOOT_TEXTURE, width: size === 6 ? 24 : 64, height: size === 6 ? 24 : 64 }, clips: { ...single, idle: 3 } }; }
+// One catalog: integrated art and explicit legacy fallbacks. No gameplay radii.
+export const ASSET_REGISTRY = {
+  magePhantom:{...hd(MAGE_PHANTOM.canvas,MAGE_PHANTOM.canvas,MAGE_PHANTOM.displaySize/MAGE_PHANTOM.canvas,'effect'),source:{kind:'atlas',key:MAGE_PHANTOM_TEXTURE,width:MAGE_PHANTOM.canvas,height:MAGE_PHANTOM.canvas},origin:{x:.5,y:.25},clips:{...single,idle:12}},
+  mage: {...hd(MAGE_HERO.canvas,MAGE_HERO.canvas,MAGE_HERO.displaySize/MAGE_HERO.canvas,'actor'),source:{kind:'atlas',key:mageHeroTexture(0),width:MAGE_HERO.canvas,height:MAGE_HERO.canvas},origin:MAGE_HERO_ORIGIN,clips:{idle:MAGE_IDLE.clips.front.frames.length,walk:0,runStart:MAGE_RUN_V2.clips.south['run-start'].frames.length,run:MAGE_RUN_V2.clips.south.run.frames.length,runStop:MAGE_RUN_V2.clips.south['run-stop'].frames.length,hurt:0,death:13}},
+  warrior: { ...hd(192,192,WARRIOR_HERO.displaySize/WARRIOR_HERO.canvas,'actor',{idle:13,walk:13,hurt:0,death:0}),source:{kind:'atlas',key:warriorHeroTexture(0),width:192,height:192},origin:{x:.5,y:132/192} },
+  grunt: hd(16, 16, 1, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
+  gruntElite: hd(16, 16, 1.4, 'actor', { idle: 1, walk: 4, hurt: 0, death: 0 }),
+  runner: runnerActor(), runnerElite: { ...runnerActor(1.4), adornment: 'copper-crest' },
+  tank: packedActor(1.6), caster: packedActor(),
+  rusher: packedActor(), splitter: packedActor(),
+  tankElite: { ...packedActor(1.6), adornment: 'quartz-mantle' }, casterElite: { ...packedActor(1.4), adornment: 'bone-crescent' },
+  rusherElite: { ...packedActor(1.4), adornment: 'thorn-collar' }, splitterElite: { ...packedActor(1.4), adornment: 'gilded-seams' },
+  guardian: { ...hd(128, 128, .525, 'actor', { idle: 13, walk: 0, hurt: 0, death: 0 }), source: { kind: 'atlas', key: GUARDIAN_TEXTURE, width: 128, height: 128 } },
+  ashGuard: {...hd(192,192,.6548310811,'actor',{idle:4,walk:8,hurt:8,death:12}),source:{kind:'atlas',key:wardenTexture(0),width:192,height:192},origin:{x:.5,y:154/192}},
+  charger: { ...bossActor(), source:{kind:'atlas',key:BRIAR_BEAST_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, sorcerer: { ...bossActor(), source: {kind:'atlas',key:RUNE_WARDEN_TEXTURE,width:128,height:128}, clips:{idle:1,walk:12,hurt:0,death:0} }, eclipse: {...bossActor(ASTRAL_VFX.bodyScale),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},clips:{idle:1,walk:16,hurt:0,death:0}},
+  runeVolley: { ...hd(32,32,ARCANE_VOLLEY.displaySize/32,'projectile'), source:{kind:'atlas',key:RUNE_ACCEPTED_TEXTURE,width:128,height:128}, origin:{x:106/128,y:30/128} },
+  astralVolley:{...hd(32,32,ASTRAL_VFX.projectileSize/32,'projectile'),source:{kind:'atlas',key:ASTRAL_REVENANT_TEXTURE,width:128,height:128},origin:{x:ASTRAL_VFX.projectilePivot,y:.5}},
+  eclipseVolley:{...hd(32,32,AP.clips.flight.size/32,'projectile'),source:{kind:'atlas',key:ASTRAL_PROJECTILE_TEXTURE,width:AP.canvas,height:AP.canvas},origin:{x:AP.clips.flight.pivot.x/AP.canvas,y:AP.clips.flight.pivot.y/AP.canvas}},
+  fireball: { ...hd(FIREBALL_MANIFEST.canvas.width,FIREBALL_MANIFEST.canvas.height,FIREBALL_VFX.scale,'projectile'),source:{kind:'atlas',key:FIREBALL_TEXTURE,width:FIREBALL_MANIFEST.canvas.width,height:FIREBALL_MANIFEST.canvas.height},origin:{x:FIREBALL_VFX.originX,y:FIREBALL_VFX.originY},clips:{...single,idle:FIREBALL_MANIFEST.clips.idle.frameCount} }, hostile: { ...hd(8, 8, 1, 'projectile'), source: { kind: 'atlas', key: BOSS_TEXTURE, width: 32, height: 32 }, clips: { ...single, idle: 4 } },
+  xp: lootAsset(6), healing: lootAsset(), haste: lootAsset(), fury: lootAsset(), magnet: lootAsset(), chest: lootAsset(16, 1.25),
+  artifactHealth: lootAsset(16, 1.15), artifactDamage: lootAsset(16, 1.15), artifactSpeed: lootAsset(16, 1.15), artifactCooldown: lootAsset(16, 1.15), artifactExperience: lootAsset(16, 1.15),
+  mageBlink:{...hd(MAGE_BLINK.canvas,MAGE_BLINK.canvas,MAGE_BLINK.displaySize/MAGE_BLINK.canvas,'effect',{idle:8,walk:0,hurt:0,death:0}),source:{kind:'atlas',key:MAGE_BLINK_TEXTURE,width:MAGE_BLINK.width,height:MAGE_BLINK.height},origin:{x:.5,y:104/128}},
+  shadow: hd(20, 8, 1, 'effect'), cleave: hd(48, 48, 1, 'effect', { idle: 4, walk: 0, hurt: 0, death: 0 }),
+  grove: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
+  darkForest: { ...hd(128, 128, 1, 'terrain'), source: { kind: 'texture', key: 'chunk-*', width: 256, height: 256 }, origin: { x: 0, y: 0 } },
+  frost: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,1,'effect',{idle:SHIELD_NOVA.clips['frost-nova'].frameCount,walk:0,hurt:0,death:0}),source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, lightning: { ...drawn('RegularLightningArt'), status: 'hd-integrated' }, meteor: {...hd(MAGE_METEOR.canvas,MAGE_METEOR.canvas,MAGE_METEOR.flightSize/MAGE_METEOR.canvas,'effect'),source:{kind:'atlas',key:MAGE_METEOR_TEXTURE,width:MAGE_METEOR.canvas,height:MAGE_METEOR.canvas},origin:{x:.5,y:MAGE_METEOR.flightPivot.y/MAGE_METEOR.canvas},clips:{...single,idle:MAGE_METEOR.clips.flight.frameCount}},
+  shield: { ...hd(SHIELD_NOVA.canvas,SHIELD_NOVA.canvas,SHIELD_NOVA.shieldScale,'effect',{idle:SHIELD_NOVA.clips['shield-loop'].frameCount,walk:0,hurt:0,death:0}),origin:{x:64/128,y:108/128},source:{kind:'atlas',key:MAGE_SHIELD_NOVA_TEXTURE,width:SHIELD_NOVA.width,height:SHIELD_NOVA.height} }, whirlwind: { ...drawn('WarriorMagic:whirlwind'), status: 'hd-integrated' }, slam: { ...drawn('WarriorMagic:slam'), status: 'hd-integrated' },
+  spear:{...hd(192,192,.5,'projectile'),source:{kind:'atlas',key:warriorSkillsTexture(WARRIOR_SKILLS.locations.spear.page),width:192,height:192}},
+  blades: { ...drawn('WarriorMagic:piercingThrow'), status: 'hd-integrated' }, iron: { ...drawn('WarriorMagic:iron'), status: 'hd-integrated' }, hit: { ...drawn('CombatFeedback:hit'), status: 'hd-integrated' }, death: { ...drawn('CombatFeedback:death'), status: 'hd-integrated' },
+  buffHaste: { ...drawn('LootPresentation:haste'), status: 'hd-integrated' }, buffFury: { ...drawn('LootPresentation:fury'), status: 'hd-integrated' },
+  hostileImpact: { ...drawn('CombatFeedback:hostileImpact'), status: 'hd-integrated' },
+  lootGlow: { ...drawn('LootPresentation:pickups'), status: 'hd-integrated' },
+  guardianTell: { ...drawn('LootPresentation:guardian'), retainedReason: 'Guardian HP bar retained; native idle/cast supply its visual cues.' },
+  bossTell: { ...drawn('GameScene:boss'), retainedReason: 'Sorcerer/Eclipse rings and radii, modifier marks and offscreen pointers retained; Charger uses local windup sparks and actor flash without a path. Actors are hd-bosses.' },
+  hud: { ...drawn('GameHUD/BossBars/GameRadar/BuffDock/RunArtifacts+hd-theme.css', 'ui'), status: 'hd-integrated' }, menu: { ...drawn('MainMenu/SettingsPanel+hd-theme.css', 'ui'), status: 'hd-integrated' },
+  upgradeUI: { ...drawn('LevelUpModal+hd-theme.css', 'ui'), status: 'hd-integrated' }, deathUI: { ...drawn('RunStatistics/GameOver/LocalRecords+hd-theme.css', 'ui'), status: 'hd-integrated' },
+} satisfies Record<string, AssetSpec>;
+export type AssetId = keyof typeof ASSET_REGISTRY;
+export const CHARACTER_ART: Record<CharacterId, AssetId> = { mage: 'mage', warrior: 'warrior' };
+export const ENEMY_ART: Record<EnemyKind, AssetId> = { ashGuard:'ashGuard', grunt: 'grunt', runner: 'runner', tank: 'tank', caster: 'caster', rusher: 'rusher', splitter: 'splitter', guardian: 'guardian', charger: 'charger', sorcerer: 'sorcerer', eclipse: 'eclipse' };
+export const ELITE_ART: Record<RegularKind, AssetId> = { grunt: 'gruntElite', runner: 'runnerElite', tank: 'tankElite', caster: 'casterElite', rusher: 'rusherElite', splitter: 'splitterElite' };
+export const LOOT_ART: Record<LootKind, AssetId> = { healing: 'healing', haste: 'haste', fury: 'fury', magnet: 'magnet' };
+export const ARTIFACT_ART: Record<ArtifactId, AssetId> = { health: 'artifactHealth', damage: 'artifactDamage', speed: 'artifactSpeed', cooldown: 'artifactCooldown', experience: 'artifactExperience' };
+export const ABILITY_ART: Record<AbilityId, AssetId> = { fireball: 'fireball', frost: 'frost', lightning: 'lightning', meteor: 'meteor', shield: 'shield', cleave: 'cleave', whirlwind: 'whirlwind', slam: 'slam', blades: 'blades', iron: 'iron' };
+export const REPLACED_LEGACY_TEXTURES: ReadonlySet<string> = new Set(['warrior', 'grunt', 'runner', 'mage', 'fireball', 'tank', 'caster', 'rusher', 'splitter', 'guardian', 'charger', 'sorcerer', 'eclipse', 'hostile', 'xp', 'loot-healing', 'loot-haste', 'loot-fury', 'loot-magnet', 'loot-chest', 'artifact']);
+export type Facing = 'down' | 'up' | 'side';
+export interface VisualSelection { asset: AssetId; texture: string; frame?: string; scale: number }
+export function selectAsset(asset: AssetId, frame?: string, scale = ASSET_REGISTRY[asset].worldScale): VisualSelection { return { asset, texture: ASSET_REGISTRY[asset].source.key, frame, scale }; }
+export function heroVisual(character: CharacterId, facing: Facing, moving: boolean, _hurt: boolean, elapsed: number): VisualSelection {
+  if(character==='mage')return {...selectAsset('mage'),...mageHeroSelection({motion:moving?'run':'idle',direction:facing==='up'?'north':facing==='down'?'south':'east',age:elapsed,casting:false})};
+  return {...selectAsset('warrior'),...warriorHeroSelection(facing==='up'?'north':facing==='down'?'south':'east',moving?'run':'idle',elapsed)};
+}
+export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number, playback?: RunnerPlayback): VisualSelection {
+  const asset = elite && kind !== 'ashGuard' && kind !== 'guardian' && kind !== 'charger' && kind !== 'sorcerer' && kind !== 'eclipse' ? ELITE_ART[kind] : ENEMY_ART[kind], spec = ASSET_REGISTRY[asset];
+  if (kind === 'ashGuard') {const layer=WARDEN.clips['south-idle']!.frames[Math.floor(elapsed/.45)%4]!.layers[0]!;return{...selectAsset('ashGuard',layer.frame),texture:wardenTexture(WARDEN.locations[layer.frame]!)};}
+  if (kind === 'grunt') return selectAsset(asset, `grunt-${elite ? 'elite' : 'normal'}-${Math.floor(elapsed * 7 + id) % 4}`);
+  if (kind === 'runner') return selectAsset(asset, runnerFrame(playback?.pose ?? 'walk', playback?.facing ?? 'right', elapsed - (playback?.started ?? 0)), elite ? 1.4 : 1);
+  if (kind === 'guardian') return selectAsset('guardian', guardianFrame('idle', elapsed));
+  if (isHdBoss(kind)) return bossVisual(kind,'right','idle',elapsed);
+  if (isHdEnemy(kind)) return selectAsset(asset, packedEnemyFrame(kind, 'right', 'walk', elapsed + id / 7), spec.worldScale === 1 && elite ? 1.4 : spec.worldScale);
+  return { ...selectAsset(asset, undefined, spec.worldScale === 1 && elite ? 1.4 : spec.worldScale), texture: kind + (spec.clips.walk && Math.floor(elapsed * 5 + id) % 2 ? '-walk' : '') };
+}
+export function bossVisual(kind:'charger'|'sorcerer'|'eclipse',facing:BossFacing,pose:BossPose,age:number,remaining=0){
+  return selectAsset(kind,kind==='charger'?briarBodyFrame(facing,pose,age,remaining):kind==='sorcerer'?runeBodyFrame(facing,pose,age,remaining):astralBodyFrame(facing,pose,age,remaining));
+}
+export function visualDimensions(selection: VisualSelection, multiplier = 1) {
+  const size = ASSET_REGISTRY[selection.asset].logicalSize;
+  if (!size) throw new Error(`Asset ${selection.asset} has no fixed world footprint`);
+  return { width: size.width * selection.scale * multiplier, height: size.height * selection.scale * multiplier };
+}
