@@ -1,0 +1,20 @@
+import { historicalWalk } from '../../helpers/runtimePath';
+import { runtimePath } from '../../helpers/runtimePath';
+import {warriorSoundsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorUltimatesIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorBuffsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCleaveIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorSkillsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCombatIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorHeroIntegration,wardenApprovedHash} from '../helpers/approvedWardenIntegration';
+import {expect,it} from 'vitest';
+import { readRuntimeFile as readFileSync } from '../../helpers/runtimeFile';
+import {createHash} from 'node:crypto';
+import {visualCleanupIntegration as proof} from '../helpers/approvedWardenIntegration';
+it('keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files',()=>{
+ const baseline=JSON.parse(readFileSync('art/generated/visual-cleanup-rune-idle-v1/runtime-baseline.json','utf8')) as Record<string,string>;
+ const walk=historicalWalk;
+ expect(proof).toMatchObject({baselineFiles:411,unchanged:405});expect(proof.added).toHaveLength(4);expect(proof.changed.map(runtimePath)).toEqual(['game/art/FireUltimateArt.ts','game/audio/AudioController.ts','game/audio/AudioPresentation.ts','game/audio/catalog.ts','game/audio/samples.ts','game/scenes/GameScene.ts']);
+ expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...warriorHeroIntegration.added,...warriorCombatIntegration.added,...warriorSkillsIntegration.added,...warriorCleaveIntegration.added,...warriorBuffsIntegration.added,...warriorUltimatesIntegration.added,...warriorSoundsIntegration.added].sort());
+ for(const [file,old]of Object.entries({...baseline,...proof.currentSHA256}))expect(createHash('sha256').update(readFileSync(file)).digest('hex'),file).toBe(wardenApprovedHash(file,proof.currentSHA256[file]??old));
+});

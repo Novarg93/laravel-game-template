@@ -1,0 +1,141 @@
+[
+  {
+    "method": "GET",
+    "old": "/api/v1/leaderboard",
+    "new": null,
+    "reason": "Unused JSON alias removed; website /leaderboard pages preserved"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/leaderboard/runs/{publicRun}",
+    "new": null,
+    "reason": "Unused JSON alias removed; website /leaderboard pages preserved"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/operations/health",
+    "new": "/internal/operations/health",
+    "reason": "Session-authenticated operator browser endpoint"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/operations/runs/{run}/review",
+    "new": "/internal/operations/runs/{run}/review",
+    "reason": "Session-authenticated operator browser endpoint"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/upgrade-offers",
+    "new": "/internal/runs/{run}/upgrade-offers"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/actions",
+    "new": "/internal/runs/{run}/actions"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/runs/{run}/actions/{operation}",
+    "new": "/internal/runs/{run}/actions/{operation}"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/actions/{operation}/ack",
+    "new": "/internal/runs/{run}/actions/{operation}/ack"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/profile/nickname",
+    "new": "/internal/profile/nickname"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/runs/{run}/status",
+    "new": "/internal/runs/{run}/status"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/payments/quote",
+    "new": "/internal/payments/quote"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/payments/orders",
+    "new": "/internal/payments/orders"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/payments/orders/{order}/dev-confirm",
+    "new": "/internal/payments/orders/{order}/dev-confirm"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/payments/orders/{order}",
+    "new": "/internal/payments/orders/{order}"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/payments/orders/{order}/checkout",
+    "new": "/internal/payments/orders/{order}/checkout"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/wallet",
+    "new": "/internal/wallet"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/shop",
+    "new": "/internal/shop"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/shop/purchases",
+    "new": "/internal/shop/purchases"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/progress",
+    "new": "/internal/progress"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/inventory",
+    "new": "/internal/inventory"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/inventory/activate-xp-boost",
+    "new": "/internal/inventory/activate-xp-boost"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs",
+    "new": "/internal/runs"
+  },
+  {
+    "method": "GET",
+    "old": "/api/v1/runs/{run}/inventory",
+    "new": "/internal/runs/{run}/inventory"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/death",
+    "new": "/internal/runs/{run}/death"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/items",
+    "new": "/internal/runs/{run}/items"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/items/{usage}/ack",
+    "new": "/internal/runs/{run}/items/{usage}/ack"
+  },
+  {
+    "method": "POST",
+    "old": "/api/v1/runs/{run}/finish",
+    "new": "/internal/runs/{run}/finish"
+  }
+]

@@ -30,6 +30,11 @@ Pixel Survivor plans and reports, including their old prohibitions against Larav
   private runtime data into Git.
 - Run relevant tests after meaningful changes, fix type/lint/build failures, and
   report actual evidence and limitations. Never disable assertions to pass a check.
+- Mandatory QA covers all current frontend/game runtime and active tests with
+  `npm run typecheck`, `npm run test:runtime`, PHP checks, builds and browser smoke.
+  Frozen PixelSurvivor artistic/UI acceptance lives in `tests/historical/` and runs
+  explicitly via historical scripts. Preserve its original assertions, fixtures
+  and hashes; never treat an active CI pass as proof of old replay compatibility.
 - Diagnose after at most three failed repetitions of an approach.
 - Update `docs/PROGRESS.md` with changes, checks, screenshots, blockers and next work.
 - Verify Canvas visually with screenshots, not only DOM snapshots. Preserve bounded

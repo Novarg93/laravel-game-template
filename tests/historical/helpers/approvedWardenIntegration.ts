@@ -1,0 +1,27 @@
+export const warriorSoundsIntegration=integrationProof('docs/verification/warrior-sounds-v1/integration-verification.json');
+export const warriorUltimatesAcceptedIntegration=integrationProof('docs/verification/warrior-ultimates-accepted-v1/integration-verification.json');
+export const warriorUltimatesIntegration=integrationProof('docs/verification/warrior-ultimates-v1/integration-verification.json');
+export const berserkSprintIntegration=integrationProof('docs/verification/berserk-sprint-v1/integration-verification.json');
+export const warriorBuffsIntegration=integrationProof('art/generated/warrior-buffs-v4/integration-verification.json');
+export const warriorCleaveIntegration=integrationProof('art/generated/warrior-cleave-sync-v3/integration-verification.json');
+export const warriorSkillsIntegration=integrationProof('art/generated/warrior-skills-runtime-v1/integration-verification.json');
+export const warriorCombatIntegration=integrationProof('art/generated/warrior-combat-sync-runtime-v2/integration-verification.json');
+export const warriorHeroIntegration=integrationProof('art/generated/warrior-hero-runtime-v1/integration-verification.json');
+import { integrationProof } from './integrationProof';
+export const wardenIntegration=integrationProof('art/generated/ash-warden-pixellab-runtime-v1/integration-verification.json');
+export const mageSfxIntegration=integrationProof('art/generated/mage-sfx-elevenlabs-v1/integration-verification.json');
+export const bossMeteorUiIntegration=integrationProof('art/generated/boss-meteor-ui-fix-v1/integration-verification.json');
+export const musicRuntimeIntegration=integrationProof('art/generated/music-runtime-v1/integration-verification.json');
+export const mageUploadedIntegration=integrationProof('art/generated/mage-uploaded-sounds-v1/integration-verification.json');
+export const wardenSoundsIntegration=integrationProof('art/generated/ash-warden-uploaded-sounds-v1/integration-verification.json');
+export const arcaneShieldIntegration=integrationProof('art/generated/arcane-shield-sound-v1/integration-verification.json');
+export const frostNovaIntegration=integrationProof('art/generated/frost-nova-sound-v1/integration-verification.json');
+export const fireUltimateIntegration=integrationProof('art/generated/fire-ultimate-runtime-v1/integration-verification.json');
+export const frostUltimateIntegration=integrationProof('art/generated/frost-ultimate-runtime-v1/integration-verification.json');
+export const minibossMusicIntegration=integrationProof('art/generated/miniboss-music-policy-v1/integration-verification.json');
+export const minibossAssetsIntegration=integrationProof('art/generated/miniboss-assets-audio-v1/integration-verification.json');
+export const visualCleanupIntegration=integrationProof('art/generated/visual-cleanup-rune-idle-v1/integration-verification.json');
+// Apply each explicit later user acceptance over immutable earlier preview proofs.
+export const warriorEmptyHandIntegration=integrationProof('docs/verification/warrior-empty-hand-v1/integration-verification.json');
+export const spearReleaseIntegration=integrationProof('docs/verification/warrior-spear-release-v1/integration-verification.json');
+export const wardenApprovedHash=(file:string,previous:string)=>spearReleaseIntegration.currentSHA256[file]??warriorEmptyHandIntegration.currentSHA256[file]??warriorSoundsIntegration.currentSHA256[file]??warriorUltimatesAcceptedIntegration.currentSHA256[file]??warriorUltimatesIntegration.currentSHA256[file]??berserkSprintIntegration.currentSHA256[file]??warriorBuffsIntegration.currentSHA256[file]??warriorCleaveIntegration.currentSHA256[file]??warriorSkillsIntegration.currentSHA256[file]??warriorCombatIntegration.currentSHA256[file]??warriorHeroIntegration.currentSHA256[file]??visualCleanupIntegration.currentSHA256[file]??minibossAssetsIntegration.currentSHA256[file]??minibossMusicIntegration.currentSHA256[file]??frostUltimateIntegration.currentSHA256[file]??fireUltimateIntegration.currentSHA256[file]??frostNovaIntegration.currentSHA256[file]??arcaneShieldIntegration.currentSHA256[file]??wardenSoundsIntegration.currentSHA256[file]??mageUploadedIntegration.currentSHA256[file]??musicRuntimeIntegration.currentSHA256[file]??bossMeteorUiIntegration.currentSHA256[file]??mageSfxIntegration.currentSHA256[file]??wardenIntegration.currentSHA256[file]??previous;

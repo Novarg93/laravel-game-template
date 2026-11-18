@@ -1,0 +1,86 @@
+name: Active CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: active-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  active-qa:
+    name: Laravel, frontend, game and browser
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      APP_ENV: testing
+      APP_KEY: base64:YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE=
+      APP_URL: http://127.0.0.1:8037
+      DB_CONNECTION: sqlite
+      DB_DATABASE: ':memory:'
+      DB_URL: ''
+      CACHE_STORE: array
+      SESSION_DRIVER: array
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.browsers
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: '8.4.27'
+          extensions: bcmath, curl, dom, fileinfo, gd, intl, mbstring, pdo_mysql, pdo_sqlite, sqlite3, zip
+          coverage: none
+          tools: composer:2.10.3
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - name: Install locked dependencies
+        run: |
+          cp .env.example .env
+          composer install --no-interaction --prefer-dist --no-progress
+          npm ci
+      - name: Laravel (isolated SQLite), PHPStan and Pint
+        run: |
+          php artisan test
+          php vendor/bin/phpstan analyse --memory-limit=512M --no-progress
+          php vendor/bin/pint --test
+      - name: Active suite integrity, TypeScript, ESLint and Vitest
+        run: |
+          npm run test:suites
+          npm run typecheck
+          npm run lint
+          npm run test:runtime
+          npm run test:catalog
+      - name: Client, SSR and standalone game builds
+        run: |
+          npm run build:ssr
+          npm run build:game
+      - name: Install pinned Chromium and OS dependencies
+        run: npx playwright install --with-deps chromium
+      - name: Production SSR website and authenticated browser smoke
+        run: npm run test:browser
+      - name: Standalone development game smoke
+        run: npm run test:e2e
+      - name: Standalone production game smoke
+        run: npm run test:e2e:production
+      - name: Browser evidence (no environment files or databases)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: active-browser-evidence
+          path: |
+            screenshots/laravel-first/
+            test-results/
+            playwright-report/
+          if-no-files-found: ignore
+          retention-days: 7

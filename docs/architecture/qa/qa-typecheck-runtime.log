@@ -1,0 +1,4 @@
+
+> laravel-game-template@1.0.0 typecheck:runtime
+> vue-tsc --noEmit -p tsconfig.runtime.json
+

@@ -1,0 +1,405 @@
+{
+  "date": "2026-11-18",
+  "repository": "Novarg93/laravel-game-template",
+  "head": "34a98c28a167c7c8395908db9039a5f8e8e5f2e8",
+  "activeStatus": "PASS (local clean source copy)",
+  "remoteGitHubActions": "not_run_no_commit_or_push",
+  "aggregate": {
+    "command": "composer ci:check",
+    "exitCode": 0,
+    "finishedUtc": "2026-11-18T15:48:20.8623828Z",
+    "startedUtc": "2026-11-18T15:46:20.7922144Z"
+  },
+  "toolchain": {
+    "php": "8.4.27",
+    "composer": "2.10.3",
+    "node": "22.16.0",
+    "npm": "10.9.2",
+    "localOS": "Windows",
+    "workflowOS": "ubuntu-24.04 (not executed remotely)"
+  },
+  "activeVitest": {
+    "files": 143,
+    "tests": 1046,
+    "passed": 1046,
+    "failed": 0,
+    "skipped": 0
+  },
+  "historicalVitest": {
+    "files": 62,
+    "tests": 414,
+    "passed": 376,
+    "failed": 38,
+    "skipped": 0,
+    "failedFiles": 29,
+    "collectionErrors": 1
+  },
+  "typescript": {
+    "active": "PASS: full current frontend/game and all active tests",
+    "runtimeOnly": "PASS",
+    "historicalDiagnostics": 10
+  },
+  "checks": {
+    "laravelSqlite": {
+      "result": "PASS",
+      "tests": 16,
+      "assertions": 383
+    },
+    "phpstan": "PASS (0 errors)",
+    "pint": "PASS",
+    "eslint": "PASS",
+    "archiveIntegrity": {
+      "result": "PASS",
+      "files": 216
+    },
+    "catalog": "PASS",
+    "clientBuild": "PASS",
+    "ssrBuild": "PASS",
+    "standaloneBuild": "PASS",
+    "websiteProductionSSRBrowser": {
+      "result": "PASS",
+      "tests": 3
+    },
+    "gameDevBrowser": {
+      "result": "PASS",
+      "tests": 2
+    },
+    "gameProductionBrowser": {
+      "result": "PASS",
+      "tests": 1
+    },
+    "canvasScreenshots": "Desktop, mobile landscape and boss/production evidence captured; desktop/mobile visually inspected"
+  },
+  "mysql": {
+    "service": "MySQL80",
+    "serviceStatus": "Running",
+    "result": "BLOCKED",
+    "database": "pixel_survivor_test",
+    "mysqlCode": 1045,
+    "writes": 0,
+    "credentialsUsersExistingDatabasesChanged": false
+  },
+  "sourceIntegrity": {
+    "baselineFiles": 934,
+    "byteDifferences": [
+      "routes/web.php (Pint whitespace only)"
+    ],
+    "phpRouteTokensUnchanged": true,
+    "originalMigrationEvidenceUnchanged": true,
+    "lockfilesUnchanged": true,
+    "highConfidenceSecretPatternFindings": 0
+  },
+  "historicalFailures": [
+    {
+      "file": "tests/historical/unit/ambient-music-review.test.ts",
+      "test": "preserves the review proof and allows only the later explicit music integration",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/ash-warden-library.test.ts",
+      "test": "catalogues all51 main clips,15 assembled scenes,4 actual projections and labelled unused/reference assets",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/ash-warden-library.test.ts",
+      "test": "leaves all345 runtime files unchanged after accepted Eclipse flame integration",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/ash-warden-north-meteor-review.test.ts",
+      "test": "keeps the complete runtime inventory and all345 game files intact pending acceptance",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/ash-warden-pixellab-runtime.test.ts",
+      "test": "packs all60 accepted native RGBA cels losslessly, with2px padding and bounded atlas memory",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/ash-warden-sounds.test.ts",
+      "test": "limits runtime changes to the explicit user-authorized sound integration",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/astral-flame-review.test.ts",
+      "test": "leaves all341 runtime files and inventory unchanged after the approved projectile/Blink integration",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/astral-projectile-review.test.ts",
+      "test": "retains the initial preview proof and verifies the subsequently approved narrow integration scope",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/berserk-sprint-scope.test.ts",
+      "test": "limits the Berserk sprint change to four runtime files and preserves all other runtime bytes",
+      "kind": "historical_acceptance",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]"
+    },
+    {
+      "file": "tests/historical/unit/boss-meteor-ui-fix.test.ts",
+      "test": "changes exactly four presentation files and preserves all359 other runtime files and all audio/atlas assets",
+      "kind": "historical_acceptance",
+      "message": "AssertionError: src/game/art/FinalBossArt.ts: expected '5b8cd70cd2e1b8950b0d135bbc0e174413df8…' to be '472c8096833d52363892295e9a7463b6c769d…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/endgame.test.ts",
+      "test": "preserves original ordinary/boss replay before15 from0 without Guardian side effects",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/endgame.test.ts",
+      "test": "preserves original ordinary/boss replay before15 from180 without Guardian side effects",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/endgame.test.ts",
+      "test": "preserves original ordinary/boss replay before15 from480 without Guardian side effects",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected 'afbf8b3e8a5872e84ed89af9efce76f61f5b7…' to be '62209e9e0fd562f9f900ad4acbd3ee521e0ce…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/endgame.test.ts",
+      "test": "preserves original ordinary/boss replay before15 from870 without Guardian side effects",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '7d2c9a41db371fe87cb153b2e129a5dc2fccb…' to be 'd612a59ad06b2469a8b217421763243322c56…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/fire-ultimate-runtime.test.ts",
+      "test": "limits the accepted integration to9 changed and8 added runtime files and protects every other file",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/frost-ultimate-runtime.test.ts",
+      "test": "preserves all389 unrelated runtime files including fire gameplay/audio and frost combat",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/mage-meteor-v3.test.ts",
+      "test": "audits approved PixelLab pixels, unchanged boss/archive art, padding and black light compositing",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/mage-sfx.test.ts",
+      "test": "allows only the explicitly requested audio and practice changes over the accepted art baseline",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/mage-uploaded-sounds.test.ts",
+      "test": "preserves music, gameplay and all other runtime files outside the exact4changed/6added scope",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/mage-uploaded-sounds.test.ts",
+      "test": "replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/mage-uploaded-sounds.test.ts",
+      "test": "connects the supplied Frost Nova WAV and preserves every other runtime file",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/miniboss-assets-audio.test.ts",
+      "test": "changes only the five presentation files and eleven explicitly accepted local assets/modules",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/music-runtime.test.ts",
+      "test": "limits runtime changes to audio and selected MP3 assets over the363-file baseline",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-buffs-v4\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/survival-enrage.test.ts",
+      "test": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/survival-enrage.test.ts",
+      "test": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/survival-enrage.test.ts",
+      "test": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected '948495edfc21aae434633bec448a7190d12cc…' to be '28c689d108bc954033cf5215dca3af3a4903e…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/survival-enrage.test.ts",
+      "test": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s",
+      "kind": "unproven_replay_compatibility",
+      "message": "AssertionError: expected 'af617a3c693ee3cd2fa9cab12a47a280ee11c…' to be 'e4e774dcab1c34a179cf5d65917da790231ac…' // Object.is equality"
+    },
+    {
+      "file": "tests/historical/unit/visual-cleanup-rune-idle.test.ts",
+      "test": "keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'"
+    },
+    {
+      "file": "tests/historical/unit/warrior-buffs-v4.test.ts",
+      "test": "protects the explicit change scope and reuses the accepted Banner A object byte for byte",
+      "kind": "historical_acceptance",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-buffs-v4.mjs"
+    },
+    {
+      "file": "tests/historical/unit/warrior-combat-scope.test.ts",
+      "test": "changes only the seven authored presentation files and adds one legacy charge atlas page",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-combat-sync-runtime-v2\\runtime-baseline.json'"
+    },
+    {
+      "file": "tests/historical/unit/warrior-empty-hand.test.ts",
+      "test": "changes exactly five approved runtime files and preserves all other 463 hashes",
+      "kind": "historical_acceptance",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]"
+    },
+    {
+      "file": "tests/historical/unit/warrior-empty-hand.test.ts",
+      "test": "uses all selected empty hand edits, preserves every windup and keeps timing, routes and exclusions",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-spear-empty-hand-review-v1\\manifest.json'"
+    },
+    {
+      "file": "tests/historical/unit/warrior-hero-scope.test.ts",
+      "test": "limits Warrior integration to seven presentation/selection files, three modules and ten atlas files",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\generated\\warrior-hero-runtime-v1\\runtime-baseline.json'"
+    },
+    {
+      "file": "tests/historical/unit/warrior-review.test.ts",
+      "kind": "collection_error",
+      "message": "Missing original art/warrior-review-v1/model and catalog"
+    },
+    {
+      "file": "tests/historical/unit/warrior-skills.test.ts",
+      "test": "verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope",
+      "kind": "historical_acceptance",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-cleave-v3.mjs"
+    },
+    {
+      "file": "tests/historical/unit/warrior-sounds.test.ts",
+      "test": "preserves all nine user recordings and pins the complete integration inventory and hashes",
+      "kind": "historical_acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '[repository]\\art\\warrior\\sounds\\banner.wav'"
+    },
+    {
+      "file": "tests/historical/unit/warrior-spear-release.test.ts",
+      "test": "limits the timing fix to one config file and preserves the remaining 467 runtime files",
+      "kind": "historical_acceptance",
+      "message": "AssertionError: expected [ Array(72) ] to deeply equal [ 'game/config/warriorAbilities.ts' ]"
+    },
+    {
+      "file": "tests/historical/unit/warrior-ultimates-accepted.test.ts",
+      "test": "limits accepted-ultimate integration to ten explicit runtime files and preserves the remaining 449",
+      "kind": "historical_acceptance",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]"
+    },
+    {
+      "file": "tests/historical/unit/warrior-ultimates-assets.test.ts",
+      "test": "preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope",
+      "kind": "historical_acceptance",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-ultimates-v1.mjs"
+    }
+  ],
+  "historicalReplays": [
+    {
+      "fixture": "pre-phase2-ordinary-replay.json",
+      "startSeconds": 0,
+      "expectedSHA256": "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880",
+      "observedPrefix": "65daa6ddf077",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-phase2-ordinary-replay.json",
+      "startSeconds": 180,
+      "expectedSHA256": "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d",
+      "observedPrefix": "00af386c24ed",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-phase2-ordinary-replay.json",
+      "startSeconds": 480,
+      "expectedSHA256": "62209e9e0fd562f9f900ad4acbd3ee521e0ce3c417512ff92dbaddacbdb4c0f4",
+      "observedPrefix": "afbf8b3e8a58",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-phase2-ordinary-replay.json",
+      "startSeconds": 870,
+      "expectedSHA256": "d612a59ad06b2469a8b217421763243322c5603a1ef5365dc47655be8687e518",
+      "observedPrefix": "7d2c9a41db37",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-enrage-replay.json",
+      "startSeconds": 0,
+      "expectedSHA256": "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880",
+      "observedPrefix": "65daa6ddf077",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-enrage-replay.json",
+      "startSeconds": 180,
+      "expectedSHA256": "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d",
+      "observedPrefix": "00af386c24ed",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-enrage-replay.json",
+      "startSeconds": 480,
+      "expectedSHA256": "28c689d108bc954033cf5215dca3af3a4903e661c6cc5eb17fe858e9e2c1c5aa",
+      "observedPrefix": "948495edfc21",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    },
+    {
+      "fixture": "pre-enrage-replay.json",
+      "startSeconds": 570,
+      "expectedSHA256": "e4e774dcab1c34a179cf5d65917da790231ac0a197646c1a1b72cb7575b70e27",
+      "observedPrefix": "af617a3c693e",
+      "compatibility": "unproven",
+      "goldenChanged": false
+    }
+  ],
+  "limitations": [
+    "Historical Warrior review/proof/source files remain absent; see QA_STABILIZATION.md.",
+    "Eight golden replays mismatch; old simulation compatibility is unproven.",
+    "Historical browser review scenarios preserved, not executed.",
+    "MySQL suite cannot be accepted until existing isolated test credentials work.",
+    "GitHub workflow and branch protection have not been applied remotely.",
+    "npm ci reports 18 existing dependency advisories; no dependency upgrades were made."
+  ],
+  "productionReadyDeclared": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

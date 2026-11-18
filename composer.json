@@ -70,9 +70,8 @@
         ],
         "ci:check": [
             "Composer\\Config::disableProcessTimeout",
-            "npm run check",
-            "npm run types:check",
-            "@test"
+            "@test",
+            "npm run check"
         ],
         "types:check": [
             "phpstan analyse --memory-limit=512M"

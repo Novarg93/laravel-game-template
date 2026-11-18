@@ -1,0 +1,176 @@
+
+> laravel-game-template@1.0.0 build:ssr
+> npm run build && vite build --ssr
+
+
+> laravel-game-template@1.0.0 prebuild
+> node scripts/export-upgrade-catalog.mjs
+
+
+> laravel-game-template@1.0.0 build
+> vite build
+
+vite v8.3.5 building client environment for production...
+[plugin @laravel/vite-plugin-wayfinder] Types generated for actions, routes, form variants
+transforming...
+✓ 3887 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                  23.42 kB │ gzip:   2.77 kB
+public/build/assets/Guide-CZzvOTVQ.css                       3.17 kB │ gzip:   0.87 kB
+public/build/assets/main-Cm_omybw.css                       58.84 kB │ gzip:  13.45 kB
+public/build/assets/app-DgHkmRPm.css                       126.78 kB │ gzip:  22.30 kB
+public/build/assets/check-Dlq0C9aU.js                        0.14 kB │ gzip:   0.15 kB
+public/build/assets/internalRoutes-DLVHBcfn.js               0.20 kB │ gzip:   0.17 kB
+public/build/assets/InputError-JnXccXyt.js                   0.30 kB │ gzip:   0.24 kB
+public/build/assets/confirm-Culw9Q-x.js                      0.36 kB │ gzip:   0.22 kB
+public/build/assets/payments-D57l3NzC.js                     0.44 kB │ gzip:   0.29 kB
+public/build/assets/leaderboard-BqOwUOES.js                  0.49 kB │ gzip:   0.33 kB
+public/build/assets/Spinner-BPGcnmnx.js                      0.54 kB │ gzip:   0.40 kB
+public/build/assets/TextLink-Bk48gZWb.js                     0.56 kB │ gzip:   0.37 kB
+public/build/assets/account-CBNwAT9f.js                      0.63 kB │ gzip:   0.40 kB
+public/build/assets/LeaderboardRun-hz_vObdw.js               0.66 kB │ gzip:   0.45 kB
+public/build/assets/useForwardPropsEmits-eUfcfKcT.js         0.71 kB │ gzip:   0.42 kB
+public/build/assets/Usage-Djq-E5Ii.js                        0.77 kB │ gzip:   0.48 kB
+public/build/assets/MoneyAmount-BfcYoc5u.js                  0.79 kB │ gzip:   0.47 kB
+public/build/assets/AccountPagination-CQXH7jQZ.js            0.82 kB │ gzip:   0.48 kB
+public/build/assets/currency-l6hrHT47.js                     0.85 kB │ gzip:   0.47 kB
+public/build/assets/wayfinder-Dp7PqxvV.js                    0.89 kB │ gzip:   0.53 kB
+public/build/assets/AccountUsage-kKTjW079.js                 1.26 kB │ gzip:   0.69 kB
+public/build/assets/VerifyEmail-C1ARcOpp.js                  1.35 kB │ gzip:   0.77 kB
+public/build/assets/OperationsUsers-BbmnLpyr.js              1.39 kB │ gzip:   0.69 kB
+public/build/assets/useAuditedRequest-C_DfYEOF.js            1.45 kB │ gzip:   0.84 kB
+public/build/assets/PasskeyVerify-DhN4SBV1.js                1.46 kB │ gzip:   0.83 kB
+public/build/assets/AccountBalances-CVXI2XQ-.js              1.47 kB │ gzip:   0.72 kB
+public/build/assets/verification-BOcn3HIw.js                 1.48 kB │ gzip:   0.52 kB
+public/build/assets/preload-helper-Cwmi1B0x.js               1.52 kB │ gzip:   0.80 kB
+public/build/assets/ForgotPassword-B2V9ksLR.js               1.77 kB │ gzip:   0.94 kB
+public/build/assets/AccountOrders-KeOX-IRN.js                1.78 kB │ gzip:   0.89 kB
+public/build/assets/PasswordInput-DsF32wtH.js                1.79 kB │ gzip:   0.98 kB
+public/build/assets/OperationsUser-BeF9Lzbx.js               1.86 kB │ gzip:   0.96 kB
+public/build/assets/RunHistoryDetail-CiIe-pVp.js             1.98 kB │ gzip:   1.06 kB
+public/build/assets/RunHistory-hkezclkP.js                   2.00 kB │ gzip:   0.96 kB
+public/build/assets/ResetPassword-DRkfnNwT.js                2.27 kB │ gzip:   0.95 kB
+public/build/assets/Appearance-BOAkWvkl.js                   2.27 kB │ gzip:   1.15 kB
+public/build/assets/Legal-tvO9_7fw.js                        2.36 kB │ gzip:   1.21 kB
+public/build/assets/Contact-_GoNTTMj.js                      2.40 kB │ gzip:   1.21 kB
+public/build/assets/ConfirmPassword-BctXl49K.js              2.44 kB │ gzip:   1.15 kB
+public/build/assets/Orders-BB_Yh2-Z.js                       2.51 kB │ gzip:   1.16 kB
+public/build/assets/PublicProfile-BCbRxL-n.js                2.60 kB │ gzip:   1.36 kB
+public/build/assets/Order-DuG5fmfV.js                        2.61 kB │ gzip:   1.18 kB
+public/build/assets/Inventory-DgQXUrBL.js                    2.62 kB │ gzip:   1.22 kB
+public/build/assets/createLucideIcon-cV6IlIwX.js             2.68 kB │ gzip:   1.35 kB
+public/build/assets/password-CB_NxgQN.js                     2.73 kB │ gzip:   0.73 kB
+public/build/assets/TwoFactorChallenge-Bxo9glX7.js           3.07 kB │ gzip:   1.26 kB
+public/build/assets/Faq-D_D3In1u.js                          3.23 kB │ gzip:   1.70 kB
+public/build/assets/Register-B4vO7lEz.js                     3.28 kB │ gzip:   1.33 kB
+public/build/assets/RunFacts-BWbpwkrs.js                     3.38 kB │ gzip:   1.60 kB
+public/build/assets/OperationsRun-Dxi6nZlO.js                3.54 kB │ gzip:   1.71 kB
+public/build/assets/Presence-Bb502BSa.js                     4.02 kB │ gzip:   1.83 kB
+public/build/assets/Input-Di49WcxD.js                        4.15 kB │ gzip:   2.06 kB
+public/build/assets/Transactions-D7JNpLux.js                 4.27 kB │ gzip:   1.83 kB
+public/build/assets/Operations-DiXK0Fz_.js                   4.29 kB │ gzip:   1.95 kB
+public/build/assets/Leaderboard-DJTmi_ok.js                  4.51 kB │ gzip:   1.78 kB
+public/build/assets/Label-DQ9x1uMf.js                        4.73 kB │ gzip:   2.19 kB
+public/build/assets/Welcome-Bs9qrQrT.js                      4.83 kB │ gzip:   2.20 kB
+public/build/assets/PaymentResult-DZykBz4J.js                5.43 kB │ gzip:   2.12 kB
+public/build/assets/Profile-vEbrk-IG.js                      6.15 kB │ gzip:   2.24 kB
+public/build/assets/InventoryPanel-l_PWo8BD.js               6.49 kB │ gzip:   2.98 kB
+public/build/assets/Shop-pidoLpyK.js                         8.02 kB │ gzip:   3.41 kB
+public/build/assets/Dashboard-Bl2FKWMl.js                    8.76 kB │ gzip:   3.41 kB
+public/build/assets/game-DcuPe8B6.js                        10.36 kB │ gzip:   3.48 kB
+public/build/assets/Guide-D7m_l2eY.js                       11.90 kB │ gzip:   5.04 kB
+public/build/assets/login-uXgCri9_.js                       12.85 kB │ gzip:   4.93 kB
+public/build/assets/vue-Dichm9nc.js                         13.38 kB │ gzip:   4.46 kB
+public/build/assets/Wallet-DerOilDS.js                      15.06 kB │ gzip:   5.19 kB
+public/build/assets/Login-DHlMbRs1.js                       18.71 kB │ gzip:   6.95 kB
+public/build/assets/dialog-dIzRy7PI.js                      26.42 kB │ gzip:   7.77 kB
+public/build/assets/Security-Cmx76Ful.js                    29.06 kB │ gzip:   8.71 kB
+public/build/assets/button-L0JxGuPT.js                      30.87 kB │ gzip:  10.12 kB
+public/build/assets/app-B_7g8Kmc.js                         33.75 kB │ gzip:   9.87 kB
+public/build/assets/lootPixels-DMGDpRZx.js                  46.82 kB │ gzip:  27.89 kB
+public/build/assets/runtime-dom.esm-bundler-D6cvTjdW.js     80.27 kB │ gzip:  31.31 kB
+public/build/assets/dist-3i4OE6PE.js                       144.91 kB │ gzip:  44.43 kB
+public/build/assets/main-CdOkPDz7.js                     2,722.41 kB │ gzip: 699.05 kB
+
+npm.cmd : [plugin builtin:vite-reporter] 
+строка:2 знак:251
++ ... STEXITCODE; npm.cmd run build:ssr > .tmp/qa-build-ssr.log 2>&1; $buil ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([plugin builtin:vite-reporter] :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeS
+plitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.39s
+Inertia SSR entry: resources/js/app.ts
+vite v8.3.5 building ssr environment for production...
+[plugin @laravel/vite-plugin-wayfinder] Types generated for actions, routes, form variants
+transforming...
+✓ 256 modules transformed.
+rendering chunks...
+computing gzip size...
+bootstrap/ssr/ssr-manifest.json                       26.64 kB │ gzip:  2.64 kB
+bootstrap/ssr/assets/internalRoutes-3azRiIYY.js        0.47 kB │ gzip:  0.32 kB │ map:   0.77 kB
+bootstrap/ssr/assets/payments-DQw1Pmab.js              0.68 kB │ gzip:  0.39 kB │ map:   2.71 kB
+bootstrap/ssr/assets/leaderboard-DhqOVB1P.js           0.77 kB │ gzip:  0.47 kB │ map:   2.77 kB
+bootstrap/ssr/assets/account-jedXMshS.js               0.89 kB │ gzip:  0.51 kB │ map:   2.97 kB
+bootstrap/ssr/assets/InputError-CIIw1mms.js            1.24 kB │ gzip:  0.57 kB │ map:   0.50 kB
+bootstrap/ssr/assets/spinner-Bv-A5kx9.js               1.39 kB │ gzip:  0.64 kB │ map:   0.65 kB
+bootstrap/ssr/assets/TextLink-LtOPNhAh.js              1.71 kB │ gzip:  0.74 kB │ map:   0.99 kB
+bootstrap/ssr/assets/confirm-CAKNrsR_.js               1.76 kB │ gzip:  0.43 kB │ map:   2.83 kB
+bootstrap/ssr/assets/Usage-Dw_ci6RK.js                 1.78 kB │ gzip:  0.78 kB │ map:   1.12 kB
+bootstrap/ssr/assets/LeaderboardRun-9uz5vjbo.js        1.90 kB │ gzip:  0.82 kB │ map:   1.06 kB
+bootstrap/ssr/assets/MoneyAmount-D3NIzL1O.js           1.94 kB │ gzip:  0.82 kB │ map:   1.49 kB
+bootstrap/ssr/assets/label-CJa-xEv-.js                 1.95 kB │ gzip:  0.86 kB │ map:   1.27 kB
+bootstrap/ssr/assets/input-M4xJ7Ipk.js                 2.26 kB │ gzip:  1.02 kB │ map:   1.77 kB
+bootstrap/ssr/assets/useAuditedRequest-EmQ6Dn-x.js     2.32 kB │ gzip:  1.05 kB │ map:   4.21 kB
+bootstrap/ssr/assets/AccountPagination-fip9IFTo.js     2.33 kB │ gzip:  0.85 kB │ map:   1.26 kB
+bootstrap/ssr/assets/PasswordInput-C7w8pmwm.js         2.67 kB │ gzip:  1.09 kB │ map:   2.40 kB
+bootstrap/ssr/assets/AccountUsage-BOjv7cWO.js          2.69 kB │ gzip:  1.06 kB │ map:   2.00 kB
+bootstrap/ssr/assets/Legal-C7SfLskh.js                 3.11 kB │ gzip:  1.47 kB │ map:   2.41 kB
+bootstrap/ssr/assets/OperationsUser-DWJBVpjz.js        3.27 kB │ gzip:  1.34 kB │ map:   2.81 kB
+bootstrap/ssr/assets/OperationsUsers-Dt8fzaY2.js       3.35 kB │ gzip:  1.09 kB │ map:   2.12 kB
+bootstrap/ssr/assets/AccountBalances-Ct6wll4R.js       3.42 kB │ gzip:  1.14 kB │ map:   2.32 kB
+bootstrap/ssr/assets/AccountOrders-Dm2pGY2l.js         3.50 kB │ gzip:  1.32 kB │ map:   2.76 kB
+bootstrap/ssr/assets/PasskeyVerify-3iy-cePI.js         3.61 kB │ gzip:  1.34 kB │ map:   3.64 kB
+bootstrap/ssr/assets/Contact-DXvo33IB.js               3.63 kB │ gzip:  1.43 kB │ map:   3.50 kB
+bootstrap/ssr/assets/RunHistoryDetail-C1hUXbi5.js      3.63 kB │ gzip:  1.39 kB │ map:   2.81 kB
+bootstrap/ssr/assets/Appearance-B80TW4xa.js            3.77 kB │ gzip:  1.26 kB │ map:   2.97 kB
+bootstrap/ssr/assets/VerifyEmail-CaHtFU-x.js           3.81 kB │ gzip:  1.31 kB │ map:   2.52 kB
+bootstrap/ssr/assets/RunHistory-DgAC_PTX.js            4.00 kB │ gzip:  1.38 kB │ map:   2.90 kB
+bootstrap/ssr/assets/Faq-DEEDZs5K.js                   4.22 kB │ gzip:  2.05 kB │ map:   3.79 kB
+bootstrap/ssr/assets/Order-D2P28xyV.js                 4.26 kB │ gzip:  1.50 kB │ map:   3.67 kB
+bootstrap/ssr/assets/PublicProfile-_uOqb9cf.js         4.66 kB │ gzip:  1.67 kB │ map:   4.34 kB
+bootstrap/ssr/assets/RunFacts-DM-hiIQg.js              4.96 kB │ gzip:  1.93 kB │ map:   4.83 kB
+bootstrap/ssr/assets/ForgotPassword-SQW9LLti.js        5.25 kB │ gzip:  1.58 kB │ map:   3.63 kB
+bootstrap/ssr/assets/Inventory-Dq5TXMML.js             5.44 kB │ gzip:  1.69 kB │ map:   4.03 kB
+bootstrap/ssr/assets/OperationsRun-Ii3y-AlF.js         5.66 kB │ gzip:  1.98 kB │ map:   5.44 kB
+bootstrap/ssr/assets/Welcome-BuQfLF9N.js               5.74 kB │ gzip:  2.45 kB │ map:   5.06 kB
+bootstrap/ssr/assets/Orders-LnjJOlDe.js                6.09 kB │ gzip:  1.52 kB │ map:   5.41 kB
+bootstrap/ssr/assets/PaymentResult-UG4nCLSW.js         6.63 kB │ gzip:  2.28 kB │ map:   9.19 kB
+bootstrap/ssr/assets/verification-BYfM_66b.js          6.67 kB │ gzip:  0.89 kB │ map:  11.88 kB
+bootstrap/ssr/assets/Operations-CRE6G4VC.js            6.68 kB │ gzip:  2.18 kB │ map:   6.71 kB
+bootstrap/ssr/assets/ResetPassword-stZog9N0.js         7.87 kB │ gzip:  1.68 kB │ map:   5.64 kB
+bootstrap/ssr/assets/Leaderboard-4Mgu9KO5.js           8.35 kB │ gzip:  2.23 kB │ map:   6.55 kB
+bootstrap/ssr/assets/InventoryPanel-C28LjGIF.js        8.78 kB │ gzip:  3.25 kB │ map:  11.94 kB
+bootstrap/ssr/assets/ConfirmPassword-Cj9CxATh.js       9.00 kB │ gzip:  1.98 kB │ map:  10.69 kB
+bootstrap/ssr/assets/Transactions-oXlyJMtp.js          9.23 kB │ gzip:  2.33 kB │ map:   8.01 kB
+bootstrap/ssr/assets/login-ClWCFNcW.js                 9.73 kB │ gzip:  2.32 kB │ map:   7.97 kB
+bootstrap/ssr/assets/TwoFactorChallenge-BYrQblDX.js   10.03 kB │ gzip:  2.17 kB │ map:   8.43 kB
+bootstrap/ssr/assets/Shop-CvWBHNW-.js                 10.80 kB │ gzip:  3.27 kB │ map:  13.08 kB
+bootstrap/ssr/assets/Register-lzOqXwha.js             11.71 kB │ gzip:  2.33 kB │ map:  10.35 kB
+bootstrap/ssr/assets/Dashboard-eGeftxs2.js            12.77 kB │ gzip:  3.91 kB │ map:  12.96 kB
+bootstrap/ssr/assets/password-DtZ3kvvu.js             12.79 kB │ gzip:  1.26 kB │ map:  21.64 kB
+bootstrap/ssr/assets/Login-B73gQye1.js                14.48 kB │ gzip:  3.19 kB │ map:  12.53 kB
+bootstrap/ssr/assets/Wallet-DPW9jkjB.js               17.80 kB │ gzip:  4.55 kB │ map:  22.24 kB
+bootstrap/ssr/assets/dialog-By6a4q5p.js               24.25 kB │ gzip:  3.23 kB │ map:  15.13 kB
+bootstrap/ssr/assets/Profile-BNLOVomb.js              29.83 kB │ gzip:  4.21 kB │ map:  25.96 kB
+bootstrap/ssr/assets/Guide-DJmPb89b.js                59.39 kB │ gzip: 31.80 kB │ map:  56.13 kB
+bootstrap/ssr/app.js                                  74.51 kB │ gzip: 12.09 kB │ map: 110.19 kB
+bootstrap/ssr/assets/Security-CVMn3ij4.js            117.26 kB │ gzip: 14.47 kB │ map: 119.21 kB
+
+✓ built in 1.47s

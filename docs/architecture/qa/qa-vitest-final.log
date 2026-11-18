@@ -1,0 +1,1325 @@
+
+> laravel-game-template@1.0.0 test
+> vitest run --reporter=default --reporter=json --outputFile=.tmp/qa-vitest-final.json
+
+
+ RUN  v5.0.5 <repository>
+
+ ❯ tests/unit/ash-warden-library.test.ts (4 tests | 2 failed) 755ms
+   × catalogues all51 main clips,15 assembled scenes,4 actual projections and labelled unused/reference assets 8ms
+   ✓ restores all473 native PNG canvases losslessly from trim offsets and embeds exact offline download bytes 671ms
+   ✓ resolves every layer and sample and matches real A-attack poses and1/3/5-wave FlameStrike presentation 70ms
+   × leaves all345 runtime files unchanged after accepted Eclipse flame integration 5ms
+ ❯ tests/unit/ash-warden-pixellab-runtime.test.ts (4 tests | 1 failed) 293ms
+   × packs all60 accepted native RGBA cels losslessly, with2px padding and bounded atlas memory 274ms
+   ✓ plays north overhead at the actual565.217ms hit, keeps32damage once, and leaves other facing clips unchanged 10ms
+   ✓ keeps the accepted warning/flight/impact anchors, delays hidden strikes and lands after the full warning 5ms
+   ✓ uses owner simulation clocks for freeze/pause and clears visuals with encounter ownership 3ms
+ ❯ tests/unit/ash-warden-north-meteor-review.test.ts (4 tests | 1 failed) 278ms
+   × keeps the complete runtime inventory and all345 game files intact pending acceptance 10ms
+   ✓ uses traceable original PixelLab cels and lossless native copies for every preview image 257ms
+   ✓ pads the original north pose without resampling and shares stable pivots across all generated action parts 6ms
+   ✓ aligns meteor travel to its tail, uses an open low-opacity warning and finishes the500ms impact on actual transparent AI pixels 3ms
+ ❯ tests/unit/astral-flame-review.test.ts (4 tests | 1 failed) 233ms
+   ✓ provides independent code art and real PixelLab spawn/idle/vanish jobs with the unchanged boss reference 3ms
+   ✓ preserves all93 source cels exactly, including AI hidden RGB and generous unclipped128px canvases 116ms
+   ✓ keeps code art on its2px palette grid, grounded fixed pivots, empty ends and accurate GIF/Aseprite exports 105ms
+   × leaves all341 runtime files and inventory unchanged after the approved projectile/Blink integration 7ms
+ ❯ tests/unit/miniboss-assets-audio.test.ts (7 tests | 1 failed) 208ms
+   ✓ preserves all six user WAVs byte-for-byte and routes the shared teleport through one sample 6ms
+   ✓ packs the accepted cast13 in both directions and flight9 without changing or scaling any pixel 190ms
+   ✓ casts once per real windup, shares teleport for both mages, and sounds the Astral second volley once 3ms
+   ✓ synchronizes Beast charge and melee without frame spam or freeze catchup; cleans up dead owners 1ms
+   ✓ plays Totem at actual release, handles final supports, pause, and does not mutate gameplay or RNG 1ms
+   ✓ does not invent a release when first observing an already advanced Totem cycle 0ms
+   × changes only the five presentation files and eleven explicitly accepted local assets/modules 6ms
+ ❯ tests/unit/astral-projectile-review.test.ts (4 tests | 1 failed) 130ms
+   ✓ keeps two independent new variants, actual AI provenance and the rejected ring attempt, outside gameplay 2ms
+   ✓ packs all55 fixed128px source cels pixel-for-pixel, including AI hidden RGB, with no clipped new frames 76ms
+   ✓ preserves the local2px grid, stable pivots, generated AI loop, transparent endings and individual export files 43ms
+   × retains the initial preview proof and verifies the subsequently approved narrow integration scope 7ms
+npm.cmd : node:fs:442
+строка:2 знак:1
++ npm.cmd test -- --reporter=default --reporter=json --outputFile=.tmp/ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:fs:442:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-cle
+ave-sync-v3\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.js
+on'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-skills.test.ts (6 tests | 1 failed) 132ms
+   × verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope 56ms
+   ✓ plays all 156 accepted poses in 48 skill/direction routes with the chosen northern mirror 5ms
+   ✓ releases a physical spear after the authored windup, hits each target once and respects the shared pool cap 9ms
+   ✓ Charge and scene cleanup cancel an unreleased spear, and defeat cannot emit one later 1ms
+   ✓ serializes special body gestures fairly while Cleave damage continues, even under fast cooldowns 59ms
+   ✓ preserves the three accepted ordinary swings and inserts the accepted skill Cleave as a fourth full gesture 1ms
+ ❯ tests/unit/endgame.test.ts (19 tests | 4 failed) 119ms
+   × preserves original ordinary/boss replay before15 from0 without Guardian side effects 18ms
+   × preserves original ordinary/boss replay before15 from180 without Guardian side effects 16ms
+   × preserves original ordinary/boss replay before15 from480 without Guardian side effects 18ms
+   × preserves original ordinary/boss replay before15 from870 without Guardian side effects 49ms
+   ✓ applies scaled orb speed/turn/TTL once, permits capped-turn dodge and cleans on leash exit 11ms
+   ✓ PhaseII at599s scales from15:00 once 0ms
+   ✓ PhaseII at600s scales from15:00 once 0ms
+   ✓ PhaseII at870s scales from15:00 once 0ms
+   ✓ PhaseII at900s scales from15:00 once 0ms
+   ✓ PhaseII at930s scales from15:00 once 0ms
+   ✓ PhaseII at960s scales from15:00 once 0ms
+   ✓ PhaseII at1080s scales from15:00 once 0ms
+   ✓ PhaseII at1200s scales from15:00 once 0ms
+   ✓ PhaseII at1500s scales from15:00 once 0ms
+   ✓ requests3 bosses, fills free slots, freezes living profiles and consumes missed windows 1ms
+   ✓ snapshots newborn pressure without changing HP/damage or reducing tells below.5 1ms
+   ✓ grows real speed/cadence through25min without raw speed or normal HP inflation 0ms
+   ✓ clips expanded non-homing volleys to48 shared slots 1ms
+   ✓ creates active early Guardians with individual linear snapshots and radar/notice 1ms
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-buffs-v4.test.ts (7 tests | 1 failed) 71ms
+   × protects the explicit change scope and reuses the accepted Banner A object byte for byte 59ms
+   ✓ widens only spear collision, snapshots area, preserves one hit per target and misses outside the new strip 6ms
+   ✓ Block Absorb is bounded, ranked, applied after armor/mitigation, refreshed without stacking and expires 1ms
+   ✓ Block intercepts fast swept hostile shots without consuming Absorb; friendly and off-radius shots remain 1ms
+   ✓ Warrior gets all three ultimates at the normal gate; Mage and Warrior reject each other ultimates 1ms
+   ✓ Banner heals 10% effective maxHP per game second for 15s only inside its anchored radius, without banked healing or overheal 1ms
+   ✓ Banner spends one charge and refills only once for each actual successful Charge; death clears healing 1ms
+ ❯ tests/unit/warrior-spear-release.test.ts (9 tests | 1 failed) 64ms
+   ✓ launches exactly on the first empty-hand pose in south, never during windup or pause 5ms
+   ✓ launches exactly on the first empty-hand pose in south-east, never during windup or pause 1ms
+   ✓ launches exactly on the first empty-hand pose in east, never during windup or pause 1ms
+   ✓ launches exactly on the first empty-hand pose in north-east, never during windup or pause 1ms
+   ✓ launches exactly on the first empty-hand pose in north, never during windup or pause 0ms
+   ✓ launches exactly on the first empty-hand pose in north-west, never during windup or pause 0ms
+   ✓ launches exactly on the first empty-hand pose in west, never during windup or pause 0ms
+   ✓ launches exactly on the first empty-hand pose in south-west, never during windup or pause 0ms
+   × limits the timing fix to one config file and preserves the remaining 467 runtime files 55ms
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\art\generated\warrior-c
+oncept-pack-v1\source\png.mjs' imported from <repository>\scripts\verify-warrior-ultim
+ates-v1.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:860:10)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-ultimates-assets.test.ts (1 test | 1 failed) 52ms
+   × preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope 51ms
+ ❯ tests/unit/ash-warden-sounds.test.ts (10 tests | 1 failed) 30ms
+   ✓ ships all five original boss WAVs byte-for-byte and preserves every Mage key/gain 6ms
+   ✓ uses swing for both horizontal variants and thrust, with one lead and one real contact (1,0) 7ms
+   ✓ uses swing for both horizontal variants and thrust, with one lead and one real contact (-1,0) 2ms
+   ✓ uses slam for vertical/diagonal South and North without a side swing (0,1) 1ms
+   ✓ uses slam for vertical/diagonal South and North without a side swing (0,-1) 1ms
+   ✓ uses slam for vertical/diagonal South and North without a side swing (1,1) 1ms
+   ✓ uses slam for vertical/diagonal South and North without a side swing (-1,-1) 1ms
+   ✓ holds Meteor contact through boss freeze and never repeats a fall cue or replays a cancelled meteor 2ms
+   ✓ preserves SFX controls and avoids doubled Charge braking or Flame Strike fan playback 2ms
+   × limits runtime changes to the explicit user-authorized sound integration 6ms
+ ❯ tests/unit/ambient-music-review.test.ts (3 tests | 1 failed) 38ms
+   ✓ retains five stage-specific instrumental themes and all20 traceable original music takes 25ms
+   ✓ decodes every original into finite non-silent minute-long audio and records a real envelope 7ms
+   × preserves the review proof and allows only the later explicit music integration 6ms
+ ❯ tests/unit/mage-sfx.test.ts (3 tests | 1 failed) 30ms
+   ✓ retains all44 traceable original takes and assigns11 local samples only to Mage cues 9ms
+   ✓ ships finite mono44.1kHz PCM with bounded peaks, quiet edges and phase-aligned ultimate durations 16ms
+   × allows only the explicitly requested audio and practice changes over the accepted art baseline 3ms
+ ❯ tests/unit/music-runtime.test.ts (5 tests | 1 failed) 20ms
+   ✓ selects exact300/600/900s boundaries and gives boss music priority 1ms
+   ✓ routes streaming through music settings, keeps SFX independent and falls back without doubling beds 1ms
+   ✓ keeps stage music for all mini-bosses and their practices, reserving the boss track for the final encounter 4ms
+   ✓ ships exactly the five accepted second takes unchanged, with bounded playback gains 9ms
+   × limits runtime changes to audio and selected MP3 assets over the363-file baseline 4ms
+ ❯ tests/unit/mage-uploaded-sounds.test.ts (5 tests | 3 failed) 20ms
+   ✓ connects all five user files byte-for-byte and assigns thunder to the ultimate release 5ms
+   ✓ uses fresh source-hash cache keys and bounded gain, retaining all four cues with no supplied replacement 1ms
+   × preserves music, gameplay and all other runtime files outside the exact4changed/6added scope 7ms
+   × replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged 2ms
+   × connects the supplied Frost Nova WAV and preserves every other runtime file 4ms
+ ❯ tests/unit/warrior-ultimates-accepted.test.ts (3 tests | 1 failed) 20ms
+   × limits accepted-ultimate integration to ten explicit runtime files and preserves the remaining 449 13ms
+   ✓ keeps the exact selected Banner/Ruin playback exclusions and records only the six selected source jobs 2ms
+   ✓ Banner contact synchronizes healing and the eight accepted body routes; pause, cancellation and restart are clean 3ms
+ ❯ tests/unit/mage-meteor-v3.test.ts (8 tests | 1 failed) 18ms
+   × audits approved PixelLab pixels, unchanged boss/archive art, padding and black light compositing 5ms
+   ✓ plays every native AI frame once or as the approved eight-frame flight loop 1ms
+   ✓ aligns the model tail, fixed contact pivot and flight to its measured model angle without delaying damage 4ms
+   ✓ locks light to the target and real AoE while the body/impact size stays fixed across rank and Area 3ms
+   ✓ owns the copied landing, fades its light once, survives pause and pool reuse, and keeps zone residue 1ms
+   ✓ keeps illumination and landing below actors at Y-6000 and cleans death/run state 1ms
+   ✓ keeps illumination and landing below actors at Y0 and cleans death/run state 1ms
+   ✓ keeps illumination and landing below actors at Y6000 and cleans death/run state 1ms
+ ❯ tests/unit/warrior-empty-hand.test.ts (2 tests | 2 failed) 15ms
+   × changes exactly five approved runtime files and preserves all other 463 hashes 13ms
+   × uses all selected empty hand edits, preserves every windup and keeps timing, routes and exclusions 1ms
+ ❯ tests/unit/berserk-sprint-scope.test.ts (1 test | 1 failed) 15ms
+   × limits the Berserk sprint change to four runtime files and preserves all other runtime bytes 14ms
+ ❯ tests/unit/fire-ultimate-runtime.test.ts (4 tests | 1 failed) 13ms
+   ✓ grows only at2/4/6/8s and emits exactly one pulse per growth, never at expiry or on repeat updates 4ms
+   ✓ heals on each world second using effective maxHP, respects pause, never resurrects, and caps bosses 0ms
+   ✓ retains source static bytes and extracts the ignition transient with click-free edges 3ms
+   × limits the accepted integration to9 changed and8 added runtime files and protects every other file 5ms
+ ❯ tests/unit/survival-enrage.test.ts (27 tests | 4 failed) 5938ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s 19ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s 17ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s 25ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s 19ms
+   ✓ Enrage at570s is linear and bounded 1ms
+   ✓ Enrage at600s is linear and bounded 0ms
+   ✓ Enrage at630s is linear and bounded 0ms
+   ✓ Enrage at660s is linear and bounded 0ms
+   ✓ Enrage at720s is linear and bounded 0ms
+   ✓ Enrage at900s is linear and bounded 0ms
+   ✓ Enrage at1200s is linear and bounded 0ms
+   ✓ starts once at10:00, steps at10:30, retains full tells and caps at arbitrarily late times 1ms
+   ✓ grunt updates living speed from10:00 once and retains slow/root 1ms
+   ✓ runner updates living speed from10:00 once and retains slow/root 1ms
+   ✓ tank updates living speed from10:00 once and retains slow/root 1ms
+   ✓ caster updates living speed from10:00 once and retains slow/root 1ms
+   ✓ rusher updates living speed from10:00 once and retains slow/root 1ms
+   ✓ splitter updates living speed from10:00 once and retains slow/root 1ms
+   ✓ increases real caster and Rusher attack starts, with no haste applied to their locked tells 177ms
+   ✓ spawns exactly one boss every30s after10:00, preserves Guardian minute waves and skips occupied slots 3ms
+   ✓ uses the same floating-clock tolerance for the10:00 transition and its30s deadline 0ms
+   ✓ does not accumulate skipped spawn attempts or late encounter windows and bounds history 41ms
+   ✓ applies final boss aggression once without retiming a warning, HP or damage 0ms
+   ✓ freezes ticks, notices, deadlines and spawning on pause/upgrade; a new run resets them 1ms
+   ✓ seed12345: AFK is threatened while active movement and legal Blink survive a fixed180s build 1971ms
+   ✓ seed67890: AFK is threatened while active movement and legal Blink survive a fixed180s build 1966ms
+   ✓ seed77: AFK is threatened while active movement and legal Blink survive a fixed180s build 1691ms
+ ❯ tests/unit/frost-ultimate-runtime.test.ts (3 tests | 1 failed) 12ms
+   ✓ reveals a fixed-origin rune with the appearance wave, retains it during freeze and clears on end/death 4ms
+   ✓ ships only the recorded effect after1.12s, with the source preserved and bounded playback gain 2ms
+   × preserves all389 unrelated runtime files including fire gameplay/audio and frost combat 5ms
+ ❯ tests/unit/boss-meteor-ui-fix.test.ts (2 tests | 1 failed) 9ms
+   ✓ shows only a sparse marker before the falling meteor, with bounded progress and the real42px radius 3ms
+   × changes exactly four presentation files and preserves all359 other runtime files and all audio/atlas assets 5ms
+ ❯ tests/unit/warrior-sounds.test.ts (5 tests | 1 failed) 10ms
+   × preserves all nine user recordings and pins the complete integration inventory and hashes 4ms
+   ✓ maps every Warrior action independently of Mage sounds 1ms
+   ✓ banner emits exactly one dedicated cue on successful activation and never the Mage shield 3ms
+   ✓ earthbreaker emits exactly one dedicated cue on successful activation and never the Mage shield 1ms
+   ✓ ruin emits exactly one dedicated cue on successful activation and never the Mage shield 1ms
+ ❯ tests/unit/visual-cleanup-rune-idle.test.ts (1 test | 1 failed) 8ms
+   × keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files 8ms
+ ❯ tests/unit/warrior-hero-scope.test.ts (1 test | 1 failed) 4ms
+   × limits Warrior integration to seven presentation/selection files, three modules and ten atlas files 3ms
+ ❯ tests/unit/warrior-combat-scope.test.ts (1 test | 1 failed) 4ms
+   × changes only the seven authored presentation files and adds one legacy charge atlas page 3ms
+ ❯ tests/unit/warrior-review.test.ts (0 test)
+ ✓ tests/unit/mage-blink-v1.test.ts (7 tests) 5536ms
+   ✓ retains every raw frame exactly, with binary alpha, transparent margins and one clean ending frame 1796ms
+   ✓ reconstructs fixed-offset depth pieces without losing a pixel or moving the feet anchor 2955ms
+   ✓ uses the current Mage V2 pixels, timings and world proportions 775ms
+ ✓ tests/unit/reliability.test.ts (5 tests) 6865ms
+   ✓ accelerates 20-minute peak waves with bounded resources and repeatable score 6828ms
+ ✓ tests/unit/combat-balance.test.ts (1 test) 2121ms
+   ✓ measures fixed-build survival without test invulnerability and isolated sustained TTK 2120ms
+ ✓ tests/unit/frost-avalanche.test.ts (6 tests) 1423ms
+   ✓ authors a deterministic hollow snow crest with multiple ice shades, transparent center and bounded texture 1412ms
+ ✓ tests/unit/encounter-survival.test.ts (1 test) 1433ms
+   ✓ measures real-HP positioning versus stationary Mage39 across10-12min scheduled encounters 1432ms
+ ✓ tests/unit/pacing-simulation.test.ts (1 test) 1446ms
+   ✓ replays ten minutes with a fixed seed deterministically and keeps the regular budget 1444ms
+ ✓ tests/unit/final-boss-balance.test.ts (1 test) 1091ms
+   ✓ measures complete legal builds and deterministic pilots without HP edits, invulnerability or support removal 1090ms
+ ✓ tests/unit/miniboss-animation-demo.test.ts (3 tests) 604ms
+   ✓ copies runtime images without changing bytes and retains exact frame rectangles 596ms
+ ✓ tests/unit/mage-hero-assets.test.ts (7 tests) 470ms
+ ✓ tests/unit/frost-armageddon.test.ts (26 tests) 610ms
+   ✓ bounds effects and hazards under150 ordinary enemies,3 bosses and3 Guardians during repeated real auto casts 547ms
+ ✓ tests/unit/current-warrior-assets.test.ts (3 tests) 405ms
+ ✓ tests/unit/audio.test.ts (15 tests) 437ms
+   ✓ synthesizes bounded original PCM deterministically, with quiet loop edges and a finite cache budget 418ms
+ ✓ tests/unit/mage-shield-nova-pixellab.test.ts (9 tests) 364ms
+ ✓ tests/unit/current-runtime-determinism.test.ts (5 tests) 332ms
+ ✓ tests/unit/final-boss-telemetry.test.ts (1 test) 255ms
+ ✓ tests/unit/mage-ability-vfx.test.ts (7 tests) 323ms
+   ✓ loads Meteor and both native Frost clips into one bounded atlas without bleed 312ms
+ ✓ tests/unit/encounter-timeline.test.ts (8 tests) 191ms
+ ✓ tests/unit/mage-casting.test.ts (13 tests) 263ms
+ ✓ tests/unit/rune-vfx-review.test.ts (4 tests) 201ms
+ ✓ tests/unit/mage-moving-cast-v2.test.ts (5 tests) 189ms
+ ✓ tests/unit/records.test.ts (6 tests) 180ms
+ ✓ tests/unit/rune-warden-pixellab.test.ts (9 tests) 174ms
+ ✓ tests/unit/phase2-warrior.test.ts (3 tests) 144ms
+ ✓ tests/unit/lightning-spawn-relief.test.ts (9 tests) 150ms
+ ✓ tests/unit/astral-flame-runtime.test.ts (3 tests) 137ms
+ ✓ tests/unit/phase2-spawn.test.ts (2 tests) 130ms
+ ✓ tests/unit/mage-running-demo-v2.test.ts (12 tests) 131ms
+ ✓ tests/unit/mage-run-v2.test.ts (11 tests) 106ms
+ ✓ tests/unit/mage-cast-v2.test.ts (5 tests) 126ms
+ ✓ tests/unit/frost-nova-art.test.ts (4 tests) 111ms
+ ✓ tests/unit/pacing.test.ts (12 tests) 98ms
+ ✓ tests/unit/astral-projectile-runtime.test.ts (4 tests) 103ms
+ ✓ tests/unit/boss-ttk.test.ts (1 test) 100ms
+ ✓ tests/unit/pixellab-spell-review.test.ts (4 tests) 100ms
+ ✓ tests/unit/meteor-sequence.test.ts (7 tests) 89ms
+ ✓ tests/unit/laravel-first.test.ts (5 tests) 93ms
+ ✓ tests/unit/world.test.ts (6 tests) 82ms
+ ✓ tests/unit/final-boss-dps.test.ts (1 test) 82ms
+ ✓ tests/unit/briar-beast.test.ts (8 tests) 82ms
+ ✓ tests/unit/mage-fireball.test.ts (11 tests) 79ms
+ ✓ tests/unit/mage-phantom.test.ts (17 tests) 80ms
+ ✓ tests/unit/ash-warden-integration-v1.test.ts (14 tests) 79ms
+ ✓ tests/unit/ash-guard-art.test.ts (1 test) 74ms
+ ✓ tests/unit/astral-revenant.test.ts (16 tests) 81ms
+ ✓ tests/unit/pixellab-shield-nova-review.test.ts (4 tests) 68ms
+ ✓ tests/unit/final-boss-contracts.test.ts (28 tests) 70ms
+ ✓ tests/unit/integration-proof.test.ts (3 tests) 66ms
+ ✓ tests/unit/loot.test.ts (17 tests) 64ms
+ ✓ tests/unit/mage-blink-runtime.test.ts (14 tests) 60ms
+ ✓ tests/unit/rune-warden.test.ts (21 tests) 62ms
+ ✓ tests/unit/mage-walk-v2.test.ts (5 tests) 60ms
+ ✓ tests/unit/final-boss.test.ts (7 tests) 62ms
+ ✓ tests/unit/guardian-orbs.test.ts (15 tests) 58ms
+ ✓ tests/unit/frost-sound.test.ts (1 test) 57ms
+ ✓ tests/unit/guardian-encounter.test.ts (10 tests) 57ms
+ ✓ tests/unit/close-melee-speed.test.ts (12 tests) 56ms
+ ✓ tests/unit/lightning-devastation.test.ts (8 tests) 53ms
+ ✓ tests/unit/asset-registry.test.ts (5 tests) 53ms
+ ✓ tests/unit/mage-idle-v2.test.ts (4 tests) 55ms
+ ✓ tests/unit/armageddon-benchmark.test.ts (1 test) 53ms
+ ✓ tests/unit/combat-balance-2.test.ts (34 tests) 50ms
+ ✓ tests/unit/phase-flame-fan.test.ts (12 tests) 52ms
+ ✓ tests/unit/encounter-director.test.ts (17 tests) 47ms
+ ✓ tests/unit/mage-hero-layers.test.ts (10 tests) 35ms
+ ✓ tests/unit/rune-practice.test.ts (6 tests) 43ms
+ ✓ tests/unit/atmosphere.test.ts (17 tests) 46ms
+ ✓ tests/unit/grove-evolution.test.ts (17 tests) 42ms
+ ✓ tests/unit/boss-enrage.test.ts (22 tests) 36ms
+ ✓ tests/unit/frost-seal.test.ts (14 tests) 37ms
+ ✓ tests/unit/astral-practice.test.ts (5 tests) 35ms
+ ✓ tests/unit/player-targeted-meteors.test.ts (6 tests) 33ms
+ ✓ tests/unit/ultimates.test.ts (21 tests) 32ms
+ ✓ tests/unit/guardian-practice.test.ts (4 tests) 29ms
+ ✓ tests/unit/balance-hotfix.test.ts (16 tests) 34ms
+ ✓ tests/unit/briar-practice.test.ts (5 tests) 27ms
+ ✓ tests/unit/lightning-ultimate-art.test.ts (6 tests) 28ms
+ ✓ tests/unit/guardians-artifacts.test.ts (15 tests) 29ms
+ ✓ tests/unit/mage-run-cycle.test.ts (11 tests) 27ms
+ ✓ tests/unit/mobility-specializations.test.ts (32 tests) 27ms
+ ✓ tests/unit/melee-combo.test.ts (10 tests) 29ms
+ ✓ tests/unit/rootbound-guardian.test.ts (5 tests) 24ms
+ ✓ tests/unit/mage-spell-origins.test.ts (6 tests) 24ms
+ ✓ tests/unit/charge-a-update.test.ts (7 tests) 18ms
+ ✓ tests/unit/bosses.test.ts (8 tests) 22ms
+ ✓ tests/unit/warrior-ultimates.test.ts (10 tests) 21ms
+ ✓ tests/unit/enemy-art.test.ts (5 tests) 27ms
+ ✓ tests/unit/flame-strike-art.test.ts (5 tests) 18ms
+ ✓ tests/unit/mage-hero-animation.test.ts (14 tests) 21ms
+ ✓ tests/unit/charge-boss.test.ts (16 tests) 18ms
+ ✓ tests/unit/gamepad.test.ts (9 tests) 18ms
+ ✓ tests/unit/necrotic-flame-wall.test.ts (14 tests) 19ms
+ ✓ tests/unit/warrior-attack-sync.test.ts (7 tests) 18ms
+ ✓ tests/unit/warrior-hero.test.ts (6 tests) 19ms
+ ✓ tests/unit/upgrade-identity.test.ts (3 tests) 16ms
+ ✓ tests/unit/regular-lightning-art.test.ts (8 tests) 18ms
+ ✓ tests/unit/ability-visual.test.ts (11 tests) 13ms
+ ✓ tests/unit/runner-art.test.ts (4 tests) 15ms
+ ✓ tests/unit/phase2-evolutions.test.ts (5 tests) 15ms
+ ✓ tests/unit/fire-inferno.test.ts (8 tests) 14ms
+ ✓ tests/unit/director.test.ts (8 tests) 14ms
+ ✓ tests/unit/ash-warden-walk-approved.test.ts (4 tests) 13ms
+ ✓ tests/unit/boss-practice.test.ts (2 tests) 13ms
+ ✓ tests/unit/fire-shield-presentation.test.ts (5 tests) 12ms
+ ✓ tests/unit/levelup-hotfix.test.ts (9 tests) 13ms
+ ✓ tests/unit/arcane-absorb.test.ts (14 tests) 13ms
+ ✓ tests/unit/flame-strike-timing.test.ts (4 tests) 13ms
+ ✓ tests/unit/abilities.test.ts (7 tests) 13ms
+ ✓ tests/unit/boss-art.test.ts (5 tests) 13ms
+ ✓ tests/unit/lightning-cinematic.test.ts (5 tests) 12ms
+ ✓ tests/unit/combat.test.ts (5 tests) 12ms
+ ✓ tests/unit/loot-art.test.ts (4 tests) 11ms
+ ✓ tests/unit/upgrades.test.ts (6 tests) 11ms
+ ✓ tests/unit/upgrade-cards.test.ts (6 tests) 11ms
+ ✓ tests/unit/player-visuals-boss-bar.test.ts (4 tests) 11ms
+ ✓ tests/unit/run-finish.test.ts (3 tests) 11ms
+ ✓ tests/unit/phase2-enemies.test.ts (3 tests) 9ms
+ ✓ tests/unit/mobility.test.ts (10 tests) 11ms
+ ✓ tests/unit/phase2-statistics.test.ts (3 tests) 8ms
+ ✓ tests/unit/guardian-art.test.ts (2 tests) 8ms
+ ✓ tests/unit/encounter-feedback.test.ts (3 tests) 9ms
+ ✓ tests/unit/warrior-art.test.ts (1 test) 11ms
+ ✓ tests/unit/phase2-feedback.test.ts (2 tests) 9ms
+ ✓ tests/unit/biome-phase-notice.test.ts (5 tests) 8ms
+ ✓ tests/unit/phase2-boss.test.ts (2 tests) 7ms
+ ✓ tests/unit/held-input.test.ts (4 tests) 8ms
+ ✓ tests/unit/fireball-cleanup.test.ts (4 tests) 8ms
+ ✓ tests/unit/ux.test.ts (4 tests) 9ms
+ ✓ tests/unit/miniboss-ambience-runtime.test.ts (3 tests) 8ms
+ ✓ tests/unit/phase2-biomes.test.ts (2 tests) 6ms
+ ✓ tests/unit/guardian-warning-art.test.ts (1 test) 6ms
+ ✓ tests/unit/mage-art.test.ts (2 tests) 6ms
+ ✓ tests/unit/public-characters.test.ts (1 test) 4ms
+ ✓ tests/unit/radar-publisher.test.ts (1 test) 4ms
+ ✓ tests/unit/world-chunks.test.ts (2 tests) 3ms
+ ✓ tests/unit/bridge.test.ts (1 test) 2ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/warrior-review.test.ts [ tests/unit/warrior-review.test.ts ]
+Error: Cannot find module '../../art/warrior-review-v1/model' imported from C:/Users/Novarg/Desktop/laravel-game-templa
+te/tests/unit/warrior-review.test.ts
+ ❯ tests/unit/warrior-review.test.ts:2:1
+      1| import { expect, it } from 'vitest';
+      2| import { createReviewWorld, reviewHit } from '../../art/warrior-review…
+       | ^
+      3| import { DIRECTIONS, SKILLS } from '../../art/warrior-review-v1/catalo…
+      4|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/39]⎯
+
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 38 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/ambient-music-review.test.ts > preserves the review proof and allows only the later explicit music in
+tegration
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/ambient-music-review.test.ts:37:459
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/39]⎯
+
+ FAIL  tests/unit/ash-warden-library.test.ts > catalogues all51 main clips,15 assembled scenes,4 actual projections and
+ labelled unused/reference assets
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/ash-warden-library.test.ts:24:93
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/39]⎯
+
+ FAIL  tests/unit/ash-warden-library.test.ts > leaves all345 runtime files unchanged after accepted Eclipse flame integ
+ration
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/ash-warden-library.test.ts:35:643
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/39]⎯
+
+ FAIL  tests/unit/ash-warden-north-meteor-review.test.ts > keeps the complete runtime inventory and all345 game files i
+ntact pending acceptance
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/ash-warden-north-meteor-review.test.ts:21:513
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/39]⎯
+
+ FAIL  tests/unit/ash-warden-pixellab-runtime.test.ts > packs all60 accepted native RGBA cels losslessly, with2px paddi
+ng and bounded atlas memory
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/ash-warden-pixellab-runtime.test.ts:18:325
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/39]⎯
+
+ FAIL  tests/unit/ash-warden-sounds.test.ts > limits runtime changes to the explicit user-authorized sound integration
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/ash-warden-sounds.test.ts:84:327
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/39]⎯
+
+ FAIL  tests/unit/astral-flame-review.test.ts > leaves all341 runtime files and inventory unchanged after the approved 
+projectile/Blink integration
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/astral-flame-review.test.ts:34:793
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/39]⎯
+
+ FAIL  tests/unit/astral-projectile-review.test.ts > retains the initial preview proof and verifies the subsequently ap
+proved narrow integration scope
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/astral-projectile-review.test.ts:44:620
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/39]⎯
+
+ FAIL  tests/unit/berserk-sprint-scope.test.ts > limits the Berserk sprint change to four runtime files and preserves a
+ll other runtime bytes
+AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]
+
+- Expected
++ Received
+
+@@ -175,10 +175,11 @@
+    "public/assets/hd/warrior-ultimates-v1/0.png",
+    "public/favicon.svg",
+    "src/App.vue",
+    "src/env.d.ts",
+    "src/game/abilities/arcaneShield.ts",
++   "src/game/abilities/baseDamage.ts",
+    "src/game/abilities/chainLightning.ts",
+    "src/game/abilities/definitions.ts",
+    "src/game/abilities/evolutions.ts",
+    "src/game/abilities/fireball.ts",
+    "src/game/abilities/frostNova.ts",
+@@ -316,10 +317,11 @@
+    "src/game/art/runnerPack.ts",
+    "src/game/art/softLightTexture.ts",
+    "src/game/art/textures.ts",
+    "src/game/art/warriorHeroManifest.json",
+    "src/game/art/warriorHeroPack.ts",
++   "src/game/art/warriorMovingLegs.json",
+    "src/game/art/warriorSkillsManifest.json",
+    "src/game/art/warriorSkillsPack.ts",
+    "src/game/art/warriorUltimatesManifest.json",
+    "src/game/art/warriorUltimatesPack.ts",
+    "src/game/audio/AudioBackend.ts",
+@@ -384,10 +386,16 @@
+    "src/game/loot/ArtifactSystem.ts",
+    "src/game/loot/BuffSystem.ts",
+    "src/game/loot/LootSystem.ts",
+    "src/game/loot/lootPools.ts",
+    "src/game/loot/types.ts",
++   "src/game/platform/ItemUseOperation.ts",
++   "src/game/platform/PaidActionOperation.ts",
++   "src/game/platform/port.ts",
++   "src/game/platform/premium.ts",
++   "src/game/platform/progression.ts",
++   "src/game/platform/runItems.ts",
+    "src/game/radar/RadarPublisher.ts",
+    "src/game/radar/radar.ts",
+    "src/game/scenes/GameScene.ts",
+    "src/game/services/storage.ts",
+    "src/game/systems/AbsorbPool.ts",
+@@ -443,14 +451,16 @@
+    "src/ui/components/DialogFrame.vue",
+    "src/ui/components/EventTimeline.vue",
+    "src/ui/components/FinalBossBar.vue",
+    "src/ui/components/GameHUD.vue",
+    "src/ui/components/GameRadar.vue",
++   "src/ui/components/InGameInventory.vue",
+    "src/ui/components/LevelUpModal.vue",
+    "src/ui/components/LocalRecords.vue",
+    "src/ui/components/MainMenu.vue",
+    "src/ui/components/MobilityControl.vue",
++   "src/ui/components/PremiumActions.vue",
+    "src/ui/components/RunArtifacts.vue",
+    "src/ui/components/RunStatistics.vue",
+    "src/ui/components/SettingsPanel.vue",
+    "src/ui/components/UltimateControl.vue",
+    "src/ui/components/UpgradeEmblem.vue",
+
+ ❯ tests/unit/berserk-sprint-scope.test.ts:11:54
+      9|   const baseline = JSON.parse(readFileSync('docs/verification/berserk-…
+     10|   const walk=historicalWalk;
+     11|   expect([...walk('src'), ...walk('public')].sort()).toEqual([...Objec…
+       |                                                      ^
+     12|   const laterBaseline = JSON.parse(readFileSync('docs/verification/war…
+     13|   const acceptedBaseline = JSON.parse(readFileSync('docs/verification/…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/39]⎯
+
+ FAIL  tests/unit/boss-meteor-ui-fix.test.ts > changes exactly four presentation files and preserves all359 other runti
+me files and all audio/atlas assets
+AssertionError: src/game/art/FinalBossArt.ts: expected '5b8cd70cd2e1b8950b0d135bbc0e174413df8…' to be '472c8096833d5236
+3892295e9a7463b6c769d…' // Object.is equality
+
+Expected: "472c8096833d52363892295e9a7463b6c769dea109e9a247f7aafcde11354c11"
+Received: "5b8cd70cd2e1b8950b0d135bbc0e174413df89ad2f63dde5a26cb3c0b0180377"
+
+ ❯ tests/unit/boss-meteor-ui-fix.test.ts:25:154
+     23|   expect(bossMeteorUiIntegration.baselineFiles).toBe(363);expect(bossM…
+     24|   expect(bossMeteorUiIntegration.changed.map(runtimePath)).toEqual(['g…
+     25|   for(const[file,sha]of Object.entries(bossMeteorUiIntegration.current…
+       |                                                                                                               
+                                           ^
+     26| });
+     27|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/39]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from0 without Guardian side effect
+s
+AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Obj
+ect.is equality
+
+Expected: "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880"
+Received: "65daa6ddf0772ef548722f71bff81aaca067bbed92e37a91c8deae0aff27e21f"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/39]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from180 without Guardian side effe
+cts
+AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Obj
+ect.is equality
+
+Expected: "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d"
+Received: "00af386c24ed4d758b836014cba395101c086698f53c91fc76a4d64ef4054d10"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/39]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from480 without Guardian side effe
+cts
+AssertionError: expected 'afbf8b3e8a5872e84ed89af9efce76f61f5b7…' to be '62209e9e0fd562f9f900ad4acbd3ee521e0ce…' // Obj
+ect.is equality
+
+Expected: "62209e9e0fd562f9f900ad4acbd3ee521e0ce3c417512ff92dbaddacbdb4c0f4"
+Received: "afbf8b3e8a5872e84ed89af9efce76f61f5b780678d6893f93b0824e556f36f6"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/39]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from870 without Guardian side effe
+cts
+AssertionError: expected '7d2c9a41db371fe87cb153b2e129a5dc2fccb…' to be 'd612a59ad06b2469a8b217421763243322c56…' // Obj
+ect.is equality
+
+Expected: "d612a59ad06b2469a8b217421763243322c5603a1ef5365dc47655be8687e518"
+Received: "7d2c9a41db371fe87cb153b2e129a5dc2fccbbd059d4ace2cfcaf1b249bd2b68"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/39]⎯
+
+ FAIL  tests/unit/fire-ultimate-runtime.test.ts > limits the accepted integration to9 changed and8 added runtime files 
+and protects every other file
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/fire-ultimate-runtime.test.ts:29:160
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/39]⎯
+
+ FAIL  tests/unit/frost-ultimate-runtime.test.ts > preserves all389 unrelated runtime files including fire gameplay/aud
+io and frost combat
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/frost-ultimate-runtime.test.ts:23:161
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/39]⎯
+
+ FAIL  tests/unit/mage-meteor-v3.test.ts > audits approved PixelLab pixels, unchanged boss/archive art, padding and bla
+ck light compositing
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/mage-meteor-v3.test.ts:19:102
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/39]⎯
+
+ FAIL  tests/unit/mage-sfx.test.ts > allows only the explicitly requested audio and practice changes over the accepted 
+art baseline
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/mage-sfx.test.ts:39:107
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/39]⎯
+
+ FAIL  tests/unit/mage-uploaded-sounds.test.ts > preserves music, gameplay and all other runtime files outside the exac
+t4changed/6added scope
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/mage-uploaded-sounds.test.ts:35:378
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/39]⎯
+
+ FAIL  tests/unit/mage-uploaded-sounds.test.ts > replaces Arcane Shield with the quiet user WAV and leaves every other 
+runtime file unchanged
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/mage-uploaded-sounds.test.ts:47:86
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/39]⎯
+
+ FAIL  tests/unit/mage-uploaded-sounds.test.ts > connects the supplied Frost Nova WAV and preserves every other runtime
+ file
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/mage-uploaded-sounds.test.ts:61:256
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/39]⎯
+
+ FAIL  tests/unit/miniboss-assets-audio.test.ts > changes only the five presentation files and eleven explicitly accept
+ed local assets/modules
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/miniboss-assets-audio.test.ts:79:161
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/39]⎯
+
+ FAIL  tests/unit/music-runtime.test.ts > limits runtime changes to audio and selected MP3 assets over the363-file base
+line
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ wardenApprovedHash tests/helpers/approvedWardenIntegration.ts:27:380
+ ❯ tests/unit/music-runtime.test.ts:53:162
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/39]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s
+AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Obj
+ect.is equality
+
+Expected: "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880"
+Received: "65daa6ddf0772ef548722f71bff81aaca067bbed92e37a91c8deae0aff27e21f"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/39]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s
+AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Obj
+ect.is equality
+
+Expected: "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d"
+Received: "00af386c24ed4d758b836014cba395101c086698f53c91fc76a4d64ef4054d10"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/39]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s
+AssertionError: expected '948495edfc21aae434633bec448a7190d12cc…' to be '28c689d108bc954033cf5215dca3af3a4903e…' // Obj
+ect.is equality
+
+Expected: "28c689d108bc954033cf5215dca3af3a4903e661c6cc5eb17fe858e9e2c1c5aa"
+Received: "948495edfc21aae434633bec448a7190d12ccc07896fc3ace8be06dc93a5bcf1"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/39]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s
+AssertionError: expected 'af617a3c693ee3cd2fa9cab12a47a280ee11c…' to be 'e4e774dcab1c34a179cf5d65917da790231ac…' // Obj
+ect.is equality
+
+Expected: "e4e774dcab1c34a179cf5d65917da790231ac0a197646c1a1b72cb7575b70e27"
+Received: "af617a3c693ee3cd2fa9cab12a47a280ee11ca0d879a761162585167da4de99b"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/39]⎯
+
+ FAIL  tests/unit/visual-cleanup-rune-idle.test.ts > keeps all411 runtime files, adds four ambience files and changes o
+nly the six accepted presentation files
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\integration-verification.json'
+ ❯ load tests/helpers/integrationProof.ts:15:26
+     13|   let proof: IntegrationProof | undefined;
+     14|   function load(): IntegrationProof {
+     15|     proof ??= JSON.parse(readFileSync(file, 'utf8')) as IntegrationPro…
+       |                          ^
+     16|     return proof;
+     17|   }
+ ❯ Object.get tests/helpers/integrationProof.ts:19:40
+ ❯ tests/unit/visual-cleanup-rune-idle.test.ts:18:127
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/39]⎯
+
+ FAIL  tests/unit/warrior-buffs-v4.test.ts > protects the explicit change scope and reuses the accepted Banner A object
+ byte for byte
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-buffs-v4.mjs
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'
+}
+
+Node.js v22.16.0
+
+ ❯ scripts/verify-warrior-buffs-v4.mjs:6:65
+ ❯ tests/unit/warrior-buffs-v4.test.ts:10:9
+      8|
+      9| it('protects the explicit change scope and reuses the accepted Banner …
+     10|  expect(execFileSync(process.execPath,['scripts/verify-warrior-buffs-v…
+       |         ^
+     11| });
+     12|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/39]⎯
+
+ FAIL  tests/unit/warrior-combat-scope.test.ts > changes only the seven authored presentation files and adds one legacy
+ charge atlas page
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-com
+bat-sync-runtime-v2\runtime-baseline.json'
+ ❯ readRuntimeFile tests/helpers/runtimeFile.ts:9:21
+      7| export function readRuntimeFile(file: string, encoding: 'utf8'): strin…
+      8| export function readRuntimeFile(file: string, encoding?: 'utf8'): Buff…
+      9|   return encoding ? readFileSync(runtimePath(file), encoding) : readFi…
+       |                     ^
+     10| }
+     11|
+ ❯ tests/unit/warrior-combat-scope.test.ts:11:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/39]⎯
+
+ FAIL  tests/unit/warrior-empty-hand.test.ts > changes exactly five approved runtime files and preserves all other 463 
+hashes
+AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]
+
+- Expected
++ Received
+
+@@ -175,10 +175,11 @@
+    "public/assets/hd/warrior-ultimates-v1/0.png",
+    "public/favicon.svg",
+    "src/App.vue",
+    "src/env.d.ts",
+    "src/game/abilities/arcaneShield.ts",
++   "src/game/abilities/baseDamage.ts",
+    "src/game/abilities/chainLightning.ts",
+    "src/game/abilities/definitions.ts",
+    "src/game/abilities/evolutions.ts",
+    "src/game/abilities/fireball.ts",
+    "src/game/abilities/frostNova.ts",
+@@ -316,10 +317,11 @@
+    "src/game/art/runnerPack.ts",
+    "src/game/art/softLightTexture.ts",
+    "src/game/art/textures.ts",
+    "src/game/art/warriorHeroManifest.json",
+    "src/game/art/warriorHeroPack.ts",
++   "src/game/art/warriorMovingLegs.json",
+    "src/game/art/warriorSkillsManifest.json",
+    "src/game/art/warriorSkillsPack.ts",
+    "src/game/art/warriorUltimatesManifest.json",
+    "src/game/art/warriorUltimatesPack.ts",
+    "src/game/audio/AudioBackend.ts",
+@@ -384,10 +386,16 @@
+    "src/game/loot/ArtifactSystem.ts",
+    "src/game/loot/BuffSystem.ts",
+    "src/game/loot/LootSystem.ts",
+    "src/game/loot/lootPools.ts",
+    "src/game/loot/types.ts",
++   "src/game/platform/ItemUseOperation.ts",
++   "src/game/platform/PaidActionOperation.ts",
++   "src/game/platform/port.ts",
++   "src/game/platform/premium.ts",
++   "src/game/platform/progression.ts",
++   "src/game/platform/runItems.ts",
+    "src/game/radar/RadarPublisher.ts",
+    "src/game/radar/radar.ts",
+    "src/game/scenes/GameScene.ts",
+    "src/game/services/storage.ts",
+    "src/game/systems/AbsorbPool.ts",
+@@ -443,14 +451,16 @@
+    "src/ui/components/DialogFrame.vue",
+    "src/ui/components/EventTimeline.vue",
+    "src/ui/components/FinalBossBar.vue",
+    "src/ui/components/GameHUD.vue",
+    "src/ui/components/GameRadar.vue",
++   "src/ui/components/InGameInventory.vue",
+    "src/ui/components/LevelUpModal.vue",
+    "src/ui/components/LocalRecords.vue",
+    "src/ui/components/MainMenu.vue",
+    "src/ui/components/MobilityControl.vue",
++   "src/ui/components/PremiumActions.vue",
+    "src/ui/components/RunArtifacts.vue",
+    "src/ui/components/RunStatistics.vue",
+    "src/ui/components/SettingsPanel.vue",
+    "src/ui/components/UltimateControl.vue",
+    "src/ui/components/UpgradeEmblem.vue",
+
+ ❯ tests/unit/warrior-empty-hand.test.ts:15:52
+     13|  const proof=JSON.parse(readFileSync(`${root}/integration-verification…
+     14|  const walk=historicalWalk;
+     15|  expect([...walk('src'),...walk('public')].sort()).toEqual(Object.keys…
+       |                                                    ^
+     16|  expect(Object.keys(baseline).filter(f=>hash(f)!==baseline[f]&&!Object…
+     17|  expect(proof.changed).toHaveLength(5);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/39]⎯
+
+ FAIL  tests/unit/warrior-empty-hand.test.ts > uses all selected empty hand edits, preserves every windup and keeps tim
+ing, routes and exclusions
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-spe
+ar-empty-hand-review-v1\manifest.json'
+ ❯ readRuntimeFile tests/helpers/runtimeFile.ts:9:21
+      7| export function readRuntimeFile(file: string, encoding: 'utf8'): strin…
+      8| export function readRuntimeFile(file: string, encoding?: 'utf8'): Buff…
+      9|   return encoding ? readFileSync(runtimePath(file), encoding) : readFi…
+       |                     ^
+     10| }
+     11|
+ ❯ tests/unit/warrior-empty-hand.test.ts:21:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/39]⎯
+
+ FAIL  tests/unit/warrior-hero-scope.test.ts > limits Warrior integration to seven presentation/selection files, three 
+modules and ten atlas files
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-her
+o-runtime-v1\runtime-baseline.json'
+ ❯ readRuntimeFile tests/helpers/runtimeFile.ts:9:21
+      7| export function readRuntimeFile(file: string, encoding: 'utf8'): strin…
+      8| export function readRuntimeFile(file: string, encoding?: 'utf8'): Buff…
+      9|   return encoding ? readFileSync(runtimePath(file), encoding) : readFi…
+       |                     ^
+     10| }
+     11|
+ ❯ tests/unit/warrior-hero-scope.test.ts:13:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/39]⎯
+
+ FAIL  tests/unit/warrior-skills.test.ts > verifies exact accepted RGBA, all production atlas frames and the explicit l
+imited runtime scope
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-cleave-v3.mjs
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-cle
+ave-sync-v3\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.js
+on'
+}
+
+Node.js v22.16.0
+
+ ❯ scripts/verify-warrior-cleave-v3.mjs:6:71
+ ❯ tests/unit/warrior-skills.test.ts:18:9
+     16| }
+     17| it('verifies exact accepted RGBA, all production atlas frames and the …
+     18|  expect(execFileSync(process.execPath,['scripts/verify-warrior-cleave-…
+       |         ^
+     19|  expect(execFileSync(process.execPath,['scripts/verify-warrior-skills-…
+     20| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/39]⎯
+
+ FAIL  tests/unit/warrior-sounds.test.ts > preserves all nine user recordings and pins the complete integration invento
+ry and hashes
+Error: ENOENT: no such file or directory, open '<repository>\art\warrior\sounds\banner
+.wav'
+ ❯ readRuntimeFile tests/helpers/runtimeFile.ts:9:65
+      7| export function readRuntimeFile(file: string, encoding: 'utf8'): strin…
+      8| export function readRuntimeFile(file: string, encoding?: 'utf8'): Buff…
+      9|   return encoding ? readFileSync(runtimePath(file), encoding) : readFi…
+       |                                                                 ^
+     10| }
+     11|
+ ❯ sha tests/unit/warrior-sounds.test.ts:12:54
+ ❯ tests/unit/warrior-sounds.test.ts:16:42
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/39]⎯
+
+ FAIL  tests/unit/warrior-spear-release.test.ts > limits the timing fix to one config file and preserves the remaining 
+467 runtime files
+AssertionError: expected [ Array(72) ] to deeply equal [ 'game/config/warriorAbilities.ts' ]
+
+- Expected
++ Received
+
+  [
+-   "game/config/warriorAbilities.ts",
++   "src/App.vue",
++   "src/env.d.ts",
++   "src/game/abilities/chainLightning.ts",
++   "src/game/abilities/definitions.ts",
++   "src/game/abilities/fireball.ts",
++   "src/game/abilities/meteor.ts",
++   "src/game/abilities/warrior.ts",
++   "src/game/art/EncounterArt.ts",
++   "src/game/art/FinalBossArt.ts",
++   "src/game/art/fireUltimatePack.ts",
++   "src/game/art/frostUltimatePack.ts",
++   "src/game/art/GameArt.ts",
++   "src/game/art/warriorHeroManifest.json",
++   "src/game/art/WarriorMovingCleaveArt.ts",
++   "src/game/art/warriorSkillsManifest.json",
++   "src/game/art/warriorUltimatesPack.ts",
++   "src/game/audio/catalog.ts",
++   "src/game/audio/mageSamples.ts",
++   "src/game/audio/musicTracks.ts",
++   "src/game/audio/samples.ts",
++   "src/game/config/atmosphere.ts",
++   "src/game/config/biomes.ts",
++   "src/game/config/enemyDefinitions.ts",
++   "src/game/config/gameBalance.ts",
++   "src/game/config/mobilityUpgrades.ts",
++   "src/game/config/pacing.ts",
++   "src/game/config/playerVisuals.ts",
++   "src/game/config/ultimates.ts",
++   "src/game/config/warriorAbilities.ts",
++   "src/game/events/bridge.ts",
++   "src/game/loot/ArtifactSystem.ts",
++   "src/game/loot/BuffSystem.ts",
++   "src/game/loot/LootSystem.ts",
++   "src/game/loot/types.ts",
++   "src/game/scenes/GameScene.ts",
++   "src/game/services/storage.ts",
++   "src/game/systems/EncounterDirector.ts",
++   "src/game/systems/FinalEncounter.ts",
++   "src/game/systems/RareGuardianSystem.ts",
++   "src/game/systems/ScoreSystem.ts",
++   "src/game/systems/UpgradeSystem.ts",
++   "src/game/systems/World.ts",
++   "src/ui/biomePhaseNotice.ts",
++   "src/ui/components/BiomePhaseNotice.vue",
++   "src/ui/components/BossBars.vue",
++   "src/ui/components/BuffDock.vue",
++   "src/ui/components/EventTimeline.vue",
++   "src/ui/components/FinalBossBar.vue",
++   "src/ui/components/GameHUD.vue",
++   "src/ui/components/GameRadar.vue",
++   "src/ui/components/LevelUpModal.vue",
++   "src/ui/components/LocalRecords.vue",
++   "src/ui/components/MainMenu.vue",
++   "src/ui/components/MobilityControl.vue",
++   "src/ui/components/RunArtifacts.vue",
++   "src/ui/components/RunStatistics.vue",
++   "src/ui/components/SettingsPanel.vue",
++   "src/ui/components/UltimateControl.vue",
++   "src/ui/components/VirtualJoystick.vue",
++   "src/ui/focus.ts",
++   "src/ui/gamepadNavigation.ts",
++   "src/ui/hd-theme.css",
++   "src/ui/inputDevice.ts",
++   "src/ui/upgradeCards.ts",
++   "src/ui/upgradeIdentity.ts",
++   "public/assets/hd/warrior-hero-v1/2.png",
++   "public/assets/hd/warrior-hero-v1/3.png",
++   "public/assets/hd/warrior-hero-v1/4.png",
++   "public/assets/hd/warrior-skills-v1/2.png",
++   "public/assets/hd/warrior-skills-v1/4.png",
++   "public/assets/hd/warrior-skills-v1/5.png",
++   "public/assets/hd/warrior-skills-v1/6.png",
+  ]
+
+ ❯ tests/unit/warrior-spear-release.test.ts:31:65
+     29|  const proof=JSON.parse(readFileSync(`${root}/integration-verification…
+     30|  const hash=(file:string)=>createHash('sha256').update(readFileSync(fi…
+     31|  expect(Object.keys(baseline).filter(f=>hash(f)!==baseline[f])).toEqua…
+       |                                                                 ^
+     32|  for(const f of Object.keys(baseline))expect(hash(f),f).toBe(proof.cur…
+     33| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/39]⎯
+
+ FAIL  tests/unit/warrior-ultimates-accepted.test.ts > limits accepted-ultimate integration to ten explicit runtime fil
+es and preserves the remaining 449
+AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]
+
+- Expected
++ Received
+
+@@ -175,10 +175,11 @@
+    "public/assets/hd/warrior-ultimates-v1/0.png",
+    "public/favicon.svg",
+    "src/App.vue",
+    "src/env.d.ts",
+    "src/game/abilities/arcaneShield.ts",
++   "src/game/abilities/baseDamage.ts",
+    "src/game/abilities/chainLightning.ts",
+    "src/game/abilities/definitions.ts",
+    "src/game/abilities/evolutions.ts",
+    "src/game/abilities/fireball.ts",
+    "src/game/abilities/frostNova.ts",
+@@ -316,10 +317,11 @@
+    "src/game/art/runnerPack.ts",
+    "src/game/art/softLightTexture.ts",
+    "src/game/art/textures.ts",
+    "src/game/art/warriorHeroManifest.json",
+    "src/game/art/warriorHeroPack.ts",
++   "src/game/art/warriorMovingLegs.json",
+    "src/game/art/warriorSkillsManifest.json",
+    "src/game/art/warriorSkillsPack.ts",
+    "src/game/art/warriorUltimatesManifest.json",
+    "src/game/art/warriorUltimatesPack.ts",
+    "src/game/audio/AudioBackend.ts",
+@@ -384,10 +386,16 @@
+    "src/game/loot/ArtifactSystem.ts",
+    "src/game/loot/BuffSystem.ts",
+    "src/game/loot/LootSystem.ts",
+    "src/game/loot/lootPools.ts",
+    "src/game/loot/types.ts",
++   "src/game/platform/ItemUseOperation.ts",
++   "src/game/platform/PaidActionOperation.ts",
++   "src/game/platform/port.ts",
++   "src/game/platform/premium.ts",
++   "src/game/platform/progression.ts",
++   "src/game/platform/runItems.ts",
+    "src/game/radar/RadarPublisher.ts",
+    "src/game/radar/radar.ts",
+    "src/game/scenes/GameScene.ts",
+    "src/game/services/storage.ts",
+    "src/game/systems/AbsorbPool.ts",
+@@ -443,14 +451,16 @@
+    "src/ui/components/DialogFrame.vue",
+    "src/ui/components/EventTimeline.vue",
+    "src/ui/components/FinalBossBar.vue",
+    "src/ui/components/GameHUD.vue",
+    "src/ui/components/GameRadar.vue",
++   "src/ui/components/InGameInventory.vue",
+    "src/ui/components/LevelUpModal.vue",
+    "src/ui/components/LocalRecords.vue",
+    "src/ui/components/MainMenu.vue",
+    "src/ui/components/MobilityControl.vue",
++   "src/ui/components/PremiumActions.vue",
+    "src/ui/components/RunArtifacts.vue",
+    "src/ui/components/RunStatistics.vue",
+    "src/ui/components/SettingsPanel.vue",
+    "src/ui/components/UltimateControl.vue",
+    "src/ui/components/UpgradeEmblem.vue",
+
+ ❯ tests/unit/warrior-ultimates-accepted.test.ts:16:54
+     14|   const proof = JSON.parse(readFileSync(`${root}/integration-verificat…
+     15|   const walk=historicalWalk;
+     16|   expect([...walk('src'), ...walk('public')].sort()).toEqual([...Objec…
+       |                                                      ^
+     17|   const changed = Object.entries(baseline).filter(([file, old]) => {
+     18|     const current = createHash('sha256').update(readFileSync(file)).di…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/39]⎯
+
+ FAIL  tests/unit/warrior-ultimates-assets.test.ts > preserves all selected Warrior ultimate RGBA frames and the explic
+it runtime scope
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-ultimates-v1.mjs
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\art\generated\warrior-c
+oncept-pack-v1\source\png.mjs' imported from <repository>\scripts\verify-warrior-ultim
+ates-v1.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:860:10)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'
+}
+
+Node.js v22.16.0
+
+ ❯ tests/unit/warrior-ultimates-assets.test.ts:6:18
+      4|
+      5| it('preserves all selected Warrior ultimate RGBA frames and the explic…
+      6|   const result = execFileSync(process.execPath, ['scripts/verify-warri…
+       |                  ^
+      7|   expect(result).toContain('"sourceFrames":63'); expect(result).toCont…
+      8| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39/39]⎯
+
+
+ Test Files  29 failed | 135 passed (164)
+      Tests  38 failed | 1147 passed (1185)
+   Start at  17:45:44
+   Duration  32.83s (tests 75%, import 22%, transform 2%, worker 1%)
+
+    Isolate  164 workers spawned · ~84ms startup each (spawn + environment, per file)
+             at least ~6.79s faster with isolate: false — reuses workers across files instead of one per file
+
+JSON report written to <repository>/.tmp/qa-vitest-final.json

@@ -36,13 +36,6 @@ Route::get('/privacy', fn () => Inertia::render('Legal', ['kind' => 'privacy']))
 Route::get('/terms', fn () => Inertia::render('Legal', ['kind' => 'terms']))->name('terms');
 Route::view('/play', 'play')->name('play');
 
-Route::stripeWebhooks('webhook')->name('stripe.webhook');
-
-Route::post('/payments/webhooks/{provider}', PaymentWebhookController::class)->middleware([LimitRunPayload::class, 'throttle:120,1,payment-webhook-']);
-if (app(TestPaymentGuard::class)->enabled()) {
-    require __DIR__.'/payment-test.php';
-}
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::redirect('/account', '/dashboard');
     Route::get('/account/orders', [AccountController::class, 'orders'])->name('account.orders');
@@ -62,6 +55,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/runs/{run}', [RunHistoryController::class, 'show'])->whereUuid('run')->middleware('throttle:60,1,run-history-detail-');
 
 });
+
+Route::post('/payments/webhooks/{provider}', PaymentWebhookController::class)->middleware([LimitRunPayload::class, 'throttle:120,1,payment-webhook-']);
+if (app(TestPaymentGuard::class)->enabled()) {
+    require __DIR__.'/payment-test.php';
+}
+
+Route::stripeWebhooks('webhook')->name('stripe.webhook');
 
 require __DIR__.'/internal.php';
 

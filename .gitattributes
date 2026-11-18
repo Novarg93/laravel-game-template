@@ -4,6 +4,13 @@
 game/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 public/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 art/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Keep frozen assertions and golden fixtures identical on Windows and Linux.
+tests/historical/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Preserve the original restructure audit evidence exactly as captured.
+docs/architecture/GAME_BASELINE.log -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/architecture/GAME_AFTER.log -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/architecture/VALIDATION.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/architecture/DEPENDENCY_MAP_BEFORE.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html

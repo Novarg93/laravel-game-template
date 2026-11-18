@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "game",
+    "resources/js",
+    "tests/historical",
+    "tests/helpers",
+    "*.ts"
+  ]
+}

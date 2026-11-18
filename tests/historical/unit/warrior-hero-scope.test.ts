@@ -1,0 +1,22 @@
+import { historicalWalk } from '../../helpers/runtimePath';
+import {warriorSoundsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorUltimatesIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorBuffsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCleaveIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorSkillsIntegration} from '../helpers/approvedWardenIntegration';
+import {warriorCombatIntegration,wardenApprovedHash} from '../helpers/approvedWardenIntegration';
+import {it,expect} from 'vitest';
+import { readRuntimeFile as readFileSync } from '../../helpers/runtimeFile';
+import {createHash} from 'node:crypto';
+import {warriorHeroIntegration as proof} from '../helpers/approvedWardenIntegration';
+it('limits Warrior integration to seven presentation/selection files, three modules and ten atlas files',()=>{
+ const baseline=JSON.parse(readFileSync('art/generated/warrior-hero-runtime-v1/runtime-baseline.json','utf8'))as Record<string,string>;
+ const walk=historicalWalk;
+ const hash=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
+ expect(proof.changed).toEqual(['game/App.vue','game/art/GameArt.ts','game/art/PlayerHealthBar.ts','game/art/assetRegistry.ts','game/bootstrap/publicCharacters.ts','game/scenes/GameScene.ts','game/ui/components/MainMenu.vue']);
+ expect(proof.added).toEqual([...Array.from({length:5},(_,i)=>[`public/game-assets/hd/warrior-hero-v1/${i}.json`,`public/game-assets/hd/warrior-hero-v1/${i}.png`]).flat(),'game/art/WarriorHeroAnimation.ts','game/art/warriorHeroManifest.json','game/art/warriorHeroPack.ts']);
+ expect(Object.keys(baseline)).toHaveLength(415);expect(proof.unchanged).toBe(408);
+ expect([...walk('src'),...walk('public')].sort()).toEqual([...Object.keys(baseline),...proof.added,...warriorCombatIntegration.added,...warriorSkillsIntegration.added,...warriorCleaveIntegration.added,...warriorBuffsIntegration.added,...warriorUltimatesIntegration.added,...warriorSoundsIntegration.added].sort());
+ for(const[p,old]of Object.entries(baseline))expect(hash(p),p).toBe(wardenApprovedHash(p,proof.currentSHA256[p]??old));
+ for(const p of proof.added)expect(hash(p),p).toBe(wardenApprovedHash(p,proof.currentSHA256[p]!));
+});

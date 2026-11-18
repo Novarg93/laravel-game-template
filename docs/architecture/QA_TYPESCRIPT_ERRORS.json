@@ -1,0 +1,72 @@
+[
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 2,
+    "column": 46,
+    "code": "TS2307",
+    "message": "Cannot find module '../../art/warrior-review-v1/model' or its corresponding type declarations."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 3,
+    "column": 36,
+    "code": "TS2307",
+    "message": "Cannot find module '../../art/warrior-review-v1/catalog' or its corresponding type declarations."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 9,
+    "column": 26,
+    "code": "TS7006",
+    "message": "Parameter 'e' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 10,
+    "column": 46,
+    "code": "TS7006",
+    "message": "Parameter 'a' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 10,
+    "column": 69,
+    "code": "TS7006",
+    "message": "Parameter 'a' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 13,
+    "column": 30,
+    "code": "TS7006",
+    "message": "Parameter 'p' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 21,
+    "column": 58,
+    "code": "TS18046",
+    "message": "'a' is of type 'unknown'."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 22,
+    "column": 48,
+    "code": "TS7006",
+    "message": "Parameter 'a' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 22,
+    "column": 71,
+    "code": "TS7006",
+    "message": "Parameter 'a' implicitly has an 'any' type."
+  },
+  {
+    "file": "tests/unit/warrior-review.test.ts",
+    "line": 23,
+    "column": 73,
+    "code": "TS7006",
+    "message": "Parameter 'a' implicitly has an 'any' type."
+  }
+]

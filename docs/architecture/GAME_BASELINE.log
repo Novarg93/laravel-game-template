@@ -1,0 +1,858 @@
+
+> pixel-survivor@1.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 <repository>
+
+ ❯ tests/unit/frost-armageddon.test.ts (26 tests | 1 failed) 489ms
+   × freezes root/sequence on pause, clears casts and control on death/disposal and retains upgrade identity 6ms
+ ❯ tests/unit/loot.test.ts (17 tests | 1 failed) 78ms
+   ❯ temporary stats and XP (7)
+     × refreshes without stacking, combines different buffs and derives upgraded stats 6ms
+ ❯ tests/unit/mage-uploaded-sounds.test.ts (0 test)
+ ❯ tests/unit/ash-warden-sounds.test.ts (0 test)
+ ❯ tests/unit/miniboss-assets-audio.test.ts (0 test)
+ ❯ tests/unit/ash-warden-north-meteor-review.test.ts (0 test)
+ ❯ tests/unit/mage-meteor-v3.test.ts (0 test)
+ ❯ tests/unit/survival-enrage.test.ts (27 tests | 4 failed) 6166ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s 19ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s 20ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s 33ms
+   × preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s 19ms
+ ❯ tests/unit/ash-warden-library.test.ts (0 test)
+ ❯ tests/unit/astral-projectile-review.test.ts (0 test)
+ ❯ tests/unit/astral-flame-review.test.ts (0 test)
+ ❯ tests/unit/endgame.test.ts (19 tests | 5 failed) 163ms
+   × preserves original ordinary/boss replay before15 from0 without Guardian side effects 17ms
+   × preserves original ordinary/boss replay before15 from180 without Guardian side effects 22ms
+   × preserves original ordinary/boss replay before15 from480 without Guardian side effects 28ms
+   × preserves original ordinary/boss replay before15 from870 without Guardian side effects 74ms
+   × creates active early Guardians with individual linear snapshots and radar/notice 1ms
+ ❯ tests/unit/ash-warden-pixellab-runtime.test.ts (0 test)
+ ❯ tests/unit/music-runtime.test.ts (0 test)
+npm.cmd : node:fs:442
+строка:2 знак:1
++ npm.cmd test > .tmp/game-baseline.log 2>&1; Get-Content .tmp/game-bas ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:fs:442:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-buffs-v4.test.ts (7 tests | 1 failed) 75ms
+   × protects the explicit change scope and reuses the accepted Banner A object byte for byte 60ms
+ ❯ tests/unit/warrior-ultimates-accepted.test.ts (0 test)
+ ❯ tests/unit/ambient-music-review.test.ts (0 test)
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-cle
+ave-sync-v3\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.js
+on'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-skills.test.ts (6 tests | 1 failed) 135ms
+   × verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope 58ms
+ ❯ tests/unit/briar-practice.test.ts (5 tests | 1 failed) 44ms
+   × starts one real Briar Beast with the same lawful Mage54 build, HP and ready lightning ultimate 11ms
+ ❯ tests/unit/mage-sfx.test.ts (0 test)
+ ❯ tests/unit/warrior-sounds.test.ts (0 test)
+ ❯ tests/unit/guardian-encounter.test.ts (10 tests | 1 failed) 58ms
+   × activates on creation without damage/proximity and keeps one awakening deadline 8ms
+ ❯ tests/unit/warrior-review.test.ts (0 test)
+ ❯ tests/unit/frost-ultimate-runtime.test.ts (0 test)
+ ❯ tests/unit/fire-ultimate-runtime.test.ts (0 test)
+ ❯ tests/unit/warrior-empty-hand.test.ts (0 test)
+ ❯ tests/unit/upgrade-cards.test.ts (6 tests | 4 failed) 18ms
+   × reads ranked control/meteor and Blink bonuses from existing balance data without changing World 3ms
+   × shows the Berserk rank1 sprint bonus and refresh rule in the upgrade card 2ms
+   × shows the Berserk rank2 sprint bonus and refresh rule in the upgrade card 1ms
+   × shows the Berserk rank3 sprint bonus and refresh rule in the upgrade card 1ms
+ ❯ tests/unit/warrior-hero-scope.test.ts (0 test)
+ ❯ tests/unit/warrior-spear-release.test.ts (9 tests | 1 failed) 74ms
+   × limits the timing fix to one config file and preserves the remaining 467 runtime files 63ms
+ ❯ tests/unit/boss-meteor-ui-fix.test.ts (0 test)
+ ❯ tests/unit/visual-cleanup-rune-idle.test.ts (0 test)
+ ❯ tests/unit/berserk-sprint-scope.test.ts (0 test)
+ ❯ tests/unit/warrior-combat-scope.test.ts (0 test)
+ ❯ tests/unit/biome-phase-notice.test.ts (5 tests | 3 failed) 17ms
+   × announces dusk exactly at its milestone for five run seconds 7ms
+   × announces dying exactly at its milestone for five run seconds 1ms
+   × announces burning exactly at its milestone for five run seconds 1ms
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\art\generated\warrior-c
+oncept-pack-v1\source\png.mjs' imported from <repository>\scripts\verify-warrior-ultim
+ates-v1.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:860:10)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'
+}
+
+Node.js v22.16.0
+ ❯ tests/unit/warrior-ultimates-assets.test.ts (1 test | 1 failed) 57ms
+   × preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope 57ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 23 ⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/ambient-music-review.test.ts [ tests/unit/ambient-music-review.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/ambient-music-review.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/47]⎯
+
+ FAIL  tests/unit/ash-warden-library.test.ts [ tests/unit/ash-warden-library.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/ash-warden-library.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/47]⎯
+
+ FAIL  tests/unit/ash-warden-north-meteor-review.test.ts [ tests/unit/ash-warden-north-meteor-review.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/ash-warden-north-meteor-review.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/47]⎯
+
+ FAIL  tests/unit/ash-warden-pixellab-runtime.test.ts [ tests/unit/ash-warden-pixellab-runtime.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/ash-warden-pixellab-runtime.test.ts:10:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/47]⎯
+
+ FAIL  tests/unit/ash-warden-sounds.test.ts [ tests/unit/ash-warden-sounds.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/ash-warden-sounds.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/47]⎯
+
+ FAIL  tests/unit/astral-flame-review.test.ts [ tests/unit/astral-flame-review.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/astral-flame-review.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/47]⎯
+
+ FAIL  tests/unit/astral-projectile-review.test.ts [ tests/unit/astral-projectile-review.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/astral-projectile-review.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/47]⎯
+
+ FAIL  tests/unit/berserk-sprint-scope.test.ts [ tests/unit/berserk-sprint-scope.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/berserk-sprint-scope.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/47]⎯
+
+ FAIL  tests/unit/boss-meteor-ui-fix.test.ts [ tests/unit/boss-meteor-ui-fix.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/boss-meteor-ui-fix.test.ts:6:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/47]⎯
+
+ FAIL  tests/unit/fire-ultimate-runtime.test.ts [ tests/unit/fire-ultimate-runtime.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/fire-ultimate-runtime.test.ts:7:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/47]⎯
+
+ FAIL  tests/unit/frost-ultimate-runtime.test.ts [ tests/unit/frost-ultimate-runtime.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/frost-ultimate-runtime.test.ts:7:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/47]⎯
+
+ FAIL  tests/unit/mage-meteor-v3.test.ts [ tests/unit/mage-meteor-v3.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/mage-meteor-v3.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/47]⎯
+
+ FAIL  tests/unit/mage-sfx.test.ts [ tests/unit/mage-sfx.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/mage-sfx.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/47]⎯
+
+ FAIL  tests/unit/mage-uploaded-sounds.test.ts [ tests/unit/mage-uploaded-sounds.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/mage-uploaded-sounds.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/47]⎯
+
+ FAIL  tests/unit/miniboss-assets-audio.test.ts [ tests/unit/miniboss-assets-audio.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/miniboss-assets-audio.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/47]⎯
+
+ FAIL  tests/unit/music-runtime.test.ts [ tests/unit/music-runtime.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/music-runtime.test.ts:11:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/47]⎯
+
+ FAIL  tests/unit/visual-cleanup-rune-idle.test.ts [ tests/unit/visual-cleanup-rune-idle.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/visual-cleanup-rune-idle.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/47]⎯
+
+ FAIL  tests/unit/warrior-combat-scope.test.ts [ tests/unit/warrior-combat-scope.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/warrior-combat-scope.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/47]⎯
+
+ FAIL  tests/unit/warrior-empty-hand.test.ts [ tests/unit/warrior-empty-hand.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/warrior-empty-hand.test.ts:6:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/47]⎯
+
+ FAIL  tests/unit/warrior-hero-scope.test.ts [ tests/unit/warrior-hero-scope.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/warrior-hero-scope.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/47]⎯
+
+ FAIL  tests/unit/warrior-review.test.ts [ tests/unit/warrior-review.test.ts ]
+Error: Cannot find module '../../art/warrior-review-v1/model' imported from C:/Users/Novarg/Desktop/laravel-game-templa
+te/tests/unit/warrior-review.test.ts
+ ❯ tests/unit/warrior-review.test.ts:2:1
+      1| import { expect, it } from 'vitest';
+      2| import { createReviewWorld, reviewHit } from '../../art/warrior-review…
+       | ^
+      3| import { DIRECTIONS, SKILLS } from '../../art/warrior-review-v1/catalo…
+      4|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/47]⎯
+
+ FAIL  tests/unit/warrior-sounds.test.ts [ tests/unit/warrior-sounds.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/warrior-sounds.test.ts:9:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/47]⎯
+
+ FAIL  tests/unit/warrior-ultimates-accepted.test.ts [ tests/unit/warrior-ultimates-accepted.test.ts ]
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\integration-verification.json'
+ ❯ tests/helpers/approvedWardenIntegration.ts:5:49
+
+ ❯ tests/unit/warrior-ultimates-accepted.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/47]⎯
+
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 24 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/biome-phase-notice.test.ts > announces dusk exactly at its milestone for five run seconds
+AssertionError: expected { phase: 'dusk', …(4) } to match object { phase: 'dusk', …(3) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "opacity": 1,
+    "phase": "dusk",
+    "remaining": 1,
+-   "title": "Сумеречная роща",
++   "title": "Twilight Grove",
+  }
+
+ ❯ tests/unit/biome-phase-notice.test.ts:9:27
+      7|     const sample = (elapsed: number) => biomePhaseNotice({ biome:'grov…
+      8|     expect(sample(start-.001)).toBeNull();
+      9|     expect(sample(start)).toMatchObject({ phase,title,remaining:1,opac…
+       |                           ^
+     10|     expect(sample(start+2.5)).toMatchObject({ phase,title,remaining:.5…
+     11|     expect(sample(start+4.75)).toMatchObject({ phase,title,opacity:.5 …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/47]⎯
+
+ FAIL  tests/unit/biome-phase-notice.test.ts > announces dying exactly at its milestone for five run seconds
+AssertionError: expected { phase: 'dying', …(4) } to match object { phase: 'dying', …(3) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "opacity": 1,
+    "phase": "dying",
+    "remaining": 1,
+-   "title": "Умирающая роща",
++   "title": "Dying Grove",
+  }
+
+ ❯ tests/unit/biome-phase-notice.test.ts:9:27
+      7|     const sample = (elapsed: number) => biomePhaseNotice({ biome:'grov…
+      8|     expect(sample(start-.001)).toBeNull();
+      9|     expect(sample(start)).toMatchObject({ phase,title,remaining:1,opac…
+       |                           ^
+     10|     expect(sample(start+2.5)).toMatchObject({ phase,title,remaining:.5…
+     11|     expect(sample(start+4.75)).toMatchObject({ phase,title,opacity:.5 …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/47]⎯
+
+ FAIL  tests/unit/biome-phase-notice.test.ts > announces burning exactly at its milestone for five run seconds
+AssertionError: expected { phase: 'burning', …(4) } to match object { phase: 'burning', …(3) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "opacity": 1,
+    "phase": "burning",
+    "remaining": 1,
+-   "title": "Горящая роща",
++   "title": "Burning Grove",
+  }
+
+ ❯ tests/unit/biome-phase-notice.test.ts:9:27
+      7|     const sample = (elapsed: number) => biomePhaseNotice({ biome:'grov…
+      8|     expect(sample(start-.001)).toBeNull();
+      9|     expect(sample(start)).toMatchObject({ phase,title,remaining:1,opac…
+       |                           ^
+     10|     expect(sample(start+2.5)).toMatchObject({ phase,title,remaining:.5…
+     11|     expect(sample(start+4.75)).toMatchObject({ phase,title,opacity:.5 …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/47]⎯
+
+ FAIL  tests/unit/briar-practice.test.ts > starts one real Briar Beast with the same lawful Mage54 build, HP and ready 
+lightning ultimate
+AssertionError: expected 'Briar Beast' to be 'Терновый зверь' // Object.is equality
+
+Expected: "Терновый зверь"
+Received: "Briar Beast"
+
+ ❯ tests/unit/briar-practice.test.ts:13:40
+     11|   expect(w.snapshot()).toMatchObject({practice:true,practiceBoss:'bria…
+     12|   expect(w.enemies).toEqual([e]);expect(e.kind).toBe('charger');expect…
+     13|   expect(w.snapshot().bosses[0]!.name).toBe('Терновый зверь');
+       |                                        ^
+     14|   expect(e.hp).toBe(ENEMIES.charger.hp*scalesAt(BRIAR_PRACTICE.at).hp)…
+     15|   expect(w.player.invulnerableUntil).toBe(0);expect(w.ultimate.selecte…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/47]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from0 without Guardian side effect
+s
+AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Obj
+ect.is equality
+
+Expected: "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880"
+Received: "65daa6ddf0772ef548722f71bff81aaca067bbed92e37a91c8deae0aff27e21f"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/47]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from180 without Guardian side effe
+cts
+AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Obj
+ect.is equality
+
+Expected: "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d"
+Received: "00af386c24ed4d758b836014cba395101c086698f53c91fc76a4d64ef4054d10"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/47]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from480 without Guardian side effe
+cts
+AssertionError: expected 'afbf8b3e8a5872e84ed89af9efce76f61f5b7…' to be '62209e9e0fd562f9f900ad4acbd3ee521e0ce…' // Obj
+ect.is equality
+
+Expected: "62209e9e0fd562f9f900ad4acbd3ee521e0ce3c417512ff92dbaddacbdb4c0f4"
+Received: "afbf8b3e8a5872e84ed89af9efce76f61f5b780678d6893f93b0824e556f36f6"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/47]⎯
+
+ FAIL  tests/unit/endgame.test.ts > preserves original ordinary/boss replay before15 from870 without Guardian side effe
+cts
+AssertionError: expected '7d2c9a41db371fe87cb153b2e129a5dc2fccb…' to be 'd612a59ad06b2469a8b217421763243322c56…' // Obj
+ect.is equality
+
+Expected: "d612a59ad06b2469a8b217421763243322c5603a1ef5365dc47655be8687e518"
+Received: "7d2c9a41db371fe87cb153b2e129a5dc2fccbbd059d4ace2cfcaf1b249bd2b68"
+
+ ❯ tests/unit/endgame.test.ts:13:324
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/47]⎯
+
+ FAIL  tests/unit/endgame.test.ts > creates active early Guardians with individual linear snapshots and radar/notice
+AssertionError: expected 'Guardian awakened! Dodge the magic or…' to contain 'сфер'
+
+Expected: "сфер"
+Received: "Guardian awakened! Dodge the magic orbs"
+
+ ❯ tests/unit/endgame.test.ts:20:529
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/47]⎯
+
+ FAIL  tests/unit/frost-armageddon.test.ts > freezes root/sequence on pause, clears casts and control on death/disposal
+ and retains upgrade identity
+AssertionError: expected 'Frost Nova +' to contain 'Морозная нова'
+
+Expected: "Морозная нова"
+Received: "Frost Nova +"
+
+ ❯ tests/unit/frost-armageddon.test.ts:125:150
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/47]⎯
+
+ FAIL  tests/unit/guardian-encounter.test.ts > activates on creation without damage/proximity and keeps one awakening d
+eadline
+AssertionError: expected 'Guardian awakened! Dodge the magic or…' to contain 'пробуждён'
+
+Expected: "пробуждён"
+Received: "Guardian awakened! Dodge the magic orbs"
+
+ ❯ tests/unit/guardian-encounter.test.ts:7:226
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/47]⎯
+
+ FAIL  tests/unit/loot.test.ts > temporary stats and XP > refreshes without stacking, combines different buffs and deri
+ves upgraded stats
+AssertionError: expected [ Array(1) ] to deeply equal [ { id: 'haste', …(2) } ]
+
+- Expected
++ Received
+
+  [
+    {
+      "id": "haste",
+-     "name": "Ускорение",
++     "multiplier": 1.5,
++     "name": "Haste",
+      "remaining": 6,
+    },
+  ]
+
+ ❯ tests/unit/loot.test.ts:61:57
+     59|     w.elapsed = 6; w.loot.grant(w, 'haste'); expect(w.effectiveSpeed).…
+     60|     applyUpgrade(w, 'speed'); applyUpgrade(w, 'damage'); expect(w.effe…
+     61|     w.elapsed = 10; expect(w.buffs.snapshot(w.elapsed)).toEqual([{ id:…
+       |                                                         ^
+     62|     w.elapsed = 16; expect(w.effectiveSpeed).toBe(speed + 13.5); expec…
+     63|     for (let i = 0; i < 100; i++) { w.loot.grant(w, 'haste'); w.loot.g…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/47]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s
+AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Obj
+ect.is equality
+
+Expected: "fc4e7d1fc3d20f2c737a0cbd5313a641d7d14b7eee137ce0e74e293716b6d880"
+Received: "65daa6ddf0772ef548722f71bff81aaca067bbed92e37a91c8deae0aff27e21f"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/47]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s
+AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Obj
+ect.is equality
+
+Expected: "8cfcbbbbdf4797b8878fdac9f316d75b45419cc35fcdb55f722ebf578c66b39d"
+Received: "00af386c24ed4d758b836014cba395101c086698f53c91fc76a4d64ef4054d10"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/47]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s
+AssertionError: expected '948495edfc21aae434633bec448a7190d12cc…' to be '28c689d108bc954033cf5215dca3af3a4903e…' // Obj
+ect.is equality
+
+Expected: "28c689d108bc954033cf5215dca3af3a4903e661c6cc5eb17fe858e9e2c1c5aa"
+Received: "948495edfc21aae434633bec448a7190d12ccc07896fc3ace8be06dc93a5bcf1"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/47]⎯
+
+ FAIL  tests/unit/survival-enrage.test.ts > preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s
+AssertionError: expected 'af617a3c693ee3cd2fa9cab12a47a280ee11c…' to be 'e4e774dcab1c34a179cf5d65917da790231ac…' // Obj
+ect.is equality
+
+Expected: "e4e774dcab1c34a179cf5d65917da790231ac0a197646c1a1b72cb7575b70e27"
+Received: "af617a3c693ee3cd2fa9cab12a47a280ee11ca0d879a761162585167da4de99b"
+
+ ❯ tests/unit/survival-enrage.test.ts:16:90
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39/47]⎯
+
+ FAIL  tests/unit/upgrade-cards.test.ts > reads ranked control/meteor and Blink bonuses from existing balance data with
+out changing World
+AssertionError: expected '1.7s' to be '1.7с' // Object.is equality
+
+Expected: "1.7с"
+Received: "1.7s"
+
+ ❯ tests/unit/upgrade-cards.test.ts:25:77
+     23| });
+     24| it('reads ranked control/meteor and Blink bonuses from existing balanc…
+     25|   expect(upgradeCard({ id: 'rank-frost', tier: 4, description: '' }).v…
+       |                                                                             ^
+     26|   expect(upgradeCard({ id: 'rank-meteor', tier: 5, description: '' }).…
+     27|   expect(upgradeCard({ id: 'mobility-arcane-sprint', tier: 3, descript…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[40/47]⎯
+
+ FAIL  tests/unit/upgrade-cards.test.ts > shows the Berserk rank1 sprint bonus and refresh rule in the upgrade card
+AssertionError: expected 'For 2s: damage +25%, CDR 25%, movemen…' to contain 'скорость движения +30%'
+
+Expected: "скорость движения +30%"
+Received: "For 2s: damage +25%, CDR 25%, movement speed +30%. CDR affects newly started cooldowns; another dash refresh
+es the effect without stacking."
+
+ ❯ tests/unit/upgrade-cards.test.ts:35:24
+     33| it.each([1, 2, 3])('shows the Berserk rank%i sprint bonus and refresh …
+     34|   const card = upgradeCard({ id: 'mobility-berserk', tier, description…
+     35|   expect(card.summary).toContain(`скорость движения +${[30, 35, 40][ti…
+       |                        ^
+     36|   expect(card.summary).toContain('На 2с'); expect(card.summary).toCont…
+     37| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[41/47]⎯
+
+ FAIL  tests/unit/upgrade-cards.test.ts > shows the Berserk rank2 sprint bonus and refresh rule in the upgrade card
+AssertionError: expected 'For 2s: damage +30%, CDR 30%, movemen…' to contain 'скорость движения +35%'
+
+Expected: "скорость движения +35%"
+Received: "For 2s: damage +30%, CDR 30%, movement speed +35%. CDR affects newly started cooldowns; another dash refresh
+es the effect without stacking."
+
+ ❯ tests/unit/upgrade-cards.test.ts:35:24
+     33| it.each([1, 2, 3])('shows the Berserk rank%i sprint bonus and refresh …
+     34|   const card = upgradeCard({ id: 'mobility-berserk', tier, description…
+     35|   expect(card.summary).toContain(`скорость движения +${[30, 35, 40][ti…
+       |                        ^
+     36|   expect(card.summary).toContain('На 2с'); expect(card.summary).toCont…
+     37| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[42/47]⎯
+
+ FAIL  tests/unit/upgrade-cards.test.ts > shows the Berserk rank3 sprint bonus and refresh rule in the upgrade card
+AssertionError: expected 'For 2s: damage +35%, CDR 35%, movemen…' to contain 'скорость движения +40%'
+
+Expected: "скорость движения +40%"
+Received: "For 2s: damage +35%, CDR 35%, movement speed +40%. CDR affects newly started cooldowns; another dash refresh
+es the effect without stacking."
+
+ ❯ tests/unit/upgrade-cards.test.ts:35:24
+     33| it.each([1, 2, 3])('shows the Berserk rank%i sprint bonus and refresh …
+     34|   const card = upgradeCard({ id: 'mobility-berserk', tier, description…
+     35|   expect(card.summary).toContain(`скорость движения +${[30, 35, 40][ti…
+       |                        ^
+     36|   expect(card.summary).toContain('На 2с'); expect(card.summary).toCont…
+     37| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[43/47]⎯
+
+ FAIL  tests/unit/warrior-buffs-v4.test.ts > protects the explicit change scope and reuses the accepted Banner A object
+ byte for byte
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-buffs-v4.mjs
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'
+}
+
+Node.js v22.16.0
+
+ ❯ scripts/verify-warrior-buffs-v4.mjs:6:65
+ ❯ tests/unit/warrior-buffs-v4.test.ts:10:9
+      8|
+      9| it('protects the explicit change scope and reuses the accepted Banner …
+     10|  expect(execFileSync(process.execPath,['scripts/verify-warrior-buffs-v…
+       |         ^
+     11| });
+     12|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[44/47]⎯
+
+ FAIL  tests/unit/warrior-skills.test.ts > verifies exact accepted RGBA, all production atlas frames and the explicit l
+imited runtime scope
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-cleave-v3.mjs
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-cle
+ave-sync-v3\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.js
+on'
+}
+
+Node.js v22.16.0
+
+ ❯ scripts/verify-warrior-cleave-v3.mjs:6:71
+ ❯ tests/unit/warrior-skills.test.ts:18:9
+     16| }
+     17| it('verifies exact accepted RGBA, all production atlas frames and the …
+     18|  expect(execFileSync(process.execPath,['scripts/verify-warrior-cleave-…
+       |         ^
+     19|  expect(execFileSync(process.execPath,['scripts/verify-warrior-skills-…
+     20| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[45/47]⎯
+
+ FAIL  tests/unit/warrior-spear-release.test.ts > limits the timing fix to one config file and preserves the remaining 
+467 runtime files
+AssertionError: expected [ 'src/App.vue', …(59) ] to deeply equal [ Array(1) ]
+
+- Expected
++ Received
+
+  [
++   "src/App.vue",
++   "src/game/abilities/chainLightning.ts",
++   "src/game/abilities/definitions.ts",
++   "src/game/abilities/fireball.ts",
++   "src/game/abilities/meteor.ts",
++   "src/game/abilities/warrior.ts",
++   "src/game/art/EncounterArt.ts",
++   "src/game/art/FinalBossArt.ts",
++   "src/game/art/warriorHeroManifest.json",
++   "src/game/art/WarriorMovingCleaveArt.ts",
++   "src/game/art/warriorSkillsManifest.json",
++   "src/game/audio/musicTracks.ts",
++   "src/game/config/atmosphere.ts",
++   "src/game/config/biomes.ts",
++   "src/game/config/enemyDefinitions.ts",
++   "src/game/config/gameBalance.ts",
++   "src/game/config/mobilityUpgrades.ts",
++   "src/game/config/pacing.ts",
++   "src/game/config/playerVisuals.ts",
++   "src/game/config/ultimates.ts",
+    "src/game/config/warriorAbilities.ts",
++   "src/game/events/bridge.ts",
++   "src/game/loot/ArtifactSystem.ts",
++   "src/game/loot/BuffSystem.ts",
++   "src/game/loot/LootSystem.ts",
++   "src/game/loot/types.ts",
++   "src/game/scenes/GameScene.ts",
++   "src/game/services/storage.ts",
++   "src/game/systems/EncounterDirector.ts",
++   "src/game/systems/FinalEncounter.ts",
++   "src/game/systems/RareGuardianSystem.ts",
++   "src/game/systems/ScoreSystem.ts",
++   "src/game/systems/UpgradeSystem.ts",
++   "src/game/systems/World.ts",
++   "src/ui/components/BossBars.vue",
++   "src/ui/components/BuffDock.vue",
++   "src/ui/components/EventTimeline.vue",
++   "src/ui/components/FinalBossBar.vue",
++   "src/ui/components/GameHUD.vue",
++   "src/ui/components/GameRadar.vue",
++   "src/ui/components/LevelUpModal.vue",
++   "src/ui/components/LocalRecords.vue",
++   "src/ui/components/MainMenu.vue",
+
++   "src/ui/components/MobilityControl.vue",
++   "src/ui/components/RunArtifacts.vue",
++   "src/ui/components/RunStatistics.vue",
++   "src/ui/components/SettingsPanel.vue",
++   "src/ui/components/UltimateControl.vue",
++   "src/ui/components/VirtualJoystick.vue",
++   "src/ui/focus.ts",
++   "src/ui/hd-theme.css",
++   "src/ui/upgradeCards.ts",
++   "src/ui/upgradeIdentity.ts",
++   "public/assets/hd/warrior-hero-v1/2.png",
++   "public/assets/hd/warrior-hero-v1/3.png",
++   "public/assets/hd/warrior-hero-v1/4.png",
++   "public/assets/hd/warrior-skills-v1/2.png",
++   "public/assets/hd/warrior-skills-v1/4.png",
++   "public/assets/hd/warrior-skills-v1/5.png",
++   "public/assets/hd/warrior-skills-v1/6.png",
+  ]
+
+ ❯ tests/unit/warrior-spear-release.test.ts:30:65
+     28|  const proof=JSON.parse(readFileSync(`${root}/integration-verification…
+     29|  const hash=(file:string)=>createHash('sha256').update(readFileSync(fi…
+     30|  expect(Object.keys(baseline).filter(f=>hash(f)!==baseline[f])).toEqua…
+       |                                                                 ^
+     31|  for(const f of Object.keys(baseline))expect(hash(f),f).toBe(proof.cur…
+     32| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[46/47]⎯
+
+ FAIL  tests/unit/warrior-ultimates-assets.test.ts > preserves all selected Warrior ultimate RGBA frames and the explic
+it runtime scope
+Error: Command failed: C:\Program Files\nodejs\node.exe scripts/verify-warrior-ultimates-v1.mjs
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\art\generated\warrior-c
+oncept-pack-v1\source\png.mjs' imported from <repository>\scripts\verify-warrior-ultim
+ates-v1.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:860:10)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'
+}
+
+Node.js v22.16.0
+
+ ❯ tests/unit/warrior-ultimates-assets.test.ts:6:18
+      4|
+      5| it('preserves all selected Warrior ultimate RGBA frames and the explic…
+      6|   const result = execFileSync(process.execPath, ['scripts/verify-warri…
+       |                  ^
+ Test Files  35 failed | 125 passed (160)
+      Tests  24 failed | 1061 passed (1085)
+   Start at  16:43:17
+   Duration  33.55s (tests 74%, import 20%, transform 5%, worker 1%)
+      7|   expect(result).toContain('"sourceFrames":63'); expect(result).toCont…
+      8| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[47/47]⎯
+
+
+    Isolate  160 workers spawned · ~90ms startup each (spawn + environment, per file)
+             at least ~7.10s faster with isolate: false — reuses workers across files instead of one per file
+

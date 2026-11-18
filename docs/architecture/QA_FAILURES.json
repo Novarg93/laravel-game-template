@@ -1,0 +1,827 @@
+{
+  "initialIssueGroups": [
+    {
+      "file": "tests/unit/ambient-music-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/ambient-music-review.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I01",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/ash-warden-library.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/ash-warden-library.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I02",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/ash-warden-north-meteor-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/ash-warden-north-meteor-review.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I03",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/ash-warden-pixellab-runtime.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/ash-warden-pixellab-runtime.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I04",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/ash-warden-sounds.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/ash-warden-sounds.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I05",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/astral-flame-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/astral-flame-review.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I06",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/astral-projectile-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/astral-projectile-review.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I07",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/berserk-sprint-scope.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/berserk-sprint-scope.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I08",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/biome-phase-notice.test.ts",
+      "title": "announces dusk exactly at its milestone for five run seconds",
+      "key": "tests/unit/biome-phase-notice.test.ts::announces dusk exactly at its milestone for five run seconds",
+      "message": "AssertionError: expected { phase: 'dusk', …(4) } to match object { phase: 'dusk', …(3) }\n(1 matching property omitted from actual)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:2066:10)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:1958:14)\n    at Proxy.methodWrapper (file:///<repository>/node_modules/chai/index.js:1737:25)\n    at <repository>/tests/unit/biome-phase-notice.test.ts:9:27\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "I09",
+      "sourceOfTruth": "game/config/atmosphere.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/biome-phase-notice.test.ts",
+      "title": "announces dying exactly at its milestone for five run seconds",
+      "key": "tests/unit/biome-phase-notice.test.ts::announces dying exactly at its milestone for five run seconds",
+      "message": "AssertionError: expected { phase: 'dying', …(4) } to match object { phase: 'dying', …(3) }\n(1 matching property omitted from actual)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:2066:10)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:1958:14)\n    at Proxy.methodWrapper (file:///<repository>/node_modules/chai/index.js:1737:25)\n    at <repository>/tests/unit/biome-phase-notice.test.ts:9:27\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "I10",
+      "sourceOfTruth": "game/config/atmosphere.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/biome-phase-notice.test.ts",
+      "title": "announces burning exactly at its milestone for five run seconds",
+      "key": "tests/unit/biome-phase-notice.test.ts::announces burning exactly at its milestone for five run seconds",
+      "message": "AssertionError: expected { phase: 'burning', …(4) } to match object { phase: 'burning', …(3) }\n(1 matching property omitted from actual)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:2066:10)\n    at Proxy.<anonymous> (file:///<repository>/node_modules/vitest/dist/chunks/index.aTZaPVhf.js:1958:14)\n    at Proxy.methodWrapper (file:///<repository>/node_modules/chai/index.js:1737:25)\n    at <repository>/tests/unit/biome-phase-notice.test.ts:9:27\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "I11",
+      "sourceOfTruth": "game/config/atmosphere.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/boss-meteor-ui-fix.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/boss-meteor-ui-fix.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I12",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/briar-practice.test.ts",
+      "title": "starts one real Briar Beast with the same lawful Mage54 build, HP and ready lightning ultimate",
+      "key": "tests/unit/briar-practice.test.ts::starts one real Briar Beast with the same lawful Mage54 build, HP and ready lightning ultimate",
+      "message": "AssertionError: expected 'Briar Beast' to be 'Терновый зверь' // Object.is equality\n    at <repository>/tests/unit/briar-practice.test.ts:13:40\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I13",
+      "sourceOfTruth": "game/config/enemyDefinitions.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from0 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from0 without Guardian side effects",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I14",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Исторический replay: причина несовпадения не установлена"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from180 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from180 without Guardian side effects",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I15",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Исторический replay: причина несовпадения не установлена"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from480 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from480 without Guardian side effects",
+      "message": "AssertionError: expected 'afbf8b3e8a5872e84ed89af9efce76f61f5b7…' to be '62209e9e0fd562f9f900ad4acbd3ee521e0ce…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I16",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Исторический replay: причина несовпадения не установлена"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from870 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from870 without Guardian side effects",
+      "message": "AssertionError: expected '7d2c9a41db371fe87cb153b2e129a5dc2fccb…' to be 'd612a59ad06b2469a8b217421763243322c56…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I17",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Исторический replay: причина несовпадения не установлена"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "creates active early Guardians with individual linear snapshots and radar/notice",
+      "key": "tests/unit/endgame.test.ts::creates active early Guardians with individual linear snapshots and radar/notice",
+      "message": "AssertionError: expected 'Guardian awakened! Dodge the magic or…' to contain 'сфер'\n    at <repository>/tests/unit/endgame.test.ts:20:529\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I18",
+      "sourceOfTruth": "game/systems/RareGuardianSystem.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/fire-ultimate-runtime.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/fire-ultimate-runtime.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I19",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/frost-armageddon.test.ts",
+      "title": "freezes root/sequence on pause, clears casts and control on death/disposal and retains upgrade identity",
+      "key": "tests/unit/frost-armageddon.test.ts::freezes root/sequence on pause, clears casts and control on death/disposal and retains upgrade identity",
+      "message": "AssertionError: expected 'Frost Nova +' to contain 'Морозная нова'\n    at <repository>/tests/unit/frost-armageddon.test.ts:125:150\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I20",
+      "sourceOfTruth": "game/abilities/definitions.ts; game/systems/UpgradeSystem.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/frost-ultimate-runtime.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/frost-ultimate-runtime.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I21",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/guardian-encounter.test.ts",
+      "title": "activates on creation without damage/proximity and keeps one awakening deadline",
+      "key": "tests/unit/guardian-encounter.test.ts::activates on creation without damage/proximity and keeps one awakening deadline",
+      "message": "AssertionError: expected 'Guardian awakened! Dodge the magic or…' to contain 'пробуждён'\n    at <repository>/tests/unit/guardian-encounter.test.ts:7:226\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I22",
+      "sourceOfTruth": "game/systems/RareGuardianSystem.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/loot.test.ts",
+      "title": "temporary stats and XP refreshes without stacking, combines different buffs and derives upgraded stats",
+      "key": "tests/unit/loot.test.ts::temporary stats and XP refreshes without stacking, combines different buffs and derives upgraded stats",
+      "message": "AssertionError: expected [ Array(1) ] to deeply equal [ { id: 'haste', …(2) } ]\n    at <repository>/tests/unit/loot.test.ts:61:57\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I23",
+      "sourceOfTruth": "game/loot/BuffSystem.ts; game/loot/types.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/mage-meteor-v3.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/mage-meteor-v3.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I24",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/mage-sfx.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/mage-sfx.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I25",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/mage-uploaded-sounds.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/mage-uploaded-sounds.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I26",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/miniboss-assets-audio.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/miniboss-assets-audio.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I27",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/music-runtime.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/music-runtime.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I28",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I29",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Историческая проверка: требуется подлинный source/proof"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I30",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Историческая проверка: требуется подлинный source/proof"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s",
+      "message": "AssertionError: expected '948495edfc21aae434633bec448a7190d12cc…' to be '28c689d108bc954033cf5215dca3af3a4903e…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I31",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Историческая проверка: требуется подлинный source/proof"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s",
+      "message": "AssertionError: expected 'af617a3c693ee3cd2fa9cab12a47a280ee11c…' to be 'e4e774dcab1c34a179cf5d65917da790231ac…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I32",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Историческая проверка: требуется подлинный source/proof"
+    },
+    {
+      "file": "tests/unit/upgrade-cards.test.ts",
+      "title": "reads ranked control/meteor and Blink bonuses from existing balance data without changing World",
+      "key": "tests/unit/upgrade-cards.test.ts::reads ranked control/meteor and Blink bonuses from existing balance data without changing World",
+      "message": "AssertionError: expected '1.7s' to be '1.7с' // Object.is equality\n    at <repository>/tests/unit/upgrade-cards.test.ts:25:77\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "I33",
+      "sourceOfTruth": "game/ui/upgradeCards.ts; game/config/mobilityUpgrades.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/upgrade-cards.test.ts",
+      "title": "shows the Berserk rank1 sprint bonus and refresh rule in the upgrade card",
+      "key": "tests/unit/upgrade-cards.test.ts::shows the Berserk rank1 sprint bonus and refresh rule in the upgrade card",
+      "message": "AssertionError: expected 'For 2s: damage +25%, CDR 25%, movemen…' to contain 'скорость движения +30%'\n    at <repository>/tests/unit/upgrade-cards.test.ts:35:24\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I34",
+      "sourceOfTruth": "game/ui/upgradeCards.ts; game/config/mobilityUpgrades.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/upgrade-cards.test.ts",
+      "title": "shows the Berserk rank2 sprint bonus and refresh rule in the upgrade card",
+      "key": "tests/unit/upgrade-cards.test.ts::shows the Berserk rank2 sprint bonus and refresh rule in the upgrade card",
+      "message": "AssertionError: expected 'For 2s: damage +30%, CDR 30%, movemen…' to contain 'скорость движения +35%'\n    at <repository>/tests/unit/upgrade-cards.test.ts:35:24\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I35",
+      "sourceOfTruth": "game/ui/upgradeCards.ts; game/config/mobilityUpgrades.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/upgrade-cards.test.ts",
+      "title": "shows the Berserk rank3 sprint bonus and refresh rule in the upgrade card",
+      "key": "tests/unit/upgrade-cards.test.ts::shows the Berserk rank3 sprint bonus and refresh rule in the upgrade card",
+      "message": "AssertionError: expected 'For 2s: damage +35%, CDR 35%, movemen…' to contain 'скорость движения +40%'\n    at <repository>/tests/unit/upgrade-cards.test.ts:35:24\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "I36",
+      "sourceOfTruth": "game/ui/upgradeCards.ts; game/config/mobilityUpgrades.ts",
+      "status": "FIXED: актуальный контракт подтверждён, assertion проходит",
+      "category": "Устаревшее ожидание текущего runtime"
+    },
+    {
+      "file": "tests/unit/visual-cleanup-rune-idle.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/visual-cleanup-rune-idle.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I37",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-buffs-v4.test.ts",
+      "title": "protects the explicit change scope and reuses the accepted Banner A object byte for byte",
+      "key": "tests/unit/warrior-buffs-v4.test.ts::protects the explicit change scope and reuses the accepted Banner A object byte for byte",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-buffs-v4.mjs\nnode:fs:442\r\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'\r\n    at readFileSync (node:fs:442:20)\r\n    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\Users\\\\Novarg\\\\Desktop\\\\laravel-game-template\\\\art\\\\generated\\\\warrior-buffs-v4\\\\runtime-baseline.json'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-buffs-v4.test.ts:10:9\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "I38",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Отсутствует исторический source/proof"
+    },
+    {
+      "file": "tests/unit/warrior-combat-scope.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-combat-scope.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I39",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-empty-hand.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-empty-hand.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I40",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-hero-scope.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-hero-scope.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I41",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-review.test.ts::MODULE COLLECTION",
+      "message": "Cannot find module '../../art/warrior-review-v1/model' imported from <repository>/tests/unit/warrior-review.test.ts",
+      "id": "I42",
+      "sourceOfTruth": "art/warrior-review-v1/model + catalog (недоступны)",
+      "status": "BLOCKED: review modules отсутствуют",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-skills.test.ts",
+      "title": "verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope",
+      "key": "tests/unit/warrior-skills.test.ts::verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-cleave-v3.mjs\nnode:fs:442\r\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.json'\r\n    at readFileSync (node:fs:442:20)\r\n    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\Users\\\\Novarg\\\\Desktop\\\\laravel-game-template\\\\art\\\\generated\\\\warrior-cleave-sync-v3\\\\runtime-baseline.json'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-skills.test.ts:18:9\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "I43",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Отсутствует исторический source/proof"
+    },
+    {
+      "file": "tests/unit/warrior-sounds.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-sounds.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I44",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-spear-release.test.ts",
+      "title": "limits the timing fix to one config file and preserves the remaining 467 runtime files",
+      "key": "tests/unit/warrior-spear-release.test.ts::limits the timing fix to one config file and preserves the remaining 467 runtime files",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\src\\App.vue'\n    at Object.openSync (node:fs:562:18)\n    at readFileSync (node:fs:446:35)\n    at hash (<repository>/tests/unit/warrior-spear-release.test.ts:29:56)\n    at <repository>/tests/unit/warrior-spear-release.test.ts:30:41\n    at Array.filter (<anonymous>)\n    at <repository>/tests/unit/warrior-spear-release.test.ts:30:31\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)",
+      "id": "I45",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Отсутствует исторический source/proof"
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-accepted.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-ultimates-accepted.test.ts::MODULE COLLECTION",
+      "message": "ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'",
+      "id": "I46",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "Сборка модуля восстановлена; отдельные архивные assertions остаются красными",
+      "category": "Отсутствующий файл"
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-assets.test.ts",
+      "title": "preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope",
+      "key": "tests/unit/warrior-ultimates-assets.test.ts::preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-ultimates-v1.mjs\nnode:internal/modules/esm/resolve:275\r\n    throw new ERR_MODULE_NOT_FOUND(\r\n          ^\r\n\r\nError [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\\art\\generated\\warrior-concept-pack-v1\\source\\png.mjs' imported from <repository>\\scripts\\verify-warrior-ultimates-v1.mjs\r\n    at finalizeResolution (node:internal/modules/esm/resolve:275:11)\r\n    at moduleResolve (node:internal/modules/esm/resolve:860:10)\r\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\r\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\r\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\r\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\r\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\r\n    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {\r\n  code: 'ERR_MODULE_NOT_FOUND',\r\n  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-ultimates-assets.test.ts:6:18\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "I47",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio",
+      "status": "UNRESOLVED: исторический assertion сохранён",
+      "category": "Отсутствует исторический source/proof"
+    }
+  ],
+  "remainingIssueGroups": [
+    {
+      "file": "tests/unit/ambient-music-review.test.ts",
+      "title": "preserves the review proof and allows only the later explicit music integration",
+      "key": "tests/unit/ambient-music-review.test.ts::preserves the review proof and allows only the later explicit music integration",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/ambient-music-review.test.ts:37:459\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R01",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/ash-warden-library.test.ts",
+      "title": "catalogues all51 main clips,15 assembled scenes,4 actual projections and labelled unused/reference assets",
+      "key": "tests/unit/ash-warden-library.test.ts::catalogues all51 main clips,15 assembled scenes,4 actual projections and labelled unused/reference assets",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/ash-warden-library.test.ts:24:93\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R02",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/ash-warden-library.test.ts",
+      "title": "leaves all345 runtime files unchanged after accepted Eclipse flame integration",
+      "key": "tests/unit/ash-warden-library.test.ts::leaves all345 runtime files unchanged after accepted Eclipse flame integration",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/ash-warden-library.test.ts:35:643\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R03",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/ash-warden-north-meteor-review.test.ts",
+      "title": "keeps the complete runtime inventory and all345 game files intact pending acceptance",
+      "key": "tests/unit/ash-warden-north-meteor-review.test.ts::keeps the complete runtime inventory and all345 game files intact pending acceptance",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/ash-warden-north-meteor-review.test.ts:21:513\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R04",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/ash-warden-pixellab-runtime.test.ts",
+      "title": "packs all60 accepted native RGBA cels losslessly, with2px padding and bounded atlas memory",
+      "key": "tests/unit/ash-warden-pixellab-runtime.test.ts::packs all60 accepted native RGBA cels losslessly, with2px padding and bounded atlas memory",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/ash-warden-pixellab-runtime.test.ts:18:325\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R05",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/ash-warden-sounds.test.ts",
+      "title": "limits runtime changes to the explicit user-authorized sound integration",
+      "key": "tests/unit/ash-warden-sounds.test.ts::limits runtime changes to the explicit user-authorized sound integration",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/ash-warden-sounds.test.ts:84:327\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R06",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/astral-flame-review.test.ts",
+      "title": "leaves all341 runtime files and inventory unchanged after the approved projectile/Blink integration",
+      "key": "tests/unit/astral-flame-review.test.ts::leaves all341 runtime files and inventory unchanged after the approved projectile/Blink integration",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/astral-flame-review.test.ts:34:793\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R07",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/astral-projectile-review.test.ts",
+      "title": "retains the initial preview proof and verifies the subsequently approved narrow integration scope",
+      "key": "tests/unit/astral-projectile-review.test.ts::retains the initial preview proof and verifies the subsequently approved narrow integration scope",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/astral-projectile-review.test.ts:44:620\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R08",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/berserk-sprint-scope.test.ts",
+      "title": "limits the Berserk sprint change to four runtime files and preserves all other runtime bytes",
+      "key": "tests/unit/berserk-sprint-scope.test.ts::limits the Berserk sprint change to four runtime files and preserves all other runtime bytes",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]\n    at <repository>/tests/unit/berserk-sprint-scope.test.ts:11:54\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "R09",
+      "category": "Несовместимая историческая область файлов/байтов",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/boss-meteor-ui-fix.test.ts",
+      "title": "changes exactly four presentation files and preserves all359 other runtime files and all audio/atlas assets",
+      "key": "tests/unit/boss-meteor-ui-fix.test.ts::changes exactly four presentation files and preserves all359 other runtime files and all audio/atlas assets",
+      "message": "AssertionError: src/game/art/FinalBossArt.ts: expected '5b8cd70cd2e1b8950b0d135bbc0e174413df8…' to be '472c8096833d52363892295e9a7463b6c769d…' // Object.is equality\n    at <repository>/tests/unit/boss-meteor-ui-fix.test.ts:25:154\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "R10",
+      "category": "Историческая проверка: требуется подлинный source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from0 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from0 without Guardian side effects",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R11",
+      "category": "Исторический replay: причина несовпадения не установлена",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from180 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from180 without Guardian side effects",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R12",
+      "category": "Исторический replay: причина несовпадения не установлена",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from480 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from480 without Guardian side effects",
+      "message": "AssertionError: expected 'afbf8b3e8a5872e84ed89af9efce76f61f5b7…' to be '62209e9e0fd562f9f900ad4acbd3ee521e0ce…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R13",
+      "category": "Исторический replay: причина несовпадения не установлена",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "title": "preserves original ordinary/boss replay before15 from870 without Guardian side effects",
+      "key": "tests/unit/endgame.test.ts::preserves original ordinary/boss replay before15 from870 without Guardian side effects",
+      "message": "AssertionError: expected '7d2c9a41db371fe87cb153b2e129a5dc2fccb…' to be 'd612a59ad06b2469a8b217421763243322c56…' // Object.is equality\n    at <repository>/tests/unit/endgame.test.ts:13:324\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R14",
+      "category": "Исторический replay: причина несовпадения не установлена",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/fire-ultimate-runtime.test.ts",
+      "title": "limits the accepted integration to9 changed and8 added runtime files and protects every other file",
+      "key": "tests/unit/fire-ultimate-runtime.test.ts::limits the accepted integration to9 changed and8 added runtime files and protects every other file",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/fire-ultimate-runtime.test.ts:29:160\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R15",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/frost-ultimate-runtime.test.ts",
+      "title": "preserves all389 unrelated runtime files including fire gameplay/audio and frost combat",
+      "key": "tests/unit/frost-ultimate-runtime.test.ts::preserves all389 unrelated runtime files including fire gameplay/audio and frost combat",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/frost-ultimate-runtime.test.ts:23:161\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R16",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/mage-meteor-v3.test.ts",
+      "title": "audits approved PixelLab pixels, unchanged boss/archive art, padding and black light compositing",
+      "key": "tests/unit/mage-meteor-v3.test.ts::audits approved PixelLab pixels, unchanged boss/archive art, padding and black light compositing",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/mage-meteor-v3.test.ts:19:102\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R17",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/mage-sfx.test.ts",
+      "title": "allows only the explicitly requested audio and practice changes over the accepted art baseline",
+      "key": "tests/unit/mage-sfx.test.ts::allows only the explicitly requested audio and practice changes over the accepted art baseline",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/mage-sfx.test.ts:39:107\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R18",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/mage-uploaded-sounds.test.ts",
+      "title": "preserves music, gameplay and all other runtime files outside the exact4changed/6added scope",
+      "key": "tests/unit/mage-uploaded-sounds.test.ts::preserves music, gameplay and all other runtime files outside the exact4changed/6added scope",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/mage-uploaded-sounds.test.ts:35:378\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R19",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/mage-uploaded-sounds.test.ts",
+      "title": "replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged",
+      "key": "tests/unit/mage-uploaded-sounds.test.ts::replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/mage-uploaded-sounds.test.ts:47:86\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R20",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/mage-uploaded-sounds.test.ts",
+      "title": "connects the supplied Frost Nova WAV and preserves every other runtime file",
+      "key": "tests/unit/mage-uploaded-sounds.test.ts::connects the supplied Frost Nova WAV and preserves every other runtime file",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/mage-uploaded-sounds.test.ts:61:256\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R21",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/miniboss-assets-audio.test.ts",
+      "title": "changes only the five presentation files and eleven explicitly accepted local assets/modules",
+      "key": "tests/unit/miniboss-assets-audio.test.ts::changes only the five presentation files and eleven explicitly accepted local assets/modules",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/miniboss-assets-audio.test.ts:79:161\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R22",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/music-runtime.test.ts",
+      "title": "limits runtime changes to audio and selected MP3 assets over the363-file baseline",
+      "key": "tests/unit/music-runtime.test.ts::limits runtime changes to audio and selected MP3 assets over the363-file baseline",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at wardenApprovedHash (<repository>/tests/helpers/approvedWardenIntegration.ts:27:380)\n    at <repository>/tests/unit/music-runtime.test.ts:53:162\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R23",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from0 s",
+      "message": "AssertionError: expected '65daa6ddf0772ef548722f71bff81aaca067b…' to be 'fc4e7d1fc3d20f2c737a0cbd5313a641d7d14…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R24",
+      "category": "Историческая проверка: требуется подлинный source/proof",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from180 s",
+      "message": "AssertionError: expected '00af386c24ed4d758b836014cba395101c086…' to be '8cfcbbbbdf4797b8878fdac9f316d75b45419…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R25",
+      "category": "Историческая проверка: требуется подлинный source/proof",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from480 s",
+      "message": "AssertionError: expected '948495edfc21aae434633bec448a7190d12cc…' to be '28c689d108bc954033cf5215dca3af3a4903e…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R26",
+      "category": "Историческая проверка: требуется подлинный source/proof",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "title": "preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s",
+      "key": "tests/unit/survival-enrage.test.ts::preserves original pre10:00 AI, spawn, combat snapshot and RNG from570 s",
+      "message": "AssertionError: expected 'af617a3c693ee3cd2fa9cab12a47a280ee11c…' to be 'e4e774dcab1c34a179cf5d65917da790231ac…' // Object.is equality\n    at <repository>/tests/unit/survival-enrage.test.ts:16:90\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2886:64\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)",
+      "id": "R27",
+      "category": "Историческая проверка: требуется подлинный source/proof",
+      "sourceOfTruth": "tests/fixtures/pre-*-replay.json; source d7bb994/d1fa0cc (недоступен)"
+    },
+    {
+      "file": "tests/unit/visual-cleanup-rune-idle.test.ts",
+      "title": "keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files",
+      "key": "tests/unit/visual-cleanup-rune-idle.test.ts::keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\integration-verification.json'\n    at readFileSync (node:fs:442:20)\n    at load (<repository>/tests/helpers/integrationProof.ts:15:26)\n    at Object.get (<repository>/tests/helpers/integrationProof.ts:19:40)\n    at <repository>/tests/unit/visual-cleanup-rune-idle.test.ts:18:127\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20",
+      "id": "R28",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-buffs-v4.test.ts",
+      "title": "protects the explicit change scope and reuses the accepted Banner A object byte for byte",
+      "key": "tests/unit/warrior-buffs-v4.test.ts::protects the explicit change scope and reuses the accepted Banner A object byte for byte",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-buffs-v4.mjs\nnode:fs:442\r\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'\r\n    at readFileSync (node:fs:442:20)\r\n    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\Users\\\\Novarg\\\\Desktop\\\\laravel-game-template\\\\art\\\\generated\\\\warrior-buffs-v4\\\\runtime-baseline.json'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-buffs-v4.test.ts:10:9\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R29",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-combat-scope.test.ts",
+      "title": "changes only the seven authored presentation files and adds one legacy charge atlas page",
+      "key": "tests/unit/warrior-combat-scope.test.ts::changes only the seven authored presentation files and adds one legacy charge atlas page",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-combat-sync-runtime-v2\\runtime-baseline.json'\n    at readFileSync (node:fs:442:20)\n    at readRuntimeFile (<repository>/tests/helpers/runtimeFile.ts:9:21)\n    at <repository>/tests/unit/warrior-combat-scope.test.ts:11:28\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)",
+      "id": "R30",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-empty-hand.test.ts",
+      "title": "changes exactly five approved runtime files and preserves all other 463 hashes",
+      "key": "tests/unit/warrior-empty-hand.test.ts::changes exactly five approved runtime files and preserves all other 463 hashes",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]\n    at <repository>/tests/unit/warrior-empty-hand.test.ts:15:52\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "R31",
+      "category": "Несовместимая историческая область файлов/байтов",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-empty-hand.test.ts",
+      "title": "uses all selected empty hand edits, preserves every windup and keeps timing, routes and exclusions",
+      "key": "tests/unit/warrior-empty-hand.test.ts::uses all selected empty hand edits, preserves every windup and keeps timing, routes and exclusions",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-spear-empty-hand-review-v1\\manifest.json'\n    at readFileSync (node:fs:442:20)\n    at readRuntimeFile (<repository>/tests/helpers/runtimeFile.ts:9:21)\n    at <repository>/tests/unit/warrior-empty-hand.test.ts:21:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)",
+      "id": "R32",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-hero-scope.test.ts",
+      "title": "limits Warrior integration to seven presentation/selection files, three modules and ten atlas files",
+      "key": "tests/unit/warrior-hero-scope.test.ts::limits Warrior integration to seven presentation/selection files, three modules and ten atlas files",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-hero-runtime-v1\\runtime-baseline.json'\n    at readFileSync (node:fs:442:20)\n    at readRuntimeFile (<repository>/tests/helpers/runtimeFile.ts:9:21)\n    at <repository>/tests/unit/warrior-hero-scope.test.ts:13:28\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)",
+      "id": "R33",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-review.test.ts",
+      "title": "MODULE COLLECTION",
+      "key": "tests/unit/warrior-review.test.ts::MODULE COLLECTION",
+      "message": "Cannot find module '../../art/warrior-review-v1/model' imported from <repository>/tests/unit/warrior-review.test.ts",
+      "id": "R34",
+      "category": "Отсутствуют исторические модули",
+      "sourceOfTruth": "art/warrior-review-v1/model + catalog (недоступны)"
+    },
+    {
+      "file": "tests/unit/warrior-skills.test.ts",
+      "title": "verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope",
+      "key": "tests/unit/warrior-skills.test.ts::verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-cleave-v3.mjs\nnode:fs:442\r\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open '<repository>\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.json'\r\n    at readFileSync (node:fs:442:20)\r\n    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\Users\\\\Novarg\\\\Desktop\\\\laravel-game-template\\\\art\\\\generated\\\\warrior-cleave-sync-v3\\\\runtime-baseline.json'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-skills.test.ts:18:9\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R35",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-sounds.test.ts",
+      "title": "preserves all nine user recordings and pins the complete integration inventory and hashes",
+      "key": "tests/unit/warrior-sounds.test.ts::preserves all nine user recordings and pins the complete integration inventory and hashes",
+      "message": "Error: ENOENT: no such file or directory, open '<repository>\\art\\warrior\\sounds\\banner.wav'\n    at Object.openSync (node:fs:562:18)\n    at readFileSync (node:fs:446:35)\n    at readRuntimeFile (<repository>/tests/helpers/runtimeFile.ts:9:65)\n    at sha (<repository>/tests/unit/warrior-sounds.test.ts:12:54)\n    at <repository>/tests/unit/warrior-sounds.test.ts:16:42\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R36",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-spear-release.test.ts",
+      "title": "limits the timing fix to one config file and preserves the remaining 467 runtime files",
+      "key": "tests/unit/warrior-spear-release.test.ts::limits the timing fix to one config file and preserves the remaining 467 runtime files",
+      "message": "AssertionError: expected [ Array(72) ] to deeply equal [ 'game/config/warriorAbilities.ts' ]\n    at <repository>/tests/unit/warrior-spear-release.test.ts:31:65\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "R37",
+      "category": "Несовместимая историческая область файлов/байтов",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-accepted.test.ts",
+      "title": "limits accepted-ultimate integration to ten explicit runtime files and preserves the remaining 449",
+      "key": "tests/unit/warrior-ultimates-accepted.test.ts::limits accepted-ultimate integration to ten explicit runtime files and preserves the remaining 449",
+      "message": "AssertionError: expected [ …(478) ] to deeply equal [ …(468) ]\n    at <repository>/tests/unit/warrior-ultimates-accepted.test.ts:16:54\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64",
+      "id": "R38",
+      "category": "Несовместимая историческая область файлов/байтов",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-assets.test.ts",
+      "title": "preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope",
+      "key": "tests/unit/warrior-ultimates-assets.test.ts::preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope",
+      "message": "Error: Command failed: C:\\Program Files\\nodejs\\node.exe scripts/verify-warrior-ultimates-v1.mjs\nnode:internal/modules/esm/resolve:275\r\n    throw new ERR_MODULE_NOT_FOUND(\r\n          ^\r\n\r\nError [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\\art\\generated\\warrior-concept-pack-v1\\source\\png.mjs' imported from <repository>\\scripts\\verify-warrior-ultimates-v1.mjs\r\n    at finalizeResolution (node:internal/modules/esm/resolve:275:11)\r\n    at moduleResolve (node:internal/modules/esm/resolve:860:10)\r\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\r\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\r\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\r\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\r\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\r\n    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {\r\n  code: 'ERR_MODULE_NOT_FOUND',\r\n  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'\r\n}\r\n\r\nNode.js v22.16.0\r\n\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execFileSync (node:child_process:918:15)\n    at <repository>/tests/unit/warrior-ultimates-assets.test.ts:6:18\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///<repository>/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)",
+      "id": "R39",
+      "category": "Отсутствует исторический source/proof",
+      "sourceOfTruth": "Подлинные stage manifests/baselines/proofs + полная цепочка later acceptances; текущие manifests в game/art и game/audio"
+    }
+  ]
+}

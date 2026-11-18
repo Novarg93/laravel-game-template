@@ -1,0 +1,2459 @@
+
+> laravel-game-template@1.0.0 test:browser
+> node scripts/test-web.mjs
+
+
+   INFO  Preparing database.  
+
+  Creating migration table .............................................................................. 12.91ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table .................................................................. 39.42ms DONE
+  0001_01_01_000001_create_cache_table .................................................................. 23.90ms DONE
+  0001_01_01_000002_create_jobs_table ................................................................... 35.75ms DONE
+  2024_01_01_000000_create_passkeys_table ............................................................... 19.85ms DONE
+  2025_08_14_170933_add_two_factor_columns_to_users_table ............................................... 19.87ms DONE
+  2026_11_14_000001_create_contact_messages_table ........................................................ 5.84ms DONE
+  2026_11_14_000002_create_progression_tables .......................................................... 307.99ms DONE
+  2026_11_14_000003_create_inventory_tables ............................................................ 151.73ms DONE
+  2026_11_14_000004_reconcile_pending_item_rewards ....................................................... 0.79ms DONE
+  2026_11_14_000005_create_wallet_shop_tables .......................................................... 159.58ms DONE
+  2026_11_14_000006_reconcile_pending_credit_rewards ..................................................... 0.93ms DONE
+  2026_11_14_000007_create_payment_engine_tables ....................................................... 183.76ms DONE
+  2026_11_15_000008_make_reward_run_reference_nullable_on_delete ........................................ 33.79ms DONE
+  2026_11_15_000009_create_run_item_usage_tables ........................................................ 91.62ms DONE
+  2026_11_15_000010_make_payment_references_case_sensitive ............................................... 0.06ms DONE
+  2026_11_15_000011_create_leaderboard_and_operations .................................................. 145.97ms DONE
+  2026_11_15_000012_payment_custom_amount ............................................................... 55.56ms DONE
+  2026_11_16_000013_create_currencies .................................................................. 163.53ms DONE
+  2026_11_16_000014_protect_inventory_usage_journal ..................................................... 11.90ms DONE
+  2026_11_16_000015_premium_gameplay .................................................................... 91.61ms DONE
+  2026_11_17_000001_create_webhook_calls_table ........................................................... 5.75ms DONE
+  2026_11_17_000002_translate_catalog_labels_to_english .................................................. 2.54ms DONE
+
+Isolated browser fixtures ready.
+npm.cmd : [Wed Nov 18 17:43:24 2026] PHP 8.4.27 Development Server (http://127.0.0.1:8037) started
+строка:2 знак:72
++ ...  $env:PATH; npm.cmd run test:browser > .tmp/qa-browser.log 2>&1; $cod ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([Wed Nov 18 17:...1:8037) started:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[Wed Nov 18 17:43:24 2026] 127.0.0.1:58786 Accepted
+[Wed Nov 18 14:43:24 2026] 127.0.0.1:58786 [GET] URI: /up
+[Wed Nov 18 17:43:24 2026] 127.0.0.1:58786 Closing
+
+Running 3 tests using 1 worker
+
+(node:10452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58799 Accepted
+[Wed Nov 18 14:43:26 2026] 127.0.0.1:58799 [GET] URI: /
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58799 Closing
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58806 Accepted
+[Wed Nov 18 14:43:26 2026] 127.0.0.1:58806 [GET] URI: /
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58806 Closing
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58814 Accepted
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58814 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58815 Accepted
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58816 Accepted
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58815 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58817 Accepted
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58816 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58814 Closing
+[Wed Nov 18 17:43:26 2026] 127.0.0.1:58818 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58817 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58819 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58818 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58815 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58820 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58819 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58821 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58820 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58816 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58817 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58822 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58821 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58818 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58823 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58822 [200]: GET /build/assets/Welcome-Bs9qrQrT.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58819 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58824 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58823 [200]: GET /images/gameplay.png
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58820 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58824 [200]: GET /images/warrior.png
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58821 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58822 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58823 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58824 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58825 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58825 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58825 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58826 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58826 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58826 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58827 Accepted
+[Wed Nov 18 14:43:27 2026] 127.0.0.1:58827 [GET] URI: /guide
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58827 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58829 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58829 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58830 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58830 [200]: GET /build/assets/Guide-CZzvOTVQ.css
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58831 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58829 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58831 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58830 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58831 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58832 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58833 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58834 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58832 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58833 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58834 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58835 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58836 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58832 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58833 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58834 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58835 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58836 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58835 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58836 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58837 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58837 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58837 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58838 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58839 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58838 [200]: GET /build/assets/Guide-D7m_l2eY.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58839 [200]: GET /build/assets/lootPixels-DMGDpRZx.js
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58838 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58839 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58844 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58844 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58844 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58845 Accepted
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58845 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58845 Closing
+[Wed Nov 18 17:43:27 2026] 127.0.0.1:58846 Accepted
+[Wed Nov 18 14:43:27 2026] 127.0.0.1:58846 [GET] URI: /faq
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58846 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58848 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58848 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58848 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58849 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58849 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58850 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58850 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58849 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58851 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58850 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58851 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58851 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58852 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58853 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58852 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58853 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58854 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58854 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58852 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58853 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58854 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58855 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58856 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58855 [200]: GET /build/assets/Faq-D_D3In1u.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58856 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58855 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58856 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58857 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58857 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58857 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58858 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58858 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58858 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58859 Accepted
+[Wed Nov 18 14:43:28 2026] 127.0.0.1:58859 [GET] URI: /contact
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58859 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58861 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58861 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58861 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58862 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58862 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58863 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58864 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58862 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58865 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58863 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58864 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58865 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58866 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58867 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58866 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58867 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58863 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58864 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58865 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58866 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58867 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58868 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58868 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58869 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58868 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58869 [200]: GET /build/assets/Contact-_GoNTTMj.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58869 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58870 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58870 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58870 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58871 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58871 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58871 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58872 Accepted
+[Wed Nov 18 14:43:28 2026] 127.0.0.1:58872 [GET] URI: /leaderboard
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58872 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58875 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58875 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58876 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58876 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58875 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58876 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58877 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58878 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58879 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58877 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58878 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58879 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58880 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58881 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58880 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58882 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58881 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58877 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58878 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58879 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58882 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58880 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58881 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58882 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58883 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58884 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58883 [200]: GET /build/assets/Leaderboard-DJTmi_ok.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58884 [200]: GET /build/assets/leaderboard-BqOwUOES.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58883 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58884 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58885 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58885 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58885 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58887 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58887 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58887 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58888 Accepted
+[Wed Nov 18 14:43:28 2026] 127.0.0.1:58888 [GET] URI: /play
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58888 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58894 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58894 [200]: GET /build/assets/game-DcuPe8B6.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58895 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58896 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58895 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58896 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58894 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58895 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58896 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58897 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58897 [200]: GET /build/assets/main-CdOkPDz7.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58898 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58899 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58898 [200]: GET /build/assets/main-Cm_omybw.css
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58900 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58899 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58900 [200]: GET /build/assets/lootPixels-DMGDpRZx.js
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58898 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58899 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58900 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58897 Closing
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58901 Accepted
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58901 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:28 2026] 127.0.0.1:58901 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58903 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58903 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58904 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58903 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58905 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58906 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58904 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58905 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58906 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58907 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58904 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58905 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58906 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58907 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58908 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58907 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58909 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58908 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58909 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58908 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58910 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58909 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58910 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58910 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58911 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58912 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58911 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58912 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58913 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58913 [200]: GET /game-assets/hd/rune-warden-v2/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58914 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58911 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58912 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58915 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58913 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58914 [200]: GET /game-assets/hd/rune-warden-v2/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58915 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58914 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58915 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58916 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58916 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58916 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58917 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58918 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58917 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58918 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58919 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58917 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58918 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58919 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58919 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58920 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58921 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58920 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58921 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58922 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58920 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58921 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58922 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58922 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58923 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58924 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58923 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58924 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58925 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58925 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58923 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58924 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58925 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58926 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58927 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58926 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58927 [200]: GET /game-assets/hd/mage-blink-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58928 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58928 [200]: GET /game-assets/hd/mage-blink-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58926 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58927 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58928 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58929 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58930 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58929 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58931 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58930 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58931 [200]: GET /game-assets/hd/mage-cast-v2/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58932 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58929 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58933 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58930 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58931 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58932 [200]: GET /game-assets/hd/mage-cast-v2/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58933 [200]: GET /game-assets/hd/mage-run-v2/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58932 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58933 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58934 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58934 [200]: GET /game-assets/hd/mage-run-v2/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58934 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58935 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58935 [200]: GET /game-assets/hd/mage-idle-v2/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58936 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58935 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58937 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58938 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58936 [200]: GET /game-assets/hd/mage-idle-v2/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58937 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58938 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58939 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58939 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58936 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58938 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58937 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58939 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58940 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58941 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58940 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58941 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58942 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58942 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58940 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58941 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58942 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58943 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58944 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58943 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58944 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58945 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58945 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58943 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58946 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58944 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58945 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58947 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58946 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58947 [200]: GET /game-assets/hd/briar-beast-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58946 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58947 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58948 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58948 [200]: GET /game-assets/hd/briar-beast-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58948 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58949 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58950 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58949 [200]: GET /game-assets/hd/rune-warden-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58950 [200]: GET /game-assets/hd/rune-warden-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58951 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58951 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58950 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58949 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58951 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58952 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58953 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58952 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58953 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58954 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58954 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58952 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58953 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58954 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58955 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58956 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58955 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58956 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58957 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58957 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58955 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58958 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58956 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58957 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58959 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58958 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58959 [200]: GET /game-assets/hd/ash-warden-v1/0.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58960 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58960 [200]: GET /game-assets/hd/ash-warden-v1/0.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58958 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58961 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58959 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58960 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58962 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58961 [200]: GET /game-assets/hd/ash-warden-v1/1.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58962 [200]: GET /game-assets/hd/ash-warden-v1/1.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58962 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58963 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58961 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58963 [200]: GET /game-assets/hd/ash-warden-v1/2.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58963 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58964 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58965 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58964 [200]: GET /game-assets/hd/ash-warden-v1/2.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58965 [200]: GET /game-assets/hd/ash-warden-v1/3.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58966 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58966 [200]: GET /game-assets/hd/ash-warden-v1/3.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58964 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58965 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58966 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58967 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58967 [200]: GET /game-assets/hd/core.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58968 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58969 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58967 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58970 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58968 [200]: GET /game-assets/hd/core.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58969 [200]: GET /game-assets/hd/runner.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58970 [200]: GET /game-assets/hd/runner.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58971 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58971 [200]: GET /game-assets/hd/mage-hero-v2/0.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58968 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58972 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58969 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58970 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58973 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58971 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58972 [200]: GET /game-assets/hd/mage-hero-v2/0.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58973 [200]: GET /game-assets/hd/mage-hero-v2/1.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58972 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58973 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58974 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58974 [200]: GET /game-assets/hd/mage-hero-v2/1.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58975 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58974 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58976 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58975 [200]: GET /game-assets/hd/warrior-hero-v1/0.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58976 [200]: GET /game-assets/hd/warrior-hero-v1/0.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58977 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58977 [200]: GET /game-assets/hd/warrior-hero-v1/1.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58975 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58976 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58977 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58978 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58979 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58978 [200]: GET /game-assets/hd/warrior-hero-v1/1.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58979 [200]: GET /game-assets/hd/warrior-hero-v1/2.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58980 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58980 [200]: GET /game-assets/hd/warrior-hero-v1/2.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58978 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58981 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58979 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58982 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58980 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58981 [200]: GET /game-assets/hd/warrior-hero-v1/3.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58982 [200]: GET /game-assets/hd/warrior-hero-v1/3.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58981 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58983 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58982 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58983 [200]: GET /game-assets/hd/warrior-hero-v1/4.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58984 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58983 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58985 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58984 [200]: GET /game-assets/hd/warrior-hero-v1/4.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58985 [200]: GET /game-assets/hd/warrior-hero-v1/5.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58986 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58986 [200]: GET /game-assets/hd/warrior-hero-v1/5.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58984 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58985 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58986 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58987 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58988 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58987 [200]: GET /game-assets/hd/warrior-skills-v1/0.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58988 [200]: GET /game-assets/hd/warrior-skills-v1/0.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58989 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58989 [200]: GET /game-assets/hd/warrior-skills-v1/1.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58987 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58988 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58989 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58990 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58991 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58990 [200]: GET /game-assets/hd/warrior-skills-v1/1.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58991 [200]: GET /game-assets/hd/warrior-skills-v1/2.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58992 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58992 [200]: GET /game-assets/hd/warrior-skills-v1/2.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58990 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58991 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58992 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58993 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58994 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58993 [200]: GET /game-assets/hd/warrior-skills-v1/3.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58994 [200]: GET /game-assets/hd/warrior-skills-v1/3.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58995 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58995 [200]: GET /game-assets/hd/warrior-skills-v1/4.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58993 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58994 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58995 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58996 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58997 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58996 [200]: GET /game-assets/hd/warrior-skills-v1/4.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58997 [200]: GET /game-assets/hd/warrior-skills-v1/5.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58998 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58998 [200]: GET /game-assets/hd/warrior-skills-v1/5.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58996 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58997 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:58998 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59007 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59007 [200]: GET /game-assets/hd/warrior-skills-v1/6.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59008 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59007 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59009 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59010 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59008 [200]: GET /game-assets/hd/warrior-skills-v1/6.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59009 [200]: GET /game-assets/hd/war-banner-v1/object.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59010 [200]: GET /game-assets/hd/enemies.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59011 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59008 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59009 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59010 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59011 [200]: GET /game-assets/hd/enemies.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59011 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59012 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59013 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59012 [200]: GET /game-assets/hd/guardian.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59013 [200]: GET /game-assets/hd/guardian.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59014 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59014 [200]: GET /game-assets/hd/bosses.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59012 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59013 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59014 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59015 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59016 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59015 [200]: GET /game-assets/hd/bosses.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59017 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59016 [200]: GET /game-assets/hd/loot.png
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59017 [200]: GET /game-assets/hd/loot.json
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59015 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59016 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59017 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59023 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59023 [200]: GET /game-assets/audio/warrior-uploaded-v1/banner.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59024 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59025 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59026 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59024 [200]: GET /game-assets/audio/warrior-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59025 [200]: GET /game-assets/audio/warrior-uploaded-v1/cleave.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59026 [200]: GET /game-assets/audio/warrior-uploaded-v1/shield_block.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59024 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59025 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59026 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59023 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59027 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59027 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_throw.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59028 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59027 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59029 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59028 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_ultimate.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59029 [200]: GET /game-assets/audio/warrior-uploaded-v1/stomp.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59030 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59028 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59029 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59030 [200]: GET /game-assets/audio/warrior-uploaded-v1/ultimate_stomp.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59030 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59031 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59032 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59031 [200]: GET /game-assets/audio/warrior-uploaded-v1/whirlwind.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59032 [200]: GET /game-assets/audio/miniboss-ambience-v1/beast-walking.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59033 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59033 [200]: GET /game-assets/audio/miniboss-ambience-v1/rune-presence.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59034 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59031 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59035 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59032 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59033 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59034 [200]: GET /game-assets/audio/miniboss-v1/mini-rune-cast.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59035 [200]: GET /game-assets/audio/miniboss-v1/mini-teleport.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59034 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59035 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59036 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59036 [200]: GET /game-assets/audio/miniboss-v1/mini-astral-cast.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59037 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59036 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59038 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59037 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-charge.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59038 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-melee.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59039 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59037 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59038 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59039 [200]: GET /game-assets/audio/miniboss-v1/mini-totem-cast.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59039 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59040 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59041 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59040 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/fireball.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59041 [200]: GET /game-assets/audio/mage-sfx-v1/mage-fireball-impact.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59042 Accepted
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59042 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59040 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59041 Closing
+[Wed Nov 18 17:43:29 2026] 127.0.0.1:59042 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59043 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59044 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59043 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59044 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59045 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59045 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/frost-nova.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59043 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59044 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59045 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59046 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59047 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59046 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/blink.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59047 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-charge.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59048 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59048 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-sky.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59049 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59046 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59047 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59048 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59050 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59049 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-overload.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59050 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/thunder.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59049 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59050 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59051 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59051 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/swing.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59052 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59051 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59053 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59052 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/slam.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59053 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59052 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59054 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59053 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59054 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/flamestrike.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59054 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59055 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59056 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59055 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59057 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59056 [200]: GET /game-assets/audio/frost-ultimate-v1/frost.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59057 [200]: GET /game-assets/audio/fire-ultimate-v1/static.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59058 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59058 [200]: GET /game-assets/audio/fire-ultimate-v1/pulse.wav
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59055 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59056 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59058 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59057 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59059 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59059 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59060 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59060 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59060 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59059 Closing
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59061 Accepted
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59061 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:30 2026] 127.0.0.1:59061 Closing
+  ✓  1 tests\browser\laravel-first.spec.ts:20:1 › website SSR, public navigation and guest game retain static assets and restart (5.3s)
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59067 Accepted
+[Wed Nov 18 14:43:31 2026] 127.0.0.1:59067 [GET] URI: /login
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59067 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59074 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59074 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59075 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59076 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59077 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59074 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59075 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59076 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59077 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59078 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59079 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59078 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59075 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59080 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59077 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59076 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59078 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59079 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59080 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59079 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59080 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59081 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59081 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59082 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59081 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59083 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59082 [200]: GET /build/assets/Login-DHlMbRs1.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59084 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59083 [200]: GET /build/assets/InputError-JnXccXyt.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59085 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59084 [200]: GET /build/assets/PasswordInput-DsF32wtH.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59086 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59085 [200]: GET /build/assets/createLucideIcon-cV6IlIwX.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59082 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59087 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59086 [200]: GET /build/assets/Input-Di49WcxD.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59083 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59088 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59087 [200]: GET /build/assets/TextLink-Bk48gZWb.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59084 Closing
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59089 Accepted
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59088 [200]: GET /build/assets/check-Dlq0C9aU.js
+[Wed Nov 18 17:43:31 2026] 127.0.0.1:59085 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59090 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59089 [200]: GET /build/assets/Label-DQ9x1uMf.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59086 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59091 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59090 [200]: GET /build/assets/Presence-Bb502BSa.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59087 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59092 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59091 [200]: GET /build/assets/useForwardPropsEmits-eUfcfKcT.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59088 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59093 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59092 [200]: GET /build/assets/Spinner-BPGcnmnx.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59089 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59094 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59093 [200]: GET /build/assets/password-CB_NxgQN.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59090 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59095 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59094 [200]: GET /build/assets/confirm-Culw9Q-x.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59091 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59096 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59095 [200]: GET /build/assets/PasskeyVerify-DhN4SBV1.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59092 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59096 [200]: GET /build/assets/vue-Dichm9nc.js
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59093 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59094 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59095 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59096 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59098 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59098 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59098 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59099 Accepted
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59099 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59099 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59100 Accepted
+[Wed Nov 18 14:43:32 2026] 127.0.0.1:59100 [POST] URI: /login
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59100 Closing
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59104 Accepted
+[Wed Nov 18 14:43:32 2026] 127.0.0.1:59104 [GET] URI: /dashboard
+[Wed Nov 18 17:43:32 2026] 127.0.0.1:59104 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59109 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59109 [200]: GET /build/assets/Dashboard-Bl2FKWMl.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59110 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59111 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59110 [200]: GET /build/assets/InventoryPanel-l_PWo8BD.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59112 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59111 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59109 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59113 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59112 [200]: GET /build/assets/AccountBalances-CVXI2XQ-.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59114 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59113 [200]: GET /build/assets/AccountOrders-KeOX-IRN.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59110 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59115 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59114 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59111 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59115 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59112 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59113 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59114 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59115 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59116 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59116 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59116 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59117 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59117 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59117 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59118 Accepted
+[Wed Nov 18 14:43:33 2026] 127.0.0.1:59118 [GET] URI: /shop
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59118 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59120 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59120 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59120 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59121 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59121 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59122 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59121 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59123 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59124 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59122 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59123 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59124 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59125 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59126 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59125 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59126 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59122 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59123 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59124 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59125 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59126 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59127 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59127 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59127 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59128 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59129 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59128 [200]: GET /build/assets/Shop-pidoLpyK.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59129 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59128 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59129 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59130 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59130 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59130 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59131 Accepted
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59131 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59131 Closing
+[Wed Nov 18 17:43:33 2026] 127.0.0.1:59136 Accepted
+[Wed Nov 18 14:43:33 2026] 127.0.0.1:59136 [POST] URI: /internal/shop/purchases
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59136 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59137 Accepted
+[Wed Nov 18 14:43:34 2026] 127.0.0.1:59137 [GET] URI: /wallet
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59137 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59139 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59139 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59139 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59140 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59140 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59141 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59142 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59143 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59140 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59141 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59144 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59142 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59143 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59145 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59144 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59146 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59145 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59146 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59141 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59142 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59143 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59147 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59144 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59148 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59145 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59146 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59149 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59147 [200]: GET /build/assets/Wallet-DerOilDS.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59150 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59148 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59149 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59150 [200]: GET /build/assets/payments-D57l3NzC.js
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59147 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59148 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59149 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59150 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59151 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59151 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59151 Closing
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59152 Accepted
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59152 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:34 2026] 127.0.0.1:59152 Closing
+[Wed Nov 18 17:43:35 2026] 127.0.0.1:59157 Accepted
+[Wed Nov 18 14:43:35 2026] 127.0.0.1:59157 [POST] URI: /internal/payments/quote
+[Wed Nov 18 17:43:35 2026] 127.0.0.1:59157 Closing
+[Wed Nov 18 17:43:35 2026] 127.0.0.1:59162 Accepted
+[Wed Nov 18 14:43:35 2026] 127.0.0.1:59162 [POST] URI: /internal/payments/orders
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59162 Closing
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59163 Accepted
+[Wed Nov 18 14:43:36 2026] 127.0.0.1:59163 [GET] URI: /payments/test/tc_524c6ac3-7801-4235-953a-a6b9b334cb5d
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59163 Closing
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59164 Accepted
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59164 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59164 Closing
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59165 Accepted
+[Wed Nov 18 14:43:36 2026] 127.0.0.1:59165 [POST] URI: /payments/test/tc_524c6ac3-7801-4235-953a-a6b9b334cb5d
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59165 Closing
+[Wed Nov 18 17:43:36 2026] 127.0.0.1:59166 Accepted
+[Wed Nov 18 14:43:36 2026] 127.0.0.1:59166 [GET] URI: /payments/4d0dfc3c-2333-4b46-bb79-c33fbc6d8dbc
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59166 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59172 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59172 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59173 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59173 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59174 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59172 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59175 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59174 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59176 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59175 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59173 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59177 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59176 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59178 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59177 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59179 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59178 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59174 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59175 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59180 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59179 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59176 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59177 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59178 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59179 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59180 [200]: GET /build/assets/PaymentResult-DZykBz4J.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59181 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59181 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59182 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59180 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59182 [200]: GET /build/assets/payments-D57l3NzC.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59181 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59182 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59183 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59183 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59183 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59184 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59184 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59184 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59185 Accepted
+[Wed Nov 18 14:43:37 2026] 127.0.0.1:59185 [GET] URI: /internal/payments/orders/4d0dfc3c-2333-4b46-bb79-c33fbc6d8dbc
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59185 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59186 Accepted
+[Wed Nov 18 14:43:37 2026] 127.0.0.1:59186 [GET] URI: /inventory
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59186 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59188 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59188 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59189 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59189 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59190 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59188 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59191 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59190 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59192 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59191 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59189 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59193 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59192 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59194 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59193 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59194 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59190 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59191 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59192 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59193 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59194 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59195 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59195 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59195 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59196 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59197 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59196 [200]: GET /build/assets/Inventory-DgQXUrBL.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59198 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59197 [200]: GET /build/assets/InventoryPanel-l_PWo8BD.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59199 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59198 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59200 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59199 [200]: GET /build/assets/AccountUsage-kKTjW079.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59196 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59201 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59200 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59197 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59201 [200]: GET /build/assets/AccountPagination-CQXH7jQZ.js
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59198 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59199 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59200 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59201 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59202 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59202 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59202 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59203 Accepted
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59203 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59203 Closing
+[Wed Nov 18 17:43:37 2026] 127.0.0.1:59204 Accepted
+[Wed Nov 18 14:43:37 2026] 127.0.0.1:59204 [GET] URI: /account/orders
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59204 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59210 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59210 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59210 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59211 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59211 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59212 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59213 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59211 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59212 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59213 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59214 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59215 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59214 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59215 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59212 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59213 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59216 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59214 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59215 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59216 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59216 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59217 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59218 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59217 [200]: GET /build/assets/Orders-BB_Yh2-Z.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59219 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59218 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59220 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59219 [200]: GET /build/assets/AccountOrders-KeOX-IRN.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59221 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59220 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59217 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59222 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59221 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59218 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59222 [200]: GET /build/assets/AccountPagination-CQXH7jQZ.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59219 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59220 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59221 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59222 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59223 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59223 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59223 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59224 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59224 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59224 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59225 Accepted
+[Wed Nov 18 14:43:38 2026] 127.0.0.1:59225 [GET] URI: /account/transactions
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59225 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59226 Accepted
+[Wed Nov 18 14:43:38 2026] 127.0.0.1:59226 [GET] URI: /account/orders
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59226 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59228 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59228 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59229 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59229 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59230 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59228 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59231 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59230 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59231 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59229 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59232 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59233 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59230 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59231 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59232 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59233 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59232 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59233 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59234 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59234 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59234 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59235 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59236 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59235 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59236 [200]: GET /build/assets/Orders-BB_Yh2-Z.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59237 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59237 [200]: GET /build/assets/AccountOrders-KeOX-IRN.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59235 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59236 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59237 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59238 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59239 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59238 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59239 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59240 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59240 [200]: GET /build/assets/AccountPagination-CQXH7jQZ.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59238 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59239 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59240 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59241 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59241 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59241 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59242 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59242 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59242 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59243 Accepted
+[Wed Nov 18 14:43:38 2026] 127.0.0.1:59243 [GET] URI: /account/tokens
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59243 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59244 Accepted
+[Wed Nov 18 14:43:38 2026] 127.0.0.1:59244 [GET] URI: /account/orders
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59244 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59246 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59246 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59247 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59247 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59248 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59246 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59249 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59248 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59250 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59249 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59247 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59251 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59250 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59252 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59251 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59252 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59248 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59249 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59253 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59250 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59251 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59252 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59253 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59253 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59254 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59255 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59254 [200]: GET /build/assets/Orders-BB_Yh2-Z.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59255 [200]: GET /build/assets/AccountOrders-KeOX-IRN.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59256 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59256 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59254 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59255 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59256 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59257 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59258 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59257 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59258 [200]: GET /build/assets/AccountPagination-CQXH7jQZ.js
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59257 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59258 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59259 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59259 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59259 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59264 Accepted
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59264 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59264 Closing
+[Wed Nov 18 17:43:38 2026] 127.0.0.1:59265 Accepted
+[Wed Nov 18 14:43:38 2026] 127.0.0.1:59265 [GET] URI: /runs
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59265 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59267 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59267 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59268 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59268 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59269 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59267 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59270 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59268 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59271 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59269 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59270 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59271 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59272 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59273 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59272 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59273 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59269 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59270 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59271 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59274 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59272 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59273 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59274 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59274 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59275 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59276 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59275 [200]: GET /build/assets/RunHistory-hkezclkP.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59276 [200]: GET /build/assets/leaderboard-BqOwUOES.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59275 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59276 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59277 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59277 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59277 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59278 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59278 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59278 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59279 Accepted
+[Wed Nov 18 14:43:39 2026] 127.0.0.1:59279 [GET] URI: /settings/profile
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59279 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59281 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59281 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59282 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59281 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59282 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59283 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59284 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59282 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59283 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59284 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59285 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59286 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59285 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59286 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59283 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59284 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59285 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59286 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59287 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59287 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59287 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59288 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59289 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59288 [200]: GET /build/assets/Profile-vEbrk-IG.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59290 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59289 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59291 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59290 [200]: GET /build/assets/InputError-JnXccXyt.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59292 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59291 [200]: GET /build/assets/PasswordInput-DsF32wtH.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59288 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59293 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59292 [200]: GET /build/assets/createLucideIcon-cV6IlIwX.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59289 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59294 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59293 [200]: GET /build/assets/Input-Di49WcxD.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59290 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59291 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59292 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59295 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59293 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59296 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59297 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59294 [200]: GET /build/assets/dialog-dIzRy7PI.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59298 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59295 [200]: GET /build/assets/Presence-Bb502BSa.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59296 [200]: GET /build/assets/Label-DQ9x1uMf.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59297 [200]: GET /build/assets/verification-BOcn3HIw.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59298 [200]: GET /build/assets/useForwardPropsEmits-eUfcfKcT.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59294 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59295 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59296 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59297 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59298 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59299 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59299 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59299 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59300 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59300 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59300 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59301 Accepted
+[Wed Nov 18 14:43:39 2026] 127.0.0.1:59301 [GET] URI: /settings/appearance
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59301 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59303 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59303 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59303 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59304 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59304 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59305 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59306 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59305 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59306 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59304 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59307 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59306 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59305 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59308 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59307 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59308 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59307 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59308 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59309 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59309 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59309 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59310 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59311 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59310 [200]: GET /build/assets/Appearance-BOAkWvkl.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59312 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59311 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59312 [200]: GET /build/assets/createLucideIcon-cV6IlIwX.js
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59310 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59311 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59312 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59313 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59313 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59313 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59314 Accepted
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59314 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59314 Closing
+[Wed Nov 18 17:43:39 2026] 127.0.0.1:59315 Accepted
+[Wed Nov 18 14:43:39 2026] 127.0.0.1:59315 [GET] URI: /settings/public-profile
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59315 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59323 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59323 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59324 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59324 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59325 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59323 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59326 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59327 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59324 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59325 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59326 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59327 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59328 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59329 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59328 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59330 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59329 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59325 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59326 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59327 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59328 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59329 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59330 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59330 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59331 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59332 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59331 [200]: GET /build/assets/PublicProfile-BCbRxL-n.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59333 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59332 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59334 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59333 [200]: GET /build/assets/Input-Di49WcxD.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59335 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59334 [200]: GET /build/assets/useAuditedRequest-C_DfYEOF.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59331 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59336 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59335 [200]: GET /build/assets/Label-DQ9x1uMf.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59332 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59336 [200]: GET /build/assets/leaderboard-BqOwUOES.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59333 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59334 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59335 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59336 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59337 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59337 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59337 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59338 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59338 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59338 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59339 Accepted
+[Wed Nov 18 14:43:40 2026] 127.0.0.1:59339 [GET] URI: /play
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59339 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59341 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59341 [200]: GET /build/assets/game-DcuPe8B6.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59342 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59343 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59342 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59343 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59341 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59342 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59343 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59344 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59344 [200]: GET /build/assets/main-CdOkPDz7.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59345 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59346 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59347 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59345 [200]: GET /build/assets/main-Cm_omybw.css
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59346 [200]: GET /build/assets/lootPixels-DMGDpRZx.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59347 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59345 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59346 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59347 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59344 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59348 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59348 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59348 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59350 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59350 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59351 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59352 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59350 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59353 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59351 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59352 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59353 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59351 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59352 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59353 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59354 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59354 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59355 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59354 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59356 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59355 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59356 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59355 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59357 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59356 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59357 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59357 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59358 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59359 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59358 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59359 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59360 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59360 [200]: GET /game-assets/hd/rune-warden-v2/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59358 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59359 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59360 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59361 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59362 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59361 [200]: GET /game-assets/hd/rune-warden-v2/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59362 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59363 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59363 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59361 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59362 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59363 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59364 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59365 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59364 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59365 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59366 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59366 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59364 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59367 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59365 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59368 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59366 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59367 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59368 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59369 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59367 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59368 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59369 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59369 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59370 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59371 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59370 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59371 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59372 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59372 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59370 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59371 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59372 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59373 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59374 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59373 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59374 [200]: GET /game-assets/hd/mage-blink-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59375 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59375 [200]: GET /game-assets/hd/mage-blink-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59373 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59376 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59374 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59377 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59375 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59376 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59377 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59378 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59376 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59377 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59378 [200]: GET /game-assets/hd/mage-cast-v2/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59378 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59379 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59380 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59379 [200]: GET /game-assets/hd/mage-cast-v2/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59380 [200]: GET /game-assets/hd/mage-run-v2/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59381 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59379 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59380 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59381 [200]: GET /game-assets/hd/mage-run-v2/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59381 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59382 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59382 [200]: GET /game-assets/hd/mage-idle-v2/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59383 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59382 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59384 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59385 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59383 [200]: GET /game-assets/hd/mage-idle-v2/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59384 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59385 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59386 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59383 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59384 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59385 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59386 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59386 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59387 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59388 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59387 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59388 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59389 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59389 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59387 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59390 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59388 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59391 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59389 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59390 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59391 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59392 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59392 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59390 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59391 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59393 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59392 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59394 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59393 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59394 [200]: GET /game-assets/hd/briar-beast-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59393 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59395 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59394 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59395 [200]: GET /game-assets/hd/briar-beast-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59395 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59396 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59397 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59396 [200]: GET /game-assets/hd/rune-warden-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59397 [200]: GET /game-assets/hd/rune-warden-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59398 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59399 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59398 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59399 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59397 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59396 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59398 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59399 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59400 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59400 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59401 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59400 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59402 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59403 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59401 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59402 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59403 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59404 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59401 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59402 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59403 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59404 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59405 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59404 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59406 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59405 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59406 [200]: GET /game-assets/hd/ash-warden-v1/0.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59407 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59407 [200]: GET /game-assets/hd/ash-warden-v1/0.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59405 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59408 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59406 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59407 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59409 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59408 [200]: GET /game-assets/hd/ash-warden-v1/1.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59409 [200]: GET /game-assets/hd/ash-warden-v1/1.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59410 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59409 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59408 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59410 [200]: GET /game-assets/hd/ash-warden-v1/2.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59410 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59411 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59412 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59411 [200]: GET /game-assets/hd/ash-warden-v1/2.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59412 [200]: GET /game-assets/hd/ash-warden-v1/3.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59413 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59413 [200]: GET /game-assets/hd/ash-warden-v1/3.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59411 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59412 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59413 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59414 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59414 [200]: GET /game-assets/hd/core.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59415 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59414 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59416 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59417 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59415 [200]: GET /game-assets/hd/core.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59416 [200]: GET /game-assets/hd/runner.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59417 [200]: GET /game-assets/hd/runner.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59418 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59418 [200]: GET /game-assets/hd/mage-hero-v2/0.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59415 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59416 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59417 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59418 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59419 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59420 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59419 [200]: GET /game-assets/hd/mage-hero-v2/0.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59420 [200]: GET /game-assets/hd/mage-hero-v2/1.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59421 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59421 [200]: GET /game-assets/hd/mage-hero-v2/1.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59422 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59419 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59420 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59423 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59421 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59422 [200]: GET /game-assets/hd/warrior-hero-v1/0.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59423 [200]: GET /game-assets/hd/warrior-hero-v1/0.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59422 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59423 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59424 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59424 [200]: GET /game-assets/hd/warrior-hero-v1/1.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59425 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59424 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59426 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59425 [200]: GET /game-assets/hd/warrior-hero-v1/1.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59426 [200]: GET /game-assets/hd/warrior-hero-v1/2.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59427 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59427 [200]: GET /game-assets/hd/warrior-hero-v1/2.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59425 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59428 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59426 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59429 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59427 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59428 [200]: GET /game-assets/hd/warrior-hero-v1/3.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59429 [200]: GET /game-assets/hd/warrior-hero-v1/3.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59428 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59429 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59430 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59430 [200]: GET /game-assets/hd/warrior-hero-v1/4.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59431 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59430 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59432 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59433 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59431 [200]: GET /game-assets/hd/warrior-hero-v1/4.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59432 [200]: GET /game-assets/hd/warrior-hero-v1/5.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59433 [200]: GET /game-assets/hd/warrior-hero-v1/5.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59434 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59434 [200]: GET /game-assets/hd/warrior-skills-v1/0.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59431 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59435 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59432 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59433 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59436 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59434 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59435 [200]: GET /game-assets/hd/warrior-skills-v1/0.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59436 [200]: GET /game-assets/hd/warrior-skills-v1/1.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59437 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59435 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59436 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59437 [200]: GET /game-assets/hd/warrior-skills-v1/1.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59437 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59438 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59439 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59438 [200]: GET /game-assets/hd/warrior-skills-v1/2.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59439 [200]: GET /game-assets/hd/warrior-skills-v1/2.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59440 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59440 [200]: GET /game-assets/hd/warrior-skills-v1/3.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59438 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59441 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59439 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59442 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59440 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59441 [200]: GET /game-assets/hd/warrior-skills-v1/3.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59442 [200]: GET /game-assets/hd/warrior-skills-v1/4.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59441 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59443 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59442 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59443 [200]: GET /game-assets/hd/warrior-skills-v1/4.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59443 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59444 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59445 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59444 [200]: GET /game-assets/hd/warrior-skills-v1/5.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59445 [200]: GET /game-assets/hd/warrior-skills-v1/5.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59444 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59445 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59446 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59446 [200]: GET /game-assets/hd/warrior-skills-v1/6.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59447 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59446 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59448 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59449 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59447 [200]: GET /game-assets/hd/warrior-skills-v1/6.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59448 [200]: GET /game-assets/hd/war-banner-v1/object.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59449 [200]: GET /game-assets/hd/enemies.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59450 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59450 [200]: GET /game-assets/hd/enemies.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59447 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59451 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59448 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59452 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59450 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59449 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59451 [200]: GET /game-assets/hd/guardian.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59452 [200]: GET /game-assets/hd/guardian.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59451 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59452 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59453 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59453 [200]: GET /game-assets/hd/bosses.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59454 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59455 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59454 [200]: GET /game-assets/hd/bosses.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59455 [200]: GET /game-assets/hd/loot.png
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59454 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59455 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59453 Closing
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59456 Accepted
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59456 [200]: GET /game-assets/hd/loot.json
+[Wed Nov 18 17:43:40 2026] 127.0.0.1:59456 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59461 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59461 [200]: GET /game-assets/audio/warrior-uploaded-v1/banner.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59462 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59463 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59464 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59462 [200]: GET /game-assets/audio/warrior-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59463 [200]: GET /game-assets/audio/warrior-uploaded-v1/cleave.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59464 [200]: GET /game-assets/audio/warrior-uploaded-v1/shield_block.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59462 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59463 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59461 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59464 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59465 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59465 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_throw.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59466 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59465 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59467 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59466 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_ultimate.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59467 [200]: GET /game-assets/audio/warrior-uploaded-v1/stomp.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59468 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59468 [200]: GET /game-assets/audio/warrior-uploaded-v1/ultimate_stomp.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59466 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59467 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59469 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59470 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59469 [200]: GET /game-assets/audio/warrior-uploaded-v1/whirlwind.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59468 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59470 [200]: GET /game-assets/audio/miniboss-ambience-v1/beast-walking.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59469 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59470 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59471 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59471 [200]: GET /game-assets/audio/miniboss-ambience-v1/rune-presence.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59472 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59473 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59472 [200]: GET /game-assets/audio/miniboss-v1/mini-rune-cast.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59471 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59473 [200]: GET /game-assets/audio/miniboss-v1/mini-teleport.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59472 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59473 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59474 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59474 [200]: GET /game-assets/audio/miniboss-v1/mini-astral-cast.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59475 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59474 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59476 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59475 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-charge.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59476 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-melee.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59477 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59475 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59476 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59477 [200]: GET /game-assets/audio/miniboss-v1/mini-totem-cast.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59477 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59478 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59479 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59478 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/fireball.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59479 [200]: GET /game-assets/audio/mage-sfx-v1/mage-fireball-impact.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59480 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59480 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59481 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59478 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59479 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59482 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59480 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59481 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59482 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59481 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59482 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59483 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59483 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/frost-nova.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59484 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59483 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59485 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59484 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/blink.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59485 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-charge.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59486 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59484 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59485 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59486 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-sky.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59486 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59487 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59488 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59487 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-overload.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59488 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/thunder.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59489 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59489 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/swing.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59487 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59490 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59488 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59491 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59489 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59490 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/slam.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59491 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59490 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59491 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59492 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59492 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/flamestrike.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59493 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59492 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59494 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59493 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59494 [200]: GET /game-assets/audio/frost-ultimate-v1/frost.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59495 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59493 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59494 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59495 [200]: GET /game-assets/audio/fire-ultimate-v1/static.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59495 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59496 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59496 [200]: GET /game-assets/audio/fire-ultimate-v1/pulse.wav
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59496 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59497 Accepted
+[Wed Nov 18 14:43:41 2026] 127.0.0.1:59497 [POST] URI: /internal/runs
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59497 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59498 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59498 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59498 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59499 Accepted
+[Wed Nov 18 14:43:41 2026] 127.0.0.1:59499 [GET] URI: /internal/runs/ad613d30-f221-48d9-bf4d-b3c653d12343/inventory
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59499 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59500 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59500 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59500 Closing
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59501 Accepted
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59501 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:41 2026] 127.0.0.1:59501 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59506 Accepted
+[Wed Nov 18 14:43:42 2026] 127.0.0.1:59506 [GET] URI: /internal/runs/ad613d30-f221-48d9-bf4d-b3c653d12343/inventory
+  ✓  2 tests\browser\laravel-first.spec.ts:48:1 › authenticated shop, payment sandbox, internal game requests and account navigation (10.5s)
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59506 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59507 Accepted
+[Wed Nov 18 14:43:42 2026] 127.0.0.1:59507 [GET] URI: /login
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59507 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59510 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59510 [200]: GET /build/assets/app-DgHkmRPm.css
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59511 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59512 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59511 [200]: GET /build/assets/app-B_7g8Kmc.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59513 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59512 [200]: GET /build/assets/dist-3i4OE6PE.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59510 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59514 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59513 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59515 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59514 [200]: GET /build/assets/currency-l6hrHT47.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59511 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59516 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59515 [200]: GET /build/assets/wayfinder-Dp7PqxvV.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59517 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59516 [200]: GET /build/assets/button-L0JxGuPT.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59512 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59513 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59518 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59517 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59514 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59515 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59516 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59517 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59519 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59518 [200]: GET /build/assets/Login-DHlMbRs1.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59518 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59519 [200]: GET /build/assets/InputError-JnXccXyt.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59519 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59520 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59520 [200]: GET /build/assets/PasswordInput-DsF32wtH.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59521 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59520 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59522 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59521 [200]: GET /build/assets/createLucideIcon-cV6IlIwX.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59522 [200]: GET /build/assets/Input-Di49WcxD.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59523 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59523 [200]: GET /build/assets/TextLink-Bk48gZWb.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59521 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59522 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59523 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59524 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59525 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59524 [200]: GET /build/assets/check-Dlq0C9aU.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59525 [200]: GET /build/assets/Label-DQ9x1uMf.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59526 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59526 [200]: GET /build/assets/Presence-Bb502BSa.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59524 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59525 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59526 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59527 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59528 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59527 [200]: GET /build/assets/useForwardPropsEmits-eUfcfKcT.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59528 [200]: GET /build/assets/Spinner-BPGcnmnx.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59529 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59529 [200]: GET /build/assets/password-CB_NxgQN.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59527 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59528 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59529 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59530 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59531 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59530 [200]: GET /build/assets/confirm-Culw9Q-x.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59531 [200]: GET /build/assets/PasskeyVerify-DhN4SBV1.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59532 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59532 [200]: GET /build/assets/vue-Dichm9nc.js
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59530 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59531 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59532 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59534 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59534 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59534 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59535 Accepted
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59535 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59535 Closing
+[Wed Nov 18 17:43:42 2026] 127.0.0.1:59537 Accepted
+[Wed Nov 18 14:43:42 2026] 127.0.0.1:59537 [POST] URI: /login
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59537 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59545 Accepted
+[Wed Nov 18 14:43:43 2026] 127.0.0.1:59545 [GET] URI: /dashboard
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59545 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59546 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59546 [200]: GET /build/assets/Dashboard-Bl2FKWMl.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59547 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59548 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59547 [200]: GET /build/assets/InventoryPanel-l_PWo8BD.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59549 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59548 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59546 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59550 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59549 [200]: GET /build/assets/AccountBalances-CVXI2XQ-.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59551 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59550 [200]: GET /build/assets/AccountOrders-KeOX-IRN.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59547 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59552 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59551 [200]: GET /build/assets/MoneyAmount-BfcYoc5u.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59548 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59552 [200]: GET /build/assets/account-CBNwAT9f.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59549 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59550 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59551 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59552 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59553 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59553 [200]: GET /favicon.svg
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59553 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59554 Accepted
+[Wed Nov 18 14:43:43 2026] 127.0.0.1:59554 [GET] URI: /admin
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59554 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59555 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59555 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59556 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59556 [200]: GET /fonts/filament/filament/inter/index.css?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59555 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59557 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59558 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59556 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59559 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59557 [200]: GET /css/filament/filament/app.css?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59558 [200]: GET /fonts/filament/filament/inter/inter-latin-wght-normal-DIHYUR35.w
+off2
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59559 [200]: GET /js/filament/actions/actions.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59560 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59561 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59560 [200]: GET /js/filament/notifications/notifications.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59562 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59558 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59559 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59560 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59557 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59561 [200]: GET /js/filament/schemas/schemas.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59562 [200]: GET /js/filament/support/support.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59561 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59562 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59563 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59563 [200]: GET /js/filament/tables/tables.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59563 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59564 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59565 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59564 [200]: GET /js/filament/filament/echo.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59565 [200]: GET /js/filament/filament/app.js?v=5.11.4.0
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59566 Accepted
+[Wed Nov 18 14:43:43 2026] 127.0.0.1:59566 [GET] URI: /livewire-d0224077/livewire.min.js
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59566 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59564 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59565 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59568 Accepted
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59568 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59568 Closing
+[Wed Nov 18 17:43:43 2026] 127.0.0.1:59570 Accepted
+[Wed Nov 18 14:43:43 2026] 127.0.0.1:59570 [GET] URI: /play
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59570 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59577 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59577 [200]: GET /build/assets/game-DcuPe8B6.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59578 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59579 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59578 [200]: GET /build/assets/internalRoutes-DLVHBcfn.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59579 [200]: GET /build/assets/preload-helper-Cwmi1B0x.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59577 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59578 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59579 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59580 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59580 [200]: GET /build/assets/main-CdOkPDz7.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59581 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59582 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59583 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59581 [200]: GET /build/assets/main-Cm_omybw.css
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59582 [200]: GET /build/assets/runtime-dom.esm-bundler-D6cvTjdW.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59583 [200]: GET /build/assets/lootPixels-DMGDpRZx.js
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59581 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59582 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59583 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59580 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59584 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59584 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59584 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59586 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59586 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59587 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59586 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59588 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59589 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59587 [200]: GET /game-assets/hd/warrior-ultimates-v1/0.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59588 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59589 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-mantle.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59590 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59587 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59588 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59589 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59590 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59591 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59590 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59592 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59591 [200]: GET /game-assets/hd/fire-ultimate-v1/fire-perimeter.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59592 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59591 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59593 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59592 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59593 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-crystal.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59593 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59594 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59595 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59594 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59595 [200]: GET /game-assets/hd/frost-ultimate-v1/ice-wave.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59596 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59597 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59596 [200]: GET /game-assets/hd/rune-warden-v2/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59598 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59594 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59595 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59596 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59597 [200]: GET /game-assets/hd/rune-warden-v2/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59597 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59598 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59598 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59599 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59599 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/north.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59599 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59600 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59601 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59600 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59601 [200]: GET /game-assets/hd/ash-warden-pixellab-v1/meteor.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59602 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59602 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59600 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59601 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59602 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59603 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59604 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59603 [200]: GET /game-assets/hd/astral-flame-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59604 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59605 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59605 [200]: GET /game-assets/hd/astral-projectile-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59603 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59604 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59605 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59606 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59607 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59606 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59607 [200]: GET /game-assets/hd/rune-warden-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59608 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59608 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59606 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59609 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59607 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59610 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59608 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59609 [200]: GET /game-assets/hd/mage-shield-nova-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59610 [200]: GET /game-assets/hd/mage-blink-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59611 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59611 [200]: GET /game-assets/hd/mage-blink-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59609 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59610 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59611 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59612 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59613 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59612 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59613 [200]: GET /game-assets/hd/mage-moving-cast-v2/upper.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59614 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59614 [200]: GET /game-assets/hd/mage-cast-v2/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59612 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59613 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59614 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59615 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59616 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59615 [200]: GET /game-assets/hd/mage-cast-v2/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59616 [200]: GET /game-assets/hd/mage-run-v2/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59617 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59617 [200]: GET /game-assets/hd/mage-run-v2/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59615 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59616 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59617 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59619 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59619 [200]: GET /game-assets/hd/mage-idle-v2/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59620 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59619 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59621 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59622 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59620 [200]: GET /game-assets/hd/mage-idle-v2/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59621 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59622 [200]: GET /game-assets/hd/mage-phantom-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59623 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59623 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59620 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59622 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59621 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59623 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59624 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59625 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59624 [200]: GET /game-assets/hd/lightning-ultimate-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59625 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59626 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59626 [200]: GET /game-assets/hd/regular-lightning-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59624 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59625 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59626 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59627 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59628 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59627 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59628 [200]: GET /game-assets/hd/mage-fireball-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59629 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59629 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59627 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59630 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59628 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59631 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59629 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59630 [200]: GET /game-assets/hd/astral-revenant-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59631 [200]: GET /game-assets/hd/briar-beast-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59630 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59632 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59631 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59632 [200]: GET /game-assets/hd/briar-beast-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59632 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59633 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59634 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59633 [200]: GET /game-assets/hd/rune-warden-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59634 [200]: GET /game-assets/hd/rune-warden-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59635 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59635 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59636 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59634 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59633 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59635 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59636 [200]: GET /game-assets/hd/mage-meteor-pixellab-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59636 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59637 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59637 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59638 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59637 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59639 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59640 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59638 [200]: GET /game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59639 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59640 [200]: GET /game-assets/hd/ash-warden-melee-combo-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59641 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59641 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59638 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59642 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59639 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59640 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59643 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59641 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59642 [200]: GET /game-assets/hd/ash-warden-flame-strike-v1/atlas.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59643 [200]: GET /game-assets/hd/ash-warden-v1/0.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59644 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59644 [200]: GET /game-assets/hd/ash-warden-v1/0.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59642 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59645 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59646 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59643 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59644 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59645 [200]: GET /game-assets/hd/ash-warden-v1/1.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59646 [200]: GET /game-assets/hd/ash-warden-v1/1.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59646 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59645 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59647 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59647 [200]: GET /game-assets/hd/ash-warden-v1/2.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59647 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59648 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59649 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59648 [200]: GET /game-assets/hd/ash-warden-v1/2.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59649 [200]: GET /game-assets/hd/ash-warden-v1/3.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59650 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59650 [200]: GET /game-assets/hd/ash-warden-v1/3.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59648 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59649 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59650 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59651 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59651 [200]: GET /game-assets/hd/core.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59652 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59651 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59653 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59654 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59652 [200]: GET /game-assets/hd/core.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59653 [200]: GET /game-assets/hd/runner.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59654 [200]: GET /game-assets/hd/runner.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59655 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59652 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59655 [200]: GET /game-assets/hd/mage-hero-v2/0.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59653 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59654 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59655 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59656 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59657 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59656 [200]: GET /game-assets/hd/mage-hero-v2/0.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59658 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59657 [200]: GET /game-assets/hd/mage-hero-v2/1.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59658 [200]: GET /game-assets/hd/mage-hero-v2/1.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59659 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59660 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59656 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59657 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59658 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59659 [200]: GET /game-assets/hd/warrior-hero-v1/0.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59660 [200]: GET /game-assets/hd/warrior-hero-v1/0.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59659 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59660 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59661 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59661 [200]: GET /game-assets/hd/warrior-hero-v1/1.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59662 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59661 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59663 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59662 [200]: GET /game-assets/hd/warrior-hero-v1/1.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59663 [200]: GET /game-assets/hd/warrior-hero-v1/2.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59664 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59664 [200]: GET /game-assets/hd/warrior-hero-v1/2.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59662 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59663 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59664 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59665 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59666 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59665 [200]: GET /game-assets/hd/warrior-hero-v1/3.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59666 [200]: GET /game-assets/hd/warrior-hero-v1/3.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59665 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59666 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59667 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59667 [200]: GET /game-assets/hd/warrior-hero-v1/4.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59668 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59667 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59669 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59670 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59668 [200]: GET /game-assets/hd/warrior-hero-v1/4.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59669 [200]: GET /game-assets/hd/warrior-hero-v1/5.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59670 [200]: GET /game-assets/hd/warrior-hero-v1/5.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59671 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59671 [200]: GET /game-assets/hd/warrior-skills-v1/0.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59668 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59669 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59670 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59671 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59672 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59673 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59672 [200]: GET /game-assets/hd/warrior-skills-v1/0.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59673 [200]: GET /game-assets/hd/warrior-skills-v1/1.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59674 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59674 [200]: GET /game-assets/hd/warrior-skills-v1/1.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59672 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59675 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59673 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59674 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59676 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59675 [200]: GET /game-assets/hd/warrior-skills-v1/2.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59676 [200]: GET /game-assets/hd/warrior-skills-v1/2.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59675 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59676 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59677 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59677 [200]: GET /game-assets/hd/warrior-skills-v1/3.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59678 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59677 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59679 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59678 [200]: GET /game-assets/hd/warrior-skills-v1/3.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59679 [200]: GET /game-assets/hd/warrior-skills-v1/4.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59680 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59680 [200]: GET /game-assets/hd/warrior-skills-v1/4.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59678 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59681 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59679 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59680 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59682 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59681 [200]: GET /game-assets/hd/warrior-skills-v1/5.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59682 [200]: GET /game-assets/hd/warrior-skills-v1/5.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59681 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59682 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59683 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59683 [200]: GET /game-assets/hd/warrior-skills-v1/6.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59684 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59683 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59685 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59686 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59684 [200]: GET /game-assets/hd/warrior-skills-v1/6.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59685 [200]: GET /game-assets/hd/war-banner-v1/object.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59686 [200]: GET /game-assets/hd/enemies.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59687 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59687 [200]: GET /game-assets/hd/enemies.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59684 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59688 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59685 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59689 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59687 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59686 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59688 [200]: GET /game-assets/hd/guardian.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59689 [200]: GET /game-assets/hd/guardian.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59688 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59689 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59690 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59690 [200]: GET /game-assets/hd/bosses.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59691 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59692 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59691 [200]: GET /game-assets/hd/bosses.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59692 [200]: GET /game-assets/hd/loot.png
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59691 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59692 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59690 Closing
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59693 Accepted
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59693 [200]: GET /game-assets/hd/loot.json
+[Wed Nov 18 17:43:44 2026] 127.0.0.1:59693 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59698 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59698 [200]: GET /game-assets/audio/warrior-uploaded-v1/banner.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59699 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59700 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59701 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59699 [200]: GET /game-assets/audio/warrior-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59700 [200]: GET /game-assets/audio/warrior-uploaded-v1/cleave.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59701 [200]: GET /game-assets/audio/warrior-uploaded-v1/shield_block.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59698 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59699 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59700 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59701 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59702 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59702 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_throw.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59703 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59702 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59704 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59703 [200]: GET /game-assets/audio/warrior-uploaded-v1/spear_ultimate.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59704 [200]: GET /game-assets/audio/warrior-uploaded-v1/stomp.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59705 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59703 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59704 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59705 [200]: GET /game-assets/audio/warrior-uploaded-v1/ultimate_stomp.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59705 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59706 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59707 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59706 [200]: GET /game-assets/audio/warrior-uploaded-v1/whirlwind.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59708 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59707 [200]: GET /game-assets/audio/miniboss-ambience-v1/beast-walking.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59709 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59708 [200]: GET /game-assets/audio/miniboss-ambience-v1/rune-presence.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59710 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59706 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59709 [200]: GET /game-assets/audio/miniboss-v1/mini-rune-cast.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59707 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59710 [200]: GET /game-assets/audio/miniboss-v1/mini-teleport.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59709 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59710 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59708 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59711 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59711 [200]: GET /game-assets/audio/miniboss-v1/mini-astral-cast.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59712 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59711 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59713 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59712 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-charge.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59713 [200]: GET /game-assets/audio/miniboss-v1/mini-briar-melee.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59714 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59712 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59713 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59714 [200]: GET /game-assets/audio/miniboss-v1/mini-totem-cast.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59714 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59715 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59716 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59715 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/fireball.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59716 [200]: GET /game-assets/audio/mage-sfx-v1/mage-fireball-impact.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59717 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59717 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59715 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59716 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59717 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59718 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59719 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59718 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59719 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59718 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59720 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59719 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59720 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/frost-nova.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59720 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59721 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59722 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59721 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/blink.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59722 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-charge.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59723 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59723 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-sky.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59724 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59721 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59722 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59725 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59723 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59724 [200]: GET /game-assets/audio/mage-sfx-v1/mage-ultimate-overload.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59725 [200]: GET /game-assets/audio/mage-sfx-uploaded-v1/thunder.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59724 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59726 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59725 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59726 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/swing.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59726 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59727 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59728 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59727 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/slam.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59728 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/charge.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59729 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59730 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59727 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59728 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59731 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59729 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/flamestrike.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59730 [200]: GET /game-assets/audio/ash-warden-uploaded-v1/meteor.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59731 [200]: GET /game-assets/audio/frost-ultimate-v1/frost.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59729 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59730 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59731 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59732 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59732 [200]: GET /game-assets/audio/fire-ultimate-v1/static.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59733 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59733 [200]: GET /game-assets/audio/fire-ultimate-v1/pulse.wav
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59733 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59732 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59734 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59734 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59735 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59735 [200]: GET /favicon.ico
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59735 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59734 Closing
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59736 Accepted
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59736 [200]: GET /game-assets/audio/music-v1/normal.mp3
+[Wed Nov 18 17:43:45 2026] 127.0.0.1:59736 Closing
+  ✓  3 tests\browser\laravel-first.spec.ts:90:1 › Filament and mobile landscape game render after relocation (3.5s)
+
+  3 passed (20.5s)

@@ -1,0 +1,3728 @@
+{
+  "version": 1,
+  "description": "Original historical files; only relative module specifiers relocated. Mixed files retain all original tests, including overlapping runtime checks.",
+  "files": [
+    {
+      "original": "tests/unit/ambient-music-review.test.ts",
+      "archived": "tests/historical/unit/ambient-music-review.test.ts",
+      "originalSHA256": "1a6f1df533e225d7a830634714d2b2b96caaaf0840cafec54d96bb7855a2ef00",
+      "archivedSHA256": "34fb1b4d51d9316e2deb95ff1a08747f01122957b5336b095b6554a874a7b6ac",
+      "statementsSHA256": "a8786314827a7bd7cd936a9b9a8048e7302059f4466107f68f08c8a49f55c2c8"
+    },
+    {
+      "original": "tests/unit/ash-warden-integration-v1.test.ts",
+      "archived": "tests/historical/unit/ash-warden-integration-v1.test.ts",
+      "originalSHA256": "5c7523b93954537ac30a0e9e6aeefd208894066cff1627e6bfe860943dda1088",
+      "archivedSHA256": "253f2766e93ee532a1d5062cfe0f94c68c73540711ab0cb71f051db8e3386127",
+      "statementsSHA256": "aa2a2792ea1ae9a21b9ffb6852872ea35f4cf0353599a4c3f64adcc587de2f48"
+    },
+    {
+      "original": "tests/unit/ash-warden-library.test.ts",
+      "archived": "tests/historical/unit/ash-warden-library.test.ts",
+      "originalSHA256": "3d7ba6375d4a79ce50bbc1304a0acc75621b79ce56106570606bf249f05cc6a5",
+      "archivedSHA256": "05f50b550da5620fa7d8be4ce73a80a83505e5aecc9437f2e296d904033b85e9",
+      "statementsSHA256": "0c85ecaa8cd822d1291db3cba94eb97ac346e0af5e6495e7ed21956f07581800"
+    },
+    {
+      "original": "tests/unit/ash-warden-north-meteor-review.test.ts",
+      "archived": "tests/historical/unit/ash-warden-north-meteor-review.test.ts",
+      "originalSHA256": "7faada306ffda05f496aa1dad24d8e2113c81e4f7e7d09ed8886782f1db97afd",
+      "archivedSHA256": "c0742bc0c1260d6330838a0b3b26c4a386725e4ab61c501e28edc3241aee6d5c",
+      "statementsSHA256": "98981eeacc93f77e6eecd8de645426f300f045db234e11ea5edd8a02d584e32f"
+    },
+    {
+      "original": "tests/unit/ash-warden-pixellab-runtime.test.ts",
+      "archived": "tests/historical/unit/ash-warden-pixellab-runtime.test.ts",
+      "originalSHA256": "42f99be089993e4875ca4a2c244f2acd879521ba925e2be6a64fec0d063aa243",
+      "archivedSHA256": "797d19cd5405c6b538a55ff5b3097de9ee59434d339e8c4f6df53e134e190946",
+      "statementsSHA256": "cc15e8f19dbc24d1872372d82946a445d712a5cabbaa53ab371ae8e2afa4f82e"
+    },
+    {
+      "original": "tests/unit/ash-warden-sounds.test.ts",
+      "archived": "tests/historical/unit/ash-warden-sounds.test.ts",
+      "originalSHA256": "11bedef3c03ebce869b244551cfb5b8de5420198058fe99c8bdb906054f23dd4",
+      "archivedSHA256": "ba68f9c117bd238123fe92d991dd47b4ee4911f0177f1b7741cb5dc165f23839",
+      "statementsSHA256": "c3107fb55c0779e37a39a447bc135cba64db68ed1b1cd1fcd180d0b790d0c8da"
+    },
+    {
+      "original": "tests/unit/ash-warden-walk-approved.test.ts",
+      "archived": "tests/historical/unit/ash-warden-walk-approved.test.ts",
+      "originalSHA256": "b100f502c07c8bc71f4685bcc7bb4692ef32144a6955d02f0bae039bf667db6d",
+      "archivedSHA256": "91b82567e7c4980b00afd5cfe98be59d33ecae720dc9d80e23856293062459f0",
+      "statementsSHA256": "993e6c9b1423906cc99f6e63ae1b833f0aa6cf0d84005f5a0de77a2d05e1d91c"
+    },
+    {
+      "original": "tests/unit/astral-flame-review.test.ts",
+      "archived": "tests/historical/unit/astral-flame-review.test.ts",
+      "originalSHA256": "3b54eb8fcf61a5215ffa372163a811ba0c833b9aeb3f0e00bb06a79f9f7f1f8a",
+      "archivedSHA256": "994e58add22e26ceb6dd303f4b1dab0a532ef3a600395dd6680c282cfb66595b",
+      "statementsSHA256": "a006d80f674a9cf506c6e79078e8d9c4557315a55f6b62da20b4b43220f6cc8f"
+    },
+    {
+      "original": "tests/unit/astral-flame-runtime.test.ts",
+      "archived": "tests/historical/unit/astral-flame-runtime.test.ts",
+      "originalSHA256": "596ffd5ea09823160d91ab025093d24c4dbadc5c02b0f6d6789f4e95842b962b",
+      "archivedSHA256": "3f444f96b565fe54aea9aef9a943100a84bf7af1fd27cd524bc85524e2a7c322",
+      "statementsSHA256": "f4cf4980c7fff6361963483d1fc4564c7dcfeaa8d28f5a08064ead4ddda0ea57"
+    },
+    {
+      "original": "tests/unit/astral-projectile-review.test.ts",
+      "archived": "tests/historical/unit/astral-projectile-review.test.ts",
+      "originalSHA256": "4c56616d74c33a428df9649c845cb5c7dbe16d176d19460ac62debbfc1ff1a0c",
+      "archivedSHA256": "f5cbddcf617451aa1101228f5b5683a1c282d1a15506181d15b2244778d318b4",
+      "statementsSHA256": "d7728f41573feb18e3737c75c39187a6e98a2cef8c4a14b78e411cd4fdce8bc7"
+    },
+    {
+      "original": "tests/unit/astral-projectile-runtime.test.ts",
+      "archived": "tests/historical/unit/astral-projectile-runtime.test.ts",
+      "originalSHA256": "7049d75a11f11dbd9a856e0ecfe5f827bb488600b0ac202859ce219601ce2f45",
+      "archivedSHA256": "b7ac6357c49fdfdc515194ac65a98ebe00c7a54c5e2cbbc965fee2b9c259082b",
+      "statementsSHA256": "690b2a0b3a64306e96eabfe8450295958302ac496d73d02d1d182cdc6bcbd870"
+    },
+    {
+      "original": "tests/unit/astral-revenant.test.ts",
+      "archived": "tests/historical/unit/astral-revenant.test.ts",
+      "originalSHA256": "0bd88fd225f7f80fe7350b7aacf77d5fe1ebee1449b964eb98195a856d428f26",
+      "archivedSHA256": "ba2b8c79a6e093d88eac13e58e1b72ea201b5698a5651e2013eb871e3ef7e576",
+      "statementsSHA256": "49773e52c71b3d5dcd3cebd4b0e71d9aea6727cc99ab0c3646d3ed7531297311"
+    },
+    {
+      "original": "tests/unit/balance-hotfix.test.ts",
+      "archived": "tests/historical/unit/balance-hotfix.test.ts",
+      "originalSHA256": "c9ee58a13cc4cdfa79ef648407b2ef078749ec9deab3bc0078844e4722762e76",
+      "archivedSHA256": "80230db35e5a173d748d293d527c4a908f626dbe7a43f1ec70426e44097c5f65",
+      "statementsSHA256": "5d83c4e0bfdbbf4f92adb11adcdd44f721d079a0edcdc63ce2c6832a10e6c003"
+    },
+    {
+      "original": "tests/unit/berserk-sprint-scope.test.ts",
+      "archived": "tests/historical/unit/berserk-sprint-scope.test.ts",
+      "originalSHA256": "ceac98dad6646dc0f691b7537906084b43d5893773de60b7e24703640558cc98",
+      "archivedSHA256": "8e24753d5fdd97c72f108866286e60488b76532f5330a658bc7a7919c44319bc",
+      "statementsSHA256": "a3664f7fd2f9af60a355d56e278f7fe547f9ef03dbc727e406b4e5f6fb57b27c"
+    },
+    {
+      "original": "tests/unit/boss-meteor-ui-fix.test.ts",
+      "archived": "tests/historical/unit/boss-meteor-ui-fix.test.ts",
+      "originalSHA256": "e0184f7b955f294cda3b3b86040c634666ebba441acd31da9db32a4a582d43e9",
+      "archivedSHA256": "28bf068bd16aafcf73302f5c13a8dbce21d79d125c315ffb657e4d74f19587b5",
+      "statementsSHA256": "1494cd76607f1ad54ed60a09f6c24d45eeedd2c2c601621e7ef90b9a7a238071"
+    },
+    {
+      "original": "tests/unit/briar-beast.test.ts",
+      "archived": "tests/historical/unit/briar-beast.test.ts",
+      "originalSHA256": "6f7be8f06e4ebc80d0cc63f6f686c3141b3bd1b108067068007cd4539964a0d2",
+      "archivedSHA256": "7bad95a326d12b6bc9d1c4216680cf970ea00f019190bea84026f6cb7d6d8156",
+      "statementsSHA256": "8c478e2bf14cb1fa5ab2a4e2ba1106babcba95b38b5f67505a3c2376e8aa54ad"
+    },
+    {
+      "original": "tests/unit/endgame.test.ts",
+      "archived": "tests/historical/unit/endgame.test.ts",
+      "originalSHA256": "8c3a5db04d46dc2507634c4fbc09ff8aa8a251df6591c03247fc3da740327b75",
+      "archivedSHA256": "0b45a12872402db8e638a0066389a4e1ad90395e11490c6bbf4035ce1c1355ec",
+      "statementsSHA256": "a3725e42aee3f7b0ec6a3b5d3c946e436b9e4e6ac62d14beb470a37918bb97e6"
+    },
+    {
+      "original": "tests/unit/fire-ultimate-runtime.test.ts",
+      "archived": "tests/historical/unit/fire-ultimate-runtime.test.ts",
+      "originalSHA256": "b9868795782e64f5c1e4a8690457377c882e33bb80f420cbb39cb213222477da",
+      "archivedSHA256": "8379b6b346d37fb094b94e87a788e804e381d4eb68eb6e607fb592751738646f",
+      "statementsSHA256": "1aae42316bc174200ebd3555d3167fd632653574b026fa2f79eb7de82b0dbe2b"
+    },
+    {
+      "original": "tests/unit/flame-strike-art.test.ts",
+      "archived": "tests/historical/unit/flame-strike-art.test.ts",
+      "originalSHA256": "3433d7f6375d22ecfdbf18be9983df6645d3db09858d8d442145c99fcdf8f527",
+      "archivedSHA256": "a9b32866ec3edfad6f1b32bbf1e18afe517eec020cdfaf2cfe88b873e4789fd3",
+      "statementsSHA256": "8ad7ad25e63b25b710400bbbe4b02bc2fbbca5ecec7aae0b0ba6b0339e442ebf"
+    },
+    {
+      "original": "tests/unit/frost-nova-art.test.ts",
+      "archived": "tests/historical/unit/frost-nova-art.test.ts",
+      "originalSHA256": "82892b7817109a3e2f2d6b33e8d5be9921fdc15707d448bfc745209ec70189a1",
+      "archivedSHA256": "ab60a19c6e508b70706aa1ac04d26ba84f789830ad2e3f7faa658d7fdaef7cc4",
+      "statementsSHA256": "c845792b8c9e4aa0d37a6caff87880fdfde3641250b275c06493ef1756060afc"
+    },
+    {
+      "original": "tests/unit/frost-ultimate-runtime.test.ts",
+      "archived": "tests/historical/unit/frost-ultimate-runtime.test.ts",
+      "originalSHA256": "8aafc19a5e529e7f07c7a4161e5c6d9f61d28d98a1980356656bb5b7ba7f9535",
+      "archivedSHA256": "df2a128a40fdba2346b5dcee67393c5b34d396da2ea722568da0219748015bb4",
+      "statementsSHA256": "59c409bde9e925957470815511725ce7cf02d9f6c6329d001df1103b95bb7a1e"
+    },
+    {
+      "original": "tests/unit/integration-proof.test.ts",
+      "archived": "tests/historical/unit/integration-proof.test.ts",
+      "originalSHA256": "5c4c43b867abefd729b459bc19d97eafb2d2eee83183339d3f50f0d0cbb8dbcb",
+      "archivedSHA256": "ebd6c6e4c2a4d5e59321124aa59fe5e6ce261a377f977db9d3be7423224535e5",
+      "statementsSHA256": "49ec36d22e6526503d0034c62beab62d6b97e20adf3aa0eb6dfbecfe1fc23963"
+    },
+    {
+      "original": "tests/unit/laravel-first.test.ts",
+      "archived": "tests/historical/unit/laravel-first.test.ts",
+      "originalSHA256": "d74894ddc6d32a4a8272f8dd90b3096e74b0ec36eae7f8b50055f101b63f8009",
+      "archivedSHA256": "26455dce25e120fd3077fd9a7b553558ab8918b5704fa9f622723069283b65f1",
+      "statementsSHA256": "71fb23f8f8d2b8ef5d216c55c25e6abcc5303ebb88dc4f38123b9a9c7b62a966"
+    },
+    {
+      "original": "tests/unit/lightning-ultimate-art.test.ts",
+      "archived": "tests/historical/unit/lightning-ultimate-art.test.ts",
+      "originalSHA256": "5b8184650dc3fc16c5344e5c258e5f792cf6114ca2214c3ed5a393237dbc8c78",
+      "archivedSHA256": "cd091ace416100a9c002016629dfbed4e117155b8d168c147bad1bc5602ec8eb",
+      "statementsSHA256": "0d7789d375d5caea579669c67e8e0b6ba5e1a65430b7f45a46d1daa96e1bbc1f"
+    },
+    {
+      "original": "tests/unit/mage-blink-runtime.test.ts",
+      "archived": "tests/historical/unit/mage-blink-runtime.test.ts",
+      "originalSHA256": "ecff8b4238adfba07c67a7afd4d6899684e2fc828015e82fe3ed7b8277c23b28",
+      "archivedSHA256": "55e2b3a6a67a1c28816edc3c66b9184f49c716a7240ddc9703383f9a4c176431",
+      "statementsSHA256": "578055155160f6050f5c99d9d35265ebe5368e1f717e6d34d363b60aedb8a0db"
+    },
+    {
+      "original": "tests/unit/mage-blink-v1.test.ts",
+      "archived": "tests/historical/unit/mage-blink-v1.test.ts",
+      "originalSHA256": "302f5394e042140c5f91a72526eb7e0f7f69358812d521cef452b541c68f7fb9",
+      "archivedSHA256": "74523a459082820ac1bcfcd299ac119e49bb4e8bc776d3c352a13a717166215d",
+      "statementsSHA256": "99bff5dc60900a4deee87bbf1f3168b3385c4560244c3995c82d099da7de8569"
+    },
+    {
+      "original": "tests/unit/mage-cast-v2.test.ts",
+      "archived": "tests/historical/unit/mage-cast-v2.test.ts",
+      "originalSHA256": "d3569b198d9a8c6c2bf0cfb89487e4ed432194a4e29902ef9c7f75727a48afa4",
+      "archivedSHA256": "61549a167c7bf90783f7fba87f4ec2ac214aaf46bd307b0d99d42a46958142ed",
+      "statementsSHA256": "1d947821f9a6be2bcf4ec8beb86be4f29261bd1931f8ad50a2a06067e0ea4b9c"
+    },
+    {
+      "original": "tests/unit/mage-fireball.test.ts",
+      "archived": "tests/historical/unit/mage-fireball.test.ts",
+      "originalSHA256": "b01e7789a59b7f6319475681cbdf55654a36aab1654471dedd58b2328f15b854",
+      "archivedSHA256": "9a6492691f3905d2b2ef5dcbbd4944b6880c862a41d39dc74742fff3ce1afcfa",
+      "statementsSHA256": "dc31cd96ee6d496d324d18b606042c0da47bfa7d2c1f790ba764ddfa10127612"
+    },
+    {
+      "original": "tests/unit/mage-hero-assets.test.ts",
+      "archived": "tests/historical/unit/mage-hero-assets.test.ts",
+      "originalSHA256": "7c4a44fd473c50eb8dc39293716a6be41c65e9473dc5c58cd46ab321f1f25282",
+      "archivedSHA256": "f58a8dc76e1e4ea50d8915572ba81773fe68cc20360a518fea33d1aa0befc3f7",
+      "statementsSHA256": "2d122f79b1c708448338041d1f9c6e57991428645afda2153a72f02fdc2b9c71"
+    },
+    {
+      "original": "tests/unit/mage-idle-v2.test.ts",
+      "archived": "tests/historical/unit/mage-idle-v2.test.ts",
+      "originalSHA256": "21203e4b0cd1a3c50a32c9004f8ca7e3f10e30a247f71639d56142e3d34c5d3b",
+      "archivedSHA256": "d166e0fa25ffd37ce98874c835e95b3130e2af22f9b0dc9ba9b21483c388555e",
+      "statementsSHA256": "20021c5f2db728f60cf09438702b1fcdbf8e0d09574e720ef13684a6cef3b3bb"
+    },
+    {
+      "original": "tests/unit/mage-meteor-v3.test.ts",
+      "archived": "tests/historical/unit/mage-meteor-v3.test.ts",
+      "originalSHA256": "35d15b7f8f22780040783cd900b8fd33da28ebe1ec0e6457e9c6cbc879bccbfe",
+      "archivedSHA256": "e905f32816701ff7a347dcbbc50e76b7e65e61066ebf26c40747101a74bd4ef9",
+      "statementsSHA256": "bd71d84d1c1265f8cc9e274eea0b887ec55bbd49035916b0b6bae875071ebeca"
+    },
+    {
+      "original": "tests/unit/mage-phantom.test.ts",
+      "archived": "tests/historical/unit/mage-phantom.test.ts",
+      "originalSHA256": "a9e052db67d7e831fbbfdc21d66b2428172d1e641c7707cc480e56b40cbae382",
+      "archivedSHA256": "67d4665436623b4a66b1b98c666342a8b818998d9f8c788620f6b17a1b3e91b1",
+      "statementsSHA256": "c35f7e93bb7729f8153b1cfefb43a1d0b87ab7451d9712a22d9f102115d94ba3"
+    },
+    {
+      "original": "tests/unit/mage-run-v2.test.ts",
+      "archived": "tests/historical/unit/mage-run-v2.test.ts",
+      "originalSHA256": "32b42b8f3fad8fea7acdb6764bc58f71cf7341a94f447b4abc0c441880a13a02",
+      "archivedSHA256": "8c38d77d4457f004070206607ba3bf0d3c81fb6cd54748e8b923899e85f73f0b",
+      "statementsSHA256": "f7d808ba1867bc4c7d2064a5c0f465f9baaf4b367ba4438b74d3be7f9c2dd0b8"
+    },
+    {
+      "original": "tests/unit/mage-running-demo-v2.test.ts",
+      "archived": "tests/historical/unit/mage-running-demo-v2.test.ts",
+      "originalSHA256": "62d823d1e9945adbf22a5f193f9a6a829ee125baf43e262ac387de4985b9485b",
+      "archivedSHA256": "2d58731f72d6a3bc177046452c6625fc3f1300f46bdd9d47b3ec937dece26d8e",
+      "statementsSHA256": "c3542dda81e83fd5aec319fda647c682af7f3933e10dda260c8632a3abecd403"
+    },
+    {
+      "original": "tests/unit/mage-sfx.test.ts",
+      "archived": "tests/historical/unit/mage-sfx.test.ts",
+      "originalSHA256": "d329c190bbea14227de9db73a50802820805eb865ace95cbd3788ffbf2c17308",
+      "archivedSHA256": "a5c73e46267b2f888ba7aea19ab2d0127b17afc20931732102b0aec2ccb239c0",
+      "statementsSHA256": "a59418e1f92cd0a150c9249ab23593afb22840ae1f2039fbdba481d6e30f4e08"
+    },
+    {
+      "original": "tests/unit/mage-shield-nova-pixellab.test.ts",
+      "archived": "tests/historical/unit/mage-shield-nova-pixellab.test.ts",
+      "originalSHA256": "dc3dda481725a78d4c4917fa87c119a5c789dcb7595b6e583a1f01fb9a6abe48",
+      "archivedSHA256": "7be83feb83926bd8da0a7281aa7af5d7cf39904e972eee840716ec598238acae",
+      "statementsSHA256": "cd935eca60fd5dec13d492a852d760d03d14638babdfcfb701c9ee9502b36776"
+    },
+    {
+      "original": "tests/unit/mage-uploaded-sounds.test.ts",
+      "archived": "tests/historical/unit/mage-uploaded-sounds.test.ts",
+      "originalSHA256": "a396d9a617bf977ea07ea45d2ad8b42243f069f664ff301f73d22fbda86cbb55",
+      "archivedSHA256": "88c398f87cd5b491c7177fdc01c6a93af1e0f46177a0f03487630e234e24daa3",
+      "statementsSHA256": "8d2d81cce7ccba35a5e37cf2fabce943b635cd7f7f873ad7a66f99f993471aa2"
+    },
+    {
+      "original": "tests/unit/mage-walk-v2.test.ts",
+      "archived": "tests/historical/unit/mage-walk-v2.test.ts",
+      "originalSHA256": "80e88577ae12f2f7d017a2c6c7b57012f867e8ed66febf1bff89941afc290dae",
+      "archivedSHA256": "da718c28ab8d3a58faa1130e8a2bd17c8a38775b7c05ba7417dab194bd384969",
+      "statementsSHA256": "2c390058555102ba883b41e0783713bcfe6a5d4a0a0ebddf0b3c9dc43121fa45"
+    },
+    {
+      "original": "tests/unit/melee-combo.test.ts",
+      "archived": "tests/historical/unit/melee-combo.test.ts",
+      "originalSHA256": "e17c72adea074d49a86259bc90b730ebf9e47c65d4638d0d193daf6c5431d570",
+      "archivedSHA256": "14f4aaeebd05f6ac878e7da7fc1551be58c983ba18ad22826fbe374722fe3d01",
+      "statementsSHA256": "88ae8689e4b4b5a7596c5a5b91e45e9439756a7087102bfa37e2043633d8b015"
+    },
+    {
+      "original": "tests/unit/miniboss-ambience-runtime.test.ts",
+      "archived": "tests/historical/unit/miniboss-ambience-runtime.test.ts",
+      "originalSHA256": "5c79409c6468563797cc7cfa9f523144677c4651062e1e1bc631ecc86d2d860c",
+      "archivedSHA256": "70013db8028af1ad8a70c87d708bcf0c160fe5aa6b1eda8c749a265583bbe9de",
+      "statementsSHA256": "95d34a92439e14f7c1cea02c91ed545fe13df3a495b62a6edb2c1e339bf1b0d2"
+    },
+    {
+      "original": "tests/unit/miniboss-animation-demo.test.ts",
+      "archived": "tests/historical/unit/miniboss-animation-demo.test.ts",
+      "originalSHA256": "e86edb6419c8b231589358255909fff82095ef7aee0551397de3ae4a9c76be51",
+      "archivedSHA256": "4563a47575592fb34d14359970f34fa8313422ddc74cd503112337e0c9768b4f",
+      "statementsSHA256": "9479b5b122df2179500b71abc35a42b96ccb1316319873f18579a949542bac55"
+    },
+    {
+      "original": "tests/unit/miniboss-assets-audio.test.ts",
+      "archived": "tests/historical/unit/miniboss-assets-audio.test.ts",
+      "originalSHA256": "309dfc9f0c79f6e717fe3eb1ce9de8c6960e4d18eacda235a1d4f7952bf042aa",
+      "archivedSHA256": "f95cc5920a6994d7d8e22c3cf1116b29dc5a29c806aa16102b5e3223b0195cde",
+      "statementsSHA256": "1bea11f71dfa4f92400752672f4438f72fbbacd156a2b0dff7fc02b7b7b19a15"
+    },
+    {
+      "original": "tests/unit/music-runtime.test.ts",
+      "archived": "tests/historical/unit/music-runtime.test.ts",
+      "originalSHA256": "b2c007afa6f66a6f5e666edc4e84b8962f020d59d122a20185ed79be17effc5f",
+      "archivedSHA256": "a9a0332a2e8f08b540440bb3607f08b28657a20156556bb6681563afed36fd4f",
+      "statementsSHA256": "ba8d025bbaf4b0ec1334a0e6e67dcb34624fee5db3519900375e32ca559657fc"
+    },
+    {
+      "original": "tests/unit/pixellab-shield-nova-review.test.ts",
+      "archived": "tests/historical/unit/pixellab-shield-nova-review.test.ts",
+      "originalSHA256": "797db3b08f24ebe2ae03959968782b9e6b89546ce6b08260f8afd8e80a0293dc",
+      "archivedSHA256": "53fb94c5b055267472e2d58a03a9d82d84555886d44b0ae8d3e46ea3f4fd706a",
+      "statementsSHA256": "9b0a2456cc4029c009a3587660f0cb58a87f8b9cf5c6b885061eef384fb88b3f"
+    },
+    {
+      "original": "tests/unit/pixellab-spell-review.test.ts",
+      "archived": "tests/historical/unit/pixellab-spell-review.test.ts",
+      "originalSHA256": "cdf57f628ec139cbda8dcb22dee72bb700b63c31249c83c346ac999932b22d22",
+      "archivedSHA256": "bb685e883a6860ce6947ad74cb75b6718bf26b0810272a5776fd94ce6c3246db",
+      "statementsSHA256": "ff459c4b7c7757eaef88f384133092ac1a3b8fa91d38c699e2242f569a211292"
+    },
+    {
+      "original": "tests/unit/regular-lightning-art.test.ts",
+      "archived": "tests/historical/unit/regular-lightning-art.test.ts",
+      "originalSHA256": "3993c2610561972d9fbdb6e0b379c993f7c4f0ec4f4555947968301867535c42",
+      "archivedSHA256": "36edf4e3440702f8f918b731a72dc0d847c96e5bfdc31d3d304f139b6c0c166e",
+      "statementsSHA256": "cec66fbb659f3b104cfde19b157e85dc9c8e651d84aee91482b110d43132ecb5"
+    },
+    {
+      "original": "tests/unit/rootbound-guardian.test.ts",
+      "archived": "tests/historical/unit/rootbound-guardian.test.ts",
+      "originalSHA256": "b2a2048977d65c502e8db28b6d57ce3dc7b5dc16861e2978b94533c2db2ca2ad",
+      "archivedSHA256": "b70442dbdfef262996e963020ffaaeffe848aeb50c7b993b7a37d26c7f820627",
+      "statementsSHA256": "45a19759178acb202a3a4dd2463efcad7f2f7630910b2ee76f7eb9e2183d9733"
+    },
+    {
+      "original": "tests/unit/rune-vfx-review.test.ts",
+      "archived": "tests/historical/unit/rune-vfx-review.test.ts",
+      "originalSHA256": "5b84c4a98f93fafa11885495fd4f30109c35911de41ceb20c566beee37576057",
+      "archivedSHA256": "845de462ab10b1bf690a7cc82988ae0bf595b21517ebb93d88d3030ac530a148",
+      "statementsSHA256": "8f182cdf4559caf642b45041087db0ef88a7ad1f88d91ae9b8172ad2bf11e1e4"
+    },
+    {
+      "original": "tests/unit/rune-warden-pixellab.test.ts",
+      "archived": "tests/historical/unit/rune-warden-pixellab.test.ts",
+      "originalSHA256": "ff19096af3922cebcac0cf3a5df60e09e0799f6fd0e32ef5febbde1b05becb9b",
+      "archivedSHA256": "479bfd2c7123f351c4bc8e6d648d399b7ce25161212029eb804e5cd383f73a27",
+      "statementsSHA256": "38cc48cfdb57a057c31eecdffc5c51fe56e2dbd04ea0bc4bb27691a1cff14ba7"
+    },
+    {
+      "original": "tests/unit/rune-warden.test.ts",
+      "archived": "tests/historical/unit/rune-warden.test.ts",
+      "originalSHA256": "b11ea216efc713a48cab59296f9c241bf9755b791890a2da5c74aa7ee014bb28",
+      "archivedSHA256": "012177bcd2c1c5396f48ae6a3c746cf61b51bdd0d0f989c9d935ff1e4bbb2312",
+      "statementsSHA256": "726b682c6928a02e6eca9316d7e62f5e42a226b15357a8e860879caa3a69ad9a"
+    },
+    {
+      "original": "tests/unit/survival-enrage.test.ts",
+      "archived": "tests/historical/unit/survival-enrage.test.ts",
+      "originalSHA256": "c9caf280fd15dc61d5ef68f193376daf67ad0ec7a55891495cc133a7f09adbb7",
+      "archivedSHA256": "7e62f3f6d1a50559f0f402be893d8909300e578aa7e1c9a24f967abafa639eca",
+      "statementsSHA256": "b6cb52385ea4ae316231c9b2ca92ed6cf995a79328fdbed94b3168ade8d6e715"
+    },
+    {
+      "original": "tests/unit/visual-cleanup-rune-idle.test.ts",
+      "archived": "tests/historical/unit/visual-cleanup-rune-idle.test.ts",
+      "originalSHA256": "da6303cc3ab2d94cd1558a3a1f95a6708baf38d631caa77af41cbcc1007241b2",
+      "archivedSHA256": "2dea910a1bcac377b92971b38d5cc03f4d56d009b987aa26739eb52742968a33",
+      "statementsSHA256": "8a51d6172d13f3e0c38726b5260ba202f901e7f41f86ea66978d4ff4a05db3a6"
+    },
+    {
+      "original": "tests/unit/warrior-buffs-v4.test.ts",
+      "archived": "tests/historical/unit/warrior-buffs-v4.test.ts",
+      "originalSHA256": "13fec3d2828f3094014d8e4d1a14ea705af6124c411dfdbe4533694b315aaded",
+      "archivedSHA256": "c3fb1053cc88d71b7b74c562d6f6ebed91d8fa5cb3513039505316155224c654",
+      "statementsSHA256": "486d33da3c00ec322d338208737d8cdaaf86bc558d40ed6ce73d30a37f92c09b"
+    },
+    {
+      "original": "tests/unit/warrior-combat-scope.test.ts",
+      "archived": "tests/historical/unit/warrior-combat-scope.test.ts",
+      "originalSHA256": "2bc9b1afbb9da457d966c7f812cc174bccefef2819dcf0559fb9b5a959c91c72",
+      "archivedSHA256": "1ff497a98d2c88fb046afc31985b5b019558c625bea39da425322ea6d5789abe",
+      "statementsSHA256": "63c90a608d4b3fe218db8306c3fb6d87317b5d14d82914cce8315c1671402d65"
+    },
+    {
+      "original": "tests/unit/warrior-empty-hand.test.ts",
+      "archived": "tests/historical/unit/warrior-empty-hand.test.ts",
+      "originalSHA256": "4f93026cfb7246b7f96fc0f6213ad5638add73b3d749c30faa5eb08b073b1583",
+      "archivedSHA256": "94f9a436b95c0b3e2644622028214a738b90297f73e206f73e7604a09be236e9",
+      "statementsSHA256": "fd4b76896152129fcad437aac643853633da278dcbbb5e3e8fab240e55bfc8a5"
+    },
+    {
+      "original": "tests/unit/warrior-hero-scope.test.ts",
+      "archived": "tests/historical/unit/warrior-hero-scope.test.ts",
+      "originalSHA256": "e5ce42f39ac41a4a7682f98a7ec90509108bc3342e07ae99e60113aaef7b3502",
+      "archivedSHA256": "18477059e1cdb3ba63e1cca084254ca789cedea2f6e41128a2fa945a44646530",
+      "statementsSHA256": "942bf519083d6db68278f679321a7adae5d55e433b7de3fe5d0b747621ea9c8e"
+    },
+    {
+      "original": "tests/unit/warrior-review.test.ts",
+      "archived": "tests/historical/unit/warrior-review.test.ts",
+      "originalSHA256": "1bee84e93aa267b544652615730884550328914a8f1095ccdb63e084b0b66b33",
+      "archivedSHA256": "688c1fb18b8ecf45fa0e9699b6db095fe4eeee71b534e2f024c80aba40dd0823",
+      "statementsSHA256": "0a930096a4dd37d2cb595cbe29563004fa80ffa21d7ea021e39609a935b245fa"
+    },
+    {
+      "original": "tests/unit/warrior-skills.test.ts",
+      "archived": "tests/historical/unit/warrior-skills.test.ts",
+      "originalSHA256": "9432e3b3ba0155c75536a045435e4b87fd15034d5cdc2a6d2497d145d34bf6df",
+      "archivedSHA256": "ca392af2f1099a922c33e36a95cd63222c6f165f812f487c6efddde82ab6f0ac",
+      "statementsSHA256": "1eca6ea2f4a9fae0cd7ad402d0a4bc4cb7ad3ff6cb150ccb5f6a96049b89ce50"
+    },
+    {
+      "original": "tests/unit/warrior-sounds.test.ts",
+      "archived": "tests/historical/unit/warrior-sounds.test.ts",
+      "originalSHA256": "8b6f29d4173d10a6c5d422596c56fe231d348bb4a8e4e5a0b3bdd77852bd81ee",
+      "archivedSHA256": "dab74b29f597d65023389850784d24c1f99c9e54e106842cca2181b87bf6c496",
+      "statementsSHA256": "62ed315e3325b4a5fdf1ed543baba5c2c4cdc1ccf122e20a030a6e57549272ea"
+    },
+    {
+      "original": "tests/unit/warrior-spear-release.test.ts",
+      "archived": "tests/historical/unit/warrior-spear-release.test.ts",
+      "originalSHA256": "53f607a81e19cedb65c154674497f85f018ec0152acafab8f6ceb2bacd52bf59",
+      "archivedSHA256": "96786d1f2a8ed5635e2c97836d8e08e3185579fd90ab7c7b8e2bbbb080611983",
+      "statementsSHA256": "8b05c6d39443c795e8f296d34bf2d9a270cb37fca1e4550a443a607dbb18a63e"
+    },
+    {
+      "original": "tests/unit/warrior-ultimates-accepted.test.ts",
+      "archived": "tests/historical/unit/warrior-ultimates-accepted.test.ts",
+      "originalSHA256": "ecc8ea943394195ef541a6c75b71e925d5005cde938402f74581c6d0d979f86e",
+      "archivedSHA256": "66e4e39aade61297b0325f3a4d15ff04556cb22f6142a6dc12763c8e2a090522",
+      "statementsSHA256": "5be4d0ab9ff678ea5aace4c4d3f460e5f7d43afd0a70788ebbc0b7ca52a78ade"
+    },
+    {
+      "original": "tests/unit/warrior-ultimates-assets.test.ts",
+      "archived": "tests/historical/unit/warrior-ultimates-assets.test.ts",
+      "originalSHA256": "b022933acc1ca4ce02aa61b6341695448590cf9be0e514feee98741504bb2089",
+      "archivedSHA256": "b022933acc1ca4ce02aa61b6341695448590cf9be0e514feee98741504bb2089",
+      "statementsSHA256": "de84907a33b43ae0950ddccdb226bda496461df330b5a63f41edcaf397463352"
+    },
+    {
+      "original": "tests/e2e/ambient-music-review.spec.ts",
+      "archived": "tests/historical/e2e/ambient-music-review.spec.ts",
+      "originalSHA256": "d6f0c3eb2218504c294cc1024c815531bfdacc15ac3d013d93bcdd2bf225bbf0",
+      "archivedSHA256": "d6f0c3eb2218504c294cc1024c815531bfdacc15ac3d013d93bcdd2bf225bbf0",
+      "statementsSHA256": "6491686eab7fa93a4c18e62639e86bc5feeeadcaf049f5e47535fa668c53d6c1"
+    },
+    {
+      "original": "tests/e2e/ash-warden-integration-v1.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-integration-v1.spec.ts",
+      "originalSHA256": "5a53c3ba5a4edda7f2cce89dbb674bd488acff4c2a31133432856900130eec42",
+      "archivedSHA256": "5a53c3ba5a4edda7f2cce89dbb674bd488acff4c2a31133432856900130eec42",
+      "statementsSHA256": "8d75042ad5f071798c44ef8efb149d26701040b42d77ab19265074a4a7458791"
+    },
+    {
+      "original": "tests/e2e/ash-warden-library.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-library.spec.ts",
+      "originalSHA256": "cca00ebfd265b76f5ca2706d258e39dc6cbdff75a66ec5f819a6b20f6ecf6295",
+      "archivedSHA256": "cca00ebfd265b76f5ca2706d258e39dc6cbdff75a66ec5f819a6b20f6ecf6295",
+      "statementsSHA256": "072f670984709cae69d80e729b9ca0a792f7622abbaca21daec681455fd50533"
+    },
+    {
+      "original": "tests/e2e/ash-warden-north-meteor-review.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-north-meteor-review.spec.ts",
+      "originalSHA256": "2fbbe8a5a27361d7b513bbfe028f75c12a5c9064e2c000dda8e99b6700fff0e7",
+      "archivedSHA256": "2fbbe8a5a27361d7b513bbfe028f75c12a5c9064e2c000dda8e99b6700fff0e7",
+      "statementsSHA256": "87a50c98984102b5a7f4309dd7664d7968cbdd9ff7222bc78435636ec60a55cc"
+    },
+    {
+      "original": "tests/e2e/ash-warden-pixellab-runtime.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-pixellab-runtime.spec.ts",
+      "originalSHA256": "91ecdf56f7dd22863005085c6b9affaa6f67af1a234355a9a02112e593e4746a",
+      "archivedSHA256": "91ecdf56f7dd22863005085c6b9affaa6f67af1a234355a9a02112e593e4746a",
+      "statementsSHA256": "5b44f6e38693ac9bf31141f93c4c7c86d63b0ece0b48a67cafc90a692d4be470"
+    },
+    {
+      "original": "tests/e2e/ash-warden-sounds.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-sounds.spec.ts",
+      "originalSHA256": "fc0174ab155d5d3f3add479d0dd5d1d557bfc3bb1e7ffc6850e849d265d60f37",
+      "archivedSHA256": "2ab5e0435f330e526dc733d8b4c9409b9c738af7084ecf8ec01ce2839a20f46e",
+      "statementsSHA256": "d96e651038b16dbac84cfab5ca288af70baa64ecc6df8509deae6ca9751be483"
+    },
+    {
+      "original": "tests/e2e/ash-warden-walk-approved.spec.ts",
+      "archived": "tests/historical/e2e/ash-warden-walk-approved.spec.ts",
+      "originalSHA256": "8773cf87537c424de56abe347c94e1e587151635cd010c2236ee10800001bf19",
+      "archivedSHA256": "8773cf87537c424de56abe347c94e1e587151635cd010c2236ee10800001bf19",
+      "statementsSHA256": "89ebdf724cfe44629d0dad40a605b73c9c873d824390a53e52570a1fbd957e98"
+    },
+    {
+      "original": "tests/e2e/astral-flame-review.spec.ts",
+      "archived": "tests/historical/e2e/astral-flame-review.spec.ts",
+      "originalSHA256": "a88f0a75d63c4214655946dd05fe460a3c4cbba814493ea02644e430dc5c5b9c",
+      "archivedSHA256": "a88f0a75d63c4214655946dd05fe460a3c4cbba814493ea02644e430dc5c5b9c",
+      "statementsSHA256": "b7a2679aa503f0152661bafb84aa28bf1156f2c7c2293ede6d7838efa6b400ab"
+    },
+    {
+      "original": "tests/e2e/astral-projectile-review.spec.ts",
+      "archived": "tests/historical/e2e/astral-projectile-review.spec.ts",
+      "originalSHA256": "d0a11abd1f7822adfcdcc1a347a5a3325f86d6e596c5f39b17962bd1d793b412",
+      "archivedSHA256": "d0a11abd1f7822adfcdcc1a347a5a3325f86d6e596c5f39b17962bd1d793b412",
+      "statementsSHA256": "0e077d6b2acb822573e8f4e76ef52673c4e15c2bc9ded04edd575ac987f14a96"
+    },
+    {
+      "original": "tests/e2e/astral-projectile-runtime.spec.ts",
+      "archived": "tests/historical/e2e/astral-projectile-runtime.spec.ts",
+      "originalSHA256": "3a7a70700e1bdff8b2374875174f33bfd6315fc0b0ce64e3a8479ae36e9a2231",
+      "archivedSHA256": "3a7a70700e1bdff8b2374875174f33bfd6315fc0b0ce64e3a8479ae36e9a2231",
+      "statementsSHA256": "3be4fdd299161c2ff928bbd079144d1fca4c74ad3542d6f2ce843eb48bd002aa"
+    },
+    {
+      "original": "tests/e2e/astral-revenant.spec.ts",
+      "archived": "tests/historical/e2e/astral-revenant.spec.ts",
+      "originalSHA256": "90cf8a8df8c75f3d141f37eb4ff6c2a1a66515904db9497a5288437ddd8dab18",
+      "archivedSHA256": "5e130c53fd6fe31fca5ec2239784fab52874c0f28e35848e34fa331454513bef",
+      "statementsSHA256": "da7234e06de3dae4c89119870e3e94dec7dfaa5ed644471163ffde91c3e5888f"
+    },
+    {
+      "original": "tests/e2e/atmosphere-milestones.spec.ts",
+      "archived": "tests/historical/e2e/atmosphere-milestones.spec.ts",
+      "originalSHA256": "2c8dc5c39f2cb491dff82d187f3c46436bd200dac18cf625e0fe75d1d1bb3fd0",
+      "archivedSHA256": "2c8dc5c39f2cb491dff82d187f3c46436bd200dac18cf625e0fe75d1d1bb3fd0",
+      "statementsSHA256": "5ce8a064b03e5f4403282fdd12bedba075ab938395973c637d217cd4f8190906"
+    },
+    {
+      "original": "tests/e2e/atmosphere.spec.ts",
+      "archived": "tests/historical/e2e/atmosphere.spec.ts",
+      "originalSHA256": "d0c87ae505bd9a69d675a2a388de6d509d2d464f771051f34e3293174142c50f",
+      "archivedSHA256": "86e45a28a3d0feb1aacf600cd713d3d5870f0b83fb47ce12c08c110379744c70",
+      "statementsSHA256": "7ce7c696fcc42e703320c6269644665c859b48b804e34d8ae6240441709919f4"
+    },
+    {
+      "original": "tests/e2e/audio.spec.ts",
+      "archived": "tests/historical/e2e/audio.spec.ts",
+      "originalSHA256": "75c3ed4ac4778889d0a6f8bffd1792f0b3098ccb676eb93cd3f3391e29547740",
+      "archivedSHA256": "9f272900c50fdd250587ae6332e7a2190565c8e7b5bccf2451e13f1a053babdc",
+      "statementsSHA256": "6f0c812749c1363745410d29cadb369c275ca37a86895bc2f20479428804cdea"
+    },
+    {
+      "original": "tests/e2e/balance-hotfix.spec.ts",
+      "archived": "tests/historical/e2e/balance-hotfix.spec.ts",
+      "originalSHA256": "5ca3365660e41204661d6b5730eddce0e720786e5f70f01c55622f9ae50638a7",
+      "archivedSHA256": "5ca3365660e41204661d6b5730eddce0e720786e5f70f01c55622f9ae50638a7",
+      "statementsSHA256": "70f361e99a01a31bc7e53d45336fef09ea977ff163fae9c132367f888984d062"
+    },
+    {
+      "original": "tests/e2e/berserk-sprint.spec.ts",
+      "archived": "tests/historical/e2e/berserk-sprint.spec.ts",
+      "originalSHA256": "826e39dc7b6558babe47b2de342ee7c818b1bb0960ab6580a655a45cfa710149",
+      "archivedSHA256": "3b006fd8003f823c35517008f7dee655e33ca3518d2275ca334d20935b49de1b",
+      "statementsSHA256": "9f8865115cfc71538bfc240c891a60c31d72fc44b45a5bbbe95b78635cec378f"
+    },
+    {
+      "original": "tests/e2e/biome-phase-notice.spec.ts",
+      "archived": "tests/historical/e2e/biome-phase-notice.spec.ts",
+      "originalSHA256": "1ca8e0700f14ba31aa22c01083c071e32c4bcb45f8381bf36fc45d320b979df9",
+      "archivedSHA256": "1ca8e0700f14ba31aa22c01083c071e32c4bcb45f8381bf36fc45d320b979df9",
+      "statementsSHA256": "2f886b7e3a7c466568ff54f2e9969c7a2bc91113c694c03be72fb6d7e440a35a"
+    },
+    {
+      "original": "tests/e2e/boss-guardian-performance.spec.ts",
+      "archived": "tests/historical/e2e/boss-guardian-performance.spec.ts",
+      "originalSHA256": "885e0a2f23022b4ff5c907fe12890030b5c8ae9f14ed0704e0a5b2e1460dd515",
+      "archivedSHA256": "885e0a2f23022b4ff5c907fe12890030b5c8ae9f14ed0704e0a5b2e1460dd515",
+      "statementsSHA256": "6a50b525ad9d69090d720c638a5bc364aed8027b375f9039d157597967ed8dbe"
+    },
+    {
+      "original": "tests/e2e/boss-guardian.spec.ts",
+      "archived": "tests/historical/e2e/boss-guardian.spec.ts",
+      "originalSHA256": "d3a8482368a410d9d70dee5b0675c6d08647566cce934065f15f32b15bad2864",
+      "archivedSHA256": "d3a8482368a410d9d70dee5b0675c6d08647566cce934065f15f32b15bad2864",
+      "statementsSHA256": "657a8a727b165158d63b18ec2e2120b37fb8ae917e55d8138d34e1a83adb93ac"
+    },
+    {
+      "original": "tests/e2e/boss-practice.spec.ts",
+      "archived": "tests/historical/e2e/boss-practice.spec.ts",
+      "originalSHA256": "d9cce455ade6ad9a956c8a0300c74c6f91c747d6928e10395b74a1c5b62481f6",
+      "archivedSHA256": "e07dcba067fd7331ecf4cd557df0b08c12bbb6ada0a036aae3f68dd88e2a7ecb",
+      "statementsSHA256": "83ab839e4ad200493eb6dd67c3191ac72f1a4f228a9f29edeea0d40dfcea9f4b"
+    },
+    {
+      "original": "tests/e2e/boss-results-layer.spec.ts",
+      "archived": "tests/historical/e2e/boss-results-layer.spec.ts",
+      "originalSHA256": "6612a8e0c0055c1c49c053965d11026925218d50136211e6a7e3d28827e5c6b6",
+      "archivedSHA256": "6612a8e0c0055c1c49c053965d11026925218d50136211e6a7e3d28827e5c6b6",
+      "statementsSHA256": "9512430a04dc58282e59a8bd09109fe9966266efe9fc3537ea64be3409604787"
+    },
+    {
+      "original": "tests/e2e/briar-beast.spec.ts",
+      "archived": "tests/historical/e2e/briar-beast.spec.ts",
+      "originalSHA256": "1cb033c699358642fd97ba5286d07b2a4adf23b7f95e8806fe06be5e71e5b593",
+      "archivedSHA256": "1cb033c699358642fd97ba5286d07b2a4adf23b7f95e8806fe06be5e71e5b593",
+      "statementsSHA256": "07968397d194b04d7b370ae3b9a34af1e1840c4a6dfa464cf4693edae8fbac19"
+    },
+    {
+      "original": "tests/e2e/camera-fireball-cleanup.spec.ts",
+      "archived": "tests/historical/e2e/camera-fireball-cleanup.spec.ts",
+      "originalSHA256": "8e943b27740b0030477ffafa3b3a05cc95f906b147a88af90d5e9c7ef3a64c3a",
+      "archivedSHA256": "19023e3557511da9ff9d2d9190eda65b6aa61877b055c1819594e1c2fe91a13e",
+      "statementsSHA256": "fda167c53ad0a3b8090a7328cd6cb7d8c5a7e395ea1f64c9b99e0619b479c341"
+    },
+    {
+      "original": "tests/e2e/cast-sequence.spec.ts",
+      "archived": "tests/historical/e2e/cast-sequence.spec.ts",
+      "originalSHA256": "e66c5cafe135557f23ad3b1ba0addb164e9356888f0cdfe79ae23729e5d1e915",
+      "archivedSHA256": "e66c5cafe135557f23ad3b1ba0addb164e9356888f0cdfe79ae23729e5d1e915",
+      "statementsSHA256": "ae32fe966092e108f8e48fb29839c84e325ee40e3ed58e9a9bae4441479c7712"
+    },
+    {
+      "original": "tests/e2e/charge-a-update.spec.ts",
+      "archived": "tests/historical/e2e/charge-a-update.spec.ts",
+      "originalSHA256": "a1a3e3ae29b2dc035143d5755bc08f03e91d834257e806e517a66f54e13e97e8",
+      "archivedSHA256": "a1a3e3ae29b2dc035143d5755bc08f03e91d834257e806e517a66f54e13e97e8",
+      "statementsSHA256": "ff706339d2c02ffffea39ef33d3cc22cbdd1b6b13a8eb3b68e225d9c8e76255f"
+    },
+    {
+      "original": "tests/e2e/close-melee-speed.spec.ts",
+      "archived": "tests/historical/e2e/close-melee-speed.spec.ts",
+      "originalSHA256": "36433ff6e9746dfd2b40093927ae289d90389f78fe6fcd5b279ab37a24245c50",
+      "archivedSHA256": "36433ff6e9746dfd2b40093927ae289d90389f78fe6fcd5b279ab37a24245c50",
+      "statementsSHA256": "22a495c690ce0aba48e2caa81cf3ef3c9203545bb82237d8dbb5f7392bdd106c"
+    },
+    {
+      "original": "tests/e2e/combat-balance-2.spec.ts",
+      "archived": "tests/historical/e2e/combat-balance-2.spec.ts",
+      "originalSHA256": "bf9d161cb9e2fe1b7e928fd94a4ea3c92c47ba37b42eb2d7fc1fc04df566842a",
+      "archivedSHA256": "bdfad440a0e8a84bdf2a720e08139f8545cfca069b78d5f619aae35a90112e5b",
+      "statementsSHA256": "4cc72ef0bc4612bc76ed0f4c9e799673f3200578ff8601f5c357285eadb7a0ce"
+    },
+    {
+      "original": "tests/e2e/combat-balance-diagnosis.spec.ts",
+      "archived": "tests/historical/e2e/combat-balance-diagnosis.spec.ts",
+      "originalSHA256": "e2d4d512a0bc180bcd1555ef795bb7a7f7b5ec2b94d72b3e7f05200eabc26657",
+      "archivedSHA256": "f773096319a2a301a721d96bedbe464c1e5476198db44ad54b9d77a52b040dcf",
+      "statementsSHA256": "6b0f8dea6b3cccbe48316bc9d0723ff3fee1a2ec22bbe9abf6bd4ba0fb4a6011"
+    },
+    {
+      "original": "tests/e2e/combat-balance-survival.spec.ts",
+      "archived": "tests/historical/e2e/combat-balance-survival.spec.ts",
+      "originalSHA256": "e75e2e8773f31ac05746dcdeff631815018ef397b3c151da3d71506cacede0c6",
+      "archivedSHA256": "5d7e4b9487b6eaa4d50d2216157bad88c058d60ed67ad117381820ccebebc5e9",
+      "statementsSHA256": "fe15fe834f4c16192de8a8099d866378de8c46742d9c67acf9b5eda9cb43fbe1"
+    },
+    {
+      "original": "tests/e2e/compact-timeline.spec.ts",
+      "archived": "tests/historical/e2e/compact-timeline.spec.ts",
+      "originalSHA256": "2b7f56dcac336d0ac47bc8ee005504e4590537170a3a4776f75eafdc8999d919",
+      "archivedSHA256": "2b7f56dcac336d0ac47bc8ee005504e4590537170a3a4776f75eafdc8999d919",
+      "statementsSHA256": "896ffa5a73a3dd4503c71b5a55870dc79f92070523dfd8234ad5726dde100fa1"
+    },
+    {
+      "original": "tests/e2e/encounter-animation.spec.ts",
+      "archived": "tests/historical/e2e/encounter-animation.spec.ts",
+      "originalSHA256": "278a49206777e241f66f2be169adadc46a94c309019695dcbd3a6d19b1e4ed5d",
+      "archivedSHA256": "278a49206777e241f66f2be169adadc46a94c309019695dcbd3a6d19b1e4ed5d",
+      "statementsSHA256": "460a7d087de66834f214b48bb5833a9c0bbfc5506d551ede9b8d1a0583def1a9"
+    },
+    {
+      "original": "tests/e2e/encounter-director.spec.ts",
+      "archived": "tests/historical/e2e/encounter-director.spec.ts",
+      "originalSHA256": "de1340dd299914c98e0cbfc9a2c4dab2d44f4df6501e9d5754dab5a794ef4727",
+      "archivedSHA256": "1b71dd48b7f2089ba1e9daa14156df3060b77aa2ed929f687145d0057eb2fb37",
+      "statementsSHA256": "2f23983db749df4bb4d0289cfb1cad6b4519782371949e63041dd38ba3ec683b"
+    },
+    {
+      "original": "tests/e2e/encounter-survival.spec.ts",
+      "archived": "tests/historical/e2e/encounter-survival.spec.ts",
+      "originalSHA256": "05308deb6f29861e3802a933267b75cec3191af6c68961c064b98ce0437f908e",
+      "archivedSHA256": "05308deb6f29861e3802a933267b75cec3191af6c68961c064b98ce0437f908e",
+      "statementsSHA256": "bb7ff9aa8873beda80dfd2f74bea652bc13470798eff5e04833c3dcd70600eba"
+    },
+    {
+      "original": "tests/e2e/endgame-performance.spec.ts",
+      "archived": "tests/historical/e2e/endgame-performance.spec.ts",
+      "originalSHA256": "5385d64942200b98207f88162d07e397f4306ca363b1a74fd0a412da67300502",
+      "archivedSHA256": "5385d64942200b98207f88162d07e397f4306ca363b1a74fd0a412da67300502",
+      "statementsSHA256": "f988dafc194c21c16ef78a680109298b646a44d2a3594e02d72d780790e3fa21"
+    },
+    {
+      "original": "tests/e2e/endgame.spec.ts",
+      "archived": "tests/historical/e2e/endgame.spec.ts",
+      "originalSHA256": "d6b6108dc236da11ee384c6bcb9516c2222c28de50876b7e0e56be81c70627ce",
+      "archivedSHA256": "d6b6108dc236da11ee384c6bcb9516c2222c28de50876b7e0e56be81c70627ce",
+      "statementsSHA256": "370b29bb147ac15063d2287b90e8c8e71ff0a98b232c3f5550f5f5c7fc1a6e67"
+    },
+    {
+      "original": "tests/e2e/final-boss-accessibility.spec.ts",
+      "archived": "tests/historical/e2e/final-boss-accessibility.spec.ts",
+      "originalSHA256": "8907d7be611578e14ad88c576f2b70ddb4a18158596243ece64f93666fd7800d",
+      "archivedSHA256": "8907d7be611578e14ad88c576f2b70ddb4a18158596243ece64f93666fd7800d",
+      "statementsSHA256": "c982d9981956edc9f9c81bf7f56f3ae5459d77cf9f7b37f19b904f900779feaa"
+    },
+    {
+      "original": "tests/e2e/final-boss-art.spec.ts",
+      "archived": "tests/historical/e2e/final-boss-art.spec.ts",
+      "originalSHA256": "9ba694e1e85e2d1874eb1d0ff88978b22ea5775fecac3b927f1da8570e05dcee",
+      "archivedSHA256": "9ba694e1e85e2d1874eb1d0ff88978b22ea5775fecac3b927f1da8570e05dcee",
+      "statementsSHA256": "8ac85f4c06ea9ffe6d3a3d3eea139c689517bedd8ff5f89231857e82cee70575"
+    },
+    {
+      "original": "tests/e2e/final-boss-mobile.spec.ts",
+      "archived": "tests/historical/e2e/final-boss-mobile.spec.ts",
+      "originalSHA256": "34d891058a4cd4b183ab1790d4e2fb7a21acef581937e2256b3c78dd47b78f3c",
+      "archivedSHA256": "34d891058a4cd4b183ab1790d4e2fb7a21acef581937e2256b3c78dd47b78f3c",
+      "statementsSHA256": "3e4a695d3af7acf2ce55213d7695b2e22972d380894b1b25d4b904ef727a36c2"
+    },
+    {
+      "original": "tests/e2e/final-boss-performance.spec.ts",
+      "archived": "tests/historical/e2e/final-boss-performance.spec.ts",
+      "originalSHA256": "8dcd5c42bde1ae36a51cf152ca7b33c8d41fb33b07ea5328f20a0c746696dc7b",
+      "archivedSHA256": "8dcd5c42bde1ae36a51cf152ca7b33c8d41fb33b07ea5328f20a0c746696dc7b",
+      "statementsSHA256": "a545e0cd15bbf265c8cff7c5a0955e6f231e2eccb78e9ba59420254f75503332"
+    },
+    {
+      "original": "tests/e2e/final-boss-results.spec.ts",
+      "archived": "tests/historical/e2e/final-boss-results.spec.ts",
+      "originalSHA256": "8193e86cce4aef06c4813e57c9c766fbd3bd93152620788b57578d8cd9398cd4",
+      "archivedSHA256": "8193e86cce4aef06c4813e57c9c766fbd3bd93152620788b57578d8cd9398cd4",
+      "statementsSHA256": "3490ce40c7fc8d6485eb731d21d5f58560a0be23bfa561cba72d9350ca2891ca"
+    },
+    {
+      "original": "tests/e2e/final-boss.spec.ts",
+      "archived": "tests/historical/e2e/final-boss.spec.ts",
+      "originalSHA256": "48eddb1ad6eb892bcfa4a505e289db07fde9f202be3dfa6fa38da79c72db324f",
+      "archivedSHA256": "48eddb1ad6eb892bcfa4a505e289db07fde9f202be3dfa6fa38da79c72db324f",
+      "statementsSHA256": "8fcd00f33ace94ec633e4222d61c28a16cba07781a6ff959b3c616785366fae9"
+    },
+    {
+      "original": "tests/e2e/final-qa.spec.ts",
+      "archived": "tests/historical/e2e/final-qa.spec.ts",
+      "originalSHA256": "7e13c2246dcfc17adc4b0c01035e07a28572199e772a1dec7670f52105b440e1",
+      "archivedSHA256": "6af7dcfcab22f7ef6f0c2830a1cfa9d9f76c9b7c95545b61694ceae637540ba9",
+      "statementsSHA256": "ffbaf03519ca04f88d36f6126637eaf004c4626eac66bd6553e9ff438eba9a6a"
+    },
+    {
+      "original": "tests/e2e/fire-inferno.spec.ts",
+      "archived": "tests/historical/e2e/fire-inferno.spec.ts",
+      "originalSHA256": "474a9f94e6613eb332c74e3e6a0d5eb32a5f96cbd2a40cf97f487338d89b7212",
+      "archivedSHA256": "365fe2efe6ddcc960ae5d61263a443ee224e5f83f49c29ec5274910913ac8197",
+      "statementsSHA256": "96e7e54a67dac59722d59eebaa666f696a0d55687953a056f7f05fb2bdda5ef2"
+    },
+    {
+      "original": "tests/e2e/fire-radius.spec.ts",
+      "archived": "tests/historical/e2e/fire-radius.spec.ts",
+      "originalSHA256": "cfe2c75b55d888035db06ba38ff84eb14ebb238b74e8d9dcbb6a6a68c97d00eb",
+      "archivedSHA256": "cfe2c75b55d888035db06ba38ff84eb14ebb238b74e8d9dcbb6a6a68c97d00eb",
+      "statementsSHA256": "f85ae1df431f1b6964c006861e58222cae3f44abe4e6340113fcd9869030ef47"
+    },
+    {
+      "original": "tests/e2e/fire-ultimate-runtime.spec.ts",
+      "archived": "tests/historical/e2e/fire-ultimate-runtime.spec.ts",
+      "originalSHA256": "a34161e24fa21293fc1592ec04b3ec2cc552e6e7bfb1b912b17cd784b79cf2d3",
+      "archivedSHA256": "a34161e24fa21293fc1592ec04b3ec2cc552e6e7bfb1b912b17cd784b79cf2d3",
+      "statementsSHA256": "7b723d394a9156f19410e6fe192e544409b3d5be747013197c996a3c5daf0817"
+    },
+    {
+      "original": "tests/e2e/flame-strike-timing.spec.ts",
+      "archived": "tests/historical/e2e/flame-strike-timing.spec.ts",
+      "originalSHA256": "435c4646ea3ac0efa334c7ebe54ace467cadf897f58d207453600e8273e08f4c",
+      "archivedSHA256": "435c4646ea3ac0efa334c7ebe54ace467cadf897f58d207453600e8273e08f4c",
+      "statementsSHA256": "b74041a5a4ad826aef4fd501e8673bd9ecd6443a964258306e775d321f760d40"
+    },
+    {
+      "original": "tests/e2e/flame-strike.spec.ts",
+      "archived": "tests/historical/e2e/flame-strike.spec.ts",
+      "originalSHA256": "aee4cd633e2e5510e2b0ad6979c72fd5950de3cfc65e07dbcd2ad260fccb4461",
+      "archivedSHA256": "aee4cd633e2e5510e2b0ad6979c72fd5950de3cfc65e07dbcd2ad260fccb4461",
+      "statementsSHA256": "d220654c6d940a12cc38347d8df235bdf97edbbba9a44f6cbc76ad3788de6280"
+    },
+    {
+      "original": "tests/e2e/frost-armageddon.spec.ts",
+      "archived": "tests/historical/e2e/frost-armageddon.spec.ts",
+      "originalSHA256": "cc8166b02f34f6731f33d8ad8c795e56b703bda52a4b5471b7aa436b2ebab88c",
+      "archivedSHA256": "cc8166b02f34f6731f33d8ad8c795e56b703bda52a4b5471b7aa436b2ebab88c",
+      "statementsSHA256": "c8f309253e309fec0af6974c47746c4e4546be5b485492ec0cad773c58299840"
+    },
+    {
+      "original": "tests/e2e/frost-audio-hotfix.spec.ts",
+      "archived": "tests/historical/e2e/frost-audio-hotfix.spec.ts",
+      "originalSHA256": "5d1d01315e57eda3342d9f94a9e11579d8235257936ed8c42252d6ef466beefd",
+      "archivedSHA256": "5d1d01315e57eda3342d9f94a9e11579d8235257936ed8c42252d6ef466beefd",
+      "statementsSHA256": "5154c85a61a8d5ce5d0795497eeae9b0b06869b9a031ec08455334df70b26088"
+    },
+    {
+      "original": "tests/e2e/frost-avalanche.spec.ts",
+      "archived": "tests/historical/e2e/frost-avalanche.spec.ts",
+      "originalSHA256": "82235da249f5b8f6cd873a351e713a6b709c78a0ed7c06bdb6daf62e4c1046d9",
+      "archivedSHA256": "82235da249f5b8f6cd873a351e713a6b709c78a0ed7c06bdb6daf62e4c1046d9",
+      "statementsSHA256": "7ded972c56dd182a7c9d8979de392be757228128438cc952ac1b1d8ff318c24d"
+    },
+    {
+      "original": "tests/e2e/frost-nova-art.spec.ts",
+      "archived": "tests/historical/e2e/frost-nova-art.spec.ts",
+      "originalSHA256": "d2d0e25067d44303ca3128ebf9b81b8923a5f2f5d980d0e8f39ac0c1d88bc7a3",
+      "archivedSHA256": "d2d0e25067d44303ca3128ebf9b81b8923a5f2f5d980d0e8f39ac0c1d88bc7a3",
+      "statementsSHA256": "778d59b83a816bd8d13d1632feaf06d8ee337bb70e74edab18789dd289ca4422"
+    },
+    {
+      "original": "tests/e2e/frost-nova-hd-game.spec.ts",
+      "archived": "tests/historical/e2e/frost-nova-hd-game.spec.ts",
+      "originalSHA256": "d991b6aac1863856a228b1f04d32d5cf8d6dbe306d16b85913bcd94d7046550a",
+      "archivedSHA256": "d991b6aac1863856a228b1f04d32d5cf8d6dbe306d16b85913bcd94d7046550a",
+      "statementsSHA256": "966b82acac87f7145e80df9c0a0be90a48d544f45c9f49c716718537a560a411"
+    },
+    {
+      "original": "tests/e2e/frost-nova-hd-preview.spec.ts",
+      "archived": "tests/historical/e2e/frost-nova-hd-preview.spec.ts",
+      "originalSHA256": "17789cbde44db5cc4f09e330fa085c5f7d3c9754adc1d265fcf7fc03bd2b8344",
+      "archivedSHA256": "17789cbde44db5cc4f09e330fa085c5f7d3c9754adc1d265fcf7fc03bd2b8344",
+      "statementsSHA256": "d55530706dee1beccff33f5c300496bef049da13d2fb9c5640ad8f15cca525e9"
+    },
+    {
+      "original": "tests/e2e/frost-seal.spec.ts",
+      "archived": "tests/historical/e2e/frost-seal.spec.ts",
+      "originalSHA256": "dfecc3ce553cbb3d37a5853c70adf320f5b0d3ef422bf6911e8d6e7851c093d4",
+      "archivedSHA256": "b150eb5401ee195b2859133da4bbec330ffc4fdbae1eac84234f6a5ac4a715e9",
+      "statementsSHA256": "31a8c83f82cb06804e7619af047e706257e5d2d797aa81b4ec1865940bba11d7"
+    },
+    {
+      "original": "tests/e2e/frost-ultimate-runtime.spec.ts",
+      "archived": "tests/historical/e2e/frost-ultimate-runtime.spec.ts",
+      "originalSHA256": "0502ce14de137072722de63850167e853c9b558d851bdb78ed2f28d82790baf8",
+      "archivedSHA256": "0502ce14de137072722de63850167e853c9b558d851bdb78ed2f28d82790baf8",
+      "statementsSHA256": "657d17d25cf4fa66dc4ee5fe51f48337967290dae2347dc7ca8f7168480422c9"
+    },
+    {
+      "original": "tests/e2e/game.spec.ts",
+      "archived": "tests/historical/e2e/game.spec.ts",
+      "originalSHA256": "c9903199275bed880b48030119cd8eba22b1aa066d57520af619bf61884461a6",
+      "archivedSHA256": "c9903199275bed880b48030119cd8eba22b1aa066d57520af619bf61884461a6",
+      "statementsSHA256": "9aadd25edf2f305b3a9aef288a286d985025cc5ddb96ec77583d1aac251f54ac"
+    },
+    {
+      "original": "tests/e2e/gamepad-performance.spec.ts",
+      "archived": "tests/historical/e2e/gamepad-performance.spec.ts",
+      "originalSHA256": "e67663642f8f7a6e01c1bb663adcd0f384c0f361b96f2d94ee99deb1d9d3d5dc",
+      "archivedSHA256": "63e21ff47e887461e3463e0672b83e1d92d44f76463ef2beb799b9f7ea97654e",
+      "statementsSHA256": "c7e023c3de7e5ef4bd03fef9383261220495ba3a7122636a28fe63b200511ba2"
+    },
+    {
+      "original": "tests/e2e/gamepad.spec.ts",
+      "archived": "tests/historical/e2e/gamepad.spec.ts",
+      "originalSHA256": "16c4796788e1b47ef58f05c3c9ab9213efd14b348d84de3bace5c0b1ccfcd274",
+      "archivedSHA256": "8fa9c004dc21b2522ca8809d4b29ea7290582a386689137866a9aa7c702fc1c4",
+      "statementsSHA256": "5c9f3a2c4d2737fee74633a84c68ff1de3dbbf2fb753bf28fd573c41ff568c10"
+    },
+    {
+      "original": "tests/e2e/gameplay-guardian.spec.ts",
+      "archived": "tests/historical/e2e/gameplay-guardian.spec.ts",
+      "originalSHA256": "c80634c12e79f31a708ba5d17827eecbc57eccb81337de39f33c94a588334fbd",
+      "archivedSHA256": "adb773b41b597ed57728fc7252ebb6f53bbbd9fcdaa550c518c39294bec6bc0b",
+      "statementsSHA256": "cb15f56d0784f28edd61db61781d5a075f19ade01af8c0cb9d9783288a181041"
+    },
+    {
+      "original": "tests/e2e/gameplay-mobility.spec.ts",
+      "archived": "tests/historical/e2e/gameplay-mobility.spec.ts",
+      "originalSHA256": "460323dca00760799662c2f56867120ac5f9a407bf887569fe7b9dd16a371f47",
+      "archivedSHA256": "6edad41bf0fc01b36b3ea2120bfa96ecd98b934a89140dc7b2e91099b8f8ab47",
+      "statementsSHA256": "aba75aab35a747f5d76cb4a6ec71fd04a2a521d64fb8eb7c06659300fa1a0c38"
+    },
+    {
+      "original": "tests/e2e/gameplay-stress.spec.ts",
+      "archived": "tests/historical/e2e/gameplay-stress.spec.ts",
+      "originalSHA256": "ea727dfcb1d5311fde7245bd09bc8f2357e64a561b12c467a0efb55e005ad0d4",
+      "archivedSHA256": "0de6ee9899ca4ffcee9f6c860b3ebbd62c0fae4e755a1b7230435134aa8da1af",
+      "statementsSHA256": "d2b9f2cb47062ceb3cad6b1c6850b43cfff6bab75aa03f696adfe7d0b706c63b"
+    },
+    {
+      "original": "tests/e2e/gameplay-visuals.spec.ts",
+      "archived": "tests/historical/e2e/gameplay-visuals.spec.ts",
+      "originalSHA256": "9c877c4e7d361e2785bfadbf10333e848d3379e0aa1c09a34891951b08f94cf0",
+      "archivedSHA256": "cf50b618679352ef25856ee570902561e14ccde80d1de62f79bb09f1ad3dfaba",
+      "statementsSHA256": "87ef356287650054381b359e6f34656679ac709a2c9353edc88c5b33bb763570"
+    },
+    {
+      "original": "tests/e2e/ground-impact-layers.spec.ts",
+      "archived": "tests/historical/e2e/ground-impact-layers.spec.ts",
+      "originalSHA256": "3e4b6a38bcf4648059d31e8620890e7fd2d3622b10272d37801464a36650e3e2",
+      "archivedSHA256": "3e4b6a38bcf4648059d31e8620890e7fd2d3622b10272d37801464a36650e3e2",
+      "statementsSHA256": "271e5f402b59dc5ef694ea0a648971757c7a9047bb0b7a15a86692d70f176cf5"
+    },
+    {
+      "original": "tests/e2e/grove-evolution.spec.ts",
+      "archived": "tests/historical/e2e/grove-evolution.spec.ts",
+      "originalSHA256": "2261a40211b47b8e5bece248e542be14a0797a118c8c2569fbd0455d2d229dba",
+      "archivedSHA256": "2261a40211b47b8e5bece248e542be14a0797a118c8c2569fbd0455d2d229dba",
+      "statementsSHA256": "851c26a64e637497c6703704ed78c2337c2f78fb97344fb049c2a2eea96baf32"
+    },
+    {
+      "original": "tests/e2e/guardian-practice.spec.ts",
+      "archived": "tests/historical/e2e/guardian-practice.spec.ts",
+      "originalSHA256": "4b91916a3cc85e5b59bd3cd039fd74980a3cf200b4832ab7174e5d989ea7eb58",
+      "archivedSHA256": "a9a35a1a40a215619fcb3caa82217303ec6e0df5d7892e71a9795db195c2cc08",
+      "statementsSHA256": "ae0eae769ee368742b4e8fbfabd1d57666bb8cbfe6d61b617efcf7d5ba550e52"
+    },
+    {
+      "original": "tests/e2e/hd-bosses.spec.ts",
+      "archived": "tests/historical/e2e/hd-bosses.spec.ts",
+      "originalSHA256": "edb833db640bfc60cc22ba734561ac86c650cf94932705bb90e9ee61c81290bf",
+      "archivedSHA256": "7f9ba9280e088ef51ddd97b0f174bba8515bd031c4998ca2fa8d35cf5c644773",
+      "statementsSHA256": "ad391e0601599462216cd9fbec1005af594d73d01c61e190b4f8894b510b01d2"
+    },
+    {
+      "original": "tests/e2e/hd-elites.spec.ts",
+      "archived": "tests/historical/e2e/hd-elites.spec.ts",
+      "originalSHA256": "94290b41a97d5cf78a4f24d4a74c0e4eeab33381e2ebf8255bc49c3b74a09ba3",
+      "archivedSHA256": "94290b41a97d5cf78a4f24d4a74c0e4eeab33381e2ebf8255bc49c3b74a09ba3",
+      "statementsSHA256": "6c55b7b56a0b24b3153dca47ded929c345db846a997a04e53c527d79e2994ac5"
+    },
+    {
+      "original": "tests/e2e/hd-enemies.spec.ts",
+      "archived": "tests/historical/e2e/hd-enemies.spec.ts",
+      "originalSHA256": "a2310ea54b7fb236da8d9e092f96b8ce733569b53186014283ce7779d9ead2ea",
+      "archivedSHA256": "d2f9549564e7d16cbe1909ecd1693f45e2f8276b98c5f07107180a91871f2c68",
+      "statementsSHA256": "ca4b8c3c02325f7a2980f60cf54cf9acac7e8f88c69f1aa2c5a2fca6949d0471"
+    },
+    {
+      "original": "tests/e2e/hd-integration.spec.ts",
+      "archived": "tests/historical/e2e/hd-integration.spec.ts",
+      "originalSHA256": "c4ee794f30a6f2d16552f1ab3b92a91c327f126f2b7136e4072fa8e941e3b025",
+      "archivedSHA256": "5f6781ac40c25dcaf2ba34e138f7a39f3612a05b2ab4ad1e2104d1b086b6f865",
+      "statementsSHA256": "1228e7ee2142f2531e930de2d835f3726e2fded3d0557556fd52c4cbd16164a0"
+    },
+    {
+      "original": "tests/e2e/hd-live-stress.spec.ts",
+      "archived": "tests/historical/e2e/hd-live-stress.spec.ts",
+      "originalSHA256": "bb75c684605424616248a2c1c997c7355d1f7321365520cd301f25ccf1b4c8d9",
+      "archivedSHA256": "c6ab3928677a0ee1a90b57e1fc21580fbce53ea8af8a673a57ed727f828904e3",
+      "statementsSHA256": "839bcbaa3e2fc209452499ebd33fbeeb5d241bff61af88828e776e53ece96783"
+    },
+    {
+      "original": "tests/e2e/hd-loot.spec.ts",
+      "archived": "tests/historical/e2e/hd-loot.spec.ts",
+      "originalSHA256": "3d738f6c0f6f1af257f7b6afa0293040fc26951df033610564030e6d10c75d38",
+      "archivedSHA256": "3d738f6c0f6f1af257f7b6afa0293040fc26951df033610564030e6d10c75d38",
+      "statementsSHA256": "4279acc92eef1a6143988b7c61fd6526cf9bff591708dd999713fc685d03ec07"
+    },
+    {
+      "original": "tests/e2e/hd-mage.spec.ts",
+      "archived": "tests/historical/e2e/hd-mage.spec.ts",
+      "originalSHA256": "ca182d807eaacc167d9d4d49857fcbdae3232d588f8a3d04e929c3274e10ea3d",
+      "archivedSHA256": "ca182d807eaacc167d9d4d49857fcbdae3232d588f8a3d04e929c3274e10ea3d",
+      "statementsSHA256": "136e2c4ca5d6d0095499a0e4225aa693c71af690887906315cfb202c24834b27"
+    },
+    {
+      "original": "tests/e2e/hd-performance.spec.ts",
+      "archived": "tests/historical/e2e/hd-performance.spec.ts",
+      "originalSHA256": "3f8943415cfd9dfa0c2b6d5efc338847755842bdcae99bb2dd4e119c37c70810",
+      "archivedSHA256": "2fcdea648a082842ed36f127d8583efc9a16d33c65d4636ae4cafcbab5d9c160",
+      "statementsSHA256": "4180f5aef53831cb02fc0235ec9b7fd2b0dabc07e1f5456518859d145089d0fe"
+    },
+    {
+      "original": "tests/e2e/hd-rework-performance.spec.ts",
+      "archived": "tests/historical/e2e/hd-rework-performance.spec.ts",
+      "originalSHA256": "76eef91a0e3b6bcf345b3a3478d3a85402bca3f5639783f1b1716796e57d1b1d",
+      "archivedSHA256": "a643cce7bd65bb20b56555a629ec9d38ac486afb2b2adea6b17ecd433b9d044d",
+      "statementsSHA256": "20acf9dce2c26e7b713d1bb8f0dd28da2a7424b57c118ca3699256f8e5d96752"
+    },
+    {
+      "original": "tests/e2e/hd-ui.spec.ts",
+      "archived": "tests/historical/e2e/hd-ui.spec.ts",
+      "originalSHA256": "a88eb5e32cf2f3d4ae6461630db3b4cc7b78a2a790ad0ca8d96c341e5d9837de",
+      "archivedSHA256": "517cf59d5d36d866b608f72bf2c4ada95c917077e690f7fa2d0a662a626aab62",
+      "statementsSHA256": "2b8a380343d4ccd3ef7460df5546562abab8fe03d7140963fcee8d44b6c3e5f6"
+    },
+    {
+      "original": "tests/e2e/hd-warrior.spec.ts",
+      "archived": "tests/historical/e2e/hd-warrior.spec.ts",
+      "originalSHA256": "d35dc2500b69c1d6a040acc11767629bc16917ee94810d37deda48c7acd7ca76",
+      "archivedSHA256": "f7a4e9bb8e1d7c15e058f06e7958ed67d1bfdf26e84934435ef397e9be5c024c",
+      "statementsSHA256": "5d6037513cbc88cae183af567c8564c95947df8ae08ac0643894e353ace1788f"
+    },
+    {
+      "original": "tests/e2e/held-movement.spec.ts",
+      "archived": "tests/historical/e2e/held-movement.spec.ts",
+      "originalSHA256": "2f97f67a560556a4e9f4c2b6a6126a75fc604ba51c702fa07f5c2c329b77dd23",
+      "archivedSHA256": "b653946a5d0cc233a3ba342759882828d256f2fbecc5f5f1f152f1b81045259c",
+      "statementsSHA256": "021403d5cbd43a609cf2610841f210fc0709d389df33c220e382f4e594feafba"
+    },
+    {
+      "original": "tests/e2e/levelup-hotfix.spec.ts",
+      "archived": "tests/historical/e2e/levelup-hotfix.spec.ts",
+      "originalSHA256": "e20144918eb48f7cdfa76d8da2f58d83430eb248c70e36c939e9781ee5f166c1",
+      "archivedSHA256": "e20144918eb48f7cdfa76d8da2f58d83430eb248c70e36c939e9781ee5f166c1",
+      "statementsSHA256": "afba1219928f79aed2ad5c7a2c8af1cf4a18f53191083e2b9e3a7a81c562d3dc"
+    },
+    {
+      "original": "tests/e2e/lightning-aftershock.spec.ts",
+      "archived": "tests/historical/e2e/lightning-aftershock.spec.ts",
+      "originalSHA256": "806448c2f06f678236813b79cf9d3506d123a0e09ed22edfa9927fb4c557bcc0",
+      "archivedSHA256": "806448c2f06f678236813b79cf9d3506d123a0e09ed22edfa9927fb4c557bcc0",
+      "statementsSHA256": "91d8c27690211b913f83324040a5cf6c3379ffba68fa5d533106e1b2d6b01d0e"
+    },
+    {
+      "original": "tests/e2e/lightning-cinematic.spec.ts",
+      "archived": "tests/historical/e2e/lightning-cinematic.spec.ts",
+      "originalSHA256": "43454adfe6462fd9158a9c3bb5d9f7bc5a8eab7456b8f96af4e1454d0647a293",
+      "archivedSHA256": "3df1172dc62b88db738ed57a19c16d86dc6631767d78de62aa629ba2f19f7233",
+      "statementsSHA256": "b17c7b8fe1e8af84fbe38ba3c9fb119e473349533a5a74c46245ea96880b85b1"
+    },
+    {
+      "original": "tests/e2e/lightning-devastation.spec.ts",
+      "archived": "tests/historical/e2e/lightning-devastation.spec.ts",
+      "originalSHA256": "5665a6fb0e6f55ecc68163c2cd629b3b5e87eb588f4ef1dd633db223a8062ff2",
+      "archivedSHA256": "5665a6fb0e6f55ecc68163c2cd629b3b5e87eb588f4ef1dd633db223a8062ff2",
+      "statementsSHA256": "f470dffc4031c5254003df775fb8fdddb7ff8544a5929d7d397e77c7cc3ef42c"
+    },
+    {
+      "original": "tests/e2e/lightning-spawn-relief.spec.ts",
+      "archived": "tests/historical/e2e/lightning-spawn-relief.spec.ts",
+      "originalSHA256": "93704e6730d9c6ffd45f6a5265f16ce3deee2c2dad1209cded6e4aea947209a8",
+      "archivedSHA256": "93704e6730d9c6ffd45f6a5265f16ce3deee2c2dad1209cded6e4aea947209a8",
+      "statementsSHA256": "64dca140733c432c4ec49bc478a34090e78aa82c52998d1c1f6603c8d5b574ac"
+    },
+    {
+      "original": "tests/e2e/lightning-ultimate-art.spec.ts",
+      "archived": "tests/historical/e2e/lightning-ultimate-art.spec.ts",
+      "originalSHA256": "ad6e5f541169ea1a65ccad18eb469c1dfef02ed062dc9da94fb9b10518451228",
+      "archivedSHA256": "ad6e5f541169ea1a65ccad18eb469c1dfef02ed062dc9da94fb9b10518451228",
+      "statementsSHA256": "74df3abb29f64d881579303311c493b5158892803432cab7e73d3654d50add93"
+    },
+    {
+      "original": "tests/e2e/loot.spec.ts",
+      "archived": "tests/historical/e2e/loot.spec.ts",
+      "originalSHA256": "027533e90c591d60adc63e9ea94c0d70182c340418b125e24f5c099c72c63c99",
+      "archivedSHA256": "cb2cd237bb7e786de393d174d54b88e7646accd73c9bd8551a86857779aa4b80",
+      "statementsSHA256": "c0e33325e94c5dea53d5e33d878d3d7d8ddfb283ef1116080d96592f54c3fc5f"
+    },
+    {
+      "original": "tests/e2e/mage-ability-vfx.spec.ts",
+      "archived": "tests/historical/e2e/mage-ability-vfx.spec.ts",
+      "originalSHA256": "2be7549d4278e0dedafd25c4aa67329c5b6a892d39c1e3d80950a5fb3d274f0d",
+      "archivedSHA256": "2be7549d4278e0dedafd25c4aa67329c5b6a892d39c1e3d80950a5fb3d274f0d",
+      "statementsSHA256": "c9426ceb251af8aa5ff399ca96e7faf274cc738bdc4dbc8ee93fd2dfd576a924"
+    },
+    {
+      "original": "tests/e2e/mage-blink-game.spec.ts",
+      "archived": "tests/historical/e2e/mage-blink-game.spec.ts",
+      "originalSHA256": "8dbb54c1b37b4dc67861c6e2e4b8b630b84ec8c029a03ad261e54b5ace48131e",
+      "archivedSHA256": "8dbb54c1b37b4dc67861c6e2e4b8b630b84ec8c029a03ad261e54b5ace48131e",
+      "statementsSHA256": "763e3c92befd93763449135f32ae1696a3b56eedac5676a4901dd634d700caa6"
+    },
+    {
+      "original": "tests/e2e/mage-blink-v1.spec.ts",
+      "archived": "tests/historical/e2e/mage-blink-v1.spec.ts",
+      "originalSHA256": "16482997673c031cbc4ae03c874921a16630547a1dad36b6d4a9e6625c4217d8",
+      "archivedSHA256": "16482997673c031cbc4ae03c874921a16630547a1dad36b6d4a9e6625c4217d8",
+      "statementsSHA256": "1e132f9e86661c8457f54f3b491e08de424cbb01f71f0338036c51eb5d5c3fc6"
+    },
+    {
+      "original": "tests/e2e/mage-cast-origins.spec.ts",
+      "archived": "tests/historical/e2e/mage-cast-origins.spec.ts",
+      "originalSHA256": "7d980324972530395ab749cac94280cade9ef3e961a3b032cd06d3603328cfaa",
+      "archivedSHA256": "7d980324972530395ab749cac94280cade9ef3e961a3b032cd06d3603328cfaa",
+      "statementsSHA256": "90cbe7cc8e847baf94c58629889bf897a8744fa7cd94809e2bfe07a7945873eb"
+    },
+    {
+      "original": "tests/e2e/mage-casting-performance.spec.ts",
+      "archived": "tests/historical/e2e/mage-casting-performance.spec.ts",
+      "originalSHA256": "dc736c12cb934f58666d71e8aacd5c53f9080fdff56c0fd1fd223689b0299e54",
+      "archivedSHA256": "dc736c12cb934f58666d71e8aacd5c53f9080fdff56c0fd1fd223689b0299e54",
+      "statementsSHA256": "fa2fd7dab5ccf25a50b7ce5ac90ef8b2cf6c9f5819c0494439765f479b58a9fe"
+    },
+    {
+      "original": "tests/e2e/mage-casting.spec.ts",
+      "archived": "tests/historical/e2e/mage-casting.spec.ts",
+      "originalSHA256": "7795c54853d515f7df1e4fb702f53f0f48f154e64e39326f8723c2ee08791a24",
+      "archivedSHA256": "445c062abb749a7201b44faf9533c2754024de786a30c608c78081dce64f3339",
+      "statementsSHA256": "cd177b7d76ec08122f451aa414129ee612aedf7d81662dd94a18461205e0cdec"
+    },
+    {
+      "original": "tests/e2e/mage-fireball-v2.spec.ts",
+      "archived": "tests/historical/e2e/mage-fireball-v2.spec.ts",
+      "originalSHA256": "557e94071189f37ccbfcd0132e0c2506e40a257a11543deca004766441bbf724",
+      "archivedSHA256": "557e94071189f37ccbfcd0132e0c2506e40a257a11543deca004766441bbf724",
+      "statementsSHA256": "1f84e5f336b28a34fca9cdcf65dd3353bea21be28e780e49abfcded7d9c2b2e9"
+    },
+    {
+      "original": "tests/e2e/mage-fireball.spec.ts",
+      "archived": "tests/historical/e2e/mage-fireball.spec.ts",
+      "originalSHA256": "6c2c7663798cac941ffddf8b766e569ac04621e4e63a9d313d4dcbc786c3de92",
+      "archivedSHA256": "6c2c7663798cac941ffddf8b766e569ac04621e4e63a9d313d4dcbc786c3de92",
+      "statementsSHA256": "f22d22b3a986b0944ec09ece523bf56183a1ae5f03b39446ad826c2afcf30bc2"
+    },
+    {
+      "original": "tests/e2e/mage-hero-v2.spec.ts",
+      "archived": "tests/historical/e2e/mage-hero-v2.spec.ts",
+      "originalSHA256": "bad70b72516c1cf179f1704051062614627920c6e765e3495a87835dfd8e0170",
+      "archivedSHA256": "b5cd25de97ee9f80bd2b17ac77f7cca291912e68a7859d113409d590a663fd71",
+      "statementsSHA256": "1e23cdfb542592300d82d0414b4cb526a0a2b0938180151e9bfe528f66462d0e"
+    },
+    {
+      "original": "tests/e2e/mage-idle-v2.spec.ts",
+      "archived": "tests/historical/e2e/mage-idle-v2.spec.ts",
+      "originalSHA256": "adae1828a7813c344c27c82084092ee56949d2969bd148de51d6e1f82489cba5",
+      "archivedSHA256": "6a782b8bd7b2172c80f3d78aadff35b5a5ca9f46d4e0073bb1a751303a94d81a",
+      "statementsSHA256": "dbc645160d882ae9bbe06a3a136842fdfc0bbddfad1f8f12f6bfeabb37d1b6f2"
+    },
+    {
+      "original": "tests/e2e/mage-meteor-v3.spec.ts",
+      "archived": "tests/historical/e2e/mage-meteor-v3.spec.ts",
+      "originalSHA256": "ef01a8515272f12a9943d05ad072cbbf7bb7d2d932580863b9a61552ea25d959",
+      "archivedSHA256": "ef01a8515272f12a9943d05ad072cbbf7bb7d2d932580863b9a61552ea25d959",
+      "statementsSHA256": "a8e65b468534988a27fc4fae43b83c472729041f229d67a873fbff3e3196be22"
+    },
+    {
+      "original": "tests/e2e/mage-moving-cast-v2.spec.ts",
+      "archived": "tests/historical/e2e/mage-moving-cast-v2.spec.ts",
+      "originalSHA256": "6da99dd15431289812d49af809169df2497390112c707d1b8a3709042f18a97d",
+      "archivedSHA256": "6da99dd15431289812d49af809169df2497390112c707d1b8a3709042f18a97d",
+      "statementsSHA256": "7fd467d38724a3639b0bf7015ee18b00ee245fb26ab9af3726af233f1271ab6d"
+    },
+    {
+      "original": "tests/e2e/mage-moving-cast.spec.ts",
+      "archived": "tests/historical/e2e/mage-moving-cast.spec.ts",
+      "originalSHA256": "c6761f37c7f85946af6cc5156bdc729a85b3e63d65ab02fccf21f45de2b36ec1",
+      "archivedSHA256": "c6761f37c7f85946af6cc5156bdc729a85b3e63d65ab02fccf21f45de2b36ec1",
+      "statementsSHA256": "c60a5f285c3390e9cae1e4da97d75fa5fb84341895c36e78ffd337bfd8f82d34"
+    },
+    {
+      "original": "tests/e2e/mage-phantom.spec.ts",
+      "archived": "tests/historical/e2e/mage-phantom.spec.ts",
+      "originalSHA256": "e87a8013b4ac9b9f3000d88a99807c3fd080e6bedadc4583ae8212d6d567d90e",
+      "archivedSHA256": "deda127eabaa7a0bdfb9f7fb5c6153820d5e1e1c01e695c86b45edd9e3c83ade",
+      "statementsSHA256": "380724fdf281be4708edab1b334edede8568655b8acfcc3ef7f82aae9a4987da"
+    },
+    {
+      "original": "tests/e2e/mage-run-cycle.spec.ts",
+      "archived": "tests/historical/e2e/mage-run-cycle.spec.ts",
+      "originalSHA256": "dd4268c002b5da5b954340e5d9f238effa07f2281da8efb1ff096bde6f50f59a",
+      "archivedSHA256": "2a9ad5472b48b396613e075bb7a9142b2b683dbd074d11886fbede0d8e45309a",
+      "statementsSHA256": "b2254ee4da1eb335a8ba780c4aa470f9c7a3ba9af5f863503349dc1933b92f01"
+    },
+    {
+      "original": "tests/e2e/mage-running-demo-v2.spec.ts",
+      "archived": "tests/historical/e2e/mage-running-demo-v2.spec.ts",
+      "originalSHA256": "96c1b306dbf2a95d98d8e8c69f7d80850404a07716a41feb1f4f6d472265cce5",
+      "archivedSHA256": "96c1b306dbf2a95d98d8e8c69f7d80850404a07716a41feb1f4f6d472265cce5",
+      "statementsSHA256": "15e5f6fa2056cdf3bd370b1fce72a5f7da7fca66d156fa057f128015ebeee462"
+    },
+    {
+      "original": "tests/e2e/mage-sfx.spec.ts",
+      "archived": "tests/historical/e2e/mage-sfx.spec.ts",
+      "originalSHA256": "b59263f811a644212a462b49e789ae130e63a65359cea5ad89f835505d7e324f",
+      "archivedSHA256": "f170c224abfc47f172995f8eede265f80a4715ae54d332ffdfac33c963355904",
+      "statementsSHA256": "e9b48b2c16d7fe6c8ad8d70eda7318a22f29790f4a57aefc1bb99886c088d5df"
+    },
+    {
+      "original": "tests/e2e/mage-shield-pixellab.spec.ts",
+      "archived": "tests/historical/e2e/mage-shield-pixellab.spec.ts",
+      "originalSHA256": "dc5eaa7a451ae75e6f3a3f994aab6dfc57bc3a3b4d26f051dea2a83c2d5015c2",
+      "archivedSHA256": "dc5eaa7a451ae75e6f3a3f994aab6dfc57bc3a3b4d26f051dea2a83c2d5015c2",
+      "statementsSHA256": "cb931b137a5699d9dcfcdd3cd4888046a44609b66f451f64e12f2cf9fb349372"
+    },
+    {
+      "original": "tests/e2e/mage-uploaded-sounds.spec.ts",
+      "archived": "tests/historical/e2e/mage-uploaded-sounds.spec.ts",
+      "originalSHA256": "1282a89974d6e87529b0934d35b059acea9a23069367536e7f43ace07788ad00",
+      "archivedSHA256": "0dda6a2ea5c5cdfd79b49f1956ad7a26d2911a09cf5beaddaf57a3bde12d4eb8",
+      "statementsSHA256": "ff21b7ccef3516463df831938e534c19295dd47d3bcf31d59b1ba4433c1905a6"
+    },
+    {
+      "original": "tests/e2e/melee-combo.spec.ts",
+      "archived": "tests/historical/e2e/melee-combo.spec.ts",
+      "originalSHA256": "72f1e5608cdaaa2ccf92041f950a87edba3d48453defbb2ee7e3805af612b38e",
+      "archivedSHA256": "72f1e5608cdaaa2ccf92041f950a87edba3d48453defbb2ee7e3805af612b38e",
+      "statementsSHA256": "da6053624d200bb26fd5b049facae9ebeedbaf1e5e844b4f20ba129f2a72ec08"
+    },
+    {
+      "original": "tests/e2e/miniboss-animation-demo.spec.ts",
+      "archived": "tests/historical/e2e/miniboss-animation-demo.spec.ts",
+      "originalSHA256": "1cfb348545762c3716100c6f0b89db3ed07f98786c5cd7f5cfb7e72de9257c7b",
+      "archivedSHA256": "1cfb348545762c3716100c6f0b89db3ed07f98786c5cd7f5cfb7e72de9257c7b",
+      "statementsSHA256": "520b675d691fcdbc25d413d0351f3e614b531f583d003fb663f7dd1bb1d53b6a"
+    },
+    {
+      "original": "tests/e2e/miniboss-assets-audio.spec.ts",
+      "archived": "tests/historical/e2e/miniboss-assets-audio.spec.ts",
+      "originalSHA256": "516a8fe72288dd3e51e1ebad54f64c3be2fc23af740dfdf6e493728684eb4e5a",
+      "archivedSHA256": "9b02123c0e37d1a2eaf82d9b2519d80b82318d3753885e9554ac98fb58ddcabc",
+      "statementsSHA256": "23dffa50d48fb739bede571d7322d6f5dbf7ae225c7571aea16614023056989a"
+    },
+    {
+      "original": "tests/e2e/mobile-landscape.spec.ts",
+      "archived": "tests/historical/e2e/mobile-landscape.spec.ts",
+      "originalSHA256": "3449152e78a15155755443bbd9bf3a539fcefd3e15008176f5706420f99763d9",
+      "archivedSHA256": "4e663bb844c6a06399f6ca98e95804e187526cfaa4760563a1e34857ffd6b01b",
+      "statementsSHA256": "daf8980a3e624b96533f2668c986c10450d1c0c677b205373ea7249b47627d33"
+    },
+    {
+      "original": "tests/e2e/mobility-hud.spec.ts",
+      "archived": "tests/historical/e2e/mobility-hud.spec.ts",
+      "originalSHA256": "14ed624c5aec2bef5bdb5ff212fe2dd806b910ffc3256e3230f9c6d87538f215",
+      "archivedSHA256": "37e5ca7e43567d597aa49b3c6a0e8e000b261d8a38056ac8185fd01c78b0d707",
+      "statementsSHA256": "55d671e31e05998d02af1602ae4e227c13270283c67e16b930b646df2962837a"
+    },
+    {
+      "original": "tests/e2e/mobility-specialization-stress.spec.ts",
+      "archived": "tests/historical/e2e/mobility-specialization-stress.spec.ts",
+      "originalSHA256": "31d557347fa4e2913637559dc36809a25efef625715c0bf8fc4c69282b79565a",
+      "archivedSHA256": "313dc9500c1dceec70beb27c4dad3f54326a9b7821f6695461a1d79880ac3ed7",
+      "statementsSHA256": "3f7f63acfea2fb10db830dede9978c3bb4f27beb7a1803dd7de5563a9d22b307"
+    },
+    {
+      "original": "tests/e2e/music-runtime.spec.ts",
+      "archived": "tests/historical/e2e/music-runtime.spec.ts",
+      "originalSHA256": "3918b947297f887d0c14190c7c68e53747335623070b093593469984e75c0b8c",
+      "archivedSHA256": "3918b947297f887d0c14190c7c68e53747335623070b093593469984e75c0b8c",
+      "statementsSHA256": "55727911464b98ca1fdf6f6c62d79cdd237822731f4e35dce373d17ae4b05959"
+    },
+    {
+      "original": "tests/e2e/mvp-ui.spec.ts",
+      "archived": "tests/historical/e2e/mvp-ui.spec.ts",
+      "originalSHA256": "f890a38525da3e62d576a25019f9ec5aa881afecf67f3cfb6a250d740946ed71",
+      "archivedSHA256": "8574108ac6dd963662f1da54c79f1728f3859f9fc3ae220905d71ba33808e560",
+      "statementsSHA256": "fa58c9bbda4bea75c6c66cd9fff09882b263c0460dda07b8090a8fea241f9ed3"
+    },
+    {
+      "original": "tests/e2e/performance.spec.ts",
+      "archived": "tests/historical/e2e/performance.spec.ts",
+      "originalSHA256": "1f1c283fc61c352d5dc409ede7abcb2860bd8f493a874842f27cb302853326b6",
+      "archivedSHA256": "5c09634a4eb3d4bcfc5f01823355954b5b2671406b0bf6eceb5d3e8628c799c3",
+      "statementsSHA256": "ab2bbcf45b7d5995aa73c0bb53e99e470ca0053aa5727643934add5972f61473"
+    },
+    {
+      "original": "tests/e2e/phase-flame-fan.spec.ts",
+      "archived": "tests/historical/e2e/phase-flame-fan.spec.ts",
+      "originalSHA256": "ea4f8a5f71e1cda5c01975a2497f366d827f9191081108b1da84118b320f73d8",
+      "archivedSHA256": "ea4f8a5f71e1cda5c01975a2497f366d827f9191081108b1da84118b320f73d8",
+      "statementsSHA256": "f286da2f0d0440c32ae9390e62278aff2eb2c37ed365a24b1eb43a594d33d7fc"
+    },
+    {
+      "original": "tests/e2e/phase2.spec.ts",
+      "archived": "tests/historical/e2e/phase2.spec.ts",
+      "originalSHA256": "c15e588e8f2318f64c955073ce3049541ab3c9aa71f960b5f2759816fa2c7522",
+      "archivedSHA256": "2878738334d07e716628e1b216284e3b087656bec40c199a3110dd9396fc752b",
+      "statementsSHA256": "590899ab2b5cb2fa052821b487867a9b1a9f32e65145f1ce214a10bb3570b4bb"
+    },
+    {
+      "original": "tests/e2e/phase3.spec.ts",
+      "archived": "tests/historical/e2e/phase3.spec.ts",
+      "originalSHA256": "dc6db41a88f5a1bb31d0142536d37c239d2fa9885e811e44975d3ee21fc307a4",
+      "archivedSHA256": "dc9b5087d7d31dce47a82a2eb13efbfb8bf626d0f7b4d5653daaa0c5dcaf06a8",
+      "statementsSHA256": "32b71d65fecb1cc53ce6b53501192e99f98525a098d6e644e63b5a87273954fa"
+    },
+    {
+      "original": "tests/e2e/pixellab-shield-nova-review.spec.ts",
+      "archived": "tests/historical/e2e/pixellab-shield-nova-review.spec.ts",
+      "originalSHA256": "6f89869fcfbd2fd6eb434b6da4b152b458da6494ca64747acc8b100c7e6c8ef0",
+      "archivedSHA256": "6f89869fcfbd2fd6eb434b6da4b152b458da6494ca64747acc8b100c7e6c8ef0",
+      "statementsSHA256": "71a9faaea1a7da3b625c877c5e8064469302b53f576f765689ca650b72669b1b"
+    },
+    {
+      "original": "tests/e2e/pixellab-spell-review.spec.ts",
+      "archived": "tests/historical/e2e/pixellab-spell-review.spec.ts",
+      "originalSHA256": "a7a46e79e9c9d9c0f3b6037afc82fc3da89898ff78cdbb3f848a18008c43ad79",
+      "archivedSHA256": "a7a46e79e9c9d9c0f3b6037afc82fc3da89898ff78cdbb3f848a18008c43ad79",
+      "statementsSHA256": "50da715d966e08b8e86ca972c279bb3c7c5b0059d4cd8b4b6c162faf053ecf51"
+    },
+    {
+      "original": "tests/e2e/player-presentation-focus.spec.ts",
+      "archived": "tests/historical/e2e/player-presentation-focus.spec.ts",
+      "originalSHA256": "d40fbc5c94a1b96d3f14dba62166c92cedd43779a57fbb4605d0e4629e8e156f",
+      "archivedSHA256": "d40fbc5c94a1b96d3f14dba62166c92cedd43779a57fbb4605d0e4629e8e156f",
+      "statementsSHA256": "a832db87a7e344eee4751b08c06af469595c568afe9209ad5fdc9583e23538de"
+    },
+    {
+      "original": "tests/e2e/player-targeted-meteors.spec.ts",
+      "archived": "tests/historical/e2e/player-targeted-meteors.spec.ts",
+      "originalSHA256": "bb64b5ed2254312003e554aaf8baf1328962cc8015ee6d2aaa57268cf65dfb60",
+      "archivedSHA256": "bb64b5ed2254312003e554aaf8baf1328962cc8015ee6d2aaa57268cf65dfb60",
+      "statementsSHA256": "28179f567cc16b9de4486b40be4dd6cc4d45d93adccda38350e248ea562b0293"
+    },
+    {
+      "original": "tests/e2e/production.spec.ts",
+      "archived": "tests/historical/e2e/production.spec.ts",
+      "originalSHA256": "297b45120f4e954c2186b584550c9833b6c87f08fbfe020fb64f4f2a1da3c278",
+      "archivedSHA256": "c2fe87579106fba08d2ac171b721ac3a1f7591b5559fc9aafaf992db813b7ddb",
+      "statementsSHA256": "2211cf81559adb9e86624173cb40801a348e6c0de9c4d40a1cde837e1a299e2f"
+    },
+    {
+      "original": "tests/e2e/regular-lightning.spec.ts",
+      "archived": "tests/historical/e2e/regular-lightning.spec.ts",
+      "originalSHA256": "1c3c79e32eae2709239dd0b56a11c019f60d661ba17deb93e3a7a86775154216",
+      "archivedSHA256": "1c3c79e32eae2709239dd0b56a11c019f60d661ba17deb93e3a7a86775154216",
+      "statementsSHA256": "f3b05e867d3d0ab877bbc8d29c825e10781f603e0048fc673f2a7a976a20d0f4"
+    },
+    {
+      "original": "tests/e2e/rootbound-guardian.spec.ts",
+      "archived": "tests/historical/e2e/rootbound-guardian.spec.ts",
+      "originalSHA256": "c99a37c19cfd56c60b2cd2341de68b72865690ec336ddbc2895fba88ff297440",
+      "archivedSHA256": "c99a37c19cfd56c60b2cd2341de68b72865690ec336ddbc2895fba88ff297440",
+      "statementsSHA256": "823843ab50d0a820ca7da2f1be581e473fd33e421f36da76bc212a141438167c"
+    },
+    {
+      "original": "tests/e2e/run-finish.spec.ts",
+      "archived": "tests/historical/e2e/run-finish.spec.ts",
+      "originalSHA256": "91e8a064c5fa7b0b96c58f114a7a29afc997a8d52412b0ef689a9f453d575095",
+      "archivedSHA256": "91e8a064c5fa7b0b96c58f114a7a29afc997a8d52412b0ef689a9f453d575095",
+      "statementsSHA256": "4b625a285dace70d084a799036df302d2ad5d297a9263b23aeabb9d3a6b4d083"
+    },
+    {
+      "original": "tests/e2e/rune-vfx-review.spec.ts",
+      "archived": "tests/historical/e2e/rune-vfx-review.spec.ts",
+      "originalSHA256": "262f3e90c3248551cfb7ae38f84c01d379ae770e5eb88b4e63cf708baa073874",
+      "archivedSHA256": "262f3e90c3248551cfb7ae38f84c01d379ae770e5eb88b4e63cf708baa073874",
+      "statementsSHA256": "d691f1b1f695107919c794ae1cc5aa8323d7f4640604f22f9b2d6adf1f4a6011"
+    },
+    {
+      "original": "tests/e2e/rune-warden-pixellab.spec.ts",
+      "archived": "tests/historical/e2e/rune-warden-pixellab.spec.ts",
+      "originalSHA256": "dbd4e6b003e34d8e6e948b340de2ab8eadfa715e5203c19ee7d45ce59fc368fc",
+      "archivedSHA256": "dbd4e6b003e34d8e6e948b340de2ab8eadfa715e5203c19ee7d45ce59fc368fc",
+      "statementsSHA256": "2f99534b72a59c33b28395b0d3b06f3be57b2a4d20f1cb11d99a133bcf29e9a5"
+    },
+    {
+      "original": "tests/e2e/rune-warden.spec.ts",
+      "archived": "tests/historical/e2e/rune-warden.spec.ts",
+      "originalSHA256": "32b15cf6761592363832df25b275b80a38a63007edb4274f5233fdcf7ff09ac3",
+      "archivedSHA256": "32b15cf6761592363832df25b275b80a38a63007edb4274f5233fdcf7ff09ac3",
+      "statementsSHA256": "59e13f34cbcf9db47c589be6ad0e27fcd070f2b68f21f8e6b7c6ca608214a5b0"
+    },
+    {
+      "original": "tests/e2e/runner-art.spec.ts",
+      "archived": "tests/historical/e2e/runner-art.spec.ts",
+      "originalSHA256": "66da0b3953ce902c0048d8ad1643c46a0523c723212e45bf84a60adb1c8c40a1",
+      "archivedSHA256": "f019319ff9558db86478948d7de473090d79ef3149814f252aaa422ac4c6b750",
+      "statementsSHA256": "79b6bd64e0eb9efbec9d534cad55e56b557d3fb5240c654dbc2a42192ca8dfc5"
+    },
+    {
+      "original": "tests/e2e/runner-performance.spec.ts",
+      "archived": "tests/historical/e2e/runner-performance.spec.ts",
+      "originalSHA256": "154d55b5dcf0eef78b1e3b88828ae15f9f3a6816a85f2766eb060e430331d53e",
+      "archivedSHA256": "82d36055edc0376aeb9f8b0863862c980b4da63b7d7b7aff42dfad18a7e19fe9",
+      "statementsSHA256": "d6e86d906e7292c72f8c82fe51c71b04075db187bfd7886d76eaa13502c2078b"
+    },
+    {
+      "original": "tests/e2e/survival-enrage-performance.spec.ts",
+      "archived": "tests/historical/e2e/survival-enrage-performance.spec.ts",
+      "originalSHA256": "683526339ac114e78151e3a97176e1a3f6875debed087880dac844df291b0c72",
+      "archivedSHA256": "683526339ac114e78151e3a97176e1a3f6875debed087880dac844df291b0c72",
+      "statementsSHA256": "dd1b655713666504bbd6f0c271eca6b250184c28b536f4939169700a9869912f"
+    },
+    {
+      "original": "tests/e2e/survival-enrage.spec.ts",
+      "archived": "tests/historical/e2e/survival-enrage.spec.ts",
+      "originalSHA256": "151fc8086e56bc3b252cf8f6faf95cbcc9a3b28f2a2e0718f58fe6dd1e26112c",
+      "archivedSHA256": "151fc8086e56bc3b252cf8f6faf95cbcc9a3b28f2a2e0718f58fe6dd1e26112c",
+      "statementsSHA256": "adaa0f2d03d0b8f8bf666c6f36c946bc9be0971558b7b2cfc031b5b526f665d5"
+    },
+    {
+      "original": "tests/e2e/ultimate-performance.spec.ts",
+      "archived": "tests/historical/e2e/ultimate-performance.spec.ts",
+      "originalSHA256": "fa169ff6608bfb2aeead6322f57a3efb4a106b24c385d2e8af40552d90164613",
+      "archivedSHA256": "fa169ff6608bfb2aeead6322f57a3efb4a106b24c385d2e8af40552d90164613",
+      "statementsSHA256": "4d48b6e7061addebe9bd11a767ec0be65faaa2fd82114d04fb0ab1ffb55629d4"
+    },
+    {
+      "original": "tests/e2e/ultimate-practice.spec.ts",
+      "archived": "tests/historical/e2e/ultimate-practice.spec.ts",
+      "originalSHA256": "4177d916c14051f95f960795b99dd7af49986d66030f9789c5b207c2d7bbe639",
+      "archivedSHA256": "4177d916c14051f95f960795b99dd7af49986d66030f9789c5b207c2d7bbe639",
+      "statementsSHA256": "05b0f4e5344a18d1ddb789ee6031682b2c9aa359954e4784c30b5cecd0c6f0a9"
+    },
+    {
+      "original": "tests/e2e/ultimates.spec.ts",
+      "archived": "tests/historical/e2e/ultimates.spec.ts",
+      "originalSHA256": "1ce8a37d584ce6bc696ad0a3de5eb9c29dbb7b4b97ea74fee3f92f5177b8c706",
+      "archivedSHA256": "04f809612933df3eceeed2557f98754bf0d2425037d37b23a3f70c5631b089cc",
+      "statementsSHA256": "c9efa2de4e6f8590f96db98a89833afc945efa34c5147125e5f0e0d27b0271df"
+    },
+    {
+      "original": "tests/e2e/upgrade-identity-charge.spec.ts",
+      "archived": "tests/historical/e2e/upgrade-identity-charge.spec.ts",
+      "originalSHA256": "0987d2fd1cc802574b1bbbfcda390ae44c6ad7ae149b89e04f47bfb43aa9cb96",
+      "archivedSHA256": "828e47f5dcde433709df68fd4da4eec7e09cb9250402f3399798ce9de4a4f02e",
+      "statementsSHA256": "6d19d3a7546fc1d7a88ee68a3455bb529496e3b9fce011b02894d276bf6c7f8f"
+    },
+    {
+      "original": "tests/e2e/visual-cleanup-runtime.spec.ts",
+      "archived": "tests/historical/e2e/visual-cleanup-runtime.spec.ts",
+      "originalSHA256": "4593e52156827a97080f592c999f4e225a5c9c3ae1458d536a073f5e9d0c513b",
+      "archivedSHA256": "4593e52156827a97080f592c999f4e225a5c9c3ae1458d536a073f5e9d0c513b",
+      "statementsSHA256": "50b3135fef72b554db486827b1fee36e6a52b9b72ca72394f93eabe11acbd4be"
+    },
+    {
+      "original": "tests/e2e/warrior-buffs-v4.spec.ts",
+      "archived": "tests/historical/e2e/warrior-buffs-v4.spec.ts",
+      "originalSHA256": "80b036f9856a2f30866a7615acc5c10aaf447c3ff26696bc435d0b7b0ece1b9b",
+      "archivedSHA256": "80b036f9856a2f30866a7615acc5c10aaf447c3ff26696bc435d0b7b0ece1b9b",
+      "statementsSHA256": "fbc0e1d440c43eaebdc812aab82ca5176835c52313690ec44b101534954a03c0"
+    },
+    {
+      "original": "tests/e2e/warrior-cleave-sync.spec.ts",
+      "archived": "tests/historical/e2e/warrior-cleave-sync.spec.ts",
+      "originalSHA256": "baa85d08768abf9e12bcc9e0658c68a14715f2b006ddc8668024ca4f0277fa69",
+      "archivedSHA256": "baa85d08768abf9e12bcc9e0658c68a14715f2b006ddc8668024ca4f0277fa69",
+      "statementsSHA256": "c34ce967b5ea53195e06aa769d17c17dcc7d96facde19d84396339ffa887a57b"
+    },
+    {
+      "original": "tests/e2e/warrior-empty-hand-runtime.spec.ts",
+      "archived": "tests/historical/e2e/warrior-empty-hand-runtime.spec.ts",
+      "originalSHA256": "f2a8fa0e00df141d0310dc8a617ded0d1ff2ec7b9832ef7cef935494863cedd1",
+      "archivedSHA256": "f2a8fa0e00df141d0310dc8a617ded0d1ff2ec7b9832ef7cef935494863cedd1",
+      "statementsSHA256": "c10ec553ce7e47d0d72669d731fb358572204f2a02e99e24616e6e3fec401636"
+    },
+    {
+      "original": "tests/e2e/warrior-hero.spec.ts",
+      "archived": "tests/historical/e2e/warrior-hero.spec.ts",
+      "originalSHA256": "e68392fb237e80c27fc3c615fd6b0bbbaa9d504c000de62556e7bde97de398ae",
+      "archivedSHA256": "e68392fb237e80c27fc3c615fd6b0bbbaa9d504c000de62556e7bde97de398ae",
+      "statementsSHA256": "ec8b5fcfbf663c26ce6d04cc7191c10a33297c93ae1987a014c6fb7ae8d19481"
+    },
+    {
+      "original": "tests/e2e/warrior-review.spec.ts",
+      "archived": "tests/historical/e2e/warrior-review.spec.ts",
+      "originalSHA256": "2f0a7a0c8ce8d0778fe0830f0d138f463e2b31061b24865f9ccdfabc3c5c54e7",
+      "archivedSHA256": "2f0a7a0c8ce8d0778fe0830f0d138f463e2b31061b24865f9ccdfabc3c5c54e7",
+      "statementsSHA256": "915dfce239130811b6330529717dd6ddc59a40ddc9a067d3ca2a0e3be3752796"
+    },
+    {
+      "original": "tests/e2e/warrior-skills.spec.ts",
+      "archived": "tests/historical/e2e/warrior-skills.spec.ts",
+      "originalSHA256": "92694910fff5fe57f156efb717eb8b0c0b7b2a1ff49ca6bcddc67d7190711769",
+      "archivedSHA256": "92694910fff5fe57f156efb717eb8b0c0b7b2a1ff49ca6bcddc67d7190711769",
+      "statementsSHA256": "ea7d100e9922999a9b1431ce371477c73d26a46c5d198ac9e98d98a5fb6e055b"
+    },
+    {
+      "original": "tests/e2e/warrior-sounds.spec.ts",
+      "archived": "tests/historical/e2e/warrior-sounds.spec.ts",
+      "originalSHA256": "323bda6bad983f641df1dcdee784345a21ec7bf42aeca9de6e1784d4a39db906",
+      "archivedSHA256": "c458aa2add8408879545e8575481bb64e2b1af41d85f14781d1324ca3a0216cb",
+      "statementsSHA256": "e44abb10f1c87afb8cc4998d8f02417f32c71413cf493fb18b143919350d350d"
+    },
+    {
+      "original": "tests/e2e/warrior-spear-empty-hand.spec.ts",
+      "archived": "tests/historical/e2e/warrior-spear-empty-hand.spec.ts",
+      "originalSHA256": "fe6c421615e7fdc4bfac3fd08545e3a1baf29e01042092883b278ef666feefa3",
+      "archivedSHA256": "fe6c421615e7fdc4bfac3fd08545e3a1baf29e01042092883b278ef666feefa3",
+      "statementsSHA256": "699b974db0b82ddf3e602cd5bd922d907d4a748ac14a9fd6e994550cfe688153"
+    },
+    {
+      "original": "tests/e2e/warrior-spear-release.spec.ts",
+      "archived": "tests/historical/e2e/warrior-spear-release.spec.ts",
+      "originalSHA256": "7a428a55c78301a0d2ad443fcc685d6ac0e5cfcd6b251984c603e0c0ee626f54",
+      "archivedSHA256": "7a428a55c78301a0d2ad443fcc685d6ac0e5cfcd6b251984c603e0c0ee626f54",
+      "statementsSHA256": "a80b49575e301b6c22c12bece6caf71ed49e2bd64f116f23b9daaf39204c2884"
+    },
+    {
+      "original": "tests/e2e/warrior-ultimates-accepted.spec.ts",
+      "archived": "tests/historical/e2e/warrior-ultimates-accepted.spec.ts",
+      "originalSHA256": "ba63a577b51192429210a2e1396ec967146bc8e09211014ade4588e5bb4936c3",
+      "archivedSHA256": "ba63a577b51192429210a2e1396ec967146bc8e09211014ade4588e5bb4936c3",
+      "statementsSHA256": "30b200af561812378f4b95ba226eafabb5c0c06f40a6c0c56f3c36d99f93c3b7"
+    },
+    {
+      "original": "tests/e2e/warrior-ultimates-animation-review.spec.ts",
+      "archived": "tests/historical/e2e/warrior-ultimates-animation-review.spec.ts",
+      "originalSHA256": "52540f21aa60420af91f40e8c9161aead5f3f335cd8392ca53dbc5d723b44e57",
+      "archivedSHA256": "52540f21aa60420af91f40e8c9161aead5f3f335cd8392ca53dbc5d723b44e57",
+      "statementsSHA256": "d09c50f996dc452eea33d38cb54e78d405de3a1dbc24018344487c873088fa00"
+    },
+    {
+      "original": "tests/e2e/warrior-ultimates-file.spec.ts",
+      "archived": "tests/historical/e2e/warrior-ultimates-file.spec.ts",
+      "originalSHA256": "201106b8902586c1b071afe3706c05c40c4297e6847d7d16108b5be2646fc84a",
+      "archivedSHA256": "201106b8902586c1b071afe3706c05c40c4297e6847d7d16108b5be2646fc84a",
+      "statementsSHA256": "0b5e64e05b996fdafebb634ae970e2c94618001f22b41340e37d46ff9438b85d"
+    },
+    {
+      "original": "tests/e2e/warrior-ultimates.spec.ts",
+      "archived": "tests/historical/e2e/warrior-ultimates.spec.ts",
+      "originalSHA256": "611c1d6fc955e666d9125a7338dad7799f2313fb4b220ec3e5ceedd776cc0408",
+      "archivedSHA256": "611c1d6fc955e666d9125a7338dad7799f2313fb4b220ec3e5ceedd776cc0408",
+      "statementsSHA256": "3c7b965a77015439ca062e4c1f7aec135fe65250e63174a116ccde20516d0166"
+    },
+    {
+      "original": "tests/helpers/earlyReplay.ts",
+      "archived": "tests/historical/helpers/earlyReplay.ts",
+      "originalSHA256": "48f528d4c8c50433c0d8c9b4e71ea700d519607904c111161f5251754dcbad35",
+      "archivedSHA256": "3a9a557131b44b6e523649de12a05a23d1705fe3a63baf3778fb22bd9410ff09",
+      "statementsSHA256": "79c29763bdf11d96879a6acff66343b1b9387e8b24a23c6d96384a4b47476b82"
+    },
+    {
+      "original": "tests/helpers/approvedWardenIntegration.ts",
+      "archived": "tests/historical/helpers/approvedWardenIntegration.ts",
+      "originalSHA256": "a1f89a7aabea15d9b3c4b741c7e93fe9d709f822d21c3545e3f81667ba508c4f",
+      "archivedSHA256": "a1f89a7aabea15d9b3c4b741c7e93fe9d709f822d21c3545e3f81667ba508c4f",
+      "statementsSHA256": "cafee2669b1a16d176f6279f3bfc6aae2f78b2ddc675f696bc2701e6c0e75113"
+    },
+    {
+      "original": "tests/helpers/integrationProof.ts",
+      "archived": "tests/historical/helpers/integrationProof.ts",
+      "originalSHA256": "b1d0357868105f68b11fd7a93ef3452e6818fc5505cdb74b0e6622c4ea987ee9",
+      "archivedSHA256": "b1d0357868105f68b11fd7a93ef3452e6818fc5505cdb74b0e6622c4ea987ee9",
+      "statementsSHA256": "cb17379e8b48ec22b65b37c1abcf4bc98e00d05ca69322f78e7b05590a4f8ad2"
+    },
+    {
+      "original": "tests/fixtures/pre-enrage-replay.json",
+      "archived": "tests/historical/fixtures/pre-enrage-replay.json",
+      "originalSHA256": "0751ac49ce1266ff7d16af0cfc1a6399bd9bd673bae446c423d63916bf23bac9",
+      "archivedSHA256": "0751ac49ce1266ff7d16af0cfc1a6399bd9bd673bae446c423d63916bf23bac9"
+    },
+    {
+      "original": "tests/fixtures/pre-phase2-ordinary-replay.json",
+      "archived": "tests/historical/fixtures/pre-phase2-ordinary-replay.json",
+      "originalSHA256": "36dbdca23548a609c1777748c2504f159dd69485d59b6800b0fe1bb569176bb0",
+      "archivedSHA256": "36dbdca23548a609c1777748c2504f159dd69485d59b6800b0fe1bb569176bb0"
+    },
+    {
+      "original": "tests/fixtures/balance-hotfix-baseline.json",
+      "archived": "tests/historical/fixtures/balance-hotfix-baseline.json",
+      "originalSHA256": "26ac3f2241f332fb95dd42f33d764dadfca616190325d46fc2d23cdae10dedd3",
+      "archivedSHA256": "26ac3f2241f332fb95dd42f33d764dadfca616190325d46fc2d23cdae10dedd3"
+    }
+  ],
+  "partition": [
+    {
+      "file": "tests/unit/abilities.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/ability-visual.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/ambient-music-review.test.ts",
+      "testStatements": 3,
+      "activeStatements": 0,
+      "historicalStatements": 3,
+      "historical": [
+        {
+          "index": 18,
+          "title": "it('retains five stage-specific instrumental themes and all20 traceable original music takes',()=>{\r\n  expect(manifest.runtimeIntegration).toBe(true);expect(manifest.totalTakes).to",
+          "reasons": [
+            "historical input: art/generated/music-ambient-review-v1"
+          ]
+        },
+        {
+          "index": 19,
+          "title": "it('decodes every original into finite non-silent minute-long audio and records a real envelope',()=>{\r\n  for(const take of manifest.tracks.flatMap(t=>t.takes)){\r\n    const a=take.",
+          "reasons": [
+            "historical input: art/generated/music-ambient-review-v1"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('preserves the review proof and allows only the later explicit music integration',()=>{\r\n  const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')) as Rec",
+          "reasons": [
+            "historical input: art/generated/music-ambient-review-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/arcane-absorb.test.ts",
+      "testStatements": 10,
+      "activeStatements": 10,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/armageddon-benchmark.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/ash-guard-art.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/ash-warden-integration-v1.test.ts",
+      "testStatements": 13,
+      "activeStatements": 12,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 12,
+          "title": "it('packages unchanged accepted PNGs, complete atlas references and original canvas offsets within 16 MiB',()=>{\n  expect(manifest.rgbaBytes).toBeLessThanOrEqual(16*1024*1024);\n  f",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/generated/ash-warden-directional-melee-b-v1/atlas.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ash-warden-library.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 23,
+          "title": "it('catalogues all51 main clips,15 assembled scenes,4 actual projections and labelled unused/reference assets',()=>{\r\n expect(m.runtimeIntegration).toBe(false);expect(m.counts).toM",
+          "reasons": [
+            "historical input: art/generated/ash-warden-animation-library-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 24,
+          "title": "it('restores all473 native PNG canvases losslessly from trim offsets and embeds exact offline download bytes',()=>{\r\n const atlases=Object.fromEntries(Object.entries(m.atlases).map",
+          "reasons": [
+            "historical input: art/generated/ash-warden-animation-library-v1"
+          ]
+        },
+        {
+          "index": 25,
+          "title": "it('resolves every layer and sample and matches real A-attack poses and1/3/5-wave FlameStrike presentation',()=>{\r\n const covered=new Set<string>();for(const e of m.entries){expect",
+          "reasons": [
+            "historical input: art/generated/ash-warden-animation-library-v1"
+          ]
+        },
+        {
+          "index": 26,
+          "title": "it('leaves all345 runtime files unchanged after accepted Eclipse flame integration',()=>{\r\n const baseline=JSON.parse(readFileSync(root+'/source/runtime-baseline.json','utf8')) as ",
+          "reasons": [
+            "historical input: art/generated/ash-warden-animation-library-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ash-warden-north-meteor-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('keeps the complete runtime inventory and all345 game files intact pending acceptance',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.acceptedForIntegration).toBe(true",
+          "reasons": [
+            "historical input: art/generated/ash-warden-north-meteor-review-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('uses traceable original PixelLab cels and lossless native copies for every preview image',()=>{\r\n for(const im of Object.values(m.images)){const source=readFileSync(im.source),",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/ash-warden-north-meteor-review-v1"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('pads the original north pose without resampling and shares stable pivots across all generated action parts',()=>{\r\n const original=rgbaPng(root+'/reference/north-idle.png'),pad",
+          "reasons": [
+            "historical input: art/generated/ash-warden-north-meteor-review-v1"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('aligns meteor travel to its tail, uses an open low-opacity warning and finishes the500ms impact on actual transparent AI pixels',()=>{\r\n const dx=m.scene.impactTip[0]!-m.scene.",
+          "reasons": [
+            "historical input: art/generated/ash-warden-north-meteor-review-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ash-warden-pixellab-runtime.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 14,
+          "title": "it('packs all60 accepted native RGBA cels losslessly, with2px padding and bounded atlas memory',()=>{\r\n expect(WARDEN_AI.frameCount).toBe(60);expect(WARDEN_AI.rgbaBytes).toBe(84662",
+          "reasons": [
+            "original source-frame read",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ash-warden-sounds.test.ts",
+      "testStatements": 6,
+      "activeStatements": 4,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 26,
+          "title": "it('ships all five original boss WAVs byte-for-byte and preserves every Mage key/gain',()=>{\r\n  const manifest=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8'))as{entries:{i",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/ash-warden-uploaded-sounds-v1"
+          ]
+        },
+        {
+          "index": 31,
+          "title": "it('limits runtime changes to the explicit user-authorized sound integration',()=>{\r\n  const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'))as Record<stri",
+          "reasons": [
+            "historical input: art/generated/ash-warden-uploaded-sounds-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ash-warden-walk-approved.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 7,
+          "title": "it('uses user-supplied North/South and accepted East GIFs with source timing for all four movement clips',()=>{\n  expect(manifest.walking.sourceFiles.north.gif).toBe('art/generated",
+          "reasons": [
+            "historical input: art/generated/ash-warden-walk-manual-v1/north/walk/north.gif",
+            "historical input: art/generated/ash-warden-walk-manual-v1/south/walk/south.gif",
+            "historical input: art/generated/ash-warden-walk-rd-v2/incoming/east/east-walk.gif"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/asset-registry.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/astral-flame-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('provides independent code art and real PixelLab spawn/idle/vanish jobs with the unchanged boss reference',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.jobs).toHaveL",
+          "reasons": [
+            "historical input: art/generated/astral-flame-review-v1"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('preserves all93 source cels exactly, including AI hidden RGB and generous unclipped128px canvases',()=>{\r\n let count=0;for(const c of Object.values(m.clips)){const s=rgbaPng(ro",
+          "reasons": [
+            "historical input: art/generated/astral-flame-review-v1"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('keeps code art on its2px palette grid, grounded fixed pivots, empty ends and accurate GIF/Aseprite exports',()=>{\r\n const palette=new Set(m.palette.map(c=>c.toLowerCase()));for",
+          "reasons": [
+            "historical input: art/generated/astral-flame-review-v1"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('leaves all341 runtime files and inventory unchanged after the approved projectile/Blink integration',()=>{\r\n const baseline=JSON.parse(readFileSync(root+'/source/runtime-baseli",
+          "reasons": [
+            "historical input: art/generated/astral-flame-runtime-v1/integration-verification.json",
+            "historical input: art/generated/astral-flame-review-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/astral-flame-runtime.test.ts",
+      "testStatements": 3,
+      "activeStatements": 1,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 7,
+          "title": "it('packs all26 accepted AI flame cels exactly, including RGB under transparency and2px padding',()=>{\n const image=rgbaPng('public/game-assets/hd/astral-flame-pixellab-v1/atlas.pn",
+          "reasons": [
+            "original source-frame read"
+          ]
+        },
+        {
+          "index": 8,
+          "title": "it('plays the accepted600ms rise/800ms loop/600ms vanish at the same fixed ground anchor',()=>{\n expect(F.clips.idle.frames.map(f=>f.sourceIndex)).toEqual([1,2,3,4,5,6,7,8]);for(co",
+          "reasons": [
+            "original source-frame read"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/astral-practice.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/astral-projectile-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('keeps two independent new variants, actual AI provenance and the rejected ring attempt, outside gameplay',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.jobs).toHaveL",
+          "reasons": [
+            "historical input: art/generated/astral-projectile-review-v1"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('packs all55 fixed128px source cels pixel-for-pixel, including AI hidden RGB, with no clipped new frames',()=>{\r\n let count=0;for(const c of Object.values(m.clips)){const s=rgba",
+          "reasons": [
+            "historical input: art/generated/astral-projectile-review-v1"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('preserves the local2px grid, stable pivots, generated AI loop, transparent endings and individual export files',()=>{\r\n const palette=new Set(m.palette.map(h=>h.toLowerCase()))",
+          "reasons": [
+            "historical input: art/generated/astral-projectile-review-v1"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('retains the initial preview proof and verifies the subsequently approved narrow integration scope',()=>{\r\n const baseline=JSON.parse(readFileSync(root+'/source/runtime-baseline",
+          "reasons": [
+            "historical input: art/generated/astral-projectile-runtime-v1/integration-verification.json",
+            "historical input: art/generated/astral-flame-runtime-v1/integration-verification.json",
+            "historical input: art/generated/astral-projectile-review-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/astral-projectile-runtime.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 11,
+          "title": "it('packs all17 accepted native PixelLab frames exactly, including hidden RGB and padding',()=>{\n const png=rgbaPng('public/game-assets/hd/astral-projectile-pixellab-v1/atlas.png')",
+          "reasons": [
+            "original source-frame read"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/astral-revenant.test.ts",
+      "testStatements": 11,
+      "activeStatements": 10,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('audits all17 inputs, native PixelLab B and the original empty despawn tail',()=>{\n  expect(Object.keys(pack.sources)).toHaveLength(17);\n  for(const [file,hash]of Object.entries",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/astral-revenant/astral-revenant.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/atmosphere.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/audio.test.ts",
+      "testStatements": 15,
+      "activeStatements": 15,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/balance-hotfix.test.ts",
+      "testStatements": 6,
+      "activeStatements": 4,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 17,
+          "title": "it.each(baseline.hp)('retains spawn HP reduction at minute$minute and the approved Briar movement buff', row => {\n  const w = quiet(); w.elapsed = row.minute * 60;\n  for (const kin",
+          "reasons": [
+            "historical module: tests/fixtures/balance-hotfix-baseline.json"
+          ]
+        },
+        {
+          "index": 18,
+          "title": "it('records actual runtime HP after the hotfix and preserves other specialization values', () => {\n  expect(S).toEqual({ ...baseline.mobility, wallDuration: [3, 3.5, 4], berserkSpe",
+          "reasons": [
+            "historical module: tests/fixtures/balance-hotfix-baseline.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/berserk-sprint-scope.test.ts",
+      "testStatements": 1,
+      "activeStatements": 0,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 6,
+          "title": "it('limits the Berserk sprint change to four runtime files and preserves all other runtime bytes', () => {\r\n  const baseline = JSON.parse(readFileSync('docs/verification/berserk-sp",
+          "reasons": [
+            "historical input: docs/verification/berserk-sprint-v1/runtime-baseline.json",
+            "historical input: docs/verification/warrior-ultimates-v1/runtime-baseline.json",
+            "historical input: docs/verification/warrior-ultimates-accepted-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/biome-phase-notice.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/boss-art.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/boss-enrage.test.ts",
+      "testStatements": 11,
+      "activeStatements": 11,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/boss-meteor-ui-fix.test.ts",
+      "testStatements": 2,
+      "activeStatements": 1,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('changes exactly four presentation files and preserves all359 other runtime files and all audio/atlas assets',()=>{\r\n  expect(bossMeteorUiIntegration.baselineFiles).toBe(363);ex",
+          "reasons": [
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/boss-practice.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/boss-ttk.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/bosses.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/briar-beast.test.ts",
+      "testStatements": 6,
+      "activeStatements": 4,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 13,
+          "title": "it('restores real31.2 base speed after a historical replay without changing live spawn behavior',()=>{\n  const w=new World(42),spawn=w.spawn;earlyReplay(w,180);expect(w.spawn).toBe",
+          "reasons": [
+            "historical module: tests/helpers/earlyReplay.ts"
+          ]
+        },
+        {
+          "index": 14,
+          "title": "it('preserves all seven user sources and imports GIF timings with PNG colors/alpha',()=>{\n  expect(Object.keys(pack.sources)).toHaveLength(7);\n  for(const [file,hash]of Object.entr",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/armored-briar-beast/armored-briar-beast.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/briar-practice.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/bridge.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/charge-a-update.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/charge-boss.test.ts",
+      "testStatements": 10,
+      "activeStatements": 10,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/close-melee-speed.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/combat-balance-2.test.ts",
+      "testStatements": 16,
+      "activeStatements": 16,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/combat-balance.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/combat.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/current-runtime-determinism.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/current-warrior-assets.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/director.test.ts",
+      "testStatements": 8,
+      "activeStatements": 8,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/encounter-director.test.ts",
+      "testStatements": 15,
+      "activeStatements": 15,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/encounter-feedback.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/encounter-survival.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/encounter-timeline.test.ts",
+      "testStatements": 8,
+      "activeStatements": 8,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/endgame.test.ts",
+      "testStatements": 8,
+      "activeStatements": 7,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 12,
+          "title": "it.each(before.rows)('preserves original ordinary/boss replay before15 from$start without Guardian side effects',({start,sha256})=>{const w=new World(12345),spawn=w.spawn.bind(w);w",
+          "reasons": [
+            "historical module: tests/fixtures/pre-phase2-ordinary-replay.json",
+            "historical module: tests/helpers/earlyReplay.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/enemy-art.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/final-boss-balance.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/final-boss-contracts.test.ts",
+      "testStatements": 14,
+      "activeStatements": 14,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/final-boss-dps.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/final-boss-telemetry.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/final-boss.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/fire-inferno.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/fire-shield-presentation.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/fire-ultimate-runtime.test.ts",
+      "testStatements": 4,
+      "activeStatements": 2,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 10,
+          "title": "it('retains source static bytes and extracts the ignition transient with click-free edges',()=>{\r\n const dir='art/main-hero-mage-v2/sounds/fire-ult/';\r\n for(const [id,m]of Object.e",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/sounds/fire-ult/"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('limits the accepted integration to9 changed and8 added runtime files and protects every other file',()=>{\r\n const baseline=JSON.parse(readFileSync('art/generated/fire-ultimate-",
+          "reasons": [
+            "historical input: art/generated/fire-ultimate-runtime-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/fireball-cleanup.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/flame-strike-art.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('ships the selected C sources in one bounded atlas with fixed ground pivot and a truly empty last frame',()=>{\n  expect(FLAME_STRIKE.selectedVariant).toBe('c');expect(FLAME_STRI",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/generated/ash-warden-flame-strike-vfx-v1/variant-c/preview-frames/00.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/flame-strike-timing.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/frost-armageddon.test.ts",
+      "testStatements": 14,
+      "activeStatements": 14,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/frost-avalanche.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/frost-nova-art.test.ts",
+      "testStatements": 3,
+      "activeStatements": 1,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 9,
+          "title": "for(const [clip,count,native]of [['frost-nova',24,512],['frost-nova-ultimate',48,146]] as const){\n  it(`${clip}: preserves source files, native timing, full-canvas pivot and every ",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage/abilities/frost-nova-hd-v1/frost-nova-hd.json'",
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage/abilities/frost-nova-ultimate/ultimate-nova.json'"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('selects the approved HD source and preserves the boss-practice diameter at native detail',()=>{\n  expect(pack.clips['frost-nova'].sheet).toBe('art/main-hero-mage/abilities/fros",
+          "reasons": [
+            "historical input: art/main-hero-mage/abilities/frost-nova-hd-v1/frost-nova-hd.png",
+            "historical input: art/main-hero-mage/abilities/frost-nova-ultimate/ultimate-nova.png"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/frost-seal.test.ts",
+      "testStatements": 10,
+      "activeStatements": 10,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/frost-sound.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/frost-ultimate-runtime.test.ts",
+      "testStatements": 3,
+      "activeStatements": 1,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('ships only the recorded effect after1.12s, with the source preserved and bounded playback gain',()=>{\r\n const m=JSON.parse(readFileSync('art/generated/frost-ultimate-runtime-v1",
+          "reasons": [
+            "historical input: art/generated/frost-ultimate-runtime-v1/audio-manifest.json"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('preserves all389 unrelated runtime files including fire gameplay/audio and frost combat',()=>{\r\n const baseline=JSON.parse(readFileSync('art/generated/frost-ultimate-runtime-v1",
+          "reasons": [
+            "historical input: art/generated/frost-ultimate-runtime-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/gamepad.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/grove-evolution.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardian-art.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardian-encounter.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardian-orbs.test.ts",
+      "testStatements": 9,
+      "activeStatements": 9,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardian-practice.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardian-warning-art.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/guardians-artifacts.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/held-input.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/integration-proof.test.ts",
+      "testStatements": 3,
+      "activeStatements": 0,
+      "historicalStatements": 3,
+      "historical": [
+        {
+          "index": 6,
+          "title": "it('keeps an unavailable historical proof a hard failure at its first assertion', () => {\r\n  const proof = integrationProof('art/generated/__unavailable-proof__/integration-verific",
+          "reasons": [
+            "historical input: art/generated/__unavailable-proof__/integration-verification.json",
+            "historical module: tests/helpers/integrationProof.ts"
+          ]
+        },
+        {
+          "index": 7,
+          "title": "it('exposes the exact existing proof without invented defaults or modified hashes', () => {\r\n  const file = 'docs/verification/warrior-spear-release-v1/integration-verification.jso",
+          "reasons": [
+            "historical input: docs/verification/warrior-spear-release-v1/integration-verification.json",
+            "historical module: tests/helpers/integrationProof.ts"
+          ]
+        },
+        {
+          "index": 8,
+          "title": "it('maps the entire original game inventory to real current files and preserves every public byte', () => {\r\n  const original = JSON.parse(readFileSync('docs/architecture/DEPENDENC",
+          "reasons": [
+            "historical input: docs/architecture/DEPENDENCY_MAP_BEFORE.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/laravel-first.test.ts",
+      "testStatements": 5,
+      "activeStatements": 4,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 10,
+          "title": "it('preserves every approved static asset and all financial and simulation modules byte for byte', () => {\r\n  const before = JSON.parse(readFileSync('docs/architecture/DEPENDENCY_M",
+          "reasons": [
+            "historical input: docs/architecture/DEPENDENCY_MAP_BEFORE.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/levelup-hotfix.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/lightning-cinematic.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/lightning-devastation.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/lightning-spawn-relief.test.ts",
+      "testStatements": 8,
+      "activeStatements": 8,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/lightning-ultimate-art.test.ts",
+      "testStatements": 6,
+      "activeStatements": 5,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 11,
+          "title": "it('preserves ten original files and74 native frames, including separate secondary chain and GIF-only impact',()=>{\n  expect(Object.keys(pack.sources)).toHaveLength(10);for(const [",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage/abilities/ult-lightning/lightning-strike.gif'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/loot-art.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/loot.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-ability-vfx.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-art.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-blink-runtime.test.ts",
+      "testStatements": 7,
+      "activeStatements": 6,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 16,
+          "title": "it('packs all 32 depth frames with exact source pixels, fixed pivots and a 2 MiB atlas',()=>{\n const sheet=rgbaPng(root+'/atlas.png'),atlas=JSON.parse(readFileSync(root+'/atlas.jso",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/generated/mage-blink-v1/prepared/departure-back.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-blink-v1.test.ts",
+      "testStatements": 7,
+      "activeStatements": 0,
+      "historicalStatements": 7,
+      "historical": [
+        {
+          "index": 17,
+          "title": "it('preserves PixelLab originals and records the free exact-renderer provenance',()=>{\n expect(Object.keys(data.sources)).toHaveLength(23);\n for(const [file,digest]of Object.entrie",
+          "reasons": [
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 18,
+          "title": "it('retains every raw frame exactly, with binary alpha, transparent margins and one clean ending frame',()=>{\n for(const clip of Object.values(data.clips)){\n  const source=rgbaPng(",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 19,
+          "title": "it('reconstructs fixed-offset depth pieces without losing a pixel or moving the feet anchor',()=>{\n expect(data.pivot).toEqual([64,104]);\n for(const clip of Object.values(data.clip",
+          "reasons": [
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('uses the current Mage V2 pixels, timings and world proportions',()=>{\n const h=data.hero;expect(hash(readFileSync(h.source))).toBe(h.sourceSha256);expect(h.pivot).toEqual([46,8",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('keeps departure contracting and arrival opening with a shared short flash',()=>{\n const a=data.clips.departure!.frames,b=data.clips.arrival!.frames,width=(f:Frame)=>f.bounds?f.",
+          "reasons": [
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('moves the demo hero immediately at Blink activation, and holds B after both clips finish',()=>{\n const t=timeline();t.auto=false;t.advance(t.leadMs-.01);expect(t.snapshot()).to",
+          "reasons": [
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        },
+        {
+          "index": 23,
+          "title": "it('seeks every frame exactly, resets modes and repeats without elapsed-time drift',()=>{\n const t=timeline();for(const mode of ['sequence','compare','departure','arrival']){t.setM",
+          "reasons": [
+            "historical input: art/generated/mage-blink-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-cast-v2.test.ts",
+      "testStatements": 5,
+      "activeStatements": 4,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 10,
+          "title": "it('packs all 91 user frames and 14 source files losslessly with the unchanged Idle size/pivots',()=>{\n const atlas=rgbaPng('public/game-assets/hd/mage-cast-v2/atlas.png'),data=JSO",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage-v2/animation/casting/north/north.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-casting.test.ts",
+      "testStatements": 13,
+      "activeStatements": 13,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-fireball.test.ts",
+      "testStatements": 6,
+      "activeStatements": 5,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 14,
+          "title": "it('preserves archived sources and all nineteen approved PixelLab cels with fixed contact and transparent padding',()=>{\n  expect(Object.keys(legacy.sources)).toHaveLength(9);\n  fo",
+          "reasons": [
+            "original source-frame read"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-hero-animation.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-hero-assets.test.ts",
+      "testStatements": 7,
+      "activeStatements": 3,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 10,
+          "title": "it('preserves protected originals and every selected generated PNG byte-for-byte',()=>{\n  for(const [file,hash]of Object.entries(pack.sources))expect(createHash('sha256').update(re",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage/abilities/hero-model/8-directions.png'"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('takes authored cast colors from the PNG sheets while matching the GIF alpha and timing',()=>{\n  const source=JSON.parse(readFileSync('art/generated/mage-hero-v2/sources.json','",
+          "reasons": [
+            "historical input: art/generated/mage-hero-v2/sources.json"
+          ]
+        },
+        {
+          "index": 12,
+          "title": "it('uses the exact PixelLab background repair without modifying the original Mage or other colors',()=>{\n  const base='art/main-hero-mage/casting/directions-pixminimax-v2/lightning",
+          "reasons": [
+            "historical input: art/main-hero-mage/casting/directions-pixminimax-v2/lightning/north-west"
+          ]
+        },
+        {
+          "index": 14,
+          "title": "it('reconstructs each trimmed frame to its exact nearest-neighbor sampled pixel hash',()=>{\n  const audit=JSON.parse(readFileSync('art/generated/mage-hero-v2/runtime-audit.json','u",
+          "reasons": [
+            "historical input: art/generated/mage-hero-v2/runtime-audit.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-hero-layers.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-idle-v2.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 7,
+          "title": "it('packs all 26 user PNG frames losslessly and protects the four source files',()=>{\n const atlas=image('public/game-assets/hd/mage-idle-v2/atlas.png'),data=JSON.parse(readFileSyn",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage-v2/animation/idle/pixellab-Inhale-deeply-to-expand-the-ch-1794238592009.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-meteor-v3.test.ts",
+      "testStatements": 6,
+      "activeStatements": 5,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 14,
+          "title": "it('audits approved PixelLab pixels, unchanged boss/archive art, padding and black light compositing',()=>{\r\n const protectedFiles=JSON.parse(readFileSync('art/generated/mage-meteo",
+          "reasons": [
+            "historical input: art/generated/mage-meteor-v3/source/protected.json",
+            "original source-frame read",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-moving-cast-v2.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-phantom.test.ts",
+      "testStatements": 10,
+      "activeStatements": 9,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 22,
+          "title": "it('preserves all original sources and exact full-canvas pivots after lossless trim',()=>{\n  for(const [file,sha]of Object.entries(audit.sources))expect(createHash('sha256').update",
+          "reasons": [
+            "historical input: art/generated/mage-phantom-cast-production-v1/source-audit.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-run-cycle.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-run-v2.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 8,
+          "title": "it('packs all59 approved running poses losslessly and protects original sheets and demo selections',()=>{\n const atlas=rgbaPng('public/game-assets/hd/mage-run-v2/atlas.png');\n cons",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage-v2/animation/runing/animation.json'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-running-demo-v2.test.ts",
+      "testStatements": 12,
+      "activeStatements": 0,
+      "historicalStatements": 12,
+      "historical": [
+        {
+          "index": 17,
+          "title": "it('preserves all source files and the exact RGBA pixels of every selected frame',()=>{\r\n for(const [file,sha]of Object.entries(data.sources))expect(hash(readFileSync(root+'/'+file",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 18,
+          "title": "it('keeps the eight user-selected running poses and a seam within the authored transition range',()=>{\r\n expect(data.clips.loop.frames.map(f=>f.sourceFrame)).toEqual([4,5,6,7,8,9,1",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 19,
+          "title": "it('joins start to loop frame11 and stops at the compatible step before frame4 of stop',()=>{\r\n const t=timeline();t.setRunning(true);t.advance(1300);expect(t.stage).toBe('loop');e",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('automatically shows all three phases, then repeats from idle',()=>{\r\n const t=timeline(),phases:string[]=[];\r\n for(let ms=0;ms<13000;ms+=10){t.advance(10);if(phases.at(-1)!==t.",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('keeps clocks and transitions stable under different frame rates',()=>{\r\n const a=timeline(),b=timeline();a.advance(16000);for(let i=0;i<1600;i++)b.advance(10);\r\n expect(b.snaps",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('handles early release, restart while running and switching out of source inspection',()=>{\r\n const t=timeline();t.setRunning(true);t.advance(200);t.setRunning(false);t.advance(",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 23,
+          "title": "it('splits the north sheet into contiguous start1-3, loop4-9 and end10-13 without editing pixels',()=>{\r\n expect(north.clips.start.frames.map(f=>f.sourceFrame)).toEqual([1,2,3]);\r\n",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 24,
+          "title": "it('repeats the six north poses and exits through the original 9→10 transition',()=>{\r\n const t=timeline(north);t.setRunning(true);t.advance(300);\r\n expect(t.stage).toBe('loop');ex",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 25,
+          "title": "it('preserves all13 north source poses when stopping immediately and maintains deterministic timing',()=>{\r\n const t=timeline(north);t.setRunning(true);t.setRunning(false);const po",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 26,
+          "title": "it('extracts north-east start/end from their sheet and a lossless six-frame cycle from the other sheet',()=>{\r\n expect(northEast.clips.start.frames.map(f=>f.sourceFrame)).toEqual([",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 27,
+          "title": "it('joins north-east start to loop10 and waits for loop7 before the end10 pose',()=>{\r\n const t=timeline(northEast);t.setRunning(true);t.advance(500);expect(t.stage).toBe('loop');e",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        },
+        {
+          "index": 28,
+          "title": "it('keeps north-east early-stop, source inspection and frame-rate-independent clocks consistent',()=>{\r\n const t=timeline(northEast);t.setRunning(true);t.advance(200);t.setRunning(",
+          "reasons": [
+            "historical input: art/main-hero-mage-v2/animation/runing"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-sfx.test.ts",
+      "testStatements": 3,
+      "activeStatements": 0,
+      "historicalStatements": 3,
+      "historical": [
+        {
+          "index": 11,
+          "title": "it('retains all44 traceable original takes and assigns11 local samples only to Mage cues',()=>{\r\n  expect(manifest.sourceCount).toBe(44);expect(manifest.entries).toHaveLength(11);e",
+          "reasons": [
+            "historical input: art/generated/mage-sfx-elevenlabs-v1"
+          ]
+        },
+        {
+          "index": 12,
+          "title": "it('ships finite mono44.1kHz PCM with bounded peaks, quiet edges and phase-aligned ultimate durations',()=>{\r\n  let bytes=0;\r\n  for(const entry of manifest.entries){\r\n    const wav",
+          "reasons": [
+            "historical input: art/generated/mage-sfx-elevenlabs-v1"
+          ]
+        },
+        {
+          "index": 13,
+          "title": "it('allows only the explicitly requested audio and practice changes over the accepted art baseline',()=>{\r\n  const audit=JSON.parse(readFileSync(`${directory}/integration-verificat",
+          "reasons": [
+            "historical input: art/generated/mage-sfx-elevenlabs-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-shield-nova-pixellab.test.ts",
+      "testStatements": 9,
+      "activeStatements": 7,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 16,
+          "title": "it('retains all48 Ultimate cels and frame metadata exactly while removing unused shared atlas memory',()=>{\r\n const original=rgbaPng(retained.source.image),packed=rgbaPng('public/g",
+          "reasons": [
+            "original source-frame read"
+          ]
+        },
+        {
+          "index": 17,
+          "title": "it('packs all34 approved native cels losslessly, including transparent endpoints and padding',()=>{\r\n const sheet=rgbaPng('public/game-assets/hd/mage-shield-nova-pixellab-v1/atlas.",
+          "reasons": [
+            "original source-frame read"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-spell-origins.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mage-uploaded-sounds.test.ts",
+      "testStatements": 5,
+      "activeStatements": 0,
+      "historicalStatements": 5,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('connects all five user files byte-for-byte and assigns thunder to the ultimate release',()=>{\r\n  expect(manifest.originalBytesPreserved).toBe(true);expect(manifest.entries).toH",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/mage-uploaded-sounds-v1"
+          ]
+        },
+        {
+          "index": 20,
+          "title": "it('uses fresh source-hash cache keys and bounded gain, retaining all four cues with no supplied replacement',()=>{\r\n  for(const e of manifest.entries){expect(mageSampleKey(e.id)).",
+          "reasons": [
+            "historical input: art/generated/mage-uploaded-sounds-v1"
+          ]
+        },
+        {
+          "index": 21,
+          "title": "it('preserves music, gameplay and all other runtime files outside the exact4changed/6added scope',()=>{\r\n  const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'u",
+          "reasons": [
+            "historical input: art/generated/mage-uploaded-sounds-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 22,
+          "title": "it('replaces Arcane Shield with the quiet user WAV and leaves every other runtime file unchanged',()=>{\r\n  const root='art/generated/arcane-shield-sound-v1';\r\n  const m=JSON.parse(",
+          "reasons": [
+            "historical input: art/generated/arcane-shield-sound-v1",
+            "original source-frame read",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 23,
+          "title": "it('connects the supplied Frost Nova WAV and preserves every other runtime file',()=>{\r\n  const root='art/generated/frost-nova-sound-v1';\r\n  const m=JSON.parse(readFileSync(`${root",
+          "reasons": [
+            "historical input: art/generated/frost-nova-sound-v1",
+            "historical input: art/main-hero-mage-v2/sounds/frost_nova/frost_nova.wav",
+            "original source-frame read",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mage-walk-v2.test.ts",
+      "testStatements": 5,
+      "activeStatements": 4,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('preserves all 26 walking frames, original colors and source GIF/PNG files exactly',()=>{\n const atlas=rgbaPng('public/game-assets/hd/mage-walk-v2/atlas.png'),data=JSON.parse(re",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage-v2/animation/walking/south/pixellab-Step-forward-toward-the-camera-1794239830649.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/melee-combo.test.ts",
+      "testStatements": 9,
+      "activeStatements": 8,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 18,
+          "title": "it('packages all source hashes with bounded memory and unchanged A canvas/pivot',()=>{\n  expect(MELEE_COMBO.rgbaBytes).toBeLessThanOrEqual(2*1048576);expect(MELEE_COMBO.bodyA.pivot",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/generated/ash-warden-melee-combo-v1/a/frames/00.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/meteor-sequence.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/miniboss-ambience-runtime.test.ts",
+      "testStatements": 3,
+      "activeStatements": 2,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('retains both user ambience WAVs exactly and provides measured quiet playback gains',()=>{\r\n for(const [id,m]of Object.entries(MINIBOSS_AMBIENCE_SAMPLES)){const source=id==='bea",
+          "reasons": [
+            "historical input: art/armored-briar-beast/sounds/beast-walking.wav",
+            "historical input: art/rune-warden/sound/mage_idle.wav"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/miniboss-animation-demo.test.ts",
+      "testStatements": 3,
+      "activeStatements": 0,
+      "historicalStatements": 3,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('catalogues all301 current and216 archived atlas frames with no invented current hurt/death clips',()=>{\r\n expect(m.runtimeIntegration).toBe(false);expect(m.counts).toEqual({cur",
+          "reasons": [
+            "historical input: art/generated/miniboss-animation-demo-v1"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('copies runtime images without changing bytes and retains exact frame rectangles',()=>{\r\n for(const [file,s]of Object.entries(m.sources)){expect(hash(readFileSync(runtimePath(fi",
+          "reasons": [
+            "historical input: art/generated/miniboss-animation-demo-v1"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('retains source timing, two facing directions, static idle aliases and the separate spell states',()=>{\r\n for(const b of m.bosses)for(const c of [...b.clips,...b.archive]){\r\n  e",
+          "reasons": [
+            "historical input: art/generated/miniboss-animation-demo-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/miniboss-assets-audio.test.ts",
+      "testStatements": 7,
+      "activeStatements": 4,
+      "historicalStatements": 3,
+      "historical": [
+        {
+          "index": 23,
+          "title": "it('preserves all six user WAVs byte-for-byte and routes the shared teleport through one sample',()=>{\r\n const entries=JSON.parse(readFileSync(root+'/audio-manifest.json','utf8')) ",
+          "reasons": [
+            "original source-frame read",
+            "historical input: art/generated/miniboss-assets-audio-v1"
+          ]
+        },
+        {
+          "index": 24,
+          "title": "it('packs the accepted cast13 in both directions and flight9 without changing or scaling any pixel',()=>{\r\n const image=rgbaPng('public/game-assets/hd/rune-warden-v2/atlas.png');ex",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/rune-warden-cast-review-v2/source/cast-0.png'"
+          ]
+        },
+        {
+          "index": 29,
+          "title": "it('changes only the five presentation files and eleven explicitly accepted local assets/modules',()=>{\r\n const baseline=JSON.parse(readFileSync(root+'/runtime-baseline.json','utf8",
+          "reasons": [
+            "historical input: art/generated/miniboss-assets-audio-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/mobility-specializations.test.ts",
+      "testStatements": 17,
+      "activeStatements": 17,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/mobility.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/music-runtime.test.ts",
+      "testStatements": 5,
+      "activeStatements": 3,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 16,
+          "title": "it('ships exactly the five accepted second takes unchanged, with bounded playback gains',()=>{\r\n  const manifest=JSON.parse(readFileSync('art/generated/music-runtime-v1/manifest.js",
+          "reasons": [
+            "historical input: art/generated/music-runtime-v1/manifest.json",
+            "original source-frame read"
+          ]
+        },
+        {
+          "index": 17,
+          "title": "it('limits runtime changes to audio and selected MP3 assets over the363-file baseline',()=>{\r\n  expect(musicRuntimeIntegration.baselineFiles).toBe(363);expect(musicRuntimeIntegrati",
+          "reasons": [
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/necrotic-flame-wall.test.ts",
+      "testStatements": 9,
+      "activeStatements": 9,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/pacing-simulation.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/pacing.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase-flame-fan.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-biomes.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-boss.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-enemies.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-evolutions.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-feedback.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-spawn.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-statistics.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/phase2-warrior.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/pixellab-shield-nova-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 8,
+          "title": "it('records genuine PixelLab model and animation jobs for ordinary abilities, retaining the first Nova candidate',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.ultimateC",
+          "reasons": [
+            "historical input: art/generated/mage-shield-nova-pixellab-v1"
+          ]
+        },
+        {
+          "index": 9,
+          "title": "it('preserves every RGBA pixel of all 35 selected AI frames, with fixed native canvas',()=>{\r\n let total=0;\r\n for(const c of Object.values(m.clips)){\r\n  const sheet=rgbaPng(root+'/",
+          "reasons": [
+            "historical input: art/generated/mage-shield-nova-pixellab-v1"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('leaves the shield centre open, keeps selected animations inside their canvas and fades fully',()=>{\r\n for(const c of Object.values(m.clips))for(const f of c.frames)expect(f.edg",
+          "reasons": [
+            "historical input: art/generated/mage-shield-nova-pixellab-v1"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('exports independent native GIF and Aseprite animations with explicit preview timings',()=>{\r\n for(const c of Object.values(m.clips)){\r\n  expect(c.playbackIndices).toEqual(c.loo",
+          "reasons": [
+            "historical input: art/generated/mage-shield-nova-pixellab-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/pixellab-spell-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 8,
+          "title": "it('records actual PixelLab AI jobs for models and motion, including the retained impact candidate',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.provider).toBe('PixelLa",
+          "reasons": [
+            "historical input: art/generated/mage-spells-pixellab-ai-v1"
+          ]
+        },
+        {
+          "index": 9,
+          "title": "it('packs all 54 original native frames without altering a visible or hidden pixel',()=>{\r\n let count=0;\r\n for(const clip of Object.values(m.clips)){\r\n  const sheet=rgbaPng(root+'/",
+          "reasons": [
+            "historical input: art/generated/mage-spells-pixellab-ai-v1"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('keeps native input appearance, transparent spells and the intentional black light pass',()=>{\r\n for(const [id,c]of Object.entries(m.clips)){\r\n  const model=rgbaPng(`${root}/raw",
+          "reasons": [
+            "historical input: art/generated/mage-spells-pixellab-ai-v1"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('exports separate GIF/Aseprite assets and uses only generated loop frames for playback',()=>{\r\n for(const c of Object.values(m.clips)){\r\n  expect(c.playbackIndices).toEqual(c.lo",
+          "reasons": [
+            "historical input: art/generated/mage-spells-pixellab-ai-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/player-targeted-meteors.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/player-visuals-boss-bar.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/public-characters.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/radar-publisher.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/records.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/regular-lightning-art.test.ts",
+      "testStatements": 4,
+      "activeStatements": 3,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('preserves both original files and32 native262×72 frames; GIF owns timing and PNG owns RGBA',()=>{\n  expect(Object.keys(pack.sources)).toHaveLength(2);for(const [file,hash]of Ob",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/main-hero-mage/abilities/regular-lightning/chain-lightning.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/reliability.test.ts",
+      "testStatements": 5,
+      "activeStatements": 5,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/rootbound-guardian.test.ts",
+      "testStatements": 5,
+      "activeStatements": 4,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 13,
+          "title": "it('keeps all four originals and26 native PNG frames, with GIF timing and transparent padding',()=>{\n  expect(Object.keys(pack.sources)).toHaveLength(4);\n  for(const [file,hash]of ",
+          "reasons": [
+            "Verified clean-checkout source dependency: Error: ENOENT: no such file or directory, open 'art/guardian/idle/pixellab-make-cracklight-lightninh-for--1794146212900.png'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/run-finish.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/rune-practice.test.ts",
+      "testStatements": 6,
+      "activeStatements": 6,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/rune-vfx-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 8,
+          "title": "it('separates original code-art, current assets and genuine PixelLab generation, retaining rejected candidates',()=>{\r\n expect(m.runtimeIntegration).toBe(true);expect(m.jobs).toHav",
+          "reasons": [
+            "historical input: art/generated/rune-warden-vfx-review-v1"
+          ]
+        },
+        {
+          "index": 9,
+          "title": "it('preserves all93 selected source frames exactly in fixed native128pixel sheets',()=>{\r\n let count=0;for(const c of Object.values(m.clips)){const sheet=rgbaPng(root+'/'+c.sheet);",
+          "reasons": [
+            "historical input: art/generated/rune-warden-vfx-review-v1"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('keeps local pixel art on a2pixel grid and keeps new runes hollow, endings transparent and selected AI free of cyan flashes',()=>{\r\n for(const [key,c]of Object.entries(m.clips))",
+          "reasons": [
+            "historical input: art/generated/rune-warden-vfx-review-v1"
+          ]
+        },
+        {
+          "index": 11,
+          "title": "it('exports individual GIF/Aseprite clips and skips only the AI input frame in live loops',()=>{\r\n for(const c of Object.values(m.clips)){expect(c.playbackIndices.length).toBe(c.du",
+          "reasons": [
+            "historical input: art/generated/rune-warden-vfx-review-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/rune-warden-pixellab.test.ts",
+      "testStatements": 7,
+      "activeStatements": 5,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 15,
+          "title": "it('packs all26 approved AI cels exactly, with native canvas and transparent padding',()=>{\n const image=rgbaPng('public/game-assets/hd/rune-warden-pixellab-v1/atlas.png');expect(C",
+          "reasons": [
+            "original source-frame read"
+          ]
+        },
+        {
+          "index": 16,
+          "title": "it('plays the accepted8frame loops and9frame fade at fixed pivots without rejected cyan clips',()=>{\n expect(C.clips.flight.pivot).toEqual({x:95,y:61});expect(C.clips.impact.opacit",
+          "reasons": [
+            "original source-frame read"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/rune-warden.test.ts",
+      "testStatements": 18,
+      "activeStatements": 17,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 19,
+          "title": "it('imports original sheets without changing any user file and contains only horizontal body projections',()=>{\n  for(const [file,hash]of Object.entries(pack.sources))expect(create",
+          "reasons": [
+            "historical input: art/rune-warden/skills/runic-judgement/make_a_rune_it_l_wil...-1072504761-0.png"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/runner-art.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/survival-enrage.test.ts",
+      "testStatements": 11,
+      "activeStatements": 10,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 13,
+          "title": "it.each(before.rows)('preserves original pre10:00 AI, spawn, combat snapshot and RNG from$start s',({start,sha256})=>{\n  expect(createHash('sha256').update(earlyReplay(new World(12",
+          "reasons": [
+            "historical module: tests/fixtures/pre-enrage-replay.json",
+            "historical module: tests/helpers/earlyReplay.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/ultimates.test.ts",
+      "testStatements": 14,
+      "activeStatements": 14,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/upgrade-cards.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/upgrade-identity.test.ts",
+      "testStatements": 3,
+      "activeStatements": 3,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/upgrades.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/ux.test.ts",
+      "testStatements": 4,
+      "activeStatements": 4,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/visual-cleanup-rune-idle.test.ts",
+      "testStatements": 1,
+      "activeStatements": 0,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 13,
+          "title": "it('keeps all411 runtime files, adds four ambience files and changes only the six accepted presentation files',()=>{\r\n const baseline=JSON.parse(readFileSync('art/generated/visual-",
+          "reasons": [
+            "historical input: art/generated/visual-cleanup-rune-idle-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-art.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/warrior-attack-sync.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/warrior-buffs-v4.test.ts",
+      "testStatements": 7,
+      "activeStatements": 6,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 7,
+          "title": "it('protects the explicit change scope and reuses the accepted Banner A object byte for byte',()=>{\n expect(execFileSync(process.execPath,['scripts/verify-warrior-buffs-v4.mjs'],{e",
+          "reasons": [
+            "historical input: art/generated/warrior-buffs-v4",
+            "historical input: art/generated/warrior-concept-pack-v1/layers/war-banner-a-object.png",
+            "historical input: docs/verification/berserk-sprint-v1",
+            "historical input: docs/verification/warrior-ultimates-v1",
+            "historical input: docs/verification/warrior-sounds-v1",
+            "historical input: docs/verification/warrior-empty-hand-v1",
+            "historical input: docs/verification/warrior-spear-release-v1",
+            "historical input: docs/verification/warrior-ultimates-accepted-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-combat-scope.test.ts",
+      "testStatements": 1,
+      "activeStatements": 0,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('changes only the seven authored presentation files and adds one legacy charge atlas page',()=>{\r\n const baseline=JSON.parse(readFileSync('art/generated/warrior-combat-sync-runt",
+          "reasons": [
+            "historical input: art/generated/warrior-combat-sync-runtime-v2/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-empty-hand.test.ts",
+      "testStatements": 2,
+      "activeStatements": 0,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('changes exactly five approved runtime files and preserves all other 463 hashes',()=>{\r\n const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8')) as Recor",
+          "reasons": [
+            "historical input: docs/verification/warrior-empty-hand-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('uses all selected empty hand edits, preserves every windup and keeps timing, routes and exclusions',()=>{\r\n const review=JSON.parse(readFileSync('art/generated/warrior-spear-em",
+          "reasons": [
+            "historical input: art/generated/warrior-spear-empty-hand-review-v1/manifest.json",
+            "historical input: docs/verification/warrior-empty-hand-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-hero-scope.test.ts",
+      "testStatements": 1,
+      "activeStatements": 0,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 11,
+          "title": "it('limits Warrior integration to seven presentation/selection files, three modules and ten atlas files',()=>{\r\n const baseline=JSON.parse(readFileSync('art/generated/warrior-hero-",
+          "reasons": [
+            "historical input: art/generated/warrior-hero-runtime-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-hero.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/warrior-review.test.ts",
+      "testStatements": 4,
+      "activeStatements": 0,
+      "historicalStatements": 4,
+      "historical": [
+        {
+          "index": 3,
+          "title": "it('review runs all five existing skills against eight stationary, bounded targets', () => {\r\n  const w = createReviewWorld({ action: 'all', rank: 3, direction: 'south' });\r\n  for ",
+          "reasons": [
+            "historical module: art/warrior-review-v1/model"
+          ]
+        },
+        {
+          "index": 4,
+          "title": "it('individual skill reviews preserve rank and isolate damage from the other skills', () => {\r\n  for (const skill of SKILLS) {\r\n    const w = createReviewWorld({ action: skill.id, ",
+          "reasons": [
+            "historical module: art/warrior-review-v1/catalog",
+            "historical module: art/warrior-review-v1/model"
+          ]
+        },
+        {
+          "index": 5,
+          "title": "it('review hit proves real armor and Iron Skin mitigation; fresh restart resets everything', () => {\r\n  const plain = createReviewWorld({ action: 'idle', rank: 1, direction: 'south",
+          "reasons": [
+            "historical module: art/warrior-review-v1/model"
+          ]
+        },
+        {
+          "index": 6,
+          "title": "it('all eight movement directions and the existing Dash use real World movement', () => {\r\n  for (const d of DIRECTIONS) {\r\n    const w = createReviewWorld({ action: 'walk', rank: ",
+          "reasons": [
+            "historical module: art/warrior-review-v1/catalog",
+            "historical module: art/warrior-review-v1/model"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-skills.test.ts",
+      "testStatements": 6,
+      "activeStatements": 5,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 10,
+          "title": "it('verifies exact accepted RGBA, all production atlas frames and the explicit limited runtime scope',()=>{\n expect(execFileSync(process.execPath,['scripts/verify-warrior-cleave-v3",
+          "reasons": [
+            "historical input: art/generated/warrior-cleave-sync-v3",
+            "historical input: art/generated/warrior-buffs-v4/integration-verification.json",
+            "historical input: docs/verification/berserk-sprint-v1",
+            "historical input: docs/verification/warrior-ultimates-v1",
+            "historical input: docs/verification/warrior-sounds-v1",
+            "historical input: docs/verification/warrior-empty-hand-v1",
+            "historical input: docs/verification/warrior-spear-release-v1",
+            "historical input: docs/verification/warrior-ultimates-accepted-v1",
+            "historical input: art/generated/warrior-skills-runtime-v1",
+            "historical input: art/generated/warrior-cleave-sync-v3/integration-verification.json",
+            "historical module: art/generated/warrior-concept-pack-v1/source/png.mjs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-sounds.test.ts",
+      "testStatements": 3,
+      "activeStatements": 2,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 11,
+          "title": "it('preserves all nine user recordings and pins the complete integration inventory and hashes',()=>{\r\n const manifest=JSON.parse(readFileSync('docs/verification/warrior-sounds-v1/m",
+          "reasons": [
+            "historical input: docs/verification/warrior-sounds-v1/manifest.json",
+            "historical input: docs/verification/warrior-sounds-v1/runtime-baseline.json",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-spear-release.test.ts",
+      "testStatements": 2,
+      "activeStatements": 1,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 8,
+          "title": "it('limits the timing fix to one config file and preserves the remaining 467 runtime files',()=>{\r\n const root='docs/verification/warrior-spear-release-v1';\r\n const baseline=JSON.p",
+          "reasons": [
+            "historical input: docs/verification/warrior-spear-release-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-accepted.test.ts",
+      "testStatements": 3,
+      "activeStatements": 1,
+      "historicalStatements": 2,
+      "historical": [
+        {
+          "index": 9,
+          "title": "it('limits accepted-ultimate integration to ten explicit runtime files and preserves the remaining 449', () => {\r\n  const root = 'docs/verification/warrior-ultimates-accepted-v1';\r",
+          "reasons": [
+            "historical input: docs/verification/warrior-ultimates-accepted-v1",
+            "historical module: tests/helpers/approvedWardenIntegration.ts"
+          ]
+        },
+        {
+          "index": 10,
+          "title": "it('keeps the exact selected Banner/Ruin playback exclusions and records only the six selected source jobs', () => {\r\n  expect(WARRIOR_ULTIMATES.reviewStatus).toBe('accepted-user-i",
+          "reasons": [
+            "historical input: docs/art/PIXELLAB_ACCEPTED_GENERATIONS.json"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-ultimates-assets.test.ts",
+      "testStatements": 1,
+      "activeStatements": 0,
+      "historicalStatements": 1,
+      "historical": [
+        {
+          "index": 3,
+          "title": "it('preserves all selected Warrior ultimate RGBA frames and the explicit runtime scope', () => {\r\n  const result = execFileSync(process.execPath, ['scripts/verify-warrior-ultimates",
+          "reasons": [
+            "historical input: docs/verification/warrior-ultimates-v1",
+            "historical input: docs/verification/warrior-sounds-v1",
+            "historical input: docs/verification/warrior-empty-hand-v1",
+            "historical input: docs/verification/warrior-spear-release-v1",
+            "historical input: docs/verification/warrior-ultimates-accepted-v1",
+            "historical module: art/generated/warrior-concept-pack-v1/source/png.mjs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/unit/warrior-ultimates.test.ts",
+      "testStatements": 7,
+      "activeStatements": 7,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/world-chunks.test.ts",
+      "testStatements": 2,
+      "activeStatements": 2,
+      "historicalStatements": 0,
+      "historical": []
+    },
+    {
+      "file": "tests/unit/world.test.ts",
+      "testStatements": 1,
+      "activeStatements": 1,
+      "historicalStatements": 0,
+      "historical": []
+    }
+  ]
+}

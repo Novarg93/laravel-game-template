@@ -1,0 +1,64 @@
+node : node:fs:442
+строка:2 знак:1
++ node node_modules/vitest/vitest.mjs run --reporter=json --outputFile= ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:fs:442:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-cle
+ave-sync-v3\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-cleave-v3.mjs:6:71
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-cleave-sync-v3\\runtime-baseline.js
+on'
+}
+
+Node.js v22.16.0
+node:fs:442
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '<repository>\art\generated\warrior-buf
+fs-v4\runtime-baseline.json'
+    at readFileSync (node:fs:442:20)
+    at file:///<repository>/scripts/verify-warrior-buffs-v4.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Novarg\\Desktop\\laravel-game-template\\art\\generated\\warrior-buffs-v4\\runtime-baseline.json'
+}
+
+Node.js v22.16.0
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '<repository>\art\generated\warrior-c
+oncept-pack-v1\source\png.mjs' imported from <repository>\scripts\verify-warrior-ultim
+ates-v1.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:860:10)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///<repository>/art/generated/warrior-concept-pack-v1/source/png.mjs'
+}
+
+Node.js v22.16.0
+JSON report written to <repository>/.tmp/qa-vitest-before.json

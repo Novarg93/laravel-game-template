@@ -1,0 +1,14 @@
+
+> laravel-game-template@1.0.0 typecheck
+> vue-tsc --noEmit && vue-tsc --noEmit -p tsconfig.game.json
+
+tests/unit/warrior-review.test.ts(2,46): error TS2307: Cannot find module '../../art/warrior-review-v1/model' or its corresponding type declarations.
+tests/unit/warrior-review.test.ts(3,36): error TS2307: Cannot find module '../../art/warrior-review-v1/catalog' or its corresponding type declarations.
+tests/unit/warrior-review.test.ts(9,26): error TS7006: Parameter 'e' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(10,46): error TS7006: Parameter 'a' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(10,69): error TS7006: Parameter 'a' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(13,30): error TS7006: Parameter 'p' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(21,58): error TS18046: 'a' is of type 'unknown'.
+tests/unit/warrior-review.test.ts(22,48): error TS7006: Parameter 'a' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(22,71): error TS7006: Parameter 'a' implicitly has an 'any' type.
+tests/unit/warrior-review.test.ts(23,73): error TS7006: Parameter 'a' implicitly has an 'any' type.

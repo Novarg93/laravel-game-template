@@ -1,0 +1,23 @@
+
+> laravel-game-template@1.0.0 test:e2e
+> node scripts/e2e.mjs laravel-first-game.spec.ts
+
+
+  VITE v8.3.5   game   ready in 364 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+
+Running 2 tests using 1 worker
+
+npm.cmd : (node:26248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:7 знак:1
++ npm.cmd run test:e2e -- laravel-first-game.spec.ts > .tmp/qa-game-e2e ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:26248) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests\e2e\laravel-first-game.spec.ts:6:1 › relocated runtime handles movement, upgrades, real contact damage, death and restart (4.4s)
+  ✓  2 tests\e2e\laravel-first-game.spec.ts:35:1 › relocated gamepad input and real Warden practice retain audio and boss rendering (5.6s)
+
+  2 passed (10.9s)

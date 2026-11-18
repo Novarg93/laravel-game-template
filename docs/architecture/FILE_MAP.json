@@ -1,0 +1,3878 @@
+[
+  {
+    "old": "apps/web/.editorconfig",
+    "new": ".editorconfig"
+  },
+  {
+    "old": "apps/web/.env.example",
+    "new": ".env.example"
+  },
+  {
+    "old": "apps/web/.gitattributes",
+    "new": ".gitattributes"
+  },
+  {
+    "old": "apps/web/.gitignore",
+    "new": ".gitignore"
+  },
+  {
+    "old": "apps/web/.npmrc",
+    "new": ".npmrc"
+  },
+  {
+    "old": "apps/web/artisan",
+    "new": "artisan"
+  },
+  {
+    "old": "apps/web/chisel-paths.php",
+    "new": "chisel-paths.php"
+  },
+  {
+    "old": "apps/web/chisel.php",
+    "new": "chisel.php"
+  },
+  {
+    "old": "apps/web/components.json",
+    "new": "components.json"
+  },
+  {
+    "old": "apps/web/composer.json",
+    "new": "composer.json"
+  },
+  {
+    "old": "apps/web/composer.lock",
+    "new": "composer.lock"
+  },
+  {
+    "old": "apps/web/eslint.config.js",
+    "new": "eslint.config.js"
+  },
+  {
+    "old": "apps/web/package-lock.json",
+    "new": "package-lock.json"
+  },
+  {
+    "old": "apps/web/package.json",
+    "new": "package.json"
+  },
+  {
+    "old": "apps/web/phpstan.neon",
+    "new": "phpstan.neon"
+  },
+  {
+    "old": "apps/web/pint.json",
+    "new": "pint.json"
+  },
+  {
+    "old": "apps/web/pnpm-workspace.yaml",
+    "new": null
+  },
+  {
+    "old": "apps/web/tsconfig.json",
+    "new": "tsconfig.json"
+  },
+  {
+    "old": "apps/web/vite.config.ts",
+    "new": "vite.config.ts"
+  },
+  {
+    "old": "apps/web/app/Actions/Fortify/CreateNewUser.php",
+    "new": "app/Actions/Fortify/CreateNewUser.php"
+  },
+  {
+    "old": "apps/web/app/Actions/Fortify/ResetUserPassword.php",
+    "new": "app/Actions/Fortify/ResetUserPassword.php"
+  },
+  {
+    "old": "apps/web/app/Concerns/PasswordValidationRules.php",
+    "new": "app/Concerns/PasswordValidationRules.php"
+  },
+  {
+    "old": "apps/web/app/Concerns/ProfileValidationRules.php",
+    "new": "app/Concerns/ProfileValidationRules.php"
+  },
+  {
+    "old": "apps/web/app/Console/Commands/InstallFeaturesCommand.php",
+    "new": "app/Console/Commands/InstallFeaturesCommand.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Pages/Gameplay.php",
+    "new": "app/Filament/Pages/Gameplay.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/CurrencyResource.php",
+    "new": "app/Filament/Resources/Currencies/CurrencyResource.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/Pages/CreateCurrency.php",
+    "new": "app/Filament/Resources/Currencies/Pages/CreateCurrency.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/Pages/EditCurrency.php",
+    "new": "app/Filament/Resources/Currencies/Pages/EditCurrency.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/Pages/ListCurrencies.php",
+    "new": "app/Filament/Resources/Currencies/Pages/ListCurrencies.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/Schemas/CurrencyForm.php",
+    "new": "app/Filament/Resources/Currencies/Schemas/CurrencyForm.php"
+  },
+  {
+    "old": "apps/web/app/Filament/Resources/Currencies/Tables/CurrenciesTable.php",
+    "new": "app/Filament/Resources/Currencies/Tables/CurrenciesTable.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/AccountController.php",
+    "new": "app/Http/Controllers/AccountController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/CommerceController.php",
+    "new": "app/Http/Controllers/CommerceController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/ContactController.php",
+    "new": "app/Http/Controllers/ContactController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/Controller.php",
+    "new": "app/Http/Controllers/Controller.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/CurrencyPreferenceController.php",
+    "new": "app/Http/Controllers/CurrencyPreferenceController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/GameAssetController.php",
+    "new": null
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/GuideController.php",
+    "new": "app/Http/Controllers/GuideController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/InventoryController.php",
+    "new": "app/Http/Controllers/InventoryController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/LeaderboardController.php",
+    "new": "app/Http/Controllers/LeaderboardController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/OperationsController.php",
+    "new": "app/Http/Controllers/OperationsController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/PaymentController.php",
+    "new": "app/Http/Controllers/PaymentController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/PaymentWebhookController.php",
+    "new": "app/Http/Controllers/PaymentWebhookController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/ProgressionController.php",
+    "new": "app/Http/Controllers/ProgressionController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/PublicHealthController.php",
+    "new": "app/Http/Controllers/PublicHealthController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/PublicProfileController.php",
+    "new": "app/Http/Controllers/PublicProfileController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/RunHistoryController.php",
+    "new": "app/Http/Controllers/RunHistoryController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/RunItemController.php",
+    "new": "app/Http/Controllers/RunItemController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/RunPaidActionController.php",
+    "new": "app/Http/Controllers/RunPaidActionController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/TestCheckoutController.php",
+    "new": "app/Http/Controllers/TestCheckoutController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/Settings/ProfileController.php",
+    "new": "app/Http/Controllers/Settings/ProfileController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Controllers/Settings/SecurityController.php",
+    "new": "app/Http/Controllers/Settings/SecurityController.php"
+  },
+  {
+    "old": "apps/web/app/Http/Middleware/HandleAppearance.php",
+    "new": "app/Http/Middleware/HandleAppearance.php"
+  },
+  {
+    "old": "apps/web/app/Http/Middleware/HandleInertiaRequests.php",
+    "new": "app/Http/Middleware/HandleInertiaRequests.php"
+  },
+  {
+    "old": "apps/web/app/Http/Middleware/LimitRunPayload.php",
+    "new": "app/Http/Middleware/LimitRunPayload.php"
+  },
+  {
+    "old": "apps/web/app/Http/Middleware/PrivatePlatformResponses.php",
+    "new": "app/Http/Middleware/PrivatePlatformResponses.php"
+  },
+  {
+    "old": "apps/web/app/Http/Middleware/PublicHealthRateLimit.php",
+    "new": "app/Http/Middleware/PublicHealthRateLimit.php"
+  },
+  {
+    "old": "apps/web/app/Http/Requests/Settings/PasswordUpdateRequest.php",
+    "new": "app/Http/Requests/Settings/PasswordUpdateRequest.php"
+  },
+  {
+    "old": "apps/web/app/Http/Requests/Settings/ProfileDeleteRequest.php",
+    "new": "app/Http/Requests/Settings/ProfileDeleteRequest.php"
+  },
+  {
+    "old": "apps/web/app/Http/Requests/Settings/ProfileUpdateRequest.php",
+    "new": "app/Http/Requests/Settings/ProfileUpdateRequest.php"
+  },
+  {
+    "old": "apps/web/app/Http/Requests/Settings/TwoFactorAuthenticationRequest.php",
+    "new": "app/Http/Requests/Settings/TwoFactorAuthenticationRequest.php"
+  },
+  {
+    "old": "apps/web/app/Jobs/StripeWebhooks/HandlePaymentIntentSucceeded.php",
+    "new": "app/Jobs/StripeWebhooks/HandlePaymentIntentSucceeded.php"
+  },
+  {
+    "old": "apps/web/app/Models/AccountProgress.php",
+    "new": "app/Models/AccountProgress.php"
+  },
+  {
+    "old": "apps/web/app/Models/ActiveAccountEffect.php",
+    "new": "app/Models/ActiveAccountEffect.php"
+  },
+  {
+    "old": "apps/web/app/Models/CharacterProgress.php",
+    "new": "app/Models/CharacterProgress.php"
+  },
+  {
+    "old": "apps/web/app/Models/CreditTransaction.php",
+    "new": "app/Models/CreditTransaction.php"
+  },
+  {
+    "old": "apps/web/app/Models/Currency.php",
+    "new": "app/Models/Currency.php"
+  },
+  {
+    "old": "apps/web/app/Models/GameplaySetting.php",
+    "new": "app/Models/GameplaySetting.php"
+  },
+  {
+    "old": "apps/web/app/Models/GameRun.php",
+    "new": "app/Models/GameRun.php"
+  },
+  {
+    "old": "apps/web/app/Models/InventoryBalance.php",
+    "new": "app/Models/InventoryBalance.php"
+  },
+  {
+    "old": "apps/web/app/Models/InventoryTransaction.php",
+    "new": "app/Models/InventoryTransaction.php"
+  },
+  {
+    "old": "apps/web/app/Models/ItemDefinition.php",
+    "new": "app/Models/ItemDefinition.php"
+  },
+  {
+    "old": "apps/web/app/Models/LeaderboardEntry.php",
+    "new": "app/Models/LeaderboardEntry.php"
+  },
+  {
+    "old": "apps/web/app/Models/LevelReward.php",
+    "new": "app/Models/LevelReward.php"
+  },
+  {
+    "old": "apps/web/app/Models/PaymentAuditEntry.php",
+    "new": "app/Models/PaymentAuditEntry.php"
+  },
+  {
+    "old": "apps/web/app/Models/PaymentConfirmation.php",
+    "new": "app/Models/PaymentConfirmation.php"
+  },
+  {
+    "old": "apps/web/app/Models/PaymentOrder.php",
+    "new": "app/Models/PaymentOrder.php"
+  },
+  {
+    "old": "apps/web/app/Models/PaymentPackage.php",
+    "new": "app/Models/PaymentPackage.php"
+  },
+  {
+    "old": "apps/web/app/Models/PaymentWebhookInbox.php",
+    "new": "app/Models/PaymentWebhookInbox.php"
+  },
+  {
+    "old": "apps/web/app/Models/PlatformAuditEntry.php",
+    "new": "app/Models/PlatformAuditEntry.php"
+  },
+  {
+    "old": "apps/web/app/Models/PublicProfile.php",
+    "new": "app/Models/PublicProfile.php"
+  },
+  {
+    "old": "apps/web/app/Models/Purchase.php",
+    "new": "app/Models/Purchase.php"
+  },
+  {
+    "old": "apps/web/app/Models/RewardGrant.php",
+    "new": "app/Models/RewardGrant.php"
+  },
+  {
+    "old": "apps/web/app/Models/RunDeath.php",
+    "new": "app/Models/RunDeath.php"
+  },
+  {
+    "old": "apps/web/app/Models/RunItemUsage.php",
+    "new": "app/Models/RunItemUsage.php"
+  },
+  {
+    "old": "apps/web/app/Models/RunPaidAction.php",
+    "new": "app/Models/RunPaidAction.php"
+  },
+  {
+    "old": "apps/web/app/Models/RunUpgradeOffer.php",
+    "new": "app/Models/RunUpgradeOffer.php"
+  },
+  {
+    "old": "apps/web/app/Models/ShopProduct.php",
+    "new": "app/Models/ShopProduct.php"
+  },
+  {
+    "old": "apps/web/app/Models/TestProviderPayment.php",
+    "new": "app/Models/TestProviderPayment.php"
+  },
+  {
+    "old": "apps/web/app/Models/User.php",
+    "new": "app/Models/User.php"
+  },
+  {
+    "old": "apps/web/app/Models/Wallet.php",
+    "new": "app/Models/Wallet.php"
+  },
+  {
+    "old": "apps/web/app/Payments/LocalDevPaymentGuard.php",
+    "new": "app/Payments/LocalDevPaymentGuard.php"
+  },
+  {
+    "old": "apps/web/app/Payments/LocalDevPaymentService.php",
+    "new": "app/Payments/LocalDevPaymentService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentAudit.php",
+    "new": "app/Payments/PaymentAudit.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentConfirmationValidator.php",
+    "new": "app/Payments/PaymentConfirmationValidator.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentDiagnostics.php",
+    "new": "app/Payments/PaymentDiagnostics.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentFulfillmentService.php",
+    "new": "app/Payments/PaymentFulfillmentService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentOrderService.php",
+    "new": "app/Payments/PaymentOrderService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentPricingService.php",
+    "new": "app/Payments/PaymentPricingService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentProblem.php",
+    "new": "app/Payments/PaymentProblem.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentProviderInterface.php",
+    "new": "app/Payments/PaymentProviderInterface.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentProviderRegistry.php",
+    "new": "app/Payments/PaymentProviderRegistry.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentService.php",
+    "new": "app/Payments/PaymentService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentStatus.php",
+    "new": "app/Payments/PaymentStatus.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentVerificationService.php",
+    "new": "app/Payments/PaymentVerificationService.php"
+  },
+  {
+    "old": "apps/web/app/Payments/PaymentWebhookProcessor.php",
+    "new": "app/Payments/PaymentWebhookProcessor.php"
+  },
+  {
+    "old": "apps/web/app/Payments/StripeSandboxGuard.php",
+    "new": "app/Payments/StripeSandboxGuard.php"
+  },
+  {
+    "old": "apps/web/app/Payments/TestPaymentGuard.php",
+    "new": "app/Payments/TestPaymentGuard.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/CheckoutSession.php",
+    "new": "app/Payments/Data/CheckoutSession.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/OrderData.php",
+    "new": "app/Payments/Data/OrderData.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/PaymentEvidence.php",
+    "new": "app/Payments/Data/PaymentEvidence.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/PaymentLookup.php",
+    "new": "app/Payments/Data/PaymentLookup.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/PaymentQuote.php",
+    "new": "app/Payments/Data/PaymentQuote.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/ProviderEvent.php",
+    "new": "app/Payments/Data/ProviderEvent.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/WebhookDelivery.php",
+    "new": "app/Payments/Data/WebhookDelivery.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/WebhookHeaders.php",
+    "new": "app/Payments/Data/WebhookHeaders.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Data/WebhookSignature.php",
+    "new": "app/Payments/Data/WebhookSignature.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Providers/LocalDevPaymentProvider.php",
+    "new": "app/Payments/Providers/LocalDevPaymentProvider.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Providers/StripeSandboxProvider.php",
+    "new": "app/Payments/Providers/StripeSandboxProvider.php"
+  },
+  {
+    "old": "apps/web/app/Payments/Providers/TestPaymentProvider.php",
+    "new": "app/Payments/Providers/TestPaymentProvider.php"
+  },
+  {
+    "old": "apps/web/app/Policies/CurrencyPolicy.php",
+    "new": "app/Policies/CurrencyPolicy.php"
+  },
+  {
+    "old": "apps/web/app/Providers/AppServiceProvider.php",
+    "new": "app/Providers/AppServiceProvider.php"
+  },
+  {
+    "old": "apps/web/app/Providers/FortifyServiceProvider.php",
+    "new": "app/Providers/FortifyServiceProvider.php"
+  },
+  {
+    "old": "apps/web/app/Providers/Filament/AdminPanelProvider.php",
+    "new": "app/Providers/Filament/AdminPanelProvider.php"
+  },
+  {
+    "old": "apps/web/app/Runs/RunAssessment.php",
+    "new": "app/Runs/RunAssessment.php"
+  },
+  {
+    "old": "apps/web/app/Runs/RunRecordValidator.php",
+    "new": "app/Runs/RunRecordValidator.php"
+  },
+  {
+    "old": "apps/web/app/Services/AccountDashboardService.php",
+    "new": "app/Services/AccountDashboardService.php"
+  },
+  {
+    "old": "apps/web/app/Services/AccountLock.php",
+    "new": "app/Services/AccountLock.php"
+  },
+  {
+    "old": "apps/web/app/Services/CurrencyService.php",
+    "new": "app/Services/CurrencyService.php"
+  },
+  {
+    "old": "apps/web/app/Services/InventoryDiagnostics.php",
+    "new": "app/Services/InventoryDiagnostics.php"
+  },
+  {
+    "old": "apps/web/app/Services/InventoryService.php",
+    "new": "app/Services/InventoryService.php"
+  },
+  {
+    "old": "apps/web/app/Services/LeaderboardService.php",
+    "new": "app/Services/LeaderboardService.php"
+  },
+  {
+    "old": "apps/web/app/Services/OperationsHealth.php",
+    "new": "app/Services/OperationsHealth.php"
+  },
+  {
+    "old": "apps/web/app/Services/OrderInvoiceService.php",
+    "new": "app/Services/OrderInvoiceService.php"
+  },
+  {
+    "old": "apps/web/app/Services/PlatformAudit.php",
+    "new": "app/Services/PlatformAudit.php"
+  },
+  {
+    "old": "apps/web/app/Services/PlatformRecovery.php",
+    "new": "app/Services/PlatformRecovery.php"
+  },
+  {
+    "old": "apps/web/app/Services/PremiumConfiguration.php",
+    "new": "app/Services/PremiumConfiguration.php"
+  },
+  {
+    "old": "apps/web/app/Services/ProgressionMath.php",
+    "new": "app/Services/ProgressionMath.php"
+  },
+  {
+    "old": "apps/web/app/Services/ProgressionService.php",
+    "new": "app/Services/ProgressionService.php"
+  },
+  {
+    "old": "apps/web/app/Services/PublicProfileService.php",
+    "new": "app/Services/PublicProfileService.php"
+  },
+  {
+    "old": "apps/web/app/Services/PurchaseService.php",
+    "new": "app/Services/PurchaseService.php"
+  },
+  {
+    "old": "apps/web/app/Services/RunAssessmentService.php",
+    "new": "app/Services/RunAssessmentService.php"
+  },
+  {
+    "old": "apps/web/app/Services/RunItemService.php",
+    "new": "app/Services/RunItemService.php"
+  },
+  {
+    "old": "apps/web/app/Services/RunPaidActionService.php",
+    "new": "app/Services/RunPaidActionService.php"
+  },
+  {
+    "old": "apps/web/app/Services/RunReviewService.php",
+    "new": "app/Services/RunReviewService.php"
+  },
+  {
+    "old": "apps/web/app/Services/UpgradePool.php",
+    "new": "app/Services/UpgradePool.php"
+  },
+  {
+    "old": "apps/web/app/Services/WalletService.php",
+    "new": "app/Services/WalletService.php"
+  },
+  {
+    "old": "apps/web/app/Support/CanonicalJson.php",
+    "new": "app/Support/CanonicalJson.php"
+  },
+  {
+    "old": "apps/web/app/Support/MySqlTestDatabase.php",
+    "new": "app/Support/MySqlTestDatabase.php"
+  },
+  {
+    "old": "apps/web/bootstrap/app.php",
+    "new": "bootstrap/app.php"
+  },
+  {
+    "old": "apps/web/bootstrap/providers.php",
+    "new": "bootstrap/providers.php"
+  },
+  {
+    "old": "apps/web/bootstrap/cache/.gitignore",
+    "new": "bootstrap/cache/.gitignore"
+  },
+  {
+    "old": "apps/web/config/app.php",
+    "new": "config/app.php"
+  },
+  {
+    "old": "apps/web/config/auth.php",
+    "new": "config/auth.php"
+  },
+  {
+    "old": "apps/web/config/cache.php",
+    "new": "config/cache.php"
+  },
+  {
+    "old": "apps/web/config/database.php",
+    "new": "config/database.php"
+  },
+  {
+    "old": "apps/web/config/filesystems.php",
+    "new": "config/filesystems.php"
+  },
+  {
+    "old": "apps/web/config/fortify.php",
+    "new": "config/fortify.php"
+  },
+  {
+    "old": "apps/web/config/inertia.php",
+    "new": "config/inertia.php"
+  },
+  {
+    "old": "apps/web/config/inventory.php",
+    "new": "config/inventory.php"
+  },
+  {
+    "old": "apps/web/config/invoices.php",
+    "new": "config/invoices.php"
+  },
+  {
+    "old": "apps/web/config/logging.php",
+    "new": "config/logging.php"
+  },
+  {
+    "old": "apps/web/config/mail.php",
+    "new": "config/mail.php"
+  },
+  {
+    "old": "apps/web/config/payments.php",
+    "new": "config/payments.php"
+  },
+  {
+    "old": "apps/web/config/premium.php",
+    "new": "config/premium.php"
+  },
+  {
+    "old": "apps/web/config/progression.php",
+    "new": "config/progression.php"
+  },
+  {
+    "old": "apps/web/config/queue.php",
+    "new": "config/queue.php"
+  },
+  {
+    "old": "apps/web/config/run_items.php",
+    "new": "config/run_items.php"
+  },
+  {
+    "old": "apps/web/config/run_review.php",
+    "new": "config/run_review.php"
+  },
+  {
+    "old": "apps/web/config/services.php",
+    "new": "config/services.php"
+  },
+  {
+    "old": "apps/web/config/session.php",
+    "new": "config/session.php"
+  },
+  {
+    "old": "apps/web/config/shop.php",
+    "new": "config/shop.php"
+  },
+  {
+    "old": "apps/web/config/stripe-webhooks.php",
+    "new": "config/stripe-webhooks.php"
+  },
+  {
+    "old": "apps/web/config/wallet.php",
+    "new": "config/wallet.php"
+  },
+  {
+    "old": "apps/web/database/.gitignore",
+    "new": "database/.gitignore"
+  },
+  {
+    "old": "apps/web/database/factories/UserFactory.php",
+    "new": "database/factories/UserFactory.php"
+  },
+  {
+    "old": "apps/web/database/migrations/0001_01_01_000000_create_users_table.php",
+    "new": "database/migrations/0001_01_01_000000_create_users_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/0001_01_01_000001_create_cache_table.php",
+    "new": "database/migrations/0001_01_01_000001_create_cache_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/0001_01_01_000002_create_jobs_table.php",
+    "new": "database/migrations/0001_01_01_000002_create_jobs_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2024_01_01_000000_create_passkeys_table.php",
+    "new": "database/migrations/2024_01_01_000000_create_passkeys_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2025_08_14_170933_add_two_factor_columns_to_users_table.php",
+    "new": "database/migrations/2025_08_14_170933_add_two_factor_columns_to_users_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000001_create_contact_messages_table.php",
+    "new": "database/migrations/2026_11_14_000001_create_contact_messages_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000002_create_progression_tables.php",
+    "new": "database/migrations/2026_11_14_000002_create_progression_tables.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000003_create_inventory_tables.php",
+    "new": "database/migrations/2026_11_14_000003_create_inventory_tables.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000004_reconcile_pending_item_rewards.php",
+    "new": "database/migrations/2026_11_14_000004_reconcile_pending_item_rewards.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000005_create_wallet_shop_tables.php",
+    "new": "database/migrations/2026_11_14_000005_create_wallet_shop_tables.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000006_reconcile_pending_credit_rewards.php",
+    "new": "database/migrations/2026_11_14_000006_reconcile_pending_credit_rewards.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_14_000007_create_payment_engine_tables.php",
+    "new": "database/migrations/2026_11_14_000007_create_payment_engine_tables.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_15_000008_make_reward_run_reference_nullable_on_delete.php",
+    "new": "database/migrations/2026_11_15_000008_make_reward_run_reference_nullable_on_delete.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_15_000009_create_run_item_usage_tables.php",
+    "new": "database/migrations/2026_11_15_000009_create_run_item_usage_tables.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_15_000010_make_payment_references_case_sensitive.php",
+    "new": "database/migrations/2026_11_15_000010_make_payment_references_case_sensitive.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_15_000011_create_leaderboard_and_operations.php",
+    "new": "database/migrations/2026_11_15_000011_create_leaderboard_and_operations.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_15_000012_payment_custom_amount.php",
+    "new": "database/migrations/2026_11_15_000012_payment_custom_amount.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_16_000013_create_currencies.php",
+    "new": "database/migrations/2026_11_16_000013_create_currencies.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_16_000014_protect_inventory_usage_journal.php",
+    "new": "database/migrations/2026_11_16_000014_protect_inventory_usage_journal.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_16_000015_premium_gameplay.php",
+    "new": "database/migrations/2026_11_16_000015_premium_gameplay.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_17_000001_create_webhook_calls_table.php",
+    "new": "database/migrations/2026_11_17_000001_create_webhook_calls_table.php"
+  },
+  {
+    "old": "apps/web/database/migrations/2026_11_17_000002_translate_catalog_labels_to_english.php",
+    "new": "database/migrations/2026_11_17_000002_translate_catalog_labels_to_english.php"
+  },
+  {
+    "old": "apps/web/database/seeders/CurrencySeeder.php",
+    "new": "database/seeders/CurrencySeeder.php"
+  },
+  {
+    "old": "apps/web/database/seeders/DatabaseSeeder.php",
+    "new": "database/seeders/DatabaseSeeder.php"
+  },
+  {
+    "old": "apps/web/public/.htaccess",
+    "new": "public/.htaccess"
+  },
+  {
+    "old": "apps/web/public/apple-touch-icon.png",
+    "new": "public/apple-touch-icon.png"
+  },
+  {
+    "old": "apps/web/public/favicon.ico",
+    "new": "public/favicon.ico"
+  },
+  {
+    "old": "apps/web/public/favicon.svg",
+    "new": "public/favicon.svg"
+  },
+  {
+    "old": "apps/web/public/index.php",
+    "new": "public/index.php"
+  },
+  {
+    "old": "apps/web/public/robots.txt",
+    "new": "public/robots.txt"
+  },
+  {
+    "old": "apps/web/public/images/gameplay.png",
+    "new": "public/images/gameplay.png"
+  },
+  {
+    "old": "apps/web/public/images/warrior.png",
+    "new": "public/images/warrior.png"
+  },
+  {
+    "old": "apps/web/resources/css/account.css",
+    "new": "resources/css/account.css"
+  },
+  {
+    "old": "apps/web/resources/css/app.css",
+    "new": "resources/css/app.css"
+  },
+  {
+    "old": "apps/web/resources/css/commerce.css",
+    "new": "resources/css/commerce.css"
+  },
+  {
+    "old": "apps/web/resources/css/inventory.css",
+    "new": "resources/css/inventory.css"
+  },
+  {
+    "old": "apps/web/resources/css/leaderboard.css",
+    "new": "resources/css/leaderboard.css"
+  },
+  {
+    "old": "apps/web/resources/css/progression.css",
+    "new": "resources/css/progression.css"
+  },
+  {
+    "old": "apps/web/resources/css/settings.css",
+    "new": "resources/css/settings.css"
+  },
+  {
+    "old": "apps/web/resources/css/site.css",
+    "new": "resources/css/site.css"
+  },
+  {
+    "old": "apps/web/resources/game/upgrade-catalog.json",
+    "new": "resources/game/upgrade-catalog.json"
+  },
+  {
+    "old": "apps/web/resources/js/app.ts",
+    "new": "resources/js/app.ts"
+  },
+  {
+    "old": "apps/web/resources/js/game.ts",
+    "new": "resources/js/game.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/AccountBalances.vue",
+    "new": "resources/js/components/AccountBalances.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AccountOrders.vue",
+    "new": "resources/js/components/AccountOrders.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AccountPagination.vue",
+    "new": "resources/js/components/AccountPagination.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AccountTransactions.vue",
+    "new": "resources/js/components/AccountTransactions.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AccountUsage.vue",
+    "new": "resources/js/components/AccountUsage.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AlertError.vue",
+    "new": "resources/js/components/AlertError.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppContent.vue",
+    "new": "resources/js/components/AppContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppearanceTabs.vue",
+    "new": "resources/js/components/AppearanceTabs.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppHeader.vue",
+    "new": "resources/js/components/AppHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppLogo.vue",
+    "new": "resources/js/components/AppLogo.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppLogoIcon.vue",
+    "new": "resources/js/components/AppLogoIcon.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppShell.vue",
+    "new": "resources/js/components/AppShell.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppSidebar.vue",
+    "new": "resources/js/components/AppSidebar.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/AppSidebarHeader.vue",
+    "new": "resources/js/components/AppSidebarHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/Breadcrumbs.vue",
+    "new": "resources/js/components/Breadcrumbs.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/CurrencySwitcher.vue",
+    "new": "resources/js/components/CurrencySwitcher.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/DeleteUser.vue",
+    "new": "resources/js/components/DeleteUser.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/Heading.vue",
+    "new": "resources/js/components/Heading.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/InputError.vue",
+    "new": "resources/js/components/InputError.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/InventoryPanel.vue",
+    "new": "resources/js/components/InventoryPanel.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/LeaderboardRows.vue",
+    "new": "resources/js/components/LeaderboardRows.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ManagePasskeys.vue",
+    "new": "resources/js/components/ManagePasskeys.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ManageTwoFactor.vue",
+    "new": "resources/js/components/ManageTwoFactor.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/MoneyAmount.vue",
+    "new": "resources/js/components/MoneyAmount.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/NavFooter.vue",
+    "new": "resources/js/components/NavFooter.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/NavMain.vue",
+    "new": "resources/js/components/NavMain.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/NavUser.vue",
+    "new": "resources/js/components/NavUser.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PasskeyItem.vue",
+    "new": "resources/js/components/PasskeyItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PasskeyRegister.vue",
+    "new": "resources/js/components/PasskeyRegister.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PasskeyVerify.vue",
+    "new": "resources/js/components/PasskeyVerify.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PasswordInput.vue",
+    "new": "resources/js/components/PasswordInput.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PaymentPanel.vue",
+    "new": "resources/js/components/PaymentPanel.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PendingTokenRewards.vue",
+    "new": "resources/js/components/PendingTokenRewards.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PlaceholderPattern.vue",
+    "new": "resources/js/components/PlaceholderPattern.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/PurchaseHistory.vue",
+    "new": "resources/js/components/PurchaseHistory.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/RunFacts.vue",
+    "new": "resources/js/components/RunFacts.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ServicePurchases.vue",
+    "new": "resources/js/components/ServicePurchases.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/TextLink.vue",
+    "new": "resources/js/components/TextLink.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/TwoFactorRecoveryCodes.vue",
+    "new": "resources/js/components/TwoFactorRecoveryCodes.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/TwoFactorSetupModal.vue",
+    "new": "resources/js/components/TwoFactorSetupModal.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/UserInfo.vue",
+    "new": "resources/js/components/UserInfo.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/UserMenu.vue",
+    "new": "resources/js/components/UserMenu.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/UserMenuContent.vue",
+    "new": "resources/js/components/UserMenuContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/alert/Alert.vue",
+    "new": "resources/js/components/ui/alert/Alert.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/alert/AlertDescription.vue",
+    "new": "resources/js/components/ui/alert/AlertDescription.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/alert/AlertTitle.vue",
+    "new": "resources/js/components/ui/alert/AlertTitle.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/alert/index.ts",
+    "new": "resources/js/components/ui/alert/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/avatar/Avatar.vue",
+    "new": "resources/js/components/ui/avatar/Avatar.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/avatar/AvatarFallback.vue",
+    "new": "resources/js/components/ui/avatar/AvatarFallback.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/avatar/AvatarImage.vue",
+    "new": "resources/js/components/ui/avatar/AvatarImage.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/avatar/index.ts",
+    "new": "resources/js/components/ui/avatar/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/badge/Badge.vue",
+    "new": "resources/js/components/ui/badge/Badge.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/badge/index.ts",
+    "new": "resources/js/components/ui/badge/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/Breadcrumb.vue",
+    "new": "resources/js/components/ui/breadcrumb/Breadcrumb.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbEllipsis.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbEllipsis.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbItem.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbLink.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbLink.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbList.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbList.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbPage.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbPage.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/BreadcrumbSeparator.vue",
+    "new": "resources/js/components/ui/breadcrumb/BreadcrumbSeparator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/breadcrumb/index.ts",
+    "new": "resources/js/components/ui/breadcrumb/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/button/Button.vue",
+    "new": "resources/js/components/ui/button/Button.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/button/index.ts",
+    "new": "resources/js/components/ui/button/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/Card.vue",
+    "new": "resources/js/components/ui/card/Card.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardAction.vue",
+    "new": "resources/js/components/ui/card/CardAction.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardContent.vue",
+    "new": "resources/js/components/ui/card/CardContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardDescription.vue",
+    "new": "resources/js/components/ui/card/CardDescription.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardFooter.vue",
+    "new": "resources/js/components/ui/card/CardFooter.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardHeader.vue",
+    "new": "resources/js/components/ui/card/CardHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/CardTitle.vue",
+    "new": "resources/js/components/ui/card/CardTitle.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/card/index.ts",
+    "new": "resources/js/components/ui/card/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/checkbox/Checkbox.vue",
+    "new": "resources/js/components/ui/checkbox/Checkbox.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/checkbox/index.ts",
+    "new": "resources/js/components/ui/checkbox/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/collapsible/Collapsible.vue",
+    "new": "resources/js/components/ui/collapsible/Collapsible.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/collapsible/CollapsibleContent.vue",
+    "new": "resources/js/components/ui/collapsible/CollapsibleContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/collapsible/CollapsibleTrigger.vue",
+    "new": "resources/js/components/ui/collapsible/CollapsibleTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/collapsible/index.ts",
+    "new": "resources/js/components/ui/collapsible/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/Dialog.vue",
+    "new": "resources/js/components/ui/dialog/Dialog.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogClose.vue",
+    "new": "resources/js/components/ui/dialog/DialogClose.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogContent.vue",
+    "new": "resources/js/components/ui/dialog/DialogContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogDescription.vue",
+    "new": "resources/js/components/ui/dialog/DialogDescription.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogFooter.vue",
+    "new": "resources/js/components/ui/dialog/DialogFooter.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogHeader.vue",
+    "new": "resources/js/components/ui/dialog/DialogHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogOverlay.vue",
+    "new": "resources/js/components/ui/dialog/DialogOverlay.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogScrollContent.vue",
+    "new": "resources/js/components/ui/dialog/DialogScrollContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogTitle.vue",
+    "new": "resources/js/components/ui/dialog/DialogTitle.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/DialogTrigger.vue",
+    "new": "resources/js/components/ui/dialog/DialogTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dialog/index.ts",
+    "new": "resources/js/components/ui/dialog/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenu.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenu.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuCheckboxItem.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuCheckboxItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuContent.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuGroup.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuGroup.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuItem.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuLabel.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuLabel.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuRadioGroup.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuRadioGroup.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuRadioItem.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuRadioItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuSeparator.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuSeparator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuShortcut.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuShortcut.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuSub.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuSub.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuSubContent.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuSubContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuSubTrigger.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuSubTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/DropdownMenuTrigger.vue",
+    "new": "resources/js/components/ui/dropdown-menu/DropdownMenuTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/dropdown-menu/index.ts",
+    "new": "resources/js/components/ui/dropdown-menu/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input/index.ts",
+    "new": "resources/js/components/ui/input/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input/Input.vue",
+    "new": "resources/js/components/ui/input/Input.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input-otp/index.ts",
+    "new": "resources/js/components/ui/input-otp/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input-otp/InputOTP.vue",
+    "new": "resources/js/components/ui/input-otp/InputOTP.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input-otp/InputOTPGroup.vue",
+    "new": "resources/js/components/ui/input-otp/InputOTPGroup.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input-otp/InputOTPSeparator.vue",
+    "new": "resources/js/components/ui/input-otp/InputOTPSeparator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/input-otp/InputOTPSlot.vue",
+    "new": "resources/js/components/ui/input-otp/InputOTPSlot.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/label/index.ts",
+    "new": "resources/js/components/ui/label/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/label/Label.vue",
+    "new": "resources/js/components/ui/label/Label.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/index.ts",
+    "new": "resources/js/components/ui/navigation-menu/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenu.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenu.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuContent.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuIndicator.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuIndicator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuItem.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuLink.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuLink.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuList.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuList.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuTrigger.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/navigation-menu/NavigationMenuViewport.vue",
+    "new": "resources/js/components/ui/navigation-menu/NavigationMenuViewport.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/index.ts",
+    "new": "resources/js/components/ui/select/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/Select.vue",
+    "new": "resources/js/components/ui/select/Select.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectContent.vue",
+    "new": "resources/js/components/ui/select/SelectContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectGroup.vue",
+    "new": "resources/js/components/ui/select/SelectGroup.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectItem.vue",
+    "new": "resources/js/components/ui/select/SelectItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectItemText.vue",
+    "new": "resources/js/components/ui/select/SelectItemText.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectLabel.vue",
+    "new": "resources/js/components/ui/select/SelectLabel.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectScrollDownButton.vue",
+    "new": "resources/js/components/ui/select/SelectScrollDownButton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectScrollUpButton.vue",
+    "new": "resources/js/components/ui/select/SelectScrollUpButton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectSeparator.vue",
+    "new": "resources/js/components/ui/select/SelectSeparator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectTrigger.vue",
+    "new": "resources/js/components/ui/select/SelectTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/select/SelectValue.vue",
+    "new": "resources/js/components/ui/select/SelectValue.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/separator/index.ts",
+    "new": "resources/js/components/ui/separator/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/separator/Separator.vue",
+    "new": "resources/js/components/ui/separator/Separator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/index.ts",
+    "new": "resources/js/components/ui/sheet/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/Sheet.vue",
+    "new": "resources/js/components/ui/sheet/Sheet.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetClose.vue",
+    "new": "resources/js/components/ui/sheet/SheetClose.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetContent.vue",
+    "new": "resources/js/components/ui/sheet/SheetContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetDescription.vue",
+    "new": "resources/js/components/ui/sheet/SheetDescription.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetFooter.vue",
+    "new": "resources/js/components/ui/sheet/SheetFooter.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetHeader.vue",
+    "new": "resources/js/components/ui/sheet/SheetHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetOverlay.vue",
+    "new": "resources/js/components/ui/sheet/SheetOverlay.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetTitle.vue",
+    "new": "resources/js/components/ui/sheet/SheetTitle.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sheet/SheetTrigger.vue",
+    "new": "resources/js/components/ui/sheet/SheetTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/index.ts",
+    "new": "resources/js/components/ui/sidebar/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/Sidebar.vue",
+    "new": "resources/js/components/ui/sidebar/Sidebar.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarContent.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarFooter.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarFooter.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarGroup.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarGroup.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarGroupAction.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarGroupAction.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarGroupContent.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarGroupContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarGroupLabel.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarGroupLabel.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarHeader.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarHeader.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarInput.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarInput.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarInset.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarInset.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenu.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenu.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuAction.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuAction.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuBadge.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuBadge.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuButton.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuButton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuButtonChild.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuButtonChild.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuItem.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuSkeleton.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuSkeleton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuSub.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuSub.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuSubButton.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuSubButton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarMenuSubItem.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarMenuSubItem.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarProvider.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarProvider.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarRail.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarRail.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarSeparator.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarSeparator.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/SidebarTrigger.vue",
+    "new": "resources/js/components/ui/sidebar/SidebarTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sidebar/utils.ts",
+    "new": "resources/js/components/ui/sidebar/utils.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/skeleton/index.ts",
+    "new": "resources/js/components/ui/skeleton/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/skeleton/Skeleton.vue",
+    "new": "resources/js/components/ui/skeleton/Skeleton.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sonner/index.ts",
+    "new": "resources/js/components/ui/sonner/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/sonner/Sonner.vue",
+    "new": "resources/js/components/ui/sonner/Sonner.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/spinner/index.ts",
+    "new": "resources/js/components/ui/spinner/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/spinner/Spinner.vue",
+    "new": "resources/js/components/ui/spinner/Spinner.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/tooltip/index.ts",
+    "new": "resources/js/components/ui/tooltip/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/tooltip/Tooltip.vue",
+    "new": "resources/js/components/ui/tooltip/Tooltip.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/tooltip/TooltipContent.vue",
+    "new": "resources/js/components/ui/tooltip/TooltipContent.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/tooltip/TooltipProvider.vue",
+    "new": "resources/js/components/ui/tooltip/TooltipProvider.vue"
+  },
+  {
+    "old": "apps/web/resources/js/components/ui/tooltip/TooltipTrigger.vue",
+    "new": "resources/js/components/ui/tooltip/TooltipTrigger.vue"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useAppearance.ts",
+    "new": "resources/js/composables/useAppearance.ts"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useAuditedRequest.ts",
+    "new": "resources/js/composables/useAuditedRequest.ts"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useCurrency.ts",
+    "new": "resources/js/composables/useCurrency.ts"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useCurrentUrl.ts",
+    "new": "resources/js/composables/useCurrentUrl.ts"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useInitials.ts",
+    "new": "resources/js/composables/useInitials.ts"
+  },
+  {
+    "old": "apps/web/resources/js/composables/useTwoFactorAuth.ts",
+    "new": "resources/js/composables/useTwoFactorAuth.ts"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/AccountLayout.vue",
+    "new": "resources/js/layouts/AccountLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/AppLayout.vue",
+    "new": "resources/js/layouts/AppLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/AuthLayout.vue",
+    "new": "resources/js/layouts/AuthLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/SiteLayout.vue",
+    "new": "resources/js/layouts/SiteLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/app/AppHeaderLayout.vue",
+    "new": "resources/js/layouts/app/AppHeaderLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/app/AppSidebarLayout.vue",
+    "new": "resources/js/layouts/app/AppSidebarLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/auth/AuthCardLayout.vue",
+    "new": "resources/js/layouts/auth/AuthCardLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/auth/AuthSimpleLayout.vue",
+    "new": "resources/js/layouts/auth/AuthSimpleLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/auth/AuthSplitLayout.vue",
+    "new": "resources/js/layouts/auth/AuthSplitLayout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/layouts/settings/Layout.vue",
+    "new": "resources/js/layouts/settings/Layout.vue"
+  },
+  {
+    "old": "apps/web/resources/js/lib/accountNavigation.ts",
+    "new": "resources/js/lib/accountNavigation.ts"
+  },
+  {
+    "old": "apps/web/resources/js/lib/currency.ts",
+    "new": "resources/js/lib/currency.ts"
+  },
+  {
+    "old": "apps/web/resources/js/lib/flashToast.ts",
+    "new": "resources/js/lib/flashToast.ts"
+  },
+  {
+    "old": "apps/web/resources/js/lib/utils.ts",
+    "new": "resources/js/lib/utils.ts"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Contact.vue",
+    "new": "resources/js/pages/Contact.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Dashboard.vue",
+    "new": "resources/js/pages/Dashboard.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Faq.vue",
+    "new": "resources/js/pages/Faq.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Guide.vue",
+    "new": "resources/js/pages/Guide.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Inventory.vue",
+    "new": "resources/js/pages/Inventory.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Leaderboard.vue",
+    "new": "resources/js/pages/Leaderboard.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/LeaderboardRun.vue",
+    "new": "resources/js/pages/LeaderboardRun.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Legal.vue",
+    "new": "resources/js/pages/Legal.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Operations.vue",
+    "new": "resources/js/pages/Operations.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/OperationsRun.vue",
+    "new": "resources/js/pages/OperationsRun.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/OperationsUser.vue",
+    "new": "resources/js/pages/OperationsUser.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/OperationsUsers.vue",
+    "new": "resources/js/pages/OperationsUsers.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/PaymentResult.vue",
+    "new": "resources/js/pages/PaymentResult.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/RunHistory.vue",
+    "new": "resources/js/pages/RunHistory.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/RunHistoryDetail.vue",
+    "new": "resources/js/pages/RunHistoryDetail.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Shop.vue",
+    "new": "resources/js/pages/Shop.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Wallet.vue",
+    "new": "resources/js/pages/Wallet.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/Welcome.vue",
+    "new": "resources/js/pages/Welcome.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/account/Order.vue",
+    "new": "resources/js/pages/account/Order.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/account/Orders.vue",
+    "new": "resources/js/pages/account/Orders.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/account/Transactions.vue",
+    "new": "resources/js/pages/account/Transactions.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/account/Usage.vue",
+    "new": "resources/js/pages/account/Usage.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/ConfirmPassword.vue",
+    "new": "resources/js/pages/auth/ConfirmPassword.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/ForgotPassword.vue",
+    "new": "resources/js/pages/auth/ForgotPassword.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/Login.vue",
+    "new": "resources/js/pages/auth/Login.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/Register.vue",
+    "new": "resources/js/pages/auth/Register.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/ResetPassword.vue",
+    "new": "resources/js/pages/auth/ResetPassword.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/TwoFactorChallenge.vue",
+    "new": "resources/js/pages/auth/TwoFactorChallenge.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/auth/VerifyEmail.vue",
+    "new": "resources/js/pages/auth/VerifyEmail.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/settings/Appearance.vue",
+    "new": "resources/js/pages/settings/Appearance.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/settings/Profile.vue",
+    "new": "resources/js/pages/settings/Profile.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/settings/PublicProfile.vue",
+    "new": "resources/js/pages/settings/PublicProfile.vue"
+  },
+  {
+    "old": "apps/web/resources/js/pages/settings/Security.vue",
+    "new": "resources/js/pages/settings/Security.vue"
+  },
+  {
+    "old": "apps/web/resources/js/platform/HttpPlatform.ts",
+    "new": "resources/js/platform/HttpPlatform.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/account.ts",
+    "new": "resources/js/types/account.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/auth.ts",
+    "new": "resources/js/types/auth.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/commerce.ts",
+    "new": "resources/js/types/commerce.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/currency.ts",
+    "new": "resources/js/types/currency.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/gameInventory.ts",
+    "new": "resources/js/types/gameInventory.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/global.d.ts",
+    "new": "resources/js/types/global.d.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/index.ts",
+    "new": "resources/js/types/index.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/inventory.ts",
+    "new": "resources/js/types/inventory.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/leaderboard.ts",
+    "new": "resources/js/types/leaderboard.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/navigation.ts",
+    "new": "resources/js/types/navigation.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/payments.ts",
+    "new": "resources/js/types/payments.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/progression.ts",
+    "new": "resources/js/types/progression.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/ui.ts",
+    "new": "resources/js/types/ui.ts"
+  },
+  {
+    "old": "apps/web/resources/js/types/vue-shims.d.ts",
+    "new": "resources/js/types/vue-shims.d.ts"
+  },
+  {
+    "old": "apps/web/resources/views/app.blade.php",
+    "new": "resources/views/app.blade.php"
+  },
+  {
+    "old": "apps/web/resources/views/play.blade.php",
+    "new": "resources/views/play.blade.php"
+  },
+  {
+    "old": "apps/web/resources/views/test-checkout.blade.php",
+    "new": "resources/views/test-checkout.blade.php"
+  },
+  {
+    "old": "apps/web/resources/views/errors/minimal.blade.php",
+    "new": "resources/views/errors/minimal.blade.php"
+  },
+  {
+    "old": "apps/web/resources/views/filament/chronicle-theme.blade.php",
+    "new": "resources/views/filament/chronicle-theme.blade.php"
+  },
+  {
+    "old": "apps/web/resources/views/filament/pages/gameplay.blade.php",
+    "new": "resources/views/filament/pages/gameplay.blade.php"
+  },
+  {
+    "old": "apps/web/routes/console.php",
+    "new": "routes/console.php"
+  },
+  {
+    "old": "apps/web/routes/operations.php",
+    "new": "routes/operations.php"
+  },
+  {
+    "old": "apps/web/routes/payment-test.php",
+    "new": "routes/payment-test.php"
+  },
+  {
+    "old": "apps/web/routes/settings.php",
+    "new": "routes/settings.php"
+  },
+  {
+    "old": "apps/web/routes/web.php",
+    "new": "routes/web.php"
+  },
+  {
+    "old": "apps/web/storage/app/.gitignore",
+    "new": "storage/app/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/app/private/.gitignore",
+    "new": "storage/app/private/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/app/public/.gitignore",
+    "new": "storage/app/public/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/.gitignore",
+    "new": "storage/framework/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/cache/.gitignore",
+    "new": "storage/framework/cache/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/cache/data/.gitignore",
+    "new": "storage/framework/cache/data/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/cache/locks/.gitignore",
+    "new": "storage/framework/cache/locks/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/sessions/.gitignore",
+    "new": "storage/framework/sessions/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/testing/.gitignore",
+    "new": "storage/framework/testing/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/framework/views/.gitignore",
+    "new": "storage/framework/views/.gitignore"
+  },
+  {
+    "old": "apps/web/storage/logs/.gitignore",
+    "new": "storage/logs/.gitignore"
+  },
+  {
+    "old": "public/favicon.svg",
+    "new": "game/favicon.svg"
+  },
+  {
+    "old": "public/assets/audio/ash-warden-uploaded-v1/charge.wav",
+    "new": "public/game-assets/audio/ash-warden-uploaded-v1/charge.wav"
+  },
+  {
+    "old": "public/assets/audio/ash-warden-uploaded-v1/flamestrike.wav",
+    "new": "public/game-assets/audio/ash-warden-uploaded-v1/flamestrike.wav"
+  },
+  {
+    "old": "public/assets/audio/ash-warden-uploaded-v1/meteor.wav",
+    "new": "public/game-assets/audio/ash-warden-uploaded-v1/meteor.wav"
+  },
+  {
+    "old": "public/assets/audio/ash-warden-uploaded-v1/slam.wav",
+    "new": "public/game-assets/audio/ash-warden-uploaded-v1/slam.wav"
+  },
+  {
+    "old": "public/assets/audio/ash-warden-uploaded-v1/swing.wav",
+    "new": "public/game-assets/audio/ash-warden-uploaded-v1/swing.wav"
+  },
+  {
+    "old": "public/assets/audio/fire-ultimate-v1/pulse.wav",
+    "new": "public/game-assets/audio/fire-ultimate-v1/pulse.wav"
+  },
+  {
+    "old": "public/assets/audio/fire-ultimate-v1/static.wav",
+    "new": "public/game-assets/audio/fire-ultimate-v1/static.wav"
+  },
+  {
+    "old": "public/assets/audio/frost-ultimate-v1/frost.wav",
+    "new": "public/game-assets/audio/frost-ultimate-v1/frost.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/arcaneshield.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/blink.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/blink.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/chain-lightning.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/fireball.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/fireball.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/frost-nova.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/frost-nova.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/meteor.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/meteor.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-uploaded-v1/thunder.wav",
+    "new": "public/game-assets/audio/mage-sfx-uploaded-v1/thunder.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-blink.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-blink.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-fireball-cast.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-fireball-cast.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-fireball-impact.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-fireball-impact.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-frost-nova.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-frost-nova.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-lightning.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-lightning.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-meteor.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-meteor.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-shield.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-shield.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-ultimate-charge.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-ultimate-charge.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-ultimate-overload.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-ultimate-overload.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-ultimate-release.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-ultimate-release.wav"
+  },
+  {
+    "old": "public/assets/audio/mage-sfx-v1/mage-ultimate-sky.wav",
+    "new": "public/game-assets/audio/mage-sfx-v1/mage-ultimate-sky.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-ambience-v1/beast-walking.wav",
+    "new": "public/game-assets/audio/miniboss-ambience-v1/beast-walking.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-ambience-v1/rune-presence.wav",
+    "new": "public/game-assets/audio/miniboss-ambience-v1/rune-presence.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-astral-cast.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-astral-cast.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-briar-charge.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-briar-charge.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-briar-melee.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-briar-melee.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-rune-cast.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-rune-cast.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-teleport.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-teleport.wav"
+  },
+  {
+    "old": "public/assets/audio/miniboss-v1/mini-totem-cast.wav",
+    "new": "public/game-assets/audio/miniboss-v1/mini-totem-cast.wav"
+  },
+  {
+    "old": "public/assets/audio/music-v1/boss.mp3",
+    "new": "public/game-assets/audio/music-v1/boss.mp3"
+  },
+  {
+    "old": "public/assets/audio/music-v1/burning.mp3",
+    "new": "public/game-assets/audio/music-v1/burning.mp3"
+  },
+  {
+    "old": "public/assets/audio/music-v1/dusk.mp3",
+    "new": "public/game-assets/audio/music-v1/dusk.mp3"
+  },
+  {
+    "old": "public/assets/audio/music-v1/dying.mp3",
+    "new": "public/game-assets/audio/music-v1/dying.mp3"
+  },
+  {
+    "old": "public/assets/audio/music-v1/normal.mp3",
+    "new": "public/game-assets/audio/music-v1/normal.mp3"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/banner.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/banner.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/charge.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/charge.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/cleave.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/cleave.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/shield_block.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/shield_block.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/spear_throw.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/spear_throw.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/spear_ultimate.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/spear_ultimate.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/stomp.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/stomp.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/ultimate_stomp.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/ultimate_stomp.wav"
+  },
+  {
+    "old": "public/assets/audio/warrior-uploaded-v1/whirlwind.wav",
+    "new": "public/game-assets/audio/warrior-uploaded-v1/whirlwind.wav"
+  },
+  {
+    "old": "public/assets/hd/ash-guard.json",
+    "new": "public/game-assets/hd/ash-guard.json"
+  },
+  {
+    "old": "public/assets/hd/ash-guard.png",
+    "new": "public/game-assets/hd/ash-guard.png"
+  },
+  {
+    "old": "public/assets/hd/bosses.json",
+    "new": "public/game-assets/hd/bosses.json"
+  },
+  {
+    "old": "public/assets/hd/bosses.png",
+    "new": "public/game-assets/hd/bosses.png"
+  },
+  {
+    "old": "public/assets/hd/core.json",
+    "new": "public/game-assets/hd/core.json"
+  },
+  {
+    "old": "public/assets/hd/core.png",
+    "new": "public/game-assets/hd/core.png"
+  },
+  {
+    "old": "public/assets/hd/enemies.json",
+    "new": "public/game-assets/hd/enemies.json"
+  },
+  {
+    "old": "public/assets/hd/enemies.png",
+    "new": "public/game-assets/hd/enemies.png"
+  },
+  {
+    "old": "public/assets/hd/guardian.json",
+    "new": "public/game-assets/hd/guardian.json"
+  },
+  {
+    "old": "public/assets/hd/guardian.png",
+    "new": "public/game-assets/hd/guardian.png"
+  },
+  {
+    "old": "public/assets/hd/loot.json",
+    "new": "public/game-assets/hd/loot.json"
+  },
+  {
+    "old": "public/assets/hd/loot.png",
+    "new": "public/game-assets/hd/loot.png"
+  },
+  {
+    "old": "public/assets/hd/mage-casting.json",
+    "new": "public/game-assets/hd/mage-casting.json"
+  },
+  {
+    "old": "public/assets/hd/mage-casting.png",
+    "new": "public/game-assets/hd/mage-casting.png"
+  },
+  {
+    "old": "public/assets/hd/mage.json",
+    "new": "public/game-assets/hd/mage.json"
+  },
+  {
+    "old": "public/assets/hd/mage.png",
+    "new": "public/game-assets/hd/mage.png"
+  },
+  {
+    "old": "public/assets/hd/runner.json",
+    "new": "public/game-assets/hd/runner.json"
+  },
+  {
+    "old": "public/assets/hd/runner.png",
+    "new": "public/game-assets/hd/runner.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-flame-strike-v1/atlas.json",
+    "new": "public/game-assets/hd/ash-warden-flame-strike-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-flame-strike-v1/atlas.png",
+    "new": "public/game-assets/hd/ash-warden-flame-strike-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-flame-strike-v1/manifest.json",
+    "new": "public/game-assets/hd/ash-warden-flame-strike-v1/manifest.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-melee-combo-v1/atlas.json",
+    "new": "public/game-assets/hd/ash-warden-melee-combo-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-melee-combo-v1/atlas.png",
+    "new": "public/game-assets/hd/ash-warden-melee-combo-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-melee-combo-v1/manifest.json",
+    "new": "public/game-assets/hd/ash-warden-melee-combo-v1/manifest.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-pixellab-v1/meteor.json",
+    "new": "public/game-assets/hd/ash-warden-pixellab-v1/meteor.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-pixellab-v1/meteor.png",
+    "new": "public/game-assets/hd/ash-warden-pixellab-v1/meteor.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-pixellab-v1/north.json",
+    "new": "public/game-assets/hd/ash-warden-pixellab-v1/north.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-pixellab-v1/north.png",
+    "new": "public/game-assets/hd/ash-warden-pixellab-v1/north.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/0.json",
+    "new": "public/game-assets/hd/ash-warden-v1/0.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/0.png",
+    "new": "public/game-assets/hd/ash-warden-v1/0.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/1.json",
+    "new": "public/game-assets/hd/ash-warden-v1/1.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/1.png",
+    "new": "public/game-assets/hd/ash-warden-v1/1.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/2.json",
+    "new": "public/game-assets/hd/ash-warden-v1/2.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/2.png",
+    "new": "public/game-assets/hd/ash-warden-v1/2.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/3.json",
+    "new": "public/game-assets/hd/ash-warden-v1/3.json"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/3.png",
+    "new": "public/game-assets/hd/ash-warden-v1/3.png"
+  },
+  {
+    "old": "public/assets/hd/ash-warden-v1/manifest.json",
+    "new": "public/game-assets/hd/ash-warden-v1/manifest.json"
+  },
+  {
+    "old": "public/assets/hd/astral-flame-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/astral-flame-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/astral-flame-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/astral-flame-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/astral-projectile-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/astral-projectile-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/astral-projectile-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/astral-projectile-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/astral-revenant-v1/atlas.json",
+    "new": "public/game-assets/hd/astral-revenant-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/astral-revenant-v1/atlas.png",
+    "new": "public/game-assets/hd/astral-revenant-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/briar-beast-v1/atlas.json",
+    "new": "public/game-assets/hd/briar-beast-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/briar-beast-v1/atlas.png",
+    "new": "public/game-assets/hd/briar-beast-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/fire-ultimate-v1/fire-mantle.json",
+    "new": "public/game-assets/hd/fire-ultimate-v1/fire-mantle.json"
+  },
+  {
+    "old": "public/assets/hd/fire-ultimate-v1/fire-mantle.png",
+    "new": "public/game-assets/hd/fire-ultimate-v1/fire-mantle.png"
+  },
+  {
+    "old": "public/assets/hd/fire-ultimate-v1/fire-perimeter.json",
+    "new": "public/game-assets/hd/fire-ultimate-v1/fire-perimeter.json"
+  },
+  {
+    "old": "public/assets/hd/fire-ultimate-v1/fire-perimeter.png",
+    "new": "public/game-assets/hd/fire-ultimate-v1/fire-perimeter.png"
+  },
+  {
+    "old": "public/assets/hd/frost-ultimate-v1/ice-crystal.json",
+    "new": "public/game-assets/hd/frost-ultimate-v1/ice-crystal.json"
+  },
+  {
+    "old": "public/assets/hd/frost-ultimate-v1/ice-crystal.png",
+    "new": "public/game-assets/hd/frost-ultimate-v1/ice-crystal.png"
+  },
+  {
+    "old": "public/assets/hd/frost-ultimate-v1/ice-wave.json",
+    "new": "public/game-assets/hd/frost-ultimate-v1/ice-wave.json"
+  },
+  {
+    "old": "public/assets/hd/frost-ultimate-v1/ice-wave.png",
+    "new": "public/game-assets/hd/frost-ultimate-v1/ice-wave.png"
+  },
+  {
+    "old": "public/assets/hd/lightning-ultimate-v1/atlas.json",
+    "new": "public/game-assets/hd/lightning-ultimate-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/lightning-ultimate-v1/atlas.png",
+    "new": "public/game-assets/hd/lightning-ultimate-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-ability-vfx-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-ability-vfx-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-ability-vfx-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-ability-vfx-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-blink-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-blink-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-blink-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-blink-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-cast-v2/atlas.json",
+    "new": "public/game-assets/hd/mage-cast-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-cast-v2/atlas.png",
+    "new": "public/game-assets/hd/mage-cast-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-fireball-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-fireball-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-fireball-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-fireball-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-v2/atlas.json",
+    "new": "public/game-assets/hd/mage-fireball-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-fireball-v2/atlas.png",
+    "new": "public/game-assets/hd/mage-fireball-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-frost-ultimate-runtime-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-frost-ultimate-runtime-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-hero-v2/0.json",
+    "new": "public/game-assets/hd/mage-hero-v2/0.json"
+  },
+  {
+    "old": "public/assets/hd/mage-hero-v2/0.png",
+    "new": "public/game-assets/hd/mage-hero-v2/0.png"
+  },
+  {
+    "old": "public/assets/hd/mage-hero-v2/1.json",
+    "new": "public/game-assets/hd/mage-hero-v2/1.json"
+  },
+  {
+    "old": "public/assets/hd/mage-hero-v2/1.png",
+    "new": "public/game-assets/hd/mage-hero-v2/1.png"
+  },
+  {
+    "old": "public/assets/hd/mage-idle-v2/atlas.json",
+    "new": "public/game-assets/hd/mage-idle-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-idle-v2/atlas.png",
+    "new": "public/game-assets/hd/mage-idle-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-meteor-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-meteor-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-meteor-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-meteor-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-meteor-v3/atlas.json",
+    "new": "public/game-assets/hd/mage-meteor-v3/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-meteor-v3/atlas.png",
+    "new": "public/game-assets/hd/mage-meteor-v3/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-moving-cast-v2/upper.json",
+    "new": "public/game-assets/hd/mage-moving-cast-v2/upper.json"
+  },
+  {
+    "old": "public/assets/hd/mage-moving-cast-v2/upper.png",
+    "new": "public/game-assets/hd/mage-moving-cast-v2/upper.png"
+  },
+  {
+    "old": "public/assets/hd/mage-phantom-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-phantom-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-phantom-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-phantom-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-run-v2/atlas.json",
+    "new": "public/game-assets/hd/mage-run-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-run-v2/atlas.png",
+    "new": "public/game-assets/hd/mage-run-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/mage-shield-nova-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-shield-nova-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/mage-shield-nova-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/mage-walk-v2/atlas.json",
+    "new": "public/game-assets/hd/mage-walk-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/mage-walk-v2/atlas.png",
+    "new": "public/game-assets/hd/mage-walk-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/regular-lightning-v1/atlas.json",
+    "new": "public/game-assets/hd/regular-lightning-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/regular-lightning-v1/atlas.png",
+    "new": "public/game-assets/hd/regular-lightning-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-pixellab-v1/atlas.json",
+    "new": "public/game-assets/hd/rune-warden-pixellab-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-pixellab-v1/atlas.png",
+    "new": "public/game-assets/hd/rune-warden-pixellab-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-v1/atlas.json",
+    "new": "public/game-assets/hd/rune-warden-v1/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-v1/atlas.png",
+    "new": "public/game-assets/hd/rune-warden-v1/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-v2/atlas.json",
+    "new": "public/game-assets/hd/rune-warden-v2/atlas.json"
+  },
+  {
+    "old": "public/assets/hd/rune-warden-v2/atlas.png",
+    "new": "public/game-assets/hd/rune-warden-v2/atlas.png"
+  },
+  {
+    "old": "public/assets/hd/war-banner-v1/object.png",
+    "new": "public/game-assets/hd/war-banner-v1/object.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/0.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/0.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/0.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/0.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/1.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/1.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/1.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/1.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/2.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/2.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/2.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/2.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/3.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/3.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/3.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/3.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/4.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/4.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/4.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/4.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/5.json",
+    "new": "public/game-assets/hd/warrior-hero-v1/5.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-hero-v1/5.png",
+    "new": "public/game-assets/hd/warrior-hero-v1/5.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/0.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/0.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/0.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/0.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/1.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/1.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/1.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/1.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/2.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/2.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/2.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/2.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/3.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/3.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/3.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/3.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/4.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/4.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/4.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/4.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/5.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/5.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/5.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/5.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/6.json",
+    "new": "public/game-assets/hd/warrior-skills-v1/6.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-skills-v1/6.png",
+    "new": "public/game-assets/hd/warrior-skills-v1/6.png"
+  },
+  {
+    "old": "public/assets/hd/warrior-ultimates-v1/0.json",
+    "new": "public/game-assets/hd/warrior-ultimates-v1/0.json"
+  },
+  {
+    "old": "public/assets/hd/warrior-ultimates-v1/0.png",
+    "new": "public/game-assets/hd/warrior-ultimates-v1/0.png"
+  },
+  {
+    "old": "src/App.vue",
+    "new": "game/App.vue"
+  },
+  {
+    "old": "src/env.d.ts",
+    "new": "game/env.d.ts"
+  },
+  {
+    "old": "src/main.ts",
+    "new": "game/main.ts"
+  },
+  {
+    "old": "src/style.css",
+    "new": "game/style.css"
+  },
+  {
+    "old": "src/game/abilities/arcaneShield.ts",
+    "new": "game/abilities/arcaneShield.ts"
+  },
+  {
+    "old": "src/game/abilities/baseDamage.ts",
+    "new": "game/abilities/baseDamage.ts"
+  },
+  {
+    "old": "src/game/abilities/chainLightning.ts",
+    "new": "game/abilities/chainLightning.ts"
+  },
+  {
+    "old": "src/game/abilities/definitions.ts",
+    "new": "game/abilities/definitions.ts"
+  },
+  {
+    "old": "src/game/abilities/evolutions.ts",
+    "new": "game/abilities/evolutions.ts"
+  },
+  {
+    "old": "src/game/abilities/fireball.ts",
+    "new": "game/abilities/fireball.ts"
+  },
+  {
+    "old": "src/game/abilities/frostNova.ts",
+    "new": "game/abilities/frostNova.ts"
+  },
+  {
+    "old": "src/game/abilities/meteor.ts",
+    "new": "game/abilities/meteor.ts"
+  },
+  {
+    "old": "src/game/abilities/targeting.ts",
+    "new": "game/abilities/targeting.ts"
+  },
+  {
+    "old": "src/game/abilities/tickAbilities.ts",
+    "new": "game/abilities/tickAbilities.ts"
+  },
+  {
+    "old": "src/game/abilities/types.ts",
+    "new": "game/abilities/types.ts"
+  },
+  {
+    "old": "src/game/abilities/warrior.ts",
+    "new": "game/abilities/warrior.ts"
+  },
+  {
+    "old": "src/game/art/abilityVisual.ts",
+    "new": "game/art/abilityVisual.ts"
+  },
+  {
+    "old": "src/game/art/ashGuardPack.ts",
+    "new": "game/art/ashGuardPack.ts"
+  },
+  {
+    "old": "src/game/art/ashWardenManifest.json",
+    "new": "game/art/ashWardenManifest.json"
+  },
+  {
+    "old": "src/game/art/ashWardenPack.ts",
+    "new": "game/art/ashWardenPack.ts"
+  },
+  {
+    "old": "src/game/art/ashWardenPixellabManifest.json",
+    "new": "game/art/ashWardenPixellabManifest.json"
+  },
+  {
+    "old": "src/game/art/ashWardenPixellabPack.ts",
+    "new": "game/art/ashWardenPixellabPack.ts"
+  },
+  {
+    "old": "src/game/art/assetRegistry.ts",
+    "new": "game/art/assetRegistry.ts"
+  },
+  {
+    "old": "src/game/art/astralFlameManifestPixellab.json",
+    "new": "game/art/astralFlameManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/astralFlamePixellabPack.ts",
+    "new": "game/art/astralFlamePixellabPack.ts"
+  },
+  {
+    "old": "src/game/art/astralProjectileManifestPixellab.json",
+    "new": "game/art/astralProjectileManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/astralProjectilePixellabPack.ts",
+    "new": "game/art/astralProjectilePixellabPack.ts"
+  },
+  {
+    "old": "src/game/art/AstralRevenantArt.ts",
+    "new": "game/art/AstralRevenantArt.ts"
+  },
+  {
+    "old": "src/game/art/astralRevenantManifest.json",
+    "new": "game/art/astralRevenantManifest.json"
+  },
+  {
+    "old": "src/game/art/astralRevenantPack.ts",
+    "new": "game/art/astralRevenantPack.ts"
+  },
+  {
+    "old": "src/game/art/BossAnimation.ts",
+    "new": "game/art/BossAnimation.ts"
+  },
+  {
+    "old": "src/game/art/bossPack.ts",
+    "new": "game/art/bossPack.ts"
+  },
+  {
+    "old": "src/game/art/briarBeastManifest.json",
+    "new": "game/art/briarBeastManifest.json"
+  },
+  {
+    "old": "src/game/art/briarBeastPack.ts",
+    "new": "game/art/briarBeastPack.ts"
+  },
+  {
+    "old": "src/game/art/CombatFeedback.ts",
+    "new": "game/art/CombatFeedback.ts"
+  },
+  {
+    "old": "src/game/art/EliteAdornment.ts",
+    "new": "game/art/EliteAdornment.ts"
+  },
+  {
+    "old": "src/game/art/EncounterArt.ts",
+    "new": "game/art/EncounterArt.ts"
+  },
+  {
+    "old": "src/game/art/EncounterFeedback.ts",
+    "new": "game/art/EncounterFeedback.ts"
+  },
+  {
+    "old": "src/game/art/EnemyAnimation.ts",
+    "new": "game/art/EnemyAnimation.ts"
+  },
+  {
+    "old": "src/game/art/enemyPack.ts",
+    "new": "game/art/enemyPack.ts"
+  },
+  {
+    "old": "src/game/art/FinalBossArt.ts",
+    "new": "game/art/FinalBossArt.ts"
+  },
+  {
+    "old": "src/game/art/FireballArt.ts",
+    "new": "game/art/FireballArt.ts"
+  },
+  {
+    "old": "src/game/art/fireballManifest.json",
+    "new": "game/art/fireballManifest.json"
+  },
+  {
+    "old": "src/game/art/fireballManifestPixellab.json",
+    "new": "game/art/fireballManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/fireballManifestV2.json",
+    "new": "game/art/fireballManifestV2.json"
+  },
+  {
+    "old": "src/game/art/fireballPack.ts",
+    "new": "game/art/fireballPack.ts"
+  },
+  {
+    "old": "src/game/art/FireUltimateArt.ts",
+    "new": "game/art/FireUltimateArt.ts"
+  },
+  {
+    "old": "src/game/art/fireUltimatePack.ts",
+    "new": "game/art/fireUltimatePack.ts"
+  },
+  {
+    "old": "src/game/art/FlameStrikeArt.ts",
+    "new": "game/art/FlameStrikeArt.ts"
+  },
+  {
+    "old": "src/game/art/flameStrikeManifest.json",
+    "new": "game/art/flameStrikeManifest.json"
+  },
+  {
+    "old": "src/game/art/flameStrikePack.ts",
+    "new": "game/art/flameStrikePack.ts"
+  },
+  {
+    "old": "src/game/art/ForestAtmosphere.ts",
+    "new": "game/art/ForestAtmosphere.ts"
+  },
+  {
+    "old": "src/game/art/frostAvalancheTexture.ts",
+    "new": "game/art/frostAvalancheTexture.ts"
+  },
+  {
+    "old": "src/game/art/FrostUltimateArt.ts",
+    "new": "game/art/FrostUltimateArt.ts"
+  },
+  {
+    "old": "src/game/art/frostUltimatePack.ts",
+    "new": "game/art/frostUltimatePack.ts"
+  },
+  {
+    "old": "src/game/art/GameArt.ts",
+    "new": "game/art/GameArt.ts"
+  },
+  {
+    "old": "src/game/art/generatedLootIcons.json",
+    "new": "game/art/generatedLootIcons.json"
+  },
+  {
+    "old": "src/game/art/groundImpactDepth.ts",
+    "new": "game/art/groundImpactDepth.ts"
+  },
+  {
+    "old": "src/game/art/groveArtPack.ts",
+    "new": "game/art/groveArtPack.ts"
+  },
+  {
+    "old": "src/game/art/GuardianAnimation.ts",
+    "new": "game/art/GuardianAnimation.ts"
+  },
+  {
+    "old": "src/game/art/guardianArt.ts",
+    "new": "game/art/guardianArt.ts"
+  },
+  {
+    "old": "src/game/art/guardianManifest.json",
+    "new": "game/art/guardianManifest.json"
+  },
+  {
+    "old": "src/game/art/guardianPack.ts",
+    "new": "game/art/guardianPack.ts"
+  },
+  {
+    "old": "src/game/art/hdCoreLayout.ts",
+    "new": "game/art/hdCoreLayout.ts"
+  },
+  {
+    "old": "src/game/art/hdForest.ts",
+    "new": "game/art/hdForest.ts"
+  },
+  {
+    "old": "src/game/art/hdGrove.ts",
+    "new": "game/art/hdGrove.ts"
+  },
+  {
+    "old": "src/game/art/lightningBeamPath.ts",
+    "new": "game/art/lightningBeamPath.ts"
+  },
+  {
+    "old": "src/game/art/LightningGroundArt.ts",
+    "new": "game/art/LightningGroundArt.ts"
+  },
+  {
+    "old": "src/game/art/LightningUltimateArt.ts",
+    "new": "game/art/LightningUltimateArt.ts"
+  },
+  {
+    "old": "src/game/art/lightningUltimateManifest.json",
+    "new": "game/art/lightningUltimateManifest.json"
+  },
+  {
+    "old": "src/game/art/lightningUltimatePack.ts",
+    "new": "game/art/lightningUltimatePack.ts"
+  },
+  {
+    "old": "src/game/art/lootPack.ts",
+    "new": "game/art/lootPack.ts"
+  },
+  {
+    "old": "src/game/art/lootPixels.ts",
+    "new": "game/art/lootPixels.ts"
+  },
+  {
+    "old": "src/game/art/LootPresentation.ts",
+    "new": "game/art/LootPresentation.ts"
+  },
+  {
+    "old": "src/game/art/MageAbilityArt.ts",
+    "new": "game/art/MageAbilityArt.ts"
+  },
+  {
+    "old": "src/game/art/mageAbilityManifest.json",
+    "new": "game/art/mageAbilityManifest.json"
+  },
+  {
+    "old": "src/game/art/mageAbilityPack.ts",
+    "new": "game/art/mageAbilityPack.ts"
+  },
+  {
+    "old": "src/game/art/mageAbilityRuntimeManifest.json",
+    "new": "game/art/mageAbilityRuntimeManifest.json"
+  },
+  {
+    "old": "src/game/art/MageBlinkArt.ts",
+    "new": "game/art/MageBlinkArt.ts"
+  },
+  {
+    "old": "src/game/art/mageBlinkManifestV1.json",
+    "new": "game/art/mageBlinkManifestV1.json"
+  },
+  {
+    "old": "src/game/art/mageBlinkPack.ts",
+    "new": "game/art/mageBlinkPack.ts"
+  },
+  {
+    "old": "src/game/art/MageCastingArt.ts",
+    "new": "game/art/MageCastingArt.ts"
+  },
+  {
+    "old": "src/game/art/MageCastingController.ts",
+    "new": "game/art/MageCastingController.ts"
+  },
+  {
+    "old": "src/game/art/mageCastingPack.ts",
+    "new": "game/art/mageCastingPack.ts"
+  },
+  {
+    "old": "src/game/art/mageCastingPoses.ts",
+    "new": "game/art/mageCastingPoses.ts"
+  },
+  {
+    "old": "src/game/art/mageCastManifestV2.json",
+    "new": "game/art/mageCastManifestV2.json"
+  },
+  {
+    "old": "src/game/art/mageCastPackV2.ts",
+    "new": "game/art/mageCastPackV2.ts"
+  },
+  {
+    "old": "src/game/art/mageCastPalms.ts",
+    "new": "game/art/mageCastPalms.ts"
+  },
+  {
+    "old": "src/game/art/mageCastSector.ts",
+    "new": "game/art/mageCastSector.ts"
+  },
+  {
+    "old": "src/game/art/MageHeroAnimation.ts",
+    "new": "game/art/MageHeroAnimation.ts"
+  },
+  {
+    "old": "src/game/art/MageHeroArt.ts",
+    "new": "game/art/MageHeroArt.ts"
+  },
+  {
+    "old": "src/game/art/mageHeroLayers.ts",
+    "new": "game/art/mageHeroLayers.ts"
+  },
+  {
+    "old": "src/game/art/mageHeroManifest.json",
+    "new": "game/art/mageHeroManifest.json"
+  },
+  {
+    "old": "src/game/art/mageHeroPack.ts",
+    "new": "game/art/mageHeroPack.ts"
+  },
+  {
+    "old": "src/game/art/mageHeroWaists.json",
+    "new": "game/art/mageHeroWaists.json"
+  },
+  {
+    "old": "src/game/art/mageIdleManifest.json",
+    "new": "game/art/mageIdleManifest.json"
+  },
+  {
+    "old": "src/game/art/mageIdlePack.ts",
+    "new": "game/art/mageIdlePack.ts"
+  },
+  {
+    "old": "src/game/art/MageMagic.ts",
+    "new": "game/art/MageMagic.ts"
+  },
+  {
+    "old": "src/game/art/mageMeteorManifestPixellab.json",
+    "new": "game/art/mageMeteorManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/mageMeteorManifestV3.json",
+    "new": "game/art/mageMeteorManifestV3.json"
+  },
+  {
+    "old": "src/game/art/mageMeteorPack.ts",
+    "new": "game/art/mageMeteorPack.ts"
+  },
+  {
+    "old": "src/game/art/MageMeteorPresentation.ts",
+    "new": "game/art/MageMeteorPresentation.ts"
+  },
+  {
+    "old": "src/game/art/mageMovingCastManifestV2.json",
+    "new": "game/art/mageMovingCastManifestV2.json"
+  },
+  {
+    "old": "src/game/art/mageMovingCastV2.ts",
+    "new": "game/art/mageMovingCastV2.ts"
+  },
+  {
+    "old": "src/game/art/magePack.ts",
+    "new": "game/art/magePack.ts"
+  },
+  {
+    "old": "src/game/art/MagePhantomArt.ts",
+    "new": "game/art/MagePhantomArt.ts"
+  },
+  {
+    "old": "src/game/art/magePhantomManifest.json",
+    "new": "game/art/magePhantomManifest.json"
+  },
+  {
+    "old": "src/game/art/magePhantomPack.ts",
+    "new": "game/art/magePhantomPack.ts"
+  },
+  {
+    "old": "src/game/art/MageRunAnimation.ts",
+    "new": "game/art/MageRunAnimation.ts"
+  },
+  {
+    "old": "src/game/art/mageRunManifestV2.json",
+    "new": "game/art/mageRunManifestV2.json"
+  },
+  {
+    "old": "src/game/art/MageRunningAnimation.ts",
+    "new": "game/art/MageRunningAnimation.ts"
+  },
+  {
+    "old": "src/game/art/mageRunPackV2.ts",
+    "new": "game/art/mageRunPackV2.ts"
+  },
+  {
+    "old": "src/game/art/mageShieldNovaManifestPixellab.json",
+    "new": "game/art/mageShieldNovaManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/mageShieldNovaPack.ts",
+    "new": "game/art/mageShieldNovaPack.ts"
+  },
+  {
+    "old": "src/game/art/MageShieldPresentation.ts",
+    "new": "game/art/MageShieldPresentation.ts"
+  },
+  {
+    "old": "src/game/art/MageSpellOrigins.ts",
+    "new": "game/art/MageSpellOrigins.ts"
+  },
+  {
+    "old": "src/game/art/mageWalkManifest.json",
+    "new": "game/art/mageWalkManifest.json"
+  },
+  {
+    "old": "src/game/art/mageWalkPack.ts",
+    "new": "game/art/mageWalkPack.ts"
+  },
+  {
+    "old": "src/game/art/MeleeComboArt.ts",
+    "new": "game/art/MeleeComboArt.ts"
+  },
+  {
+    "old": "src/game/art/meleeComboManifest.json",
+    "new": "game/art/meleeComboManifest.json"
+  },
+  {
+    "old": "src/game/art/meleeComboPack.ts",
+    "new": "game/art/meleeComboPack.ts"
+  },
+  {
+    "old": "src/game/art/PickupAnimation.ts",
+    "new": "game/art/PickupAnimation.ts"
+  },
+  {
+    "old": "src/game/art/PlayerHealthBar.ts",
+    "new": "game/art/PlayerHealthBar.ts"
+  },
+  {
+    "old": "src/game/art/playerShieldVisuals.ts",
+    "new": "game/art/playerShieldVisuals.ts"
+  },
+  {
+    "old": "src/game/art/RegularLightningArt.ts",
+    "new": "game/art/RegularLightningArt.ts"
+  },
+  {
+    "old": "src/game/art/regularLightningManifest.json",
+    "new": "game/art/regularLightningManifest.json"
+  },
+  {
+    "old": "src/game/art/regularLightningPack.ts",
+    "new": "game/art/regularLightningPack.ts"
+  },
+  {
+    "old": "src/game/art/RuneJudgementFlash.ts",
+    "new": "game/art/RuneJudgementFlash.ts"
+  },
+  {
+    "old": "src/game/art/runeWardenAccepted.ts",
+    "new": "game/art/runeWardenAccepted.ts"
+  },
+  {
+    "old": "src/game/art/RuneWardenArt.ts",
+    "new": "game/art/RuneWardenArt.ts"
+  },
+  {
+    "old": "src/game/art/runeWardenManifest.json",
+    "new": "game/art/runeWardenManifest.json"
+  },
+  {
+    "old": "src/game/art/runeWardenPack.ts",
+    "new": "game/art/runeWardenPack.ts"
+  },
+  {
+    "old": "src/game/art/runeWardenVfxManifestPixellab.json",
+    "new": "game/art/runeWardenVfxManifestPixellab.json"
+  },
+  {
+    "old": "src/game/art/runeWardenVfxPack.ts",
+    "new": "game/art/runeWardenVfxPack.ts"
+  },
+  {
+    "old": "src/game/art/RunnerAnimation.ts",
+    "new": "game/art/RunnerAnimation.ts"
+  },
+  {
+    "old": "src/game/art/runnerPack.ts",
+    "new": "game/art/runnerPack.ts"
+  },
+  {
+    "old": "src/game/art/softLightTexture.ts",
+    "new": "game/art/softLightTexture.ts"
+  },
+  {
+    "old": "src/game/art/textures.ts",
+    "new": "game/art/textures.ts"
+  },
+  {
+    "old": "src/game/art/UltimateArt.ts",
+    "new": "game/art/UltimateArt.ts"
+  },
+  {
+    "old": "src/game/art/WarBannerArt.ts",
+    "new": "game/art/WarBannerArt.ts"
+  },
+  {
+    "old": "src/game/art/WarriorHeroAnimation.ts",
+    "new": "game/art/WarriorHeroAnimation.ts"
+  },
+  {
+    "old": "src/game/art/warriorHeroManifest.json",
+    "new": "game/art/warriorHeroManifest.json"
+  },
+  {
+    "old": "src/game/art/warriorHeroPack.ts",
+    "new": "game/art/warriorHeroPack.ts"
+  },
+  {
+    "old": "src/game/art/WarriorMagic.ts",
+    "new": "game/art/WarriorMagic.ts"
+  },
+  {
+    "old": "src/game/art/WarriorMovingCleaveArt.ts",
+    "new": "game/art/WarriorMovingCleaveArt.ts"
+  },
+  {
+    "old": "src/game/art/warriorMovingLegs.json",
+    "new": "game/art/warriorMovingLegs.json"
+  },
+  {
+    "old": "src/game/art/WarriorSkillArt.ts",
+    "new": "game/art/WarriorSkillArt.ts"
+  },
+  {
+    "old": "src/game/art/warriorSkillsManifest.json",
+    "new": "game/art/warriorSkillsManifest.json"
+  },
+  {
+    "old": "src/game/art/warriorSkillsPack.ts",
+    "new": "game/art/warriorSkillsPack.ts"
+  },
+  {
+    "old": "src/game/art/WarriorUltimateArt.ts",
+    "new": "game/art/WarriorUltimateArt.ts"
+  },
+  {
+    "old": "src/game/art/warriorUltimatesManifest.json",
+    "new": "game/art/warriorUltimatesManifest.json"
+  },
+  {
+    "old": "src/game/art/warriorUltimatesPack.ts",
+    "new": "game/art/warriorUltimatesPack.ts"
+  },
+  {
+    "old": "src/game/audio/ashWardenSamples.ts",
+    "new": "game/audio/ashWardenSamples.ts"
+  },
+  {
+    "old": "src/game/audio/AudioBackend.ts",
+    "new": "game/audio/AudioBackend.ts"
+  },
+  {
+    "old": "src/game/audio/AudioController.ts",
+    "new": "game/audio/AudioController.ts"
+  },
+  {
+    "old": "src/game/audio/AudioPresentation.ts",
+    "new": "game/audio/AudioPresentation.ts"
+  },
+  {
+    "old": "src/game/audio/catalog.ts",
+    "new": "game/audio/catalog.ts"
+  },
+  {
+    "old": "src/game/audio/fireUltimateSamples.ts",
+    "new": "game/audio/fireUltimateSamples.ts"
+  },
+  {
+    "old": "src/game/audio/frostUltimateSample.ts",
+    "new": "game/audio/frostUltimateSample.ts"
+  },
+  {
+    "old": "src/game/audio/mageSamples.ts",
+    "new": "game/audio/mageSamples.ts"
+  },
+  {
+    "old": "src/game/audio/mageUploadedSamples.ts",
+    "new": "game/audio/mageUploadedSamples.ts"
+  },
+  {
+    "old": "src/game/audio/MinibossAmbience.ts",
+    "new": "game/audio/MinibossAmbience.ts"
+  },
+  {
+    "old": "src/game/audio/minibossAmbienceSamples.ts",
+    "new": "game/audio/minibossAmbienceSamples.ts"
+  },
+  {
+    "old": "src/game/audio/MinibossAudio.ts",
+    "new": "game/audio/MinibossAudio.ts"
+  },
+  {
+    "old": "src/game/audio/minibossSamples.ts",
+    "new": "game/audio/minibossSamples.ts"
+  },
+  {
+    "old": "src/game/audio/musicTracks.ts",
+    "new": "game/audio/musicTracks.ts"
+  },
+  {
+    "old": "src/game/audio/PhaserAudioBackend.ts",
+    "new": "game/audio/PhaserAudioBackend.ts"
+  },
+  {
+    "old": "src/game/audio/README.md",
+    "new": "game/audio/README.md"
+  },
+  {
+    "old": "src/game/audio/samples.ts",
+    "new": "game/audio/samples.ts"
+  },
+  {
+    "old": "src/game/audio/StreamingMusic.ts",
+    "new": "game/audio/StreamingMusic.ts"
+  },
+  {
+    "old": "src/game/audio/synthesis.ts",
+    "new": "game/audio/synthesis.ts"
+  },
+  {
+    "old": "src/game/bootstrap/createGame.ts",
+    "new": "game/bootstrap/createGame.ts"
+  },
+  {
+    "old": "src/game/bootstrap/finalBossScenario.ts",
+    "new": "game/bootstrap/finalBossScenario.ts"
+  },
+  {
+    "old": "src/game/bootstrap/preparePracticeMage.ts",
+    "new": "game/bootstrap/preparePracticeMage.ts"
+  },
+  {
+    "old": "src/game/bootstrap/publicCharacters.ts",
+    "new": "game/bootstrap/publicCharacters.ts"
+  },
+  {
+    "old": "src/game/bootstrap/startAstralPractice.ts",
+    "new": "game/bootstrap/startAstralPractice.ts"
+  },
+  {
+    "old": "src/game/bootstrap/startBossPractice.ts",
+    "new": "game/bootstrap/startBossPractice.ts"
+  },
+  {
+    "old": "src/game/bootstrap/startBriarPractice.ts",
+    "new": "game/bootstrap/startBriarPractice.ts"
+  },
+  {
+    "old": "src/game/bootstrap/startGuardianPractice.ts",
+    "new": "game/bootstrap/startGuardianPractice.ts"
+  },
+  {
+    "old": "src/game/bootstrap/startRunePractice.ts",
+    "new": "game/bootstrap/startRunePractice.ts"
+  },
+  {
+    "old": "src/game/config/astralRevenant.ts",
+    "new": "game/config/astralRevenant.ts"
+  },
+  {
+    "old": "src/game/config/atmosphere.ts",
+    "new": "game/config/atmosphere.ts"
+  },
+  {
+    "old": "src/game/config/biomes.ts",
+    "new": "game/config/biomes.ts"
+  },
+  {
+    "old": "src/game/config/bossEnrage.ts",
+    "new": "game/config/bossEnrage.ts"
+  },
+  {
+    "old": "src/game/config/bossPractice.ts",
+    "new": "game/config/bossPractice.ts"
+  },
+  {
+    "old": "src/game/config/characters.ts",
+    "new": "game/config/characters.ts"
+  },
+  {
+    "old": "src/game/config/chargeBoss.ts",
+    "new": "game/config/chargeBoss.ts"
+  },
+  {
+    "old": "src/game/config/encounterDirector.ts",
+    "new": "game/config/encounterDirector.ts"
+  },
+  {
+    "old": "src/game/config/encounters.ts",
+    "new": "game/config/encounters.ts"
+  },
+  {
+    "old": "src/game/config/endgame.ts",
+    "new": "game/config/endgame.ts"
+  },
+  {
+    "old": "src/game/config/enemyDefinitions.ts",
+    "new": "game/config/enemyDefinitions.ts"
+  },
+  {
+    "old": "src/game/config/finalBoss.ts",
+    "new": "game/config/finalBoss.ts"
+  },
+  {
+    "old": "src/game/config/gameBalance.ts",
+    "new": "game/config/gameBalance.ts"
+  },
+  {
+    "old": "src/game/config/guardianOrbs.ts",
+    "new": "game/config/guardianOrbs.ts"
+  },
+  {
+    "old": "src/game/config/mageAbilities.ts",
+    "new": "game/config/mageAbilities.ts"
+  },
+  {
+    "old": "src/game/config/mageAbilityTuning.json",
+    "new": "game/config/mageAbilityTuning.json"
+  },
+  {
+    "old": "src/game/config/mobilityUpgrades.ts",
+    "new": "game/config/mobilityUpgrades.ts"
+  },
+  {
+    "old": "src/game/config/pacing.ts",
+    "new": "game/config/pacing.ts"
+  },
+  {
+    "old": "src/game/config/playerVisuals.ts",
+    "new": "game/config/playerVisuals.ts"
+  },
+  {
+    "old": "src/game/config/runeWarden.ts",
+    "new": "game/config/runeWarden.ts"
+  },
+  {
+    "old": "src/game/config/runLimits.ts",
+    "new": "game/config/runLimits.ts"
+  },
+  {
+    "old": "src/game/config/survivalEnrage.ts",
+    "new": "game/config/survivalEnrage.ts"
+  },
+  {
+    "old": "src/game/config/ultimates.ts",
+    "new": "game/config/ultimates.ts"
+  },
+  {
+    "old": "src/game/config/warriorAbilities.ts",
+    "new": "game/config/warriorAbilities.ts"
+  },
+  {
+    "old": "src/game/config/warriorCleave.ts",
+    "new": "game/config/warriorCleave.ts"
+  },
+  {
+    "old": "src/game/entities/types.ts",
+    "new": "game/entities/types.ts"
+  },
+  {
+    "old": "src/game/events/bridge.ts",
+    "new": "game/events/bridge.ts"
+  },
+  {
+    "old": "src/game/events/gameFeedback.ts",
+    "new": "game/events/gameFeedback.ts"
+  },
+  {
+    "old": "src/game/input/GamepadInputController.ts",
+    "new": "game/input/GamepadInputController.ts"
+  },
+  {
+    "old": "src/game/input/HeldInputTracker.ts",
+    "new": "game/input/HeldInputTracker.ts"
+  },
+  {
+    "old": "src/game/input/movement.ts",
+    "new": "game/input/movement.ts"
+  },
+  {
+    "old": "src/game/loot/ArtifactSystem.ts",
+    "new": "game/loot/ArtifactSystem.ts"
+  },
+  {
+    "old": "src/game/loot/BuffSystem.ts",
+    "new": "game/loot/BuffSystem.ts"
+  },
+  {
+    "old": "src/game/loot/lootPools.ts",
+    "new": "game/loot/lootPools.ts"
+  },
+  {
+    "old": "src/game/loot/LootSystem.ts",
+    "new": "game/loot/LootSystem.ts"
+  },
+  {
+    "old": "src/game/loot/types.ts",
+    "new": "game/loot/types.ts"
+  },
+  {
+    "old": "src/game/platform/ItemUseOperation.ts",
+    "new": "game/platform/ItemUseOperation.ts"
+  },
+  {
+    "old": "src/game/platform/PaidActionOperation.ts",
+    "new": "game/platform/PaidActionOperation.ts"
+  },
+  {
+    "old": "src/game/platform/port.ts",
+    "new": "game/platform/port.ts"
+  },
+  {
+    "old": "src/game/platform/premium.ts",
+    "new": "game/platform/premium.ts"
+  },
+  {
+    "old": "src/game/platform/progression.ts",
+    "new": "game/platform/progression.ts"
+  },
+  {
+    "old": "src/game/platform/runItems.ts",
+    "new": "game/platform/runItems.ts"
+  },
+  {
+    "old": "src/game/radar/radar.ts",
+    "new": "game/radar/radar.ts"
+  },
+  {
+    "old": "src/game/radar/RadarPublisher.ts",
+    "new": "game/radar/RadarPublisher.ts"
+  },
+  {
+    "old": "src/game/scenes/GameScene.ts",
+    "new": "game/scenes/GameScene.ts"
+  },
+  {
+    "old": "src/game/services/storage.ts",
+    "new": "game/services/storage.ts"
+  },
+  {
+    "old": "src/game/systems/AbsorbPool.ts",
+    "new": "game/systems/AbsorbPool.ts"
+  },
+  {
+    "old": "src/game/systems/AtmospherePhaseController.ts",
+    "new": "game/systems/AtmospherePhaseController.ts"
+  },
+  {
+    "old": "src/game/systems/BossMagic.ts",
+    "new": "game/systems/BossMagic.ts"
+  },
+  {
+    "old": "src/game/systems/BossSystem.ts",
+    "new": "game/systems/BossSystem.ts"
+  },
+  {
+    "old": "src/game/systems/ChargeBoss.ts",
+    "new": "game/systems/ChargeBoss.ts"
+  },
+  {
+    "old": "src/game/systems/CombatSystem.ts",
+    "new": "game/systems/CombatSystem.ts"
+  },
+  {
+    "old": "src/game/systems/Cooldown.ts",
+    "new": "game/systems/Cooldown.ts"
+  },
+  {
+    "old": "src/game/systems/DifficultyDirector.ts",
+    "new": "game/systems/DifficultyDirector.ts"
+  },
+  {
+    "old": "src/game/systems/EclipseBoss.ts",
+    "new": "game/systems/EclipseBoss.ts"
+  },
+  {
+    "old": "src/game/systems/EncounterDirector.ts",
+    "new": "game/systems/EncounterDirector.ts"
+  },
+  {
+    "old": "src/game/systems/encounterSchedule.ts",
+    "new": "game/systems/encounterSchedule.ts"
+  },
+  {
+    "old": "src/game/systems/EndgamePressure.ts",
+    "new": "game/systems/EndgamePressure.ts"
+  },
+  {
+    "old": "src/game/systems/EnemySystem.ts",
+    "new": "game/systems/EnemySystem.ts"
+  },
+  {
+    "old": "src/game/systems/ExperienceSystem.ts",
+    "new": "game/systems/ExperienceSystem.ts"
+  },
+  {
+    "old": "src/game/systems/FinalDangerPlanner.ts",
+    "new": "game/systems/FinalDangerPlanner.ts"
+  },
+  {
+    "old": "src/game/systems/FinalEncounter.ts",
+    "new": "game/systems/FinalEncounter.ts"
+  },
+  {
+    "old": "src/game/systems/FrostControl.ts",
+    "new": "game/systems/FrostControl.ts"
+  },
+  {
+    "old": "src/game/systems/GuardianEncounter.ts",
+    "new": "game/systems/GuardianEncounter.ts"
+  },
+  {
+    "old": "src/game/systems/GuardianOrbs.ts",
+    "new": "game/systems/GuardianOrbs.ts"
+  },
+  {
+    "old": "src/game/systems/MobilitySystem.ts",
+    "new": "game/systems/MobilitySystem.ts"
+  },
+  {
+    "old": "src/game/systems/NecroticFlameWalls.ts",
+    "new": "game/systems/NecroticFlameWalls.ts"
+  },
+  {
+    "old": "src/game/systems/ObjectPool.ts",
+    "new": "game/systems/ObjectPool.ts"
+  },
+  {
+    "old": "src/game/systems/RareGuardianSystem.ts",
+    "new": "game/systems/RareGuardianSystem.ts"
+  },
+  {
+    "old": "src/game/systems/ScoreSystem.ts",
+    "new": "game/systems/ScoreSystem.ts"
+  },
+  {
+    "old": "src/game/systems/SpatialGrid.ts",
+    "new": "game/systems/SpatialGrid.ts"
+  },
+  {
+    "old": "src/game/systems/SpawnClock.ts",
+    "new": "game/systems/SpawnClock.ts"
+  },
+  {
+    "old": "src/game/systems/SpawnSystem.ts",
+    "new": "game/systems/SpawnSystem.ts"
+  },
+  {
+    "old": "src/game/systems/SpecialEnemies.ts",
+    "new": "game/systems/SpecialEnemies.ts"
+  },
+  {
+    "old": "src/game/systems/UltimateFreeze.ts",
+    "new": "game/systems/UltimateFreeze.ts"
+  },
+  {
+    "old": "src/game/systems/UpgradeSystem.ts",
+    "new": "game/systems/UpgradeSystem.ts"
+  },
+  {
+    "old": "src/game/systems/World.ts",
+    "new": "game/systems/World.ts"
+  },
+  {
+    "old": "src/game/systems/WorldChunkSystem.ts",
+    "new": "game/systems/WorldChunkSystem.ts"
+  },
+  {
+    "old": "src/game/ultimates/chainStorm.ts",
+    "new": "game/ultimates/chainStorm.ts"
+  },
+  {
+    "old": "src/game/ultimates/FireUltimate.ts",
+    "new": "game/ultimates/FireUltimate.ts"
+  },
+  {
+    "old": "src/game/ultimates/FrostUltimate.ts",
+    "new": "game/ultimates/FrostUltimate.ts"
+  },
+  {
+    "old": "src/game/ultimates/lightningCinematic.ts",
+    "new": "game/ultimates/lightningCinematic.ts"
+  },
+  {
+    "old": "src/game/ultimates/UltimateSystem.ts",
+    "new": "game/ultimates/UltimateSystem.ts"
+  },
+  {
+    "old": "src/game/ultimates/WarBanner.ts",
+    "new": "game/ultimates/WarBanner.ts"
+  },
+  {
+    "old": "src/game/ultimates/WarriorUltimates.ts",
+    "new": "game/ultimates/WarriorUltimates.ts"
+  },
+  {
+    "old": "src/game/utils/math.ts",
+    "new": "game/utils/math.ts"
+  },
+  {
+    "old": "src/game/utils/SeededRandom.ts",
+    "new": "game/utils/SeededRandom.ts"
+  },
+  {
+    "old": "src/game/utils/worldTiles.ts",
+    "new": "game/utils/worldTiles.ts"
+  },
+  {
+    "old": "src/ui/biomePhaseNotice.ts",
+    "new": "game/ui/biomePhaseNotice.ts"
+  },
+  {
+    "old": "src/ui/bossBar.ts",
+    "new": "game/ui/bossBar.ts"
+  },
+  {
+    "old": "src/ui/focus.ts",
+    "new": "game/ui/focus.ts"
+  },
+  {
+    "old": "src/ui/format.ts",
+    "new": "game/ui/format.ts"
+  },
+  {
+    "old": "src/ui/gamepadNavigation.ts",
+    "new": "game/ui/gamepadNavigation.ts"
+  },
+  {
+    "old": "src/ui/hd-theme.css",
+    "new": "game/ui/hd-theme.css"
+  },
+  {
+    "old": "src/ui/hudStatus.ts",
+    "new": "game/ui/hudStatus.ts"
+  },
+  {
+    "old": "src/ui/inputDevice.ts",
+    "new": "game/ui/inputDevice.ts"
+  },
+  {
+    "old": "src/ui/mobile-layout.css",
+    "new": "game/ui/mobile-layout.css"
+  },
+  {
+    "old": "src/ui/mobileViewport.ts",
+    "new": "game/ui/mobileViewport.ts"
+  },
+  {
+    "old": "src/ui/upgradeCards.ts",
+    "new": "game/ui/upgradeCards.ts"
+  },
+  {
+    "old": "src/ui/UpgradeConfirmation.ts",
+    "new": "game/ui/UpgradeConfirmation.ts"
+  },
+  {
+    "old": "src/ui/upgradeEmblems.ts",
+    "new": "game/ui/upgradeEmblems.ts"
+  },
+  {
+    "old": "src/ui/upgradeIdentity.ts",
+    "new": "game/ui/upgradeIdentity.ts"
+  },
+  {
+    "old": "src/ui/upgradeInput.ts",
+    "new": "game/ui/upgradeInput.ts"
+  },
+  {
+    "old": "src/ui/components/BiomePhaseNotice.vue",
+    "new": "game/ui/components/BiomePhaseNotice.vue"
+  },
+  {
+    "old": "src/ui/components/BossBars.vue",
+    "new": "game/ui/components/BossBars.vue"
+  },
+  {
+    "old": "src/ui/components/BuffDock.vue",
+    "new": "game/ui/components/BuffDock.vue"
+  },
+  {
+    "old": "src/ui/components/DialogFrame.vue",
+    "new": "game/ui/components/DialogFrame.vue"
+  },
+  {
+    "old": "src/ui/components/EventTimeline.vue",
+    "new": "game/ui/components/EventTimeline.vue"
+  },
+  {
+    "old": "src/ui/components/FinalBossBar.vue",
+    "new": "game/ui/components/FinalBossBar.vue"
+  },
+  {
+    "old": "src/ui/components/GameHUD.vue",
+    "new": "game/ui/components/GameHUD.vue"
+  },
+  {
+    "old": "src/ui/components/GameRadar.vue",
+    "new": "game/ui/components/GameRadar.vue"
+  },
+  {
+    "old": "src/ui/components/InGameInventory.vue",
+    "new": "game/ui/components/InGameInventory.vue"
+  },
+  {
+    "old": "src/ui/components/LevelUpModal.vue",
+    "new": "game/ui/components/LevelUpModal.vue"
+  },
+  {
+    "old": "src/ui/components/LocalRecords.vue",
+    "new": "game/ui/components/LocalRecords.vue"
+  },
+  {
+    "old": "src/ui/components/MainMenu.vue",
+    "new": "game/ui/components/MainMenu.vue"
+  },
+  {
+    "old": "src/ui/components/MobilityControl.vue",
+    "new": "game/ui/components/MobilityControl.vue"
+  },
+  {
+    "old": "src/ui/components/PremiumActions.vue",
+    "new": "game/ui/components/PremiumActions.vue"
+  },
+  {
+    "old": "src/ui/components/RunArtifacts.vue",
+    "new": "game/ui/components/RunArtifacts.vue"
+  },
+  {
+    "old": "src/ui/components/RunStatistics.vue",
+    "new": "game/ui/components/RunStatistics.vue"
+  },
+  {
+    "old": "src/ui/components/SettingsPanel.vue",
+    "new": "game/ui/components/SettingsPanel.vue"
+  },
+  {
+    "old": "src/ui/components/UltimateControl.vue",
+    "new": "game/ui/components/UltimateControl.vue"
+  },
+  {
+    "old": "src/ui/components/UpgradeEmblem.vue",
+    "new": "game/ui/components/UpgradeEmblem.vue"
+  },
+  {
+    "old": "src/ui/components/VirtualJoystick.vue",
+    "new": "game/ui/components/VirtualJoystick.vue"
+  }
+]

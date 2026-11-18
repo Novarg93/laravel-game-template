@@ -86,38 +86,57 @@ not introduce live payment support.
 
 ## Validation
 
+The mandatory [Active CI](.github/workflows/active-ci.yml) runs on pull requests,
+main pushes and manual dispatch, with pinned actions/toolchains and locked dependencies.
+It checks Laravel SQLite tests, PHPStan, Pint, strict TypeScript for **all current
+website/game code and active tests**, ESLint, runtime Vitest, catalog integrity,
+client/SSR/standalone builds and real Chromium smoke scenarios.
+
 ```sh
-php artisan route:list
 php artisan test                    # isolated in-memory SQLite
 composer lint:check                 # Pint
 composer types:check                # PHPStan
-composer test:mysql                 # guarded, isolated MySQL test database only
-npm run typecheck:runtime            # all website/game source, strict unused checks
-npm run typecheck                    # full source + existing test code
+npm run typecheck                   # generates Wayfinder types, then all active TS/Vue
+npm run typecheck:runtime           # optional source-only diagnostic
 npm run lint
-npm test                            # complete existing Vitest suite; no skipped tests
+npm run test:suites                 # archive integrity + active TypeScript coverage
+npm test                            # active runtime/integration Vitest (test:runtime)
 npm run test:catalog
-npm run test:browser                 # new temporary SQLite DB and local HTTP server
-npm run test:e2e -- laravel-first-game.spec.ts
+npm run build:ssr
+npm run build:game
+npm run test:browser                # isolated SQLite, owned Laravel + production SSR
+npm run test:e2e                    # current standalone development smoke
+npm run test:e2e:production         # current standalone production smoke
 ```
 
-Install the local browser binary with
-`PLAYWRIGHT_BROWSERS_PATH=.browsers npx playwright install chromium` (PowerShell:
-`$env:PLAYWRIGHT_BROWSERS_PATH = "$PWD/.browsers"` before running the command).
-`test:browser` creates a fresh database below `storage/framework/testing/` and
-synthetic test accounts, and stops its server afterwards. It does not migrate or
-reset your configured development database.
+Install Chromium once: `PLAYWRIGHT_BROWSERS_PATH=.browsers npx playwright install chromium`
+(PowerShell: set `$env:PLAYWRIGHT_BROWSERS_PATH = "$PWD/.browsers"` first).
+On Linux CI the workflow adds `--with-deps` for Chromium's OS libraries.
+`composer ci:check` runs the complete active PHP/frontend/build/browser checks after
+installation. Browser checks require free ports 8037, 13714, 5173 and 4173 and no
+`public/hot` development marker. `test:browser` creates a new synthetic test database
+under `storage/framework/testing/` and stops its own HTTP/SSR servers afterwards.
+It does not reset the development database or reuse an existing SSR process.
 
-**Current validation limitations:** QA fixed 12 stale runtime expectations and
-restored collection of 84 historical tests. Full Vitest still has 29 failing files,
-38 failed assertions and one collection error (1147 tests pass). Missing historical
-Warrior proofs/review sources, incompatible old byte/scope/replay fixtures and
-MySQL authentication block full acceptance. Full test-code TypeScript retains
-10 diagnostics from unavailable review modules. No checks were skipped or weakened.
-Runtime types, lint, client/SSR/standalone builds, SQLite tests and the browser/game
-smoke checks pass. This template is **not declared production-ready**. See
-[QA stabilization](docs/architecture/QA_STABILIZATION.md) for the exact failure tables
-and private test-credential setup commands.
+The separate [historical archive](tests/historical/README.md) keeps original artistic
+acceptance, proof/scope assertions, PixelSurvivor browser review scenarios and golden
+replays. `npm run test:historical`, `npm run typecheck:historical` and
+`npm run test:e2e:historical` are explicit opt-in checks; their unresolved failures
+are documented, not converted to success. `npm run test:all` runs both Vitest suites.
+Eight old replay rows still have **unproven compatibility**; their golden hashes
+were not updated. Missing Warrior source/proof files are not needed by active CI.
+
+MySQL remains a separate guarded verification. Run the read-only diagnostic
+`php scripts/check-mysql-test-connection.php` before `composer test:mysql`; use only
+existing credentials for the isolated `pixel_survivor_test` database. Never point
+this suite at a production/development database. No credentials/users/databases
+are changed by the diagnostic.
+
+See the [active CI report](docs/architecture/ACTIVE_CI.md) for executed results and
+remaining blockers, and [QA stabilization](docs/architecture/QA_STABILIZATION.md)
+for the original failure inventory. A configured workflow is not proof of a remote
+CI run, and historical acceptance/MySQL limitations still prevent an unconditional
+production-ready claim.
 
 ## Copying for another game
 
