@@ -4,7 +4,7 @@ import type { RunRecord } from '../services/storage';
 import type { PermanentBonuses } from './progression';
 import type { RunEconomy, RunInventoryPort } from './runItems';
 
-export interface RunStart { clientRunId: string; seed: number; bonuses: PermanentBonuses; economy?: RunEconomy }
+export interface RunStart { clientRunId: string; seed: number; bonuses: PermanentBonuses; economy?: RunEconomy; contentVersion?: string }
 export interface PlatformPort {
   readonly commerce?: RunInventoryPort;
   start(character: CharacterId, biome: BiomeId, practice: boolean): Promise<RunStart>;

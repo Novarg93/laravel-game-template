@@ -64,7 +64,7 @@ export class HttpPlatform implements PlatformPort {
         }
         this.runs.set(result.client_run_id, result.server_run_id); this.pending = undefined;
         while (this.runs.size > 8) { const oldest = this.runs.keys().next().value; if (oldest) this.runs.delete(oldest); }
-        return { clientRunId: result.client_run_id, seed: result.seed, bonuses: permanentBonuses(bonuses), economy: readEconomy(result.economy) };
+        return { clientRunId: result.client_run_id, seed: result.seed, bonuses: permanentBonuses(bonuses), economy: readEconomy(result.economy), contentVersion: typeof result.content_version === 'string' ? result.content_version : undefined };
     }
     async finish(record: RunRecord): Promise<string> {
         const serverId = this.runs.get(record.id);

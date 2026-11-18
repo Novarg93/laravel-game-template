@@ -1,7 +1,8 @@
 import { ABILITIES, abilitiesFor, initialAbilities } from '../game/abilities/definitions';
 import { isPublicCharacter, PUBLIC_CHARACTER } from '../game/bootstrap/publicCharacters';
 import { AVAILABLE_MAPS } from '../game/config/biomes';
-import { CHARACTERS, type CharacterId } from '../game/config/characters';
+import { CHARACTERS } from '../game/config/characters';
+import { gameDefinition } from '../game/content/registry';
 import { SUPPLIES, UPGRADES } from '../game/systems/UpgradeSystem';
 
 interface ServerCatalog {
@@ -13,10 +14,12 @@ interface ServerCatalog {
     shopItemIds: string[];
     premiumItemIds: string[];
     runItemIds: string[];
+    enemyPoints?: Record<string, number>;
+    regularKinds?: string[];
 }
 
 function distinct(ids: string[], label: string) {
-    if (ids.length === 0 || new Set(ids).size !== ids.length || ids.some(id => !/^[a-z][a-z0-9_-]*$/.test(id))) {
+    if (ids.length === 0 || new Set(ids).size !== ids.length || ids.some(id => !/^[a-z][a-zA-Z0-9_-]*$/.test(id))) {
         throw new Error(`Empty, invalid or duplicate IDs in ${label}.`);
     }
 }
@@ -30,8 +33,8 @@ function sameIds(actual: string[], expected: string[], label: string) {
 }
 
 export function checkGameCatalog(server: ServerCatalog) {
-    const characters = Object.keys(CHARACTERS) as CharacterId[];
-    const playable = characters.filter(isPublicCharacter);
+    const characters = Object.keys(CHARACTERS) as (keyof typeof CHARACTERS)[];
+    const playable = characters.filter(hero => isPublicCharacter(hero));
     sameIds(server.heroIds, playable, 'server/public heroes');
     sameIds(Object.keys(server.pools), playable, 'character ability pool owners');
     sameIds(server.mapIds, AVAILABLE_MAPS.map(map => map.id), 'server/playable maps');
@@ -56,6 +59,13 @@ export function checkGameCatalog(server: ServerCatalog) {
     }
     if (server.maxLevel !== 10) throw new Error('The current server progression service supports 10 permanent levels.');
 
+    // The v1 mirrors remain as historical compatibility inputs.
+    const legacy = gameDefinition();
+    if (legacy.version === 'pixel-survivor-v1' && server.enemyPoints && server.regularKinds) {
+        sameIds(Object.keys(server.enemyPoints), legacy.enemies.map(enemy => enemy.id), 'legacy enemy score IDs');
+        sameIds(server.regularKinds, legacy.enemies.filter(enemy => enemy.elite).map(enemy => enemy.id), 'legacy elite eligibility');
+        for (const enemy of legacy.enemies) if (server.enemyPoints[enemy.id] !== enemy.score) throw new Error('Changed legacy score for ' + enemy.id);
+    }
     distinct(server.items, 'inventory items');
     for (const [label, ids] of [['shop', server.shopItemIds], ['premium', server.premiumItemIds], ['run items', server.runItemIds]] as const) {
         if (ids.some(id => !server.items.includes(id))) throw new Error(`Unsupported inventory reference in ${label}.`);

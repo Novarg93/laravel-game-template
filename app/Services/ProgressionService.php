@@ -7,6 +7,7 @@ use App\Models\CharacterProgress;
 use App\Models\GameRun;
 use App\Models\LevelReward;
 use App\Models\RewardGrant;
+use App\Runs\GameCatalog;
 use App\Runs\RunRecordValidator;
 use App\Support\CanonicalJson;
 use Illuminate\Support\Facades\DB;
@@ -19,11 +20,17 @@ class ProgressionService
 {
     public function syncCatalog(): void
     {
-        foreach (['account', ...array_map(fn (int|string $id) => 'character:'.$id, array_keys(config('progression.characters')))] as $track) {
+        foreach ($this->tracks() as $track) {
             for ($level = 1; $level <= 10; $level++) {
                 LevelReward::firstOrCreate(['track' => $track, 'level' => $level, 'config_version' => config('progression.version')], ['rewards' => $this->rewardItems($track, $level)]);
             }
         }
+    }
+
+    /** @return list<string> */
+    private function tracks(): array
+    {
+        return ['account', ...array_map(fn (int|string $id) => 'character:'.$id, array_keys(app(GameCatalog::class)->publicHeroes()))];
     }
 
     /** @return array<int, array<string, mixed>> */
@@ -49,7 +56,8 @@ class ProgressionService
     {
         DB::transaction(function () use ($userId): void {
             $this->lockUser($userId);
-            if (LevelReward::where('config_version', config('progression.version'))->count() < (count(config('progression.characters')) + 1) * 10) {
+            $tracks = $this->tracks();
+            if (LevelReward::where('config_version', config('progression.version'))->whereIn('track', $tracks)->count() < count($tracks) * 10) {
                 $this->syncCatalog();
             }
             if (Schema::hasTable('wallets')) {
@@ -60,7 +68,7 @@ class ProgressionService
             }
             AccountProgress::firstOrCreate(['user_id' => $userId]);
             $this->grantLevel($userId, 'account', 1, null);
-            foreach (array_keys(config('progression.characters')) as $id) {
+            foreach (array_keys(app(GameCatalog::class)->publicHeroes()) as $id) {
                 CharacterProgress::firstOrCreate(['user_id' => $userId, 'character_id' => $id]);
                 $this->grantLevel($userId, 'character:'.$id, 1, null);
             }
@@ -115,7 +123,7 @@ class ProgressionService
             $this->lockUser($userId);
             $characters = CharacterProgress::where('user_id', $userId)->get()->mapWithKeys(fn (CharacterProgress $p) => [$p->character_id => $this->progressDto($p)])->all();
             $catalog = [];
-            foreach (['account', ...array_map(fn (int|string $id) => 'character:'.$id, array_keys(config('progression.characters')))] as $track) {
+            foreach ($this->tracks() as $track) {
                 for ($level = 1; $level <= 10; $level++) {
                     $items = $track === 'account' ? config("progression.account_rewards.{$level}", []) : config("progression.character_rewards.{$level}", []);
                     if ($track !== 'account') {
@@ -129,6 +137,9 @@ class ProgressionService
             $stats = ['wins' => 0, 'defeats' => 0, 'seconds' => 0.0, 'best_score' => 0];
             // Stream aggregates instead of loading an unbounded history into memory.
             foreach (GameRun::where('user_id', $userId)->where('status', 'accepted')->where('mode', 'normal')->cursor() as $run) {
+                if (! $run->ranking_eligible && app(GameCatalog::class)->forRun($run)['experimental']) {
+                    continue;
+                }
                 $record = $run->record ?? [];
                 $stats[$record['outcome'] === 'victory' ? 'wins' : 'defeats']++;
                 $stats['seconds'] += (float) $record['elapsed'];
@@ -149,14 +160,15 @@ class ProgressionService
     {
         $data = Validator::make($input, [
             'operation_id' => 'required|uuid', 'client_run_id' => 'required|uuid',
-            'character_id' => ['required', Rule::in(array_keys(config('progression.characters')))],
-            'biome_id' => ['required', Rule::in(config('progression.maps'))],
+            'character_id' => 'required|string|max:40',
+            'biome_id' => 'required|string|max:40',
+            'content_version' => 'prohibited', 'content_hash' => 'prohibited', 'preset' => 'prohibited',
             'mode' => ['required', Rule::in(['normal', 'practice'])],
         ])->validate();
         $hash = $this->hash($data);
-        $this->initialize($userId);
+        $catalog = app(GameCatalog::class)->active();
 
-        return DB::transaction(function () use ($userId, $data, $hash): array {
+        return DB::transaction(function () use ($userId, $data, $hash, $catalog): array {
             $this->lockUser($userId);
             $existing = GameRun::where('user_id', $userId)->where('operation_id', $data['operation_id'])->first();
             if ($existing) {
@@ -164,15 +176,20 @@ class ProgressionService
 
                 return $existing->start_snapshot;
             }
+            abort_unless(($catalog['heroes'][$data['character_id']]['public'] ?? false)
+                && in_array($data['biome_id'], $catalog['maps'], true)
+                && ($data['mode'] === 'normal' || $catalog['practice']), 422, 'Hero, map or practice is unavailable in this preset.');
             abort_if(GameRun::where('user_id', $userId)->where('client_run_id', $data['client_run_id'])->exists(), 409, 'Client run already registered.');
+            $this->initialize($userId);
             $hero = CharacterProgress::where('user_id', $userId)->where('character_id', $data['character_id'])->firstOrFail();
             $id = (string) Str::uuid();
             $startedAt = now();
             $snapshot = ['server_run_id' => $id, 'client_run_id' => $data['client_run_id'], 'seed' => random_int(1, 2147483647),
                 'bonuses' => $this->bonuses($data['mode'] === 'practice' ? 1 : $hero->level), 'character' => $this->progressDto($hero),
                 'account' => $this->progressDto(AccountProgress::where('user_id', $userId)->firstOrFail()), 'config_version' => config('progression.version'),
-                'character_xp_boost' => app(InventoryService::class)->runBoostSnapshot($userId, $data['mode'] === 'normal', $startedAt),
-                'economy' => app(RunItemService::class)->settings($data['mode'] === 'normal')];
+                'character_xp_boost' => app(InventoryService::class)->runBoostSnapshot($userId, $data['mode'] === 'normal' && ! $catalog['experimental'], $startedAt),
+                'economy' => app(RunItemService::class)->settings($data['mode'] === 'normal' && ! $catalog['experimental']),
+                'content_version' => $catalog['version'], 'content_hash' => CanonicalJson::hash($catalog)];
             $run = GameRun::create(['id' => $id, 'user_id' => $userId, ...$data, 'start_hash' => $hash, 'started_at' => $startedAt,
                 'config_version' => config('progression.version'), 'start_snapshot' => $snapshot, 'session_expires_at' => $startedAt->addSeconds(config('run_items.session_ttl_seconds'))]);
 
@@ -185,12 +202,11 @@ class ProgressionService
      */
     public function finish(int $userId, string $runId, array $record): array
     {
-        $data = app(RunRecordValidator::class)->validate($record);
-        $hash = $this->hash($data);
-
-        return DB::transaction(function () use ($userId, $runId, $data, $hash): array {
+        return DB::transaction(function () use ($userId, $runId, $record): array {
             $this->lockUser($userId);
             $run = GameRun::where('user_id', $userId)->whereKey($runId)->firstOrFail();
+            $data = app(RunRecordValidator::class)->validate($record, app(GameCatalog::class)->forRun($run));
+            $hash = $this->hash($data);
             if ($run->status !== 'active') {
                 abort_unless($run->finish_hash === $hash && $run->receipt !== null, 409, 'Run already finalized with another result.');
 
@@ -237,7 +253,7 @@ class ProgressionService
             return $run->reward_receipt ?? $zero();
         }
         $accountXp = $heroXp = 0;
-        if ($run->mode === 'normal') {
+        if ($run->mode === 'normal' && ! app(GameCatalog::class)->forRun($run)['experimental']) {
             $victory = ($run->record['outcome'] ?? '') === 'victory';
             $elapsed = (float) ($run->record['elapsed'] ?? 0);
             $accountXp = $victory ? 50 : 0;

@@ -7,7 +7,8 @@ import {ASTRAL_REVENANT_TEXTURE,astralBodyFrame} from './astralRevenantPack';
 import {ASTRAL_VFX} from '../config/astralRevenant';
 import {ASTRAL_PROJECTILE as AP,ASTRAL_PROJECTILE_TEXTURE} from './astralProjectilePixellabPack';
 import { ARCANE_VOLLEY } from '../config/runeWarden';
-import type { CharacterId } from '../config/characters';
+import type { HeroArchetype } from '../content/types';
+import { HEROES, type HeroId } from '../content/heroes';
 import type { EnemyKind, RegularKind } from '../config/enemyDefinitions';
 import type { AbilityId } from '../abilities/types';
 import type { LootKind } from '../loot/types';
@@ -90,7 +91,7 @@ export const ASSET_REGISTRY = {
   upgradeUI: { ...drawn('LevelUpModal+hd-theme.css', 'ui'), status: 'hd-integrated' }, deathUI: { ...drawn('RunStatistics/GameOver/LocalRecords+hd-theme.css', 'ui'), status: 'hd-integrated' },
 } satisfies Record<string, AssetSpec>;
 export type AssetId = keyof typeof ASSET_REGISTRY;
-export const CHARACTER_ART: Record<CharacterId, AssetId> = { mage: 'mage', warrior: 'warrior' };
+export const CHARACTER_ART: Record<HeroArchetype, AssetId> = { mage: 'mage', warrior: 'warrior' };
 export const ENEMY_ART: Record<EnemyKind, AssetId> = { ashGuard:'ashGuard', grunt: 'grunt', runner: 'runner', tank: 'tank', caster: 'caster', rusher: 'rusher', splitter: 'splitter', guardian: 'guardian', charger: 'charger', sorcerer: 'sorcerer', eclipse: 'eclipse' };
 export const ELITE_ART: Record<RegularKind, AssetId> = { grunt: 'gruntElite', runner: 'runnerElite', tank: 'tankElite', caster: 'casterElite', rusher: 'rusherElite', splitter: 'splitterElite' };
 export const LOOT_ART: Record<LootKind, AssetId> = { healing: 'healing', haste: 'haste', fury: 'fury', magnet: 'magnet' };
@@ -100,8 +101,8 @@ export const REPLACED_LEGACY_TEXTURES: ReadonlySet<string> = new Set(['warrior',
 export type Facing = 'down' | 'up' | 'side';
 export interface VisualSelection { asset: AssetId; texture: string; frame?: string; scale: number }
 export function selectAsset(asset: AssetId, frame?: string, scale = ASSET_REGISTRY[asset].worldScale): VisualSelection { return { asset, texture: ASSET_REGISTRY[asset].source.key, frame, scale }; }
-export function heroVisual(character: CharacterId, facing: Facing, moving: boolean, _hurt: boolean, elapsed: number): VisualSelection {
-  if(character==='mage')return {...selectAsset('mage'),...mageHeroSelection({motion:moving?'run':'idle',direction:facing==='up'?'north':facing==='down'?'south':'east',age:elapsed,casting:false})};
+export function heroVisual(character: HeroId, facing: Facing, moving: boolean, _hurt: boolean, elapsed: number): VisualSelection {
+  if(HEROES[character].visual==='mage')return {...selectAsset('mage'),...mageHeroSelection({motion:moving?'run':'idle',direction:facing==='up'?'north':facing==='down'?'south':'east',age:elapsed,casting:false})};
   return {...selectAsset('warrior'),...warriorHeroSelection(facing==='up'?'north':facing==='down'?'south':'east',moving?'run':'idle',elapsed)};
 }
 export function enemyVisual(kind: EnemyKind, elite: boolean, elapsed: number, id: number, playback?: RunnerPlayback): VisualSelection {

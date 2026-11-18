@@ -7,11 +7,10 @@ import {ASTRAL_VFX} from '../config/astralRevenant';
 import {NecroticFlameWalls} from './NecroticFlameWalls';
 import { FinalEncounter } from './FinalEncounter';
 import { UltimateSystem } from '../ultimates/UltimateSystem';
-import { FINAL_BOSS } from '../config/finalBoss';
 import { advanceUltimateFreeze, ultimateFrozen } from './UltimateFreeze';
 import { enemyShielded, onSpecialDeath } from './SpecialEnemies';
 import { BALANCE, GUARDIAN_BALANCE } from '../config/gameBalance';
-import { ENEMIES, ENEMY_NAMES, isBossKind, type EnemyKind } from '../config/enemyDefinitions';
+import { isBossKind } from '../config/enemyDefinitions';
 import type { Enemy, Projectile, Effect, XpOrb, Impact, Zone, DamageSource } from '../entities/types';
 import { evolved, shieldPulse } from '../abilities/evolutions';
 import { SeededRandom } from '../utils/SeededRandom';
@@ -21,11 +20,15 @@ import { receiveDamage } from './CombatSystem';
 import { ExperienceSystem, xpThreshold } from './ExperienceSystem';
 import { ObjectPool } from './ObjectPool';
 import { chooseUpgrades, upgradePool, applyUpgrade, type UpgradeDefinition } from './UpgradeSystem';
-import { initialAbilities, ABILITIES, abilitiesFor } from '../abilities/definitions';
-import { CHARACTERS, type CharacterId } from '../config/characters';
-import { playableMap, type BiomeId } from '../config/biomes';
+import { initialAbilities } from '../abilities/definitions';
+import type { CharacterId } from '../config/characters';
+import { mapDefinition, type BiomeId } from '../config/biomes';
+import { configuredWave, describeVictory, gameDefinition, heroDefinition, heroSkills, selectedHero, weightedEnemy } from '../content/registry';
+import { enemyAvailable } from '../content/validation';
+import type { GameDefinition } from '../content/types';
+import type { AbilityId } from '../abilities/types';
 import { tickAbilities } from '../abilities/tickAbilities';
-import { profileAt, pickEnemy, scalesAt, spawnCadenceAt } from './DifficultyDirector';
+import { profileAt, scalesAt, spawnCadenceAt } from './DifficultyDirector';
 import { enrageAt } from '../config/survivalEnrage';
 import { AbsorbPool } from './AbsorbPool';
 import {ENDGAME,lateBossProfile} from '../config/endgame';
@@ -51,7 +54,7 @@ import { formationEdge, pressureAt } from './EndgamePressure';
 import type { MovementInput } from '../input/movement';
 import { permanentBonuses, bonusFactor, type PermanentBonuses } from '../platform/progression';
 import { LOOT_FOR_ITEM, type RunEconomy, type RunItemId, type RunItemReceipt } from '../platform/runItems';
-export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId; permanentBonuses?: PermanentBonuses; clientRunId?: string; economy?: RunEconomy }
+export interface RunOptions { spawnRate?: number; character?: CharacterId; biome?: BiomeId; permanentBonuses?: PermanentBonuses; clientRunId?: string; economy?: RunEconomy; content?: GameDefinition }
 
 // Phaser Scene is the sole runtime caller; this state has no timers, DOM or render dependencies.
 export class World {
@@ -171,7 +174,7 @@ export class World {
   sound(cue: LegacyCue) { if(cue.startsWith('final-')){if(this.sounds.length>=16)this.sounds.pop();this.sounds.unshift(cue);}else if (this.sounds.length < 16) this.sounds.push(cue); }
   pause() { if (this.status === 'playing') this.status = 'paused'; }
   resume() { if (!this.premiumPending && this.status === 'paused' && !this.awaitingRevive) this.status = 'playing'; }
-  experience = new ExperienceSystem();
+  readonly experience: ExperienceSystem;
   get upgradeLevel() { return this.experience.pending > 0 ? this.experience.level - this.experience.pending + 1 : this.experience.level; }
   upgrades: Record<string, number> = {};
   choices: UpgradeDefinition[] = [];
@@ -181,9 +184,18 @@ export class World {
   readonly shield = new AbsorbPool();
   readonly blockShield = new AbsorbPool();
   warrior: {cleave?:CleaveSwing;cleaveSequence:number;whirlwindUntil:number;whirlwindTick:number;bladesUntil:number;bladesTick:number;ironUntil:number;gestureUntil:number;throwSequence:number;throwStarted:number;throwDirection:Point;pendingSpear?:{releaseAt:number;vx:number;vy:number;damage:number;pierce:number;hitRadius:number}} = { cleaveSequence:0,whirlwindUntil: 0, whirlwindTick: 0, bladesUntil: 0, bladesTick: 0, ironUntil: 0,gestureUntil:0,throwSequence:0,throwStarted:-1,throwDirection:{x:1,y:0} };
-  get character() { return this.options.character ?? 'mage'; }
-  get biome() { return playableMap(this.options.biome); }
-  get abilityDefinitions() { return abilitiesFor(this.character); }
+  readonly content: GameDefinition;
+  private readonly hasSpawnRestrictions: boolean;
+  readonly character: CharacterId;
+  readonly hero: ReturnType<typeof heroDefinition>;
+  readonly map: ReturnType<typeof mapDefinition>;
+  readonly abilityDefinitions: ReturnType<typeof heroSkills>;
+  private readonly enemyIndex: ReadonlyMap<string, GameDefinition["enemies"][number]>;
+  get biome() { return this.map.id; }
+  skillId(behavior: AbilityId) { return this.abilityDefinitions.find(skill => skill.behavior === behavior)?.contentId ?? behavior; }
+  enemyDefinition(id: string) { return this.enemyIndex.get(id); }
+  abilityRadius(id: AbilityId) { return this.abilityDefinitions.find(skill => skill.behavior === id)?.radiusMultiplier ?? 1; }
+  waveAt(at = this.elapsed) { return this.content.pacing === 'grove' ? profileAt(at, this.content.waves) : configuredWave(this.content, at); }
   impacts: Impact[] = [];
   zones: Zone[] = [];
   addZone(at: Point, radius: number, damage: number, duration: number, source: DamageSource) {
@@ -202,35 +214,52 @@ export class World {
   enemies: Enemy[] = []; projectiles: Projectile[] = []; effects: Effect[] = [];
   readonly runId: string;
   elapsed = 0;
-  private scoring = new ScoreSystem();
+  private readonly scoring: ScoreSystem;
   get kills() { return this.scoring.kills; }
   get score() { return this.scoring.score; }
   width = 640; height = 360;
   spawnedRegular = 0;
   private serial = 0; private cosmeticSerial = 0; private spawnClock = new SpawnClock();
-  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed); const hero=CHARACTERS[this.character];
+  constructor(seed = 12345, readonly options: RunOptions = {}) { this.rng = new SeededRandom(seed); this.loot = new LootSystem(seed); this.artifacts = new ArtifactSystem(seed); this.guardianSystem = new RareGuardianSystem(seed);
+    this.content = options.content ?? gameDefinition();
+    this.hasSpawnRestrictions = this.content.enemies.some(enemy => enemy.spawn);
+    this.character = options.character ?? selectedHero(this.content);
+    const hero = this.hero = heroDefinition(this.content, this.character);
+    this.map = mapDefinition(options.biome, this.content.maps);
+    this.abilityDefinitions = heroSkills(this.content, hero);
+    this.enemyIndex = new Map(this.content.enemies.map(enemy => [enemy.id, enemy]));
+    this.experience = new ExperienceSystem(this.content.limits.maxLevel);
+    this.scoring = new ScoreSystem(this.content.enemies.map(enemy => enemy.id));
+    if (this.content.encounters.kind === 'milestones') this.encounterDirector.nextAt = this.content.encounters.milestones[0]?.at ?? Infinity;
     this.permanent = permanentBonuses(options.permanentBonuses); this.runId = options.clientRunId ?? globalThis.crypto.randomUUID();
     this.player.hp=this.player.maxHp=hero.hp * bonusFactor(this.permanent, 'maximum_health');
     this.player.speed=hero.speed * bonusFactor(this.permanent, 'movement_speed');
     this.stats.area *= bonusFactor(this.permanent, 'ability_area'); this.stats.pickup *= bonusFactor(this.permanent, 'pickup_radius');
     this.stats.cooldown *= 1 - this.permanent.cooldown_reduction / 10000;
-    this.abilities=initialAbilities(this.character); }
+    this.abilities=initialAbilities();
+    for (const state of Object.values(this.abilities)) state.level = 0;
+    for (const skill of this.abilityDefinitions) this.abilities[skill.behavior].level = hero.startingSkills[skill.contentId] ?? 0; }
   id() { return ++this.serial; }
-  spawn(kind: EnemyKind, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
+  spawn(id: string, at?: Point, elite = false, guardianWaveId?: number): Enemy | undefined {
+    const definition = this.enemyDefinition(id);
+    if (!definition || !enemyAvailable(definition, this.biome, this.elapsed)) return;
+    const kind = definition.behavior;
     if(this.practiceDuel&&(this.outcome||kind!==this.practiceDuel.kind||this.enemies.length>0))return;
     if (this.finalEncounter.active || this.finalEncounter.phase==='defeated' || kind==='ashGuard') return;
     const boss = isBossKind(kind);
     if (!boss && kind !== 'guardian' && this.ultimate.regularSpawnFactor(this.elapsed) === 0) return;
-    if (kind === 'guardian' ? this.guardians.length >= GUARDIAN_BALANCE.cap : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(BALANCE.regularCap, profileAt(this.elapsed).cap)) return;
-    if (kind === 'guardian') elite = false;
-    const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng)), definition = ENEMIES[kind];
+    if (kind === 'guardian' ? this.guardians.length >= GUARDIAN_BALANCE.cap : boss ? this.bosses.length >= BOSS_CAP : this.regularCount >= Math.min(this.content.limits.regularCap, this.waveAt().cap)) return;
+    if (kind === 'guardian' || !definition.elite && !boss) elite = false;
+    const p = at ?? (kind === 'guardian' ? this.guardianSystem.spawnPoint(this) : spawnPerimeter(this.player, this.width, this.height, this.rng));
     if (!p || !Number.isFinite(p.x+p.y)) return;
     const enrageIndex=boss&&this.elapsed>=BOSS_MAGIC.from?this.encounterDirector.enrageSpawns+1:0;
     const aggression = bossBirthAggression(this.elapsed / 60,kind,enrageIndex);
-    const scale = scalesAt(this.elapsed), hp = definition.hp * (boss||kind==='guardian'?scale.hp:scalesAt(Math.min(this.elapsed,ENDGAME.from)).hp) * (elite ? 2 : 1);
+    const scale = scalesAt(this.elapsed, this.content.scaling), hp = definition.hp * (boss || kind === 'guardian' || this.content.pacing === 'fixed' ? scale.hp : scalesAt(Math.min(this.elapsed, ENDGAME.from), this.content.scaling).hp) * (elite ? 2 : 1);
     const enemy: Enemy = { ...p, born: this.elapsed, modifier: elite ? (['frenzy', 'shielded', 'volatile'] as const)[this.rng.int(3)] : undefined, rush: kind === 'rusher' ? { phase: 'approach', until: this.elapsed + 1, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : undefined, id: this.id(), kind, hp, maxHp: hp, radius: definition.radius * (elite ? 1.25 : 1), hitUntil: 0, slowUntil: 0, slowFactor: 1, elite, speed: definition.speed * (elite ? 1.15 : 1), damage: definition.damage * scale.damage * (elite ? 1.4 : 1), score: definition.score * (elite ? 3 : 1), xp: definition.xp * (elite ? 2 : 1), shootAt: this.elapsed + (kind === 'caster' ? pressureAt(this.elapsed).casterFirstShot : 2), shootingAt: 0, boss: boss ? { aggression, phase: 'approach', until: this.elapsed + (kind === 'charger' ? CHARGE_BOSS.initialDelay : 2) / aggression.frequency, direction: { x: 0, y: 0 }, aim: { x: 0, y: 0 } } : null };
     if(boss&&enrageIndex){this.encounterDirector.enrageSpawns++;enemy.boss!.enrageIndex=enrageIndex;if(kind!=='charger')enemy.boss!.magic={nextAt:this.elapsed+BOSS_MAGIC.initialTeleport,teleports:0};}
     if(boss&&this.elapsed>=ENDGAME.from){const late=lateBossProfile(this.elapsed,++this.encounterDirector.endgameSpawns,kind==='charger');enemy.boss!.late=late;enemy.boss!.aggression={...aggression,movement:aggression.movement*late.movement,frequency:aggression.frequency*late.frequency};}
+    if (id !== kind) enemy.contentId = id;
+    if (definition.visual !== kind) enemy.visual = definition.visual;
     this.enemies.push(enemy); if (kind === 'guardian') this.guardianSystem.spawned(this, enemy, guardianWaveId); else if (!boss) this.spawnedRegular++; return enemy;
   }
   effect(kind: Effect['kind'], p: Point, radius: number, color: number, duration = 0.22, target?: Point, amount?: number, source?: DamageSource, ownerId?: number) {
@@ -250,7 +279,8 @@ export class World {
     const before = enemy.hp;
     if (source === 'fireball' || source === 'cleave') this.feedback({ type: 'impact', source });
     const devastation=executeRegular&&source==='ultimate-lightning'&&!enemy.boss&&enemy.kind!=='guardian';
-    const resolved=Math.min(maxDamage, amount * bonusFactor(this.permanent, 'damage') * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
+    const damageMultiplier = this.abilityDefinitions.find(skill => skill.behavior === source)?.damageMultiplier ?? 1;
+    const resolved=Math.min(maxDamage, amount * damageMultiplier * bonusFactor(this.permanent, 'damage') * this.artifacts.multiplier('damage') * this.buffs.multiplier('fury', this.elapsed) * this.buffs.modifier('damage', this.elapsed) * (enemyShielded(enemy, this.elapsed) ? 0.35 : 1) * (enemy.boss?.phase === 'recover' ? 1.25 : 1));
     enemy.hp = devastation ? 0 : Math.max(0, enemy.hp - this.finalEncounter.limitDamage(enemy,resolved));
     this.finalEncounter.afterDamage(this,enemy); enemy.hitUntil = this.elapsed + 0.12;
     if(enemy.boss&&enemy.finalRole!=='boss'&&enemy.hp<before){
@@ -262,16 +292,17 @@ export class World {
     this.effect('hit', enemy, 8, 0xffe1ad, 0.32, undefined, before - enemy.hp);
     if (!enemy.boss && enemy.kind !== 'guardian'&&!ultimateFrozen(enemy,this.elapsed)) { const away = direction(enemy.x - this.player.x, enemy.y - this.player.y), kick = enemy.kind === 'tank' ? 2 : 5; enemy.x += away.x * kick; enemy.y += away.y * kick; }
     if (enemy.hp === 0) {
-      this.scoring.recordKill(enemy.kind, enemy.elite);
+      const definition = this.enemyDefinition(enemy.contentId ?? enemy.kind)!;
+      this.scoring.recordKill(enemy.kind, enemy.elite, definition.id, definition.score);
       if(this.practiceDuel&&enemy.kind===this.practiceDuel.kind){
-        enemy.deathSource=source;this.sound('kill');this.effect('death',enemy,12,ENEMIES[enemy.kind].color,.45);
+        enemy.deathSource=source;this.sound('kill');this.effect('death',enemy,12,definition.color,.45);
         this.clearOwnedEffects(enemy.id);this.enemies.splice(this.enemies.indexOf(enemy),1);
         this.outcome='victory';this.status='over';this.clearTemporaryState();return true;
       }
       if(enemy.finalRole==='boss'){enemy.deathSource=source;this.finalEncounter.finish(this);return true;}
       this.sound('kill');
       enemy.deathSource = source;
-      if (source !== 'ultimate-lightning') this.effect('death', enemy, 12, ENEMIES[enemy.kind].color, 0.45);
+      if (source !== 'ultimate-lightning') this.effect('death', enemy, 12, definition.color, 0.45);
       this.dropXp(enemy, enemy.xp);
       if(!enemy.finalRole)this.loot.onEnemyDeath(this, enemy);
       if (enemy.boss) { this.clearOwnedEffects(enemy.id); enemy.boss.charge = undefined; }
@@ -303,7 +334,7 @@ export class World {
   damagePlayer(amount: number) {
     if (this.outcome || this.status !== 'playing' || this.player.hp <= 0 || this.elapsed < this.player.invulnerableUntil || this.elapsed < this.mobility.protectedUntil || this.ultimate.protected(this.elapsed) || amount <= 0 || !Number.isFinite(amount)) return false;
     const mitigation = this.warrior.ironUntil > this.elapsed ? .5 : 1;
-    const incoming = amount * (1 - CHARACTERS[this.character].armor) * mitigation * (1 - this.permanent.damage_reduction / 10000);
+    const incoming = amount * (1 - this.hero.armor) * mitigation * (1 - this.permanent.damage_reduction / 10000);
     const block=this.blockShield.absorbDamage(this.elapsed,incoming);
     const arcane=this.shield.absorbDamage(this.elapsed,incoming-block);
     const mobility=this.mobility.absorbDamage(this.elapsed,incoming-block-arcane),absorbed=block+arcane+mobility;
@@ -322,7 +353,11 @@ export class World {
     const dt = Math.max(0, Math.min(rawDelta, 0.05)); this.elapsed += dt;
     if(isWarriorAttackUltimate(this.ultimate.selected)){this.ultimate.update(this);if(this.status!=='playing')return;}
     if(this.finalEncounter.phase==='dying'){this.finalEncounter.update(this,dt);return;}
-    if(!this.practiceDuel&&this.elapsed+1e-7>=FINAL_BOSS.at)this.finalEncounter.begin(this);
+    const victory = this.content.victory;
+    if (!this.practice && this.elapsed + 1e-7 >= victory.at && victory.kind === 'duration') {
+      this.elapsed = victory.at; this.outcome = 'victory'; this.status = 'over'; this.clearTemporaryState(); return;
+    }
+    if(!this.practiceDuel&&victory.kind==='final-boss'&&this.elapsed+1e-7>=victory.at)this.finalEncounter.begin(this);
     const vector = direction(input.x, input.y);
     const magnitude = input.analog ? Math.min(1, Math.hypot(input.x, input.y)) : 1;
     if (!this.ultimate.casting && !this.mobility.update(this, dt)) { this.player.x += vector.x * magnitude * this.effectiveSpeed * dt; this.player.y += vector.y * magnitude * this.effectiveSpeed * dt; }
@@ -331,14 +366,16 @@ export class World {
     // Release starts relief before this frame's spawns, including Splitter offspring.
     if (this.ultimate.selected === 'lightning') this.ultimate.update(this);
     if (this.status !== 'playing') return;
-    const profile = profileAt(this.elapsed);
-    const cadence=spawnCadenceAt(this.elapsed);
+    const profile = this.waveAt();
+    const cadence = this.content.pacing === 'grove' ? spawnCadenceAt(this.elapsed, this.content.waves) : profile;
     const spawnFactor=this.ultimate.regularSpawnFactor(this.elapsed);
     if(this.practiceDuel||this.finalEncounter.active || spawnFactor===0)this.spawnClock.reset();
-    else if (this.spawnClock.tick(dt*spawnFactor, cadence.interval / ((this.options.spawnRate ?? 1.3) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
+    else if (this.spawnClock.tick(dt*spawnFactor, cadence.interval / ((this.options.spawnRate ?? (this.content.pacing === 'grove' ? 1.3 : 1)) * this.encounterDirector.regularSpawnFactor(this.elapsed)))) {
       for (let i = 0; i < cadence.burst; i++) {
-        const at = this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
-        this.spawn(pickEnemy(profile, this.rng), at, this.rng.next() < profile.elite);
+        const at = this.content.pacing === 'grove' && this.elapsed >= 480 ? spawnPerimeter(this.player, this.width, this.height, this.rng, formationEdge(this.elapsed, i)) : undefined;
+        const id = weightedEnemy(profile, this.rng.next(), this.hasSpawnRestrictions
+          ? candidate => enemyAvailable(this.enemyIndex.get(candidate)!, this.biome, this.elapsed) : undefined);
+        if (id) this.spawn(id, at, this.rng.next() < profile.elite);
       }
     }
     if(!this.practiceDuel&&!this.finalEncounter.active)this.encounterDirector.update(this);
@@ -358,7 +395,7 @@ export class World {
       if(shot.homing&&!steerGuardianOrb(this,shot,dt))continue;
       const old = { x: shot.x, y: shot.y }; shot.x += shot.vx * dt; shot.y += shot.vy * dt;
       if(this.ultimate.selected==='fire'&&this.ultimate.fire.absorb(this,old,shot))continue;
-      if(shot.hostile&&shot.expires>this.elapsed&&this.character==='warrior'&&this.warrior.ironUntil>this.elapsed&&segmentDistance(this.player,old,shot)<WARRIOR_CAST.blockProjectileRadius+(shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius:3)){shot.expires=0;this.effect('shield',this.player,24,0xb5c9da,.15);continue;}
+      if(shot.hostile&&shot.expires>this.elapsed&&this.warrior.ironUntil>this.elapsed&&segmentDistance(this.player,old,shot)<WARRIOR_CAST.blockProjectileRadius+(shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius:3)){shot.expires=0;this.effect('shield',this.player,24,0xb5c9da,.15);continue;}
       if (shot.hostile) { if (segmentDistance(this.player, old, shot) < (shot.homing?GUARDIAN_ORBS[shot.homing.variant].radius+9:12)) { this.damagePlayer(shot.damage); shot.expires = 0; } continue; }
       const targets = this.combatTargets.filter(e => !shot.hits?.includes(e.id) && segmentDistance(e, old, shot) < e.radius + (shot.source==='blades'?(shot.hitRadius??WARRIOR_CAST.spearHitRadius):4)).sort((a, b) => distance(old, a) - distance(old, b));
       for (const target of targets) {
@@ -403,11 +440,12 @@ export class World {
     if (this.status === 'playing') this.artifacts.update(this);
   }
   snapshot() {
-    const damageByAbility=this.abilityDefinitions.map(a=>({id:a.id,name:a.name,damage:this.scoring.damage[a.id]}));
+    const damageByAbility=this.abilityDefinitions.map(a=>({id:a.contentId,name:a.name,damage:this.scoring.damage[a.behavior]}));
     const mostEffective=[...damageByAbility].sort((a,b)=>b.damage-a.damage)[0];
     return {
       regularKills:this.scoring.regularKills,eliteKills:this.scoring.eliteKills,bossKills:this.scoring.bossKills,damageByAbility,mostEffective:mostEffective?.damage>0?mostEffective:null,
       finalEncounter: this.finalEncounter.snapshot(),
+      ...(this.content.version !== 'pixel-survivor-v1' ? { objective: { ...this.content.victory, description: describeVictory(this.content), maxLevel: this.content.limits.maxLevel } } : {}),
       ...(this.practice?{practice:true}:{}),
       ...(this.practiceBoss?{practiceBoss:this.practiceBoss}:{}),
       ...(this.practiceDuel?{practiceElapsed:Math.max(0,this.elapsed-this.practiceDuel.at)}:{}),
@@ -415,6 +453,7 @@ export class World {
       runId: this.runId, character: this.character, biome: this.biome, status: this.status, ...(this.outcome?{outcome:this.outcome}:{}), elapsed: this.elapsed,
       ...(this.serverEconomy ? { serverEconomy: true, awaitingRevive: this.awaitingRevive, deathId: this.deathId, reviveCount: this.reviveCount, reviveLimit: this.options.economy?.revive_limit ?? 0,
         reviveHealthPercent: (this.options.economy?.revive_health_basis_points ?? 0) / 100, reviveProtectionSeconds: (this.options.economy?.revive_protection_ms ?? 0) / 1000, itemsUsed: { ...this.itemsUsed }, eliteKillsByKind: { ...this.scoring.eliteByKind } } : {}),
+      ...(this.content.version !== 'pixel-survivor-v1' ? { eliteKillsByKind: { ...this.scoring.eliteByKind } } : {}),
       encounterNotice: this.encounterDirector.notice?.text ?? null, guardianWaves: this.guardianSystem.snapshot(), completedGuardianWaves: this.guardianSystem.completedWaves,
       guardians: this.guardians.map(e => ({ id: e.id, hp: e.hp, maxHp: e.maxHp, phase: this.guardianSystem.encounters.get(e.id)?.phase ?? null })),
       ...(this.ultimate.selected || this.scoring.damage['ultimate-lightning']+this.scoring.damage['ultimate-frost']+this.scoring.damage['ultimate-fire']+this.scoring.damage['ultimate-earthbreaker']+this.scoring.damage['ultimate-ruin']>0 ? {ultimate:this.ultimate.snapshot(this.elapsed),ultimateDamage:{lightning:this.scoring.damage['ultimate-lightning'],frost:this.scoring.damage['ultimate-frost'],fire:this.scoring.damage['ultimate-fire'],earthbreaker:this.scoring.damage['ultimate-earthbreaker'],ruin:this.scoring.damage['ultimate-ruin']}} : {}),
@@ -427,12 +466,12 @@ export class World {
       level: this.experience.level, xp: this.experience.xp, xpNext: xpThreshold(this.experience.level),
       offerId: this.offerId, pending: this.experience.pending,
       choices: this.choices.map(c => {
-        const ability = ABILITIES.find(a => 'rank-' + a.id === c.id);
-        return { id: c.id, name: c.name, description: c.description, category: MOBILITY_UPGRADES.find(u => `mobility-${u.id}` === c.id)?.category ?? null, tier: ability ? this.abilities[ability.id].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
+        const ability = this.abilityDefinitions.find(a => 'rank-' + a.contentId === c.id);
+        return { id: c.id, name: c.name, description: c.description, category: MOBILITY_UPGRADES.find(u => `mobility-${u.id}` === c.id)?.category ?? null, tier: ability ? this.abilities[ability.behavior].level + 1 : (this.upgrades[c.id] ?? 0) + 1 };
       }),
-      abilities: this.abilityDefinitions.map(a => ({ id: a.id, name: a.name, icon: a.icon, level: this.abilities[a.id].level, readyIn: Math.max(0, this.abilities[a.id].readyAt - this.elapsed) })),
-      bosses: this.bosses.map(e => ({ id: e.id, name: ENEMY_NAMES[e.kind], hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase,damageOrder:this.bossDamageOrder.get(e.id)??0 })),
-      wave: this.finalEncounter.phase!=='inactive'?'Final encounter':profileAt(this.elapsed).name,
+      abilities: this.abilityDefinitions.map(a => ({ id: a.contentId, name: a.name, icon: a.icon, level: this.abilities[a.behavior].level, readyIn: Math.max(0, this.abilities[a.behavior].readyAt - this.elapsed) })),
+      bosses: this.bosses.map(e => ({ id: e.id, name: this.enemyDefinition(e.contentId ?? e.kind)!.name, hp: e.hp, maxHp: e.maxHp, phase: e.boss!.phase,damageOrder:this.bossDamageOrder.get(e.id)??0 })),
+      wave: this.finalEncounter.phase!=='inactive'?'Final encounter':this.waveAt().name,
     };
   }
 }

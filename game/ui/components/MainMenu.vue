@@ -6,14 +6,11 @@ import { useInputDevice } from '../inputDevice';
 const inputDevice = useInputDevice();
 import type { CharacterId } from '@game/config/characters';
 import type { BiomeId } from '@game/config/biomes';
-import { AVAILABLE_MAPS } from '@game/config/biomes';
-import { isPublicCharacter } from '@game/bootstrap/publicCharacters';
-const unavailable = ref(false);
-function chooseCharacter(value: CharacterId) {
-  if (!isPublicCharacter(value)) { unavailable.value = true; return; }
-  unavailable.value = false; emit('character', value);
-}
-const props = defineProps<{ presentation: GamePresentation; best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+import { describeVictory, gameDefinition, publicHeroes } from '../../content/registry';
+import type { GameDefinition } from '../../content/types';
+const props = defineProps<{ presentation: GamePresentation; content?: GameDefinition; best: number; character: CharacterId; biome: BiomeId; premiumAvailable?: boolean }>();
+const content = computed(() => props.content ?? gameDefinition());
+const heroes = computed(() => publicHeroes(content.value));
 const wordmark = computed(() => splitWordmark(props.presentation.title));
 const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; help: []; settings: []; records: []; premium: []; character: [value: CharacterId]; biome: [value: BiomeId] }>(); const play = ref<HTMLButtonElement>(); onMounted(() => play.value?.focus());
 </script>
@@ -26,19 +23,19 @@ const emit = defineEmits<{ play: []; bossPractice: []; guardianPractice: []; hel
     <span v-else class="menu-wordmark-text"><template v-if="wordmark[0]">{{ wordmark[0] }}<br></template><span class="menu-wordmark-accent">{{ wordmark[1] }}</span><i aria-hidden="true">✦</i></span>
    </h1>
    <p class="menu-description">{{ presentation.subtitle }}<br>{{ presentation.description }}</p>
-   <div class="run-selection" aria-label="Character"><button :aria-pressed="character === 'mage'" v-pad="() => chooseCharacter('mage')" @click="chooseCharacter('mage')">Mage <small>100 HP · magic</small></button><button :aria-pressed="character === 'warrior'" v-pad="() => chooseCharacter('warrior')" @click="chooseCharacter('warrior')">Warrior <small>150 HP · sword and shield</small></button></div>
-   <p v-if="unavailable" class="character-notice" role="status">Warrior is in development</p>
-   <div class="run-selection" aria-label="Location"><button v-for="map in AVAILABLE_MAPS" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
+   <div class="run-selection" aria-label="Character"><button v-for="hero in heroes" :key="hero.id" :aria-pressed="character === hero.id" v-pad="() => emit('character', hero.id)" @click="emit('character', hero.id)">{{ hero.name }} <small>{{ hero.hp }} HP · {{ hero.combat === 'mage' ? 'magic' : 'sword and shield' }}</small></button></div>
+   <div class="run-selection" aria-label="Location"><button v-for="map in content.maps" :key="map.id" :aria-pressed="biome === map.id" v-pad="() => emit('biome',map.id)" @click="emit('biome',map.id)">{{ map.name }}</button></div>
    <div class="start-actions"><button ref="play" class="play-button" v-pad="() => emit('play')" @click="emit('play')"><span>Start run</span><span>→</span></button>
-   <button class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Fight the Warden</b><small>Practice · Mage 54 · Heavenly Wrath</small></span><span aria-hidden="true">↗</span></button>
-   <button class="boss-practice-button guardian-practice-button" v-pad="() => emit('guardianPractice')" @click="emit('guardianPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Fight a Guardian</b><small>Rootbound totem · 1×1 · Mage 54</small></span><span aria-hidden="true">↗</span></button></div>
+   <button v-if="content.practice" class="boss-practice-button" v-pad="() => emit('bossPractice')" @click="emit('bossPractice')"><span class="practice-sword" aria-hidden="true">⚔</span><span><b>Fight the Warden</b><small>Practice · Mage 54 · Heavenly Wrath</small></span><span aria-hidden="true">↗</span></button>
+   <button v-if="content.practice" class="boss-practice-button guardian-practice-button" v-pad="() => emit('guardianPractice')" @click="emit('guardianPractice')"><span class="practice-sword" aria-hidden="true">◇</span><span><b>Fight a Guardian</b><small>Rootbound totem · 1×1 · Mage 54</small></span><span aria-hidden="true">↗</span></button></div>
    <div class="menu-actions"><button class="text-button" v-pad="() => emit('help')" @click="emit('help')">How to play</button><span>·</span><button class="text-button" v-pad="() => emit('settings')" @click="emit('settings')">Settings</button></div>
    <button class="text-button records-link" v-pad="() => emit('records')" @click="emit('records')">Local records ↗</button>
    <button v-if="premiumAvailable" class="text-button" data-testid="menu-premium" v-pad="() => emit('premium')" @click="emit('premium')">Premium Actions ↗</button>
-   <div class="menu-facts"><span><b>5</b> schools of magic</span><span><b>∞</b> endless forest</span><span><b>1</b> last spark</span></div>
+   <p v-if="content.id !== 'pixel-survivor'">{{ describeVictory(content) }}</p>
+   <div v-else class="menu-facts"><span><b>5</b> schools of magic</span><span><b>∞</b> endless forest</span><span><b>1</b> last spark</span></div>
    <p v-if="best" class="best">Personal best · {{ best.toLocaleString('en-US') }} points</p>
   </section>
-  <div class="menu-caption"><span>SHARD GROVE</span><small>Original pixel magic</small></div>
+  <div v-if="content.id === 'pixel-survivor'" class="menu-caption"><span>SHARD GROVE</span><small>Original pixel magic</small></div>
   <footer class="menu-footer"><span>SINGLE PLAYER · OFFLINE</span><span>{{ inputDevice === 'gamepad' ? 'D-PAD · A SELECT · LEFT STICK IN GAME' : 'WASD / ARROW KEYS · AUTOMATIC MAGIC' }}</span></footer>
  </div>
 </template>

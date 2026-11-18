@@ -28,14 +28,14 @@ import { HeldInputTracker } from '../input/HeldInputTracker';
 import { GamepadInputController } from '../input/GamepadInputController';
 import { selectMovement } from '../input/movement';
 import type { Point } from '../utils/math';
-import { runCharacter } from '../bootstrap/publicCharacters';
+import { gameDefinition, selectedHero } from '../content/registry';
+import type { GameDefinition } from '../content/types';
 import type { CharacterId } from '../config/characters';
 import { mobileViewport } from '@game/ui/mobileViewport';
 import { ForestAtmosphere } from '../art/ForestAtmosphere';
-import { mapDefinition } from '../config/biomes';
 import {playerCameraZoom} from '../config/playerVisuals';
 export class GameScene extends Phaser.Scene {
-  world = new World();
+  world: World;
   private mage!: Phaser.GameObjects.Sprite;
   private chunks!: WorldChunkSystem;
   private atmosphere!: ForestAtmosphere;
@@ -65,7 +65,7 @@ export class GameScene extends Phaser.Scene {
   private mobilityDirection: Point | undefined;
   private audio!: AudioController;
   private audioPresentation!: AudioPresentation;
-  constructor(private preferences: Settings = DEFAULT_SETTINGS) { super('field'); }
+  constructor(private preferences: Settings = DEFAULT_SETTINGS, private readonly content: GameDefinition = gameDefinition()) { super('field'); this.world = new World(undefined, { content }); }
   preload() { preloadGameArt(this); }
   create() {
     this.ultimateReview = import.meta.env.DEV && new URLSearchParams(location.search).get('warriorUltimatesReview') === '1';
@@ -74,9 +74,9 @@ export class GameScene extends Phaser.Scene {
     this.audio.settings(this.preferences); this.audioPresentation = new AudioPresentation(this.audio);
     this.art = new GameArt(this);
     this.radar = new RadarPublisher(frame => radarFrames.emit(frame));
-    this.world = new World(); this.orientationResume = false; this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
+    this.world = new World(undefined, { content: this.content }); this.orientationResume = false; this.publishAt = 0; this.facing = 'down'; this.touch = { x: 0, y: 0 };
     this.world.status = 'menu'; this.audioPresentation.observe(this.world);
-    const presentation = mapDefinition(this.world.biome).presentation;
+    const presentation = this.world.map.presentation;
     this.chunks = new WorldChunkSystem(this, presentation);
     this.atmosphere = new ForestAtmosphere(this, this.chunks, presentation.phases);
     const initialMage=mageHeroSelection({motion:'idle',direction:'south',age:0,casting:false});
@@ -116,23 +116,31 @@ export class GameScene extends Phaser.Scene {
       if (command.type === 'apply-offer') { command.acknowledge(this.world.applyServerOffer(command.offer,command.localOffer)); snapshots.emit(this.world.snapshot()); return; }
       if (command.type === 'apply-paid-action') { command.acknowledge(this.world.applyPaidAction(command.receipt)); this.audioPresentation.observe(this.world); this.resetInput(); snapshots.emit(this.world.snapshot()); return; }
       if (command.type === 'apply-run-item') { command.acknowledge(this.world.applyRunItem(command.receipt)); this.audioPresentation.observe(this.world); this.resetInput(); snapshots.emit(this.world.snapshot()); return; }
-      if (command.type === 'finish-run') { if (this.world.serverEconomy && this.world.status === 'paused' && !this.world.premiumPending) this.world.finishDefeat(); snapshots.emit(this.world.snapshot()); return; }
+      if (command.type === 'finish-run') { if (this.world.options.clientRunId && this.world.status === 'paused' && !this.world.premiumPending) this.world.finishDefeat(); snapshots.emit(this.world.snapshot()); return; }
       if (command.type === 'resume' && this.uiScreen === 'inventory') return;
       if (mobileViewport().blocked && ['restart', 'boss-practice', 'resume', 'mobility', 'ultimate'].includes(command.type)) return;
       if (command.type === 'ui-screen') { this.uiScreen = command.screen; gamepad.reset(true); return; }
       if (command.type === 'ultimate') { if(this.world.status === 'playing')this.ultimateRequested=true;return; }
       if (command.type === 'mobility') { if (this.world.status === 'playing') this.mobilityRequested = true; return; }
       if (command.type === 'move') { this.touch = this.world.status === 'playing' || this.world.status === 'upgrade' ? command.input : { x: 0, y: 0 }; return; }
+      if (command.type === 'boss-practice' && !this.content.practice) return;
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') { this.orientationResume = false; this.visualTime = undefined; }
       if (command.type === 'restart' || command.type === 'boss-practice' || command.type === 'menu' || command.type === 'preview') {
-        this.runOptions = { character: command.type==='boss-practice'?'mage':runCharacter(import.meta.env.DEV ? this.testCharacter : undefined,command.character??this.runOptions.character),
+        this.runOptions = { content: this.content, character: command.type === 'boss-practice' ? 'mage' : selectedHero(this.content, (import.meta.env.DEV ? this.testCharacter : undefined) ?? command.character ?? this.runOptions.character),
           biome: command.type==='boss-practice'?'grove':command.biome??this.runOptions.biome,
           permanentBonuses: command.type==='restart' ? command.platformRun?.bonuses : undefined,
           economy: command.type === 'restart' ? command.platformRun?.economy : undefined,
           clientRunId: command.platformRun?.clientRunId };
+        const previousMap = this.world.map;
         this.atmosphere.clear(); this.world.clearTemporaryState(); this.radar.clear(); this.lootPresentation.clear();
         this.world = new World(command.platformRun?.seed ?? Date.now(), this.runOptions);
-        if(command.type==='boss-practice'){if(command.practiceBoss==='rootbound-guardian')startGuardianPractice(this.world);else if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
+        if (previousMap.presentation !== this.world.map.presentation) {
+          this.atmosphere.destroy();
+          this.chunks.destroy();
+          this.chunks = new WorldChunkSystem(this, this.world.map.presentation);
+          this.atmosphere = new ForestAtmosphere(this, this.chunks, this.world.map.presentation.phases);
+        }
+        if(command.type==='boss-practice' && this.content.practice){if(command.practiceBoss==='rootbound-guardian')startGuardianPractice(this.world);else if(command.practiceBoss==='astral-revenant')startAstralPractice(this.world);else if(command.practiceBoss==='briar-beast')startBriarPractice(this.world);else if(command.practiceBoss==='rune-warden')startRunePractice(this.world);else startBossPractice(this.world);}else if (command.type !== 'restart') this.world.status = 'menu';
         for (const sprite of [...this.sprites.values(), ...this.spareSprites]) sprite.destroy(); this.sprites.clear(); this.spareSprites = [];
         if (window.__PIXEL__) window.__PIXEL__.world = this.world;
       }

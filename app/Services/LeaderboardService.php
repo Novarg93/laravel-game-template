@@ -7,6 +7,7 @@ use App\Models\PlatformAuditEntry;
 use App\Models\PublicProfile;
 use App\Models\RunItemUsage;
 use App\Models\RunPaidAction;
+use App\Runs\GameCatalog;
 use App\Runs\RunAssessment;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Carbon;
@@ -38,7 +39,9 @@ class LeaderboardService
         $run->ranking_score = (int) ($run->record['score'] ?? 0);
         $run->ranking_elapsed_us = (int) round((float) ($run->record['elapsed'] ?? 0) * 1000000);
         $run->validation_evidence = [...$assessment->evidence(), 'record_hash' => $originalHash, 'assessed_record_hash' => $assessment->recordHash, 'manual_acceptance' => $manual];
-        $run->ranking_eligible = $run->status === 'accepted' && $run->mode === 'normal' && $assessment->hardFlags === [] && ($assessment->reviewFlags === [] || $manual);
+        $run->ranking_eligible = $run->status === 'accepted' && $run->mode === 'normal'
+            && ! app(GameCatalog::class)->forRun($run)['experimental']
+            && $assessment->hardFlags === [] && ($assessment->reviewFlags === [] || $manual);
     }
 
     public function refreshFactsLocked(GameRun $run): void

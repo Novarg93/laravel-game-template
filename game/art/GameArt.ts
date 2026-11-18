@@ -112,7 +112,7 @@ export function applyVisual(sprite: Phaser.GameObjects.Sprite, selection: Visual
   sprite.setTexture(selection.texture, selection.frame).setOrigin(spec.origin.x, spec.origin.y).setDisplaySize(size.width, size.height);
 }
 export function entityVisual(entity: RenderEntity, elapsed: number): VisualSelection {
-  if ('kind' in entity) return enemyVisual(entity.kind, entity.elite, elapsed, entity.id);
+  if ('kind' in entity) return enemyVisual(entity.visual ?? entity.kind, entity.elite, elapsed, entity.id);
   if ('value' in entity) return selectAsset('xp', lootFrame('xp', elapsed));
   if ('lootKind' in entity) return selectAsset(LOOT_ART[entity.lootKind], lootFrame(entity.lootKind, elapsed));
   if ('lootPool' in entity) return selectAsset('chest', lootFrame('chest', elapsed));
@@ -175,6 +175,7 @@ export class GameArt {
   private liveEntityVisual(entity: RenderEntity, world: World): VisualSelection {
     if('vx'in entity&&entity.source==='blades'&&!entity.hostile)return selectAsset('spear','spear');
 
+    if ('kind' in entity && entity.visual) return enemyVisual(entity.visual, entity.elite, world.elapsed, entity.id);
     if ('kind' in entity && entity.kind === 'runner') return enemyVisual('runner', entity.elite, world.elapsed, entity.id, this.runner.view(entity, world));
     if ('kind' in entity && entity.kind === 'guardian') return selectAsset('guardian', this.guardian.frame(entity, world));
     if ('kind' in entity && isHdBoss(entity.kind)) { const p = this.bosses.view(entity, world), age=world.elapsed-p.started; const remaining=Math.max(0,(entity.kind==='eclipse'&&entity.shootingAt>world.elapsed?entity.shootingAt:entity.boss?.until??world.elapsed)-world.elapsed);if(entity.kind==='sorcerer'&&(p.pose==='windup'||p.pose==='attack')&&entity.boss?.magic?.phase!=='signal')return {...selectAsset('sorcerer',acceptedRuneCast(p.facing,p.pose,age,remaining),ASSET_REGISTRY.sorcerer.worldScale*1.5),texture:RUNE_ACCEPTED_TEXTURE};return bossVisual(entity.kind,p.facing,p.pose,age,remaining); }
@@ -195,8 +196,8 @@ export class GameArt {
     this.heroHp = world.player.hp; this.heroSprite = sprite;
     if (world.status !== 'paused' && world.status !== 'upgrade') this.heroMoving = moving;
     if (world.status === 'over') this.heroDeathAge += Math.min(.05, this.scene.game.loop.delta / 1000);
-    const hurt = world.character === 'mage' && world.elapsed - this.heroHurtStarted < .25;
-    if(world.character==='mage'){this.warriorMoving.hide();
+    const hurt = world.hero.visual === 'mage' && world.elapsed - this.heroHurtStarted < .25;
+    if(world.hero.visual==='mage'){this.warriorMoving.hide();
       this.warriorAnimation.clear();this.warriorPose=undefined;
       this.mageHeroArt.render(sprite,world,this.heroMoving,this.heroDeathAge,multiplier,hurt);
       this.spellOrigins.capture(world,this.mageHeroArt.muzzle(world.elapsed));
@@ -273,7 +274,7 @@ export class GameArt {
     for (const e of world.enemies) shadow(Math.round(e.x), Math.round(e.y + (e.finalRole==='boss'?3:e.boss ? 23 : 6)), e.boss ? 2.5 : e.kind === 'tank' ? 1.6 : e.elite ? 1.4 : 1);
     for (let i = count; i < this.shadows.length; i++) this.shadows[i].setVisible(false);
     count = 0;
-    for (const e of world.effects) if (e.kind === 'cleave' && world.character !== 'warrior') {
+    for (const e of world.effects) if (e.kind === 'cleave' && world.hero.visual !== 'warrior') {
       const rank = abilityVisual(world.abilities.cleave.level);
       const t = Math.min(1, Math.max(0, (world.elapsed - e.started) / e.duration));
       const image = this.cleaves[count] ?? this.scene.add.image(0, 0, HD_CORE_TEXTURE, 'cleave-0').setDepth(14); this.cleaves[count++] = image;

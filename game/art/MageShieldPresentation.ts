@@ -10,7 +10,7 @@ export class MageShieldPresentation{
  clear(){this.alive=false;this.started=this.until=0;this.ended=undefined;}
  views(w:World,intensity:number,reducedFlash=false):MageAbilityView[]{
   if(this.run!==w.runId){this.clear();this.run=w.runId;}
-  if(w.character!=='mage'||w.status==='menu'||w.status==='over'||!PLAYER_VISUALS.arcaneShield){this.clear();return [];}
+  if(w.hero.visual!=='mage'||w.status==='menu'||w.status==='over'||!PLAYER_VISUALS.arcaneShield){this.clear();return [];}
   const now=w.elapsed,active=w.shield.absorbValue(now)>0,fade=mageShieldNovaDuration('shield-fade');
   if(active){
    if(!this.alive){

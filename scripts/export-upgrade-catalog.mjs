@@ -25,10 +25,36 @@ try {
     ultimates: { mage: ultimateDefinitions('mage'), warrior: ultimateDefinitions('warrior') },
     abilities: ABILITIES.map(a => ({ id: a.id, character: a.character ?? 'mage' })),
   }, null, 2) + '\n';
-  if(process.argv.includes('--check')){
+  const checking = process.argv.includes('--check');
+  if(checking){
     if(await readFile('resources/game/upgrade-catalog.json','utf8')!==json)throw new Error('Upgrade catalog is stale. Run npm run export:upgrades.');
     const { checkGameCatalog } = await server.ssrLoadModule('/scripts/check-game-catalog.ts');
     const definitions = execFileSync(process.env.PHP_BINARY ?? 'php', ['scripts/read-game-catalog.php'], { encoding: 'utf8' });
     checkGameCatalog(JSON.parse(definitions));
   }else await writeFile('resources/game/upgrade-catalog.json',json);
+
+  const { contentCatalogs } = await server.ssrLoadModule('/scripts/export-content-catalog.ts');
+  const path = 'resources/game/content-catalog.json';
+  const previous = await readFile(path, 'utf8').then(value => JSON.parse(value), error => {
+    if (error.code !== 'ENOENT') throw error;
+    return { schema: 1, active: {}, versions: [] };
+  });
+  if (previous.schema !== 1 || !Array.isArray(previous.versions)) throw new Error('Invalid content catalog schema.');
+  const versions = new Map(previous.versions.map(row => [row.version, row]));
+  if (versions.size !== previous.versions.length) throw new Error('Duplicate content catalog version.');
+  const active = {};
+  for (const row of contentCatalogs()) {
+    const saved = versions.get(row.version);
+    if (saved && JSON.stringify(saved) !== JSON.stringify(row)) {
+      throw new Error(`Immutable content version changed: ${row.version}. Keep the existing row and increment the preset version.`);
+    }
+    active[row.id] = row.version;
+    versions.set(row.version, row);
+  }
+  const contentJson = JSON.stringify({ schema: 1, active, versions: [...versions.values()] }, null, 2) + '\n';
+  if (checking) {
+    if (await readFile(path, 'utf8') !== contentJson) throw new Error('Content catalog is stale. Run npm run export:upgrades.');
+  } else {
+    await writeFile(path, contentJson);
+  }
 } finally { await server.close(); }

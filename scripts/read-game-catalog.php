@@ -7,6 +7,7 @@ $shop = require $config.'shop.php';
 $premium = require $config.'premium.php';
 $inventory = require $config.'inventory.php';
 $runItems = require $config.'run_items.php';
+$review = require $config.'run_review.php';
 
 echo json_encode([
     'heroIds' => array_keys($progression['characters']),
@@ -16,5 +17,7 @@ echo json_encode([
     'items' => array_keys($inventory['items']),
     'shopItemIds' => array_values(array_map(fn ($product) => $product['item_id'] ?? null, $shop['products'])),
     'premiumItemIds' => array_keys($premium['consumables']),
+    'enemyPoints' => $review['enemy_points'],
+    'regularKinds' => $review['regular_kinds'],
     'runItemIds' => array_keys($runItems['items']),
 ], JSON_THROW_ON_ERROR);

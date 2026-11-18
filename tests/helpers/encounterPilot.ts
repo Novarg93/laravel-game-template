@@ -36,7 +36,7 @@ export function encounterPilot(w: World, state: PilotState, allowBlink = true) {
     return score;
   };
   const input=[desired,...Array.from({length:8},(_,i)=>({x:Math.cos(i*Math.PI/4),y:Math.sin(i*Math.PI/4)}))].sort((a,b)=>cost(a)-cost(b))[0];
-  const blinkDistance=Math.min(MOBILITY[w.character].distance,Math.max(24,Math.min(w.width,w.height)*MOBILITY.viewportFraction)),landing={x:w.player.x+input.x*blinkDistance,y:w.player.y+input.y*blinkDistance};
+  const blinkDistance=Math.min(MOBILITY[w.hero.combat].distance,Math.max(24,Math.min(w.width,w.height)*MOBILITY.viewportFraction)),landing={x:w.player.x+input.x*blinkDistance,y:w.player.y+input.y*blinkDistance};
   const unsafe=w.impacts.some(i=>i.hostile&&distance(landing,i)<i.radius+20)||w.enemies.some(e=>distance(landing,e)<e.radius+22)||w.projectiles.some(p=>p.hostile&&segmentDistance(landing,p,{x:p.x+p.vx*.35,y:p.y+p.vy*.35})<24);
   if(allowBlink&&danger>.3&&!unsafe&&w.mobility.activate(w,input))state.blinks++;
   return input;

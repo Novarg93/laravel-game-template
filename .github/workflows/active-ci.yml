@@ -71,6 +71,7 @@ jobs:
         run: |
           npm run test:browser
           npm run test:browser:branding
+          npm run test:browser:content
       - name: Standalone development game smoke
         run: npm run test:e2e
       - name: Standalone production game smoke

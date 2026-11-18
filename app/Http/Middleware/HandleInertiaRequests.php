@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Runs\GameCatalog;
 use App\Services\CurrencyService;
 use App\Support\ProjectPresentation;
 use Illuminate\Http\Request;
@@ -42,6 +43,7 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'name' => app(ProjectPresentation::class)->name(),
             'project' => Inertia::always(fn () => app(ProjectPresentation::class)->website()),
+            'gameContentPreset' => Inertia::always(fn () => app(GameCatalog::class)->active()['id']),
             'csrfToken' => csrf_token(),
             'currencies' => fn () => app(CurrencyService::class)->snapshot($request->user(), $request->session()->get('display_currency')),
             'auth' => [

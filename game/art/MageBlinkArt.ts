@@ -7,7 +7,7 @@ import {MAGE_BLINK,MAGE_BLINK_TEXTURE,mageBlinkFrame} from './mageBlinkPack';
 // The instant teleport, protection, cooldown and upgrades remain in MobilitySystem.
 export function mageBlinkViews(w:World,intensity:number,reducedFlash=false){
  const index=mageBlinkFrame(w.elapsed-w.mobility.started),alpha=Number.isFinite(intensity)?Math.max(0,Math.min(1,intensity)):0;
- if(!PLAYER_VISUALS.arcaneBlink||w.character!=='mage'||w.mobility.sequence===0||w.status==='menu'||w.status==='over'||index===undefined||index===7||alpha===0)return [];
+ if(!PLAYER_VISUALS.arcaneBlink||w.hero.visual!=='mage'||w.mobility.sequence===0||w.status==='menu'||w.status==='over'||index===undefined||index===7||alpha===0)return [];
  return (['departure','arrival'] as const).flatMap(id=>{
   const at=id==='departure'?w.mobility.from:w.mobility.to;
   return (['back','front'] as const).map(layer=>({endpoint:id,layer,index,frame:MAGE_BLINK.clips[id][layer][index]!.frame,x:at.x,y:at.y,depth:layer==='back'?9.99:10.02,alpha:alpha*(reducedFlash?.65:1),tint:reducedFlash?0xc3b3e5:0xffffff}));

@@ -27,9 +27,9 @@ export function drawMageMagic(g: Phaser.GameObjects.Graphics, w: World, intensit
       if (w.status === 'over' || e.expires <= w.elapsed || !showPlayerShieldShell(w)) continue;
       // A spent cast must not leave a protective shell. The large evolution
       // pulse remains visible as damage feedback while the player is alive.
-      if (w.character === 'mage' && w.shield.absorbValue(w.elapsed) <= 0 && e.radius <= 32) continue;
+      if (w.hero.visual === 'mage' && w.shield.absorbValue(w.elapsed) <= 0 && e.radius <= 32) continue;
       const r = e.radius * (.65 + t * .35), color = 0xa5c4ff;
-      const v = abilityVisual(w.abilities[w.character === 'warrior' ? 'iron' : 'shield'].level);
+      const v = abilityVisual(w.abilities[w.hero.visual === 'warrior' ? 'iron' : 'shield'].level);
       ring(g, e.x, e.y, r, 0x263e53, fade, 0, 32); ring(g, e.x, e.y, r - 1, color, fade);
       for (let n = 0; n < v.rings; n++) ring(g, e.x, e.y, r * (.87 - n * .12), color, fade * (.3 + v.power * .2), .12, 24, v.lineWidth);
       for (let i = 0; i < v.sparks; i++) {

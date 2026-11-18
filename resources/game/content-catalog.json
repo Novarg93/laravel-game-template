@@ -1,0 +1,692 @@
+{
+  "schema": 1,
+  "active": {
+    "pixel-survivor": "pixel-survivor-v1",
+    "training-grove": "training-grove-v1"
+  },
+  "versions": [
+    {
+      "definitionHash": "61576154044a424d40102984cb89fc0f1028cf76b1d2d390b20606dc64b40076",
+      "id": "pixel-survivor",
+      "version": "pixel-survivor-v1",
+      "experimental": false,
+      "practice": true,
+      "heroes": {
+        "mage": {
+          "name": "Mage",
+          "public": true,
+          "skills": [
+            "fireball",
+            "frost",
+            "lightning",
+            "meteor",
+            "shield"
+          ],
+          "starting": {
+            "fireball": 1
+          },
+          "combat": "mage",
+          "ultimates": [
+            "lightning",
+            "frost",
+            "fire"
+          ]
+        },
+        "warrior": {
+          "name": "Warrior",
+          "public": true,
+          "skills": [
+            "cleave",
+            "whirlwind",
+            "slam",
+            "blades",
+            "iron"
+          ],
+          "starting": {
+            "cleave": 1
+          },
+          "combat": "warrior",
+          "ultimates": [
+            "banner",
+            "earthbreaker",
+            "ruin"
+          ]
+        }
+      },
+      "skills": {
+        "fireball": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "frost": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "lightning": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "meteor": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "shield": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "cleave": {
+          "maxRank": 5,
+          "evolutionRank": null
+        },
+        "whirlwind": {
+          "maxRank": 5,
+          "evolutionRank": null
+        },
+        "slam": {
+          "maxRank": 5,
+          "evolutionRank": null
+        },
+        "blades": {
+          "maxRank": 5,
+          "evolutionRank": null
+        },
+        "iron": {
+          "maxRank": 5,
+          "evolutionRank": null
+        }
+      },
+      "maps": [
+        "grove"
+      ],
+      "enemies": {
+        "ashGuard": {
+          "score": 5000,
+          "category": "final-boss",
+          "elite": false
+        },
+        "guardian": {
+          "score": 500,
+          "category": "guardian",
+          "elite": false
+        },
+        "grunt": {
+          "score": 10,
+          "category": "regular",
+          "elite": true
+        },
+        "runner": {
+          "score": 15,
+          "category": "regular",
+          "elite": true
+        },
+        "tank": {
+          "score": 30,
+          "category": "regular",
+          "elite": true
+        },
+        "caster": {
+          "score": 25,
+          "category": "regular",
+          "elite": true
+        },
+        "rusher": {
+          "score": 25,
+          "category": "regular",
+          "elite": true
+        },
+        "splitter": {
+          "score": 35,
+          "category": "regular",
+          "elite": true
+        },
+        "charger": {
+          "score": 1000,
+          "category": "miniboss",
+          "elite": false
+        },
+        "sorcerer": {
+          "score": 1000,
+          "category": "miniboss",
+          "elite": false
+        },
+        "eclipse": {
+          "score": 1500,
+          "category": "miniboss",
+          "elite": false
+        }
+      },
+      "scoreStep": 10,
+      "victory": {
+        "kind": "final-boss",
+        "at": 1200,
+        "enemy": "ashGuard",
+        "behavior": "ash-warden"
+      },
+      "maxLevel": 70,
+      "upgrades": {
+        "entries": [
+          {
+            "id": "mobility-flame-trail",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-slowing-flame",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-arcane-sprint",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-cleaving-dash",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "mobility-absorb-shield",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "mobility-berserk",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "damage",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "cooldown",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "projectiles",
+            "max": 3,
+            "rule": "stat",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "speed",
+            "max": 4,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "health",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "pickup",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "area",
+            "max": 4,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "unlock-frost",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "unlock-lightning",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "lightning",
+            "archetype": null
+          },
+          {
+            "id": "unlock-meteor",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "meteor",
+            "archetype": null
+          },
+          {
+            "id": "unlock-shield",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "unlock-whirlwind",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "whirlwind",
+            "archetype": null
+          },
+          {
+            "id": "unlock-slam",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "slam",
+            "archetype": null
+          },
+          {
+            "id": "unlock-blades",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "blades",
+            "archetype": null
+          },
+          {
+            "id": "unlock-iron",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "iron",
+            "archetype": null
+          },
+          {
+            "id": "rank-fireball",
+            "max": 4,
+            "rule": "rank",
+            "ability": "fireball",
+            "archetype": null
+          },
+          {
+            "id": "rank-frost",
+            "max": 4,
+            "rule": "rank",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "rank-lightning",
+            "max": 4,
+            "rule": "rank",
+            "ability": "lightning",
+            "archetype": null
+          },
+          {
+            "id": "rank-meteor",
+            "max": 4,
+            "rule": "rank",
+            "ability": "meteor",
+            "archetype": null
+          },
+          {
+            "id": "rank-shield",
+            "max": 4,
+            "rule": "rank",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "rank-cleave",
+            "max": 4,
+            "rule": "rank",
+            "ability": "cleave",
+            "archetype": null
+          },
+          {
+            "id": "rank-whirlwind",
+            "max": 4,
+            "rule": "rank",
+            "ability": "whirlwind",
+            "archetype": null
+          },
+          {
+            "id": "rank-slam",
+            "max": 4,
+            "rule": "rank",
+            "ability": "slam",
+            "archetype": null
+          },
+          {
+            "id": "rank-blades",
+            "max": 4,
+            "rule": "rank",
+            "ability": "blades",
+            "archetype": null
+          },
+          {
+            "id": "rank-iron",
+            "max": 4,
+            "rule": "rank",
+            "ability": "iron",
+            "archetype": null
+          },
+          {
+            "id": "evolve-fireball",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "fireball",
+            "archetype": null
+          },
+          {
+            "id": "evolve-frost",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "evolve-lightning",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "lightning",
+            "archetype": null
+          },
+          {
+            "id": "evolve-meteor",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "meteor",
+            "archetype": null
+          },
+          {
+            "id": "evolve-shield",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "restore",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "nova",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "magnet",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          }
+        ],
+        "mobilityLevel": 10,
+        "mobilityMax": 3,
+        "ultimateLevel": 30,
+        "ultimateTime": 300
+      }
+    },
+    {
+      "definitionHash": "faa98bc1fbe4ff550e5f74ce24a5ca497c36d7b8f61a616ac61a3b75a35296b1",
+      "id": "training-grove",
+      "version": "training-grove-v1",
+      "experimental": true,
+      "practice": false,
+      "heroes": {
+        "scout": {
+          "name": "Scout",
+          "public": true,
+          "skills": [
+            "trail-spark",
+            "frost",
+            "shield"
+          ],
+          "starting": {
+            "trail-spark": 1
+          },
+          "combat": "mage",
+          "ultimates": [
+            "lightning",
+            "frost",
+            "fire"
+          ]
+        }
+      },
+      "skills": {
+        "trail-spark": {
+          "maxRank": 3,
+          "evolutionRank": 3
+        },
+        "frost": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        },
+        "shield": {
+          "maxRank": 5,
+          "evolutionRank": 3
+        }
+      },
+      "maps": [
+        "trial-grove"
+      ],
+      "enemies": {
+        "runner": {
+          "score": 15,
+          "category": "regular",
+          "elite": true
+        },
+        "charger": {
+          "score": 1000,
+          "category": "miniboss",
+          "elite": false
+        },
+        "bramble": {
+          "score": 15,
+          "category": "regular",
+          "elite": true
+        }
+      },
+      "scoreStep": 30,
+      "victory": {
+        "kind": "duration",
+        "at": 20
+      },
+      "maxLevel": 8,
+      "upgrades": {
+        "entries": [
+          {
+            "id": "mobility-flame-trail",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-slowing-flame",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-arcane-sprint",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "mobility-cleaving-dash",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "mobility-absorb-shield",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "mobility-berserk",
+            "max": 3,
+            "rule": "mobility",
+            "ability": null,
+            "archetype": "warrior"
+          },
+          {
+            "id": "damage",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "cooldown",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "projectiles",
+            "max": 3,
+            "rule": "stat",
+            "ability": null,
+            "archetype": "mage"
+          },
+          {
+            "id": "speed",
+            "max": 4,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "health",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "pickup",
+            "max": 5,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "area",
+            "max": 4,
+            "rule": "stat",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "unlock-frost",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "unlock-shield",
+            "max": 1,
+            "rule": "unlock",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "rank-trail-spark",
+            "max": 2,
+            "rule": "rank",
+            "ability": "trail-spark",
+            "archetype": null
+          },
+          {
+            "id": "rank-frost",
+            "max": 4,
+            "rule": "rank",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "rank-shield",
+            "max": 4,
+            "rule": "rank",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "evolve-trail-spark",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "trail-spark",
+            "archetype": null
+          },
+          {
+            "id": "evolve-frost",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "frost",
+            "archetype": null
+          },
+          {
+            "id": "evolve-shield",
+            "max": 1,
+            "rule": "evolve",
+            "ability": "shield",
+            "archetype": null
+          },
+          {
+            "id": "restore",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "nova",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          },
+          {
+            "id": "magnet",
+            "max": 1000,
+            "rule": "supply",
+            "ability": null,
+            "archetype": null
+          }
+        ],
+        "mobilityLevel": 10,
+        "mobilityMax": 3,
+        "ultimateLevel": 30,
+        "ultimateTime": 300
+      }
+    }
+  ]
+}

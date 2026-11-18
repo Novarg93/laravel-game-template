@@ -24,12 +24,14 @@ import type { CharacterId } from '@game/config/characters';
 import type { PracticeBoss } from '@game/config/bossPractice';
 import { navigateGamepad, vPad } from './ui/gamepadNavigation';
 import { INPUT_DEVICE } from './ui/inputDevice';
-import { isPublicCharacter, PUBLIC_CHARACTER } from '@game/bootstrap/publicCharacters';
+import { gameDefinition, selectedHero } from './content/registry';
+import type { GameDefinition } from './content/types';
 import { mobileViewport, MobileFullscreen } from './ui/mobileViewport';
 import { platformPort } from '@game/platform/port';
 import type { RunRecord } from '@game/services/storage';
 import type { GamePresentation } from './presentation';
-defineProps<{ presentation: GamePresentation }>();
+const props = defineProps<{ presentation: GamePresentation; content?: GameDefinition }>();
+const content = props.content ?? gameDefinition();
 const platform = platformPort(), starting = ref(false), sending = ref(false), platformMessage = ref('');
 const inventoryOpen = ref(false);
 function inventoryModal(open: boolean) { inventoryOpen.value = open; commands.emit({ type: 'ui-screen', screen: open ? 'inventory' : 'game' }); }
@@ -54,15 +56,15 @@ const offNotice = gamepadNotices.on(notice => {
   if (notice === 'disconnected' || notice === 'unsupported' || notice === 'unavailable') inputDevice.value = 'keyboard';
   clearTimeout(noticeTimer); noticeTimer = setTimeout(() => { controllerNotice.value = ''; }, 4000);
 });
-const character = ref<CharacterId>('mage');
-const biome = ref<BiomeId>('grove');
-function chooseBiome(value: BiomeId) { biome.value=playableMap(value); commands.emit({type:'preview',biome:biome.value}); }
-function chooseCharacter(value: CharacterId) { character.value = isPublicCharacter(value) ? value : PUBLIC_CHARACTER; commands.emit({type:'preview',character:character.value}); }
+const character = ref<CharacterId>(selectedHero(content));
+const biome = ref<BiomeId>(content.maps[0].id);
+function chooseBiome(value: BiomeId) { biome.value=playableMap(value, content.maps); commands.emit({type:'preview',biome:biome.value}); }
+function chooseCharacter(value: CharacterId) { character.value = selectedHero(content, value); commands.emit({type:'preview',character:character.value}); }
 const mount = ref<HTMLElement>(), state = ref<Snapshot>();
 const debug = import.meta.env.DEV && new URLSearchParams(location.search).get('debug') === '1';
 const debugState = ref<Metrics>();
 const offMetrics = metrics.on(value => { if (debug) debugState.value = value; });
-const profile = ref(loadProfile()), previousBest = ref(profile.value.records[0]?.score ?? 0), storageFailed = ref(false);
+const profile = ref(loadProfile(undefined, content)), previousBest = ref(profile.value.records[0]?.score ?? 0), storageFailed = ref(false);
 const settings = ref(profile.value.settings), screen = ref<UiScreen>('game');
 watch(screen, value => commands.emit({ type: 'ui-screen', screen: value }), { flush: 'sync' });
 watch(screen, () => {
@@ -86,7 +88,7 @@ const off = snapshots.on(value => {
   if(value.status!=='over'){resultsVisible.value=false;}
   else resultsVisible.value=true;
   // Latch/save victory at the fatal hit; show results only after World completes Death A.
-  if ((value.status === 'over'||value.outcome==='victory') && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; if(!value.practice){profile.value = withRun(profile.value, runRecord(value)); storageFailed.value = !saveProfile(profile.value);} }
+  if ((value.status === 'over'||value.outcome==='victory') && recordedId !== value.runId) { recordedId = value.runId; previousBest.value = profile.value.records[0]?.score ?? 0; if(!value.practice){profile.value = withRun(profile.value, runRecord(value), content); storageFailed.value = !saveProfile(profile.value, undefined, content);} }
   if (platform && (value.status === 'over' || value.outcome === 'victory') && submittedId !== value.runId) {
     submittedId = value.runId; const record = runRecord(value);
     if (value.practice) record.elapsed = value.practiceElapsed ?? Math.max(0, value.elapsed - value.finalEncounter.started);
@@ -103,10 +105,10 @@ function restartCurrent(){if(state.value?.practice)startRun(state.value.practice
 async function startRun(practice:PracticeBoss|null) {
   const current = mobileViewport();
   if (current.blocked) return;
-  if (starting.value) return;
+  if (starting.value || practice && !content.practice) return;
   if (pendingResult.value) { platformMessage.value = 'Retry saving the previous result first.'; return; }
   if (current.touch && inputDevice.value !== 'gamepad') fullscreen.enter(document.documentElement);
-  if(practice)character.value = PUBLIC_CHARACTER;
+  if(practice)character.value = selectedHero(content, 'mage');
   if(practice)biome.value='grove';
   storageFailed.value=false;
   screen.value = 'game';
@@ -116,13 +118,14 @@ async function startRun(practice:PracticeBoss|null) {
   try {
     const platformRun = await platform.start(chosen, map, !!practice);
     if (!alive) return;
+    if (platformRun.contentVersion && platformRun.contentVersion !== content.version) throw new Error('Game content was updated. Reload the page to start a new run.');
     platformMessage.value = '';
     commands.emit({ type: practice?'boss-practice':'restart', practiceBoss:practice??undefined, character: chosen, biome: map, platformRun });
     if (document.hidden || !document.hasFocus()) commands.emit({ type: 'pause' });
   } catch (error) { if (alive) platformMessage.value = error instanceof Error ? error.message : 'Could not register the run.'; }
   finally { if (alive) starting.value = false; }
 }
-function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value); commands.emit({ type: 'settings', value }); }
+function updateSettings(value: Settings) { settings.value = value; profile.value.settings = value; saveProfile(profile.value, undefined, content); commands.emit({ type: 'settings', value }); }
 function openSettings() { commands.emit({ type: 'pause' }); screen.value = 'settings'; }
 function key(event: KeyboardEvent) {
   if (screen.value !== 'game' || inventoryOpen.value || event.repeat || event.target instanceof Element && event.target.closest('input,textarea,select,[contenteditable]')) return;
@@ -131,7 +134,7 @@ function key(event: KeyboardEvent) {
   }
   if (event.key === 'Escape' || event.key.toLowerCase() === 'p') { event.preventDefault(); if (state.value?.status === 'playing') commands.emit({ type: 'pause' }); else if (state.value?.status === 'paused') commands.emit({ type: 'resume' }); }
 }
-onMounted(() => { offUpgradeSpace = installUpgradeSpaceGuard(window, () => state.value?.status === 'upgrade' || state.value?.status === 'over'); if (mount.value) game = createGame(mount.value, settings.value); window.addEventListener('keydown', key); });
+onMounted(() => { offUpgradeSpace = installUpgradeSpaceGuard(window, () => state.value?.status === 'upgrade' || state.value?.status === 'over'); if (mount.value) game = createGame(mount.value, settings.value, content); window.addEventListener('keydown', key); });
 onMounted(() => { window.addEventListener('resize', resizeViewport); document.addEventListener('fullscreenchange', resizeViewport); window.screen.orientation?.addEventListener('change', resizeViewport); window.visualViewport?.addEventListener('resize', resizeViewport); });
 onUnmounted(() => { fullscreen.destroy(); window.removeEventListener('resize', resizeViewport); document.removeEventListener('fullscreenchange', resizeViewport); window.screen.orientation?.removeEventListener('change', resizeViewport); window.visualViewport?.removeEventListener('resize', resizeViewport); });
 onUnmounted(() => { alive = false; platform?.destroy(); off(); offMetrics(); offDevice(); offNotice(); offPadUi(); clearTimeout(noticeTimer); offUpgradeSpace?.(); window.removeEventListener('keydown', key); game?.destroy(true); });
@@ -147,7 +150,7 @@ onUnmounted(() => { alive = false; platform?.destroy(); off(); offMetrics(); off
    <button v-if="pendingResult && !sending" class="small-button" @click="sendResult">Retry saving</button>
   </aside>
   <div v-if="debug && debugState" class="debug-hud">FPS {{ debugState.fps.toFixed(1) }} · update {{ debugState.updateMs.toFixed(2) }}ms<br>mobs {{ debugState.enemies }} / bullets {{ debugState.projectiles }} / XP {{ debugState.orbs }} / bosses {{ debugState.bosses }}<br>chunks {{ debugState.chunks }} / sprites {{ debugState.sprites }} + {{ debugState.pooledSprites }} pooled</div>
-  <MainMenu v-if="state?.status === 'menu'" :presentation="presentation" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" :premium-available="!!platform?.commerce" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @guardian-practice="startGuardianPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" @premium="screen = 'premium'" />
+  <MainMenu v-if="state?.status === 'menu'" :presentation="presentation" :content="content" :best="profile.records[0]?.score ?? 0" :character="character" :biome="biome" :premium-available="!!platform?.commerce && !content.experimental" @character="chooseCharacter" @biome="chooseBiome" @play="start" @boss-practice="startBossPractice" @guardian-practice="startGuardianPractice" @help="screen = 'help'" @settings="openSettings" @records="screen = 'records'" @premium="screen = 'premium'" />
   <template v-if="state && state.status !== 'menu'">
    <InGameInventory v-if="platform?.commerce && state.serverEconomy" :state="state" :port="platform.commerce" @modal="inventoryModal" />
    <UltimateControl :state="state" @activate="commands.emit({ type: 'ultimate' })" />
@@ -156,7 +159,7 @@ onUnmounted(() => { alive = false; platform?.destroy(); off(); offMetrics(); off
    <LevelUpModal v-if="state.status === 'upgrade'" :choices="state.choices" :level="state.level - state.pending + 1" :offer="state.offerId" :disabled="state.premiumPending" :loading="state.serverEconomy && !!state.premium?.enabled && !state.serverOffer" @choose="(id, offer) => commands.emit({ type: 'upgrade', id, offer })"><PremiumActions v-if="platform?.commerce && state.serverEconomy && state.premium?.enabled" :state="state" :port="platform.commerce" mode="level" /></LevelUpModal>
    <DialogFrame v-if="state.status === 'paused' && screen === 'game' && !inventoryOpen && !state.awaitingRevive" label="Pause" @close="commands.emit({ type: 'resume' })"><small>THE GROVE CAN WAIT</small><h1>Pause</h1><p>Catch your breath. Your magic will be here.</p><div class="button-stack"><button v-pad="() => commands.emit({ type: 'resume' })" @click="commands.emit({ type: 'resume' })">Resume →</button><button v-if="state.serverEconomy" class="secondary" v-pad="() => commands.emit({ type: 'inventory-open' })" @click="commands.emit({ type: 'inventory-open' })">Consumables / Shop</button><button class="secondary" v-pad="openSettings" @click="openSettings">Settings</button><button class="text-button" v-pad="() => commands.emit({ type: 'menu' })" @click="commands.emit({ type: 'menu' })">Main menu</button></div></DialogFrame>
    <DialogFrame v-if="state.status === 'over' && resultsVisible" class="run-results" label="Game over">
-    <div class="result-heading"><small>{{state.outcome==='victory'?victoryTitle(state.practiceBoss):'THE LAST SPARK'}}</small><h1>{{state.outcome==='victory'?'Victory!':'The grove wins. For now.'}}</h1></div>
+    <div class="result-heading"><small>{{state.outcome==='victory'?(content.victory.kind === 'duration' ? 'TARGET REACHED' : victoryTitle(state.practiceBoss)):'THE LAST SPARK'}}</small><h1>{{ state.outcome === 'victory' ? 'Victory!' : state.objective ? 'Run ended' : 'The grove wins. For now.' }}</h1></div>
     <div class="result-metrics" aria-label="Run summary">
      <div><small>Score</small><h2 class="result-score">{{state.score.toLocaleString('en-US')}}</h2></div>
      <div><small>Time</small><b>{{formatTime(state.practiceElapsed??state.elapsed)}}</b></div>
@@ -170,7 +173,8 @@ onUnmounted(() => { alive = false; platform?.destroy(); off(); offMetrics(); off
      <p v-if="Object.keys(state.itemsUsed??{}).length" data-testid="run-item-summary" class="muted">Used: Healing {{state.itemsUsed?.healing_potion??0}} · Movement {{state.itemsUsed?.movement_boost??0}} · Damage {{state.itemsUsed?.damage_boost??0}} · Revive {{state.itemsUsed?.revive??0}}</p>
      <details ref="resultDetails" class="result-details result-build-details"><summary v-pad="toggleResultDetails">Build and local records</summary>
       <div class="run-build"><span v-for="ability in state.abilities.filter(a=>a.level>0)" :key="ability.id">{{ability.icon}} {{ability.name}} {{ability.level}}</span></div>
-      <p class="muted">Sprouts {{state.killsByKind.grunt}} · Runners {{state.killsByKind.runner}} · Golems {{state.killsByKind.tank}} · Casters {{state.killsByKind.caster}}</p>
+      <p v-if="state.objective" class="muted"><template v-for="enemy in content.enemies" :key="enemy.id"><span v-if="state.killsByKind[enemy.id]">{{ enemy.name }} {{ state.killsByKind[enemy.id] }} · </span></template></p>
+     <p v-else class="muted">Sprouts {{state.killsByKind.grunt}} · Runners {{state.killsByKind.runner}} · Golems {{state.killsByKind.tank}} · Casters {{state.killsByKind.caster}}</p>
       <LocalRecords v-if="!state.practice" :records="profile.records.slice(0,3)" />
      </details>
      <aside v-if="platform || !state.practice" class="platform-notice platform-result-notice" role="status"><span v-if="platform">{{sending?'Saving run result…':platformMessage}}</span><button v-if="pendingResult && !sending" class="small-button" @click="sendResult">Retry saving</button><a v-if="platform" href="/dashboard">Account →</a><a v-else href="/register">Create an account for future progression →</a></aside>

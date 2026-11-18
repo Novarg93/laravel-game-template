@@ -6,6 +6,7 @@ use App\Models\GameRun;
 use App\Models\InventoryTransaction;
 use App\Models\RunDeath;
 use App\Models\RunItemUsage;
+use App\Runs\GameCatalog;
 use App\Runs\RunAssessment;
 use App\Runs\RunRecordValidator;
 use App\Support\CanonicalJson;
@@ -20,11 +21,12 @@ class RunAssessmentService
     public function assess(GameRun $run, array $r, CarbonInterface $submittedAt): RunAssessment
     {
         $hard = $soft = $items = [];
-        $points = config('run_review.enemy_points');
-        $regular = config('run_review.regular_kinds');
+        $catalog = app(GameCatalog::class)->forRun($run);
+        $points = array_map(fn (array $enemy): int => $enemy['score'], $catalog['enemies']);
+        $regular = array_keys(array_filter($catalog['enemies'], fn (array $enemy): bool => $enemy['elite']));
         $hash = CanonicalJson::recordHash($r);
         try {
-            app(RunRecordValidator::class)->validate($r);
+            app(RunRecordValidator::class)->validate($r, $catalog);
         } catch (ValidationException) {
             return new RunAssessment(['invalid_stored_record'], [], [], 0, 0, 0, 'unavailable', $hash);
         }
@@ -49,22 +51,30 @@ class RunAssessmentService
         if ($elapsed < 0 || $elapsed > $wall + 2 || $wall < 0 || $wall > 86400 || (float) ($r['finalEncounter']['duration'] ?? -1) > $elapsed + 2) {
             $hard[] = 'submitted_time_inconsistency';
         }
-        $bosses = $r['byKind']['ashGuard'] + $r['byKind']['charger'] + $r['byKind']['sorcerer'] + $r['byKind']['eclipse'];
+        $bosses = $guardians = 0;
+        foreach ($catalog['enemies'] as $kind => $enemy) {
+            if (in_array($enemy['category'], ['miniboss', 'final-boss'], true)) {
+                $bosses += $r['byKind'][$kind];
+            } elseif ($enemy['category'] === 'guardian') {
+                $guardians += $r['byKind'][$kind];
+            }
+        }
         if (array_sum($r['byKind']) !== $r['kills'] || $bosses !== $r['details']['bossKills']
-            || $r['details']['regularKills'] + $r['details']['eliteKills'] + $bosses + $r['byKind']['guardian'] !== $r['kills']) {
+            || $r['details']['regularKills'] + $r['details']['eliteKills'] + $bosses + $guardians !== $r['kills']) {
             $hard[] = 'kill_counters_inconsistent';
         }
-        $allowed = config('progression.character_abilities.'.$run->character_id, []);
-        if (array_diff($r['abilities'], $allowed) !== [] || array_diff(array_column($r['details']['damage'], 'id'), $allowed) !== []) {
+        $hero = $catalog['heroes'][$run->character_id] ?? null;
+        $allowed = $hero['skills'] ?? [];
+        if ($hero === null || ! in_array($run->biome_id, $catalog['maps'], true)
+            || array_diff($r['abilities'], $allowed) !== [] || array_diff(array_column($r['details']['damage'], 'id'), $allowed) !== []
+            || isset($run->start_snapshot['content_version']) && array_diff(array_keys($hero['starting'] ?? []), $r['abilities']) !== []) {
             $hard[] = 'character_abilities_mismatch';
         }
         if ($r['kills'] > $elapsed * 500 + 150) {
             $hard[] = 'existing_kill_rate_bound';
         }
         $won = $r['outcome'] === 'victory';
-        if ($run->mode === 'normal' && (($won && ($elapsed < 1200 || ! $r['finalEncounter']['killed'] || ! $r['finalEncounter']['reached'] || $r['byKind']['ashGuard'] !== 1 || ($r['completionKind'] ?? '') !== 'final-boss'))
-            || (! $won && ($r['finalEncounter']['killed'] || $r['byKind']['ashGuard'] !== 0 || ($r['completionKind'] ?? '') !== 'defeat'))
-            || ($r['finalEncounter']['reached'] && $elapsed < 1200))) {
+        if ($run->mode === 'normal' && ! $this->validOutcome($r, $catalog, $elapsed, $won)) {
             $hard[] = 'final_encounter_inconsistent';
         }
         $base = 0;
@@ -111,7 +121,7 @@ class RunAssessmentService
         } elseif ($elite > 0) {
             $soft[] = 'legacy_elite_distribution_missing';
         }
-        if ($elite > array_sum(array_column($capacity, 'count')) || $r['score'] < $minimum || $r['score'] > $maximum || ($r['score'] - $base) % 10 !== 0) {
+        if ($elite > array_sum(array_column($capacity, 'count')) || $r['score'] < $minimum || $r['score'] > $maximum || ($r['score'] - $base) % $catalog['scoreStep'] !== 0) {
             $hard[] = 'game_score_inconsistent';
         }
         if ($r['score'] >= config('run_review.soft_score_threshold') || config('run_review.soft_kills_per_second') < $r['kills'] / max(1, $elapsed)) {
@@ -166,5 +176,32 @@ class RunAssessmentService
         }
 
         return new RunAssessment(array_values(array_unique($hard)), array_values(array_unique($soft)), $items, $revives, $minimum, $maximum, $scoreEvidence, $hash);
+    }
+
+    /** @param array<string,mixed> $record
+     * @param  array<string,mixed>  $catalog
+     */
+    private function validOutcome(array $record, array $catalog, float $elapsed, bool $won): bool
+    {
+        $rule = $catalog['victory'];
+        $final = $record['finalEncounter'];
+        $completion = $record['completionKind'];
+        if ($rule['kind'] === 'duration') {
+            $finalKills = array_filter($catalog['enemies'], fn (array $enemy): bool => $enemy['category'] === 'final-boss');
+            foreach (array_keys($finalKills) as $kind) {
+                if ($record['byKind'][$kind] !== 0) {
+                    return false;
+                }
+            }
+
+            return ! $final['reached'] && ! $final['killed'] && (float) $final['duration'] === 0.0
+                && ($won ? ($completion === 'survival' && $elapsed === (float) $rule['at']) : ($completion === 'defeat' && $elapsed < $rule['at']));
+        }
+
+        $kills = $record['byKind'][$rule['enemy']];
+
+        return (! $final['reached'] || $elapsed >= $rule['at'])
+            && ($won ? ($elapsed >= $rule['at'] && $final['reached'] && $final['killed'] && $kills === 1 && $completion === 'final-boss')
+                : (! $final['killed'] && $kills === 0 && $completion === 'defeat'));
     }
 }

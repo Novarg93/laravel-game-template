@@ -17,7 +17,7 @@ export class MageSpellOrigins{
   }
   capture(w:World,muzzle: MageMuzzle|undefined){
     if(this.run!==w.runId){this.launches.clear();this.arcs.clear();this.run=w.runId;}
-    if(w.character!=='mage'||w.status==='menu'||w.status==='over'){this.clear();return;}
+    if(w.hero.visual!=='mage'||w.status==='menu'||w.status==='over'){this.clear();return;}
     if(this.observed?.at!==w.elapsed||this.observed.run!==w.runId)this.observe(w);
     const signal=this.observed!;
     const live=new Set(w.projectiles.filter(p=>!p.hostile&&p.source==='fireball').map(p=>p.id));

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Head, Link, usePage } from '@inertiajs/vue3';
 import { computed, ref } from 'vue';
+import { gameDefinition } from '@game/content/registry';
 import type { ProgressionSnapshot, RewardItem } from '@/types/progression';
 import type { InventorySnapshot } from '@/types/inventory';
 import InventoryPanel from '@/components/InventoryPanel.vue';
@@ -9,7 +10,8 @@ import type { AccountSummary } from '@/types/account';
 import AccountBalances from '@/components/AccountBalances.vue';
 import AccountOrders from '@/components/AccountOrders.vue';
 const props = defineProps<{ progression: ProgressionSnapshot; inventory: InventorySnapshot; commerce: CommerceSummary; account: AccountSummary }>();
-const page = usePage(), track = ref('account');
+const page = usePage<{ gameContentPreset: string }>(), track = ref('account');
+const content = computed(() => gameDefinition(page.props.gameContentPreset));
 defineOptions({ name: 'DashboardPage' });
 const names: Record<string, string> = { damage: 'Damage', maximum_health: 'Maximum HP', movement_speed: 'Movement speed', pickup_radius: 'Pickup radius', ability_area: 'Ability area', cooldown_reduction: 'Cooldown reduction', damage_reduction: 'Incoming damage reduction', experience_gain: 'In-run experience' };
 const labels: Record<string, string> = { credits: 'Credits', healing_potion: 'Healing Potion', movement_boost: 'Movement boost', damage_boost: 'Damage boost', revive: 'Revive', xp_boost_24h: '24-hour XP Boost', cosmetic_reward: 'Cosmetic reward' };
@@ -26,7 +28,7 @@ function duration(seconds: number) { const total = Math.floor(seconds); return `
         <AccountBalances :balances="account.balances" />
         <section class="account-recent"><div class="section-heading"><h2>Recent orders</h2><Link href="/account/orders">All orders →</Link></div><AccountOrders :entries="account.orders" /></section>
         <div class="profile-panel"><div><small>PROFILE</small><p>{{ page.props.auth.user.email }}</p><span>Email verified</span></div><Link href="/settings/profile" class="quiet-link">Settings →</Link><form action="/logout" method="post"><input type="hidden" name="_token" :value="page.props.csrfToken" /><button type="submit" class="quiet-link">Log out</button></form></div>
-        <section class="progress-account" aria-label="Account Progress"><div><small>ACCOUNT LEVEL</small><h2 data-testid="account-level">{{ progression.account.level }} <span>/ 10</span></h2></div><div><progress :value="progression.account.level === 10 ? 100 : progression.account.xp" max="100" aria-label="Account XP" /><p>{{ progression.account.level === 10 ? 'Maximum level' : `${progression.account.xp} / 100 XP · next level in ${progression.account.xp_to_next} XP` }}</p><small>Defeat the final Warden: +50 XP. Defeat and practice: 0 Account XP.</small></div></section>
+        <section class="progress-account" aria-label="Account Progress"><div><small>ACCOUNT LEVEL</small><h2 data-testid="account-level">{{ progression.account.level }} <span>/ 10</span></h2></div><div><progress :value="progression.account.level === 10 ? 100 : progression.account.xp" max="100" aria-label="Account XP" /><p>{{ progression.account.level === 10 ? 'Maximum level' : `${progression.account.xp} / 100 XP · next level in ${progression.account.xp_to_next} XP` }}</p><small>{{ content.experimental ? 'This training mode does not award Account XP.' : content.victory.kind === 'duration' ? 'Reach the survival target: +50 XP. Defeat and practice: 0 Account XP.' : 'Defeat the final Warden: +50 XP. Defeat and practice: 0 Account XP.' }}</small></div></section>
         <h2>Characters</h2>
         <div class="character-progress-grid"><article v-for="(hero, id) in progression.characters" :key="id" :data-testid="`character-${id}`"><p class="overline">{{ id }}</p><h3>Level {{ hero.level }} / 10</h3><progress :value="hero.level === 10 ? 100 : hero.xp" max="100" :aria-label="`${id} XP`" /><p>{{ hero.level === 10 ? 'Maximum level' : `${hero.xp} / 100 XP · ${hero.xp_to_next} XP to go` }}</p><dl><template v-for="(amount, stat) in hero.bonuses" :key="stat"><dt>{{ names[stat] ?? stat }}</dt><dd>{{ amount / 100 }}%</dd></template></dl><small>Damage bonuses add up: +5% at level 10. Cooldown and damage reduction are shown as reductions.</small></article></div>
         <section class="run-summary" aria-label="Run summary"><div><b>{{ progression.stats.wins }}</b><span>Victories</span></div><div><b>{{ progression.stats.defeats }}</b><span>Defeats</span></div><div><b>{{ duration(progression.stats.seconds) }}</b><span>Time played</span></div><div><b>{{ progression.stats.best_score.toLocaleString('en-US') }}</b><span>Best score</span></div></section>

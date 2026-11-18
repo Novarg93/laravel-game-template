@@ -22,7 +22,7 @@ export class MobilitySystem extends AbsorbPool {
   private arrivedSequence = 0;
   upgrade(w: World, variant: MobilityVariant) {
     const definition = MOBILITY_UPGRADES.find(u => u.id === variant);
-    if (!definition || w.experience.level < MOBILITY_SPECIALIZATION_LEVEL || !['playing', 'upgrade'].includes(w.status) || definition.character !== w.character || this.variant && this.variant !== variant || this.rank >= MOBILITY_MAX_RANK) return false;
+    if (!definition || w.experience.level < MOBILITY_SPECIALIZATION_LEVEL || !['playing', 'upgrade'].includes(w.status) || definition.character !== w.hero.combat || this.variant && this.variant !== variant || this.rank >= MOBILITY_MAX_RANK) return false;
     this.variant = variant; this.rank++; return true;
   }
   private arrive(w: World) {
@@ -42,9 +42,9 @@ export class MobilitySystem extends AbsorbPool {
   }
   activate(w: World, input: Point = { x: 0, y: 0 }) {
     if(w.outcome)return false;
-    if(w.character==='warrior'&&w.ultimate.warriorBodyActive(w.elapsed))return false;
+    if(w.hero.mobility === 'dash'&&w.ultimate.warriorBodyActive(w.elapsed))return false;
     if (w.status !== 'playing' || w.elapsed < this.readyAt || this.remaining > 0 || !Number.isFinite(input.x + input.y + w.player.x + w.player.y)) return false;
-    const c = MOBILITY[w.character], v = direction(input.x, input.y);
+    const c = MOBILITY[w.hero.mobility === 'blink' ? 'mage' : 'warrior'], v = direction(input.x, input.y);
     this.direction = v.x || v.y ? v : { ...w.facing };
     if (!Number.isFinite(this.direction.x + this.direction.y) || !Math.hypot(this.direction.x, this.direction.y)) return false;
     this.distance = Math.min(c.distance, Math.max(24, Math.min(w.width, w.height) * MOBILITY.viewportFraction));
@@ -54,7 +54,7 @@ export class MobilitySystem extends AbsorbPool {
     this.castCooldown = effectiveCooldown(c.cooldown, w.effectiveCooldown);
     this.started = w.elapsed; this.readyAt = w.elapsed + this.castCooldown; this.protectedUntil = w.elapsed + c.protection; this.sequence++;
     this.dashHits.clear(); w.facing = { ...this.direction };
-    if (w.character === 'mage') { w.player.x = this.to.x; w.player.y = this.to.y; this.arrive(w); }
+    if (w.hero.mobility === 'blink') { w.player.x = this.to.x; w.player.y = this.to.y; this.arrive(w); }
     else {this.remaining = this.distance;w.warrior.pendingSpear=undefined;w.warrior.cleave=undefined;w.warrior.gestureUntil=w.elapsed+c.duration;}
     w.ultimate.onBlink(w);
     return true;
@@ -89,6 +89,6 @@ export class MobilitySystem extends AbsorbPool {
       }
     }
   }
-  snapshot(w: World) { const c = MOBILITY[w.character], specialization = MOBILITY_UPGRADES.find(u => u.id === this.variant); return { name: c.name, cooldown: effectiveCooldown(c.cooldown, w.effectiveCooldown), castCooldown: this.castCooldown, readyIn: Math.max(0, this.readyAt - w.elapsed), active: this.remaining > 0, sequence: this.sequence, variant: this.variant, rank: this.rank, specialization: specialization?.name ?? null, category: specialization?.category ?? null, absorb: this.absorbValue(w.elapsed), absorbRemaining: Math.max(0, this.absorbUntil - w.elapsed) }; }
+  snapshot(w: World) { const c = MOBILITY[w.hero.mobility === 'blink' ? 'mage' : 'warrior'], specialization = MOBILITY_UPGRADES.find(u => u.id === this.variant); return { name: c.name, cooldown: effectiveCooldown(c.cooldown, w.effectiveCooldown), castCooldown: this.castCooldown, readyIn: Math.max(0, this.readyAt - w.elapsed), active: this.remaining > 0, sequence: this.sequence, variant: this.variant, rank: this.rank, specialization: specialization?.name ?? null, category: specialization?.category ?? null, absorb: this.absorbValue(w.elapsed), absorbRemaining: Math.max(0, this.absorbUntil - w.elapsed) }; }
   clear() { this.readyAt = this.protectedUntil = this.remaining = this.castCooldown = this.absorb = this.absorbUntil = 0; this.started = this.upgradeStarted = -Infinity; this.variant = null; this.rank = 0; this.dashHits.clear(); this.arrivedSequence = 0; }
 }

@@ -31,7 +31,7 @@ export class UltimateSystem {
     return Math.max(0,Math.min(1,(age-C.lightning.spawnQuiet)/C.lightning.spawnRecovery));
   }
   eligible(w: World) { return !this.selected && w.elapsed>=C.time && w.upgradeLevel>=C.level; }
-  choose(w: World, id: UltimateId) { if(!this.eligible(w)||!ultimateDefinitions(w.character).some(d=>d.id===id))return false;this.selected=id;this.charge=C.charges;this.blinkSequence=w.mobility.sequence;return true; }
+  choose(w: World, id: UltimateId) { if(!this.eligible(w)||!ultimateDefinitions(w.hero.ultimate).some(d=>d.id===id))return false;this.selected=id;this.charge=C.charges;this.blinkSequence=w.mobility.sequence;return true; }
   onBlink(w: World) {
     if(w.mobility.sequence===this.blinkSequence)return;
     this.blinkSequence=w.mobility.sequence;
@@ -44,7 +44,7 @@ export class UltimateSystem {
   activate(w: World) {
     if(w.outcome)return false;
     if(w.finalEncounter.phase==='intro')return false;
-    if(w.status!=='playing'||!this.selected||!ultimateDefinitions(w.character).some(d=>d.id===this.selected)||this.charge<C.charges||w.elapsed<this.activeUntil||this.casting)return false;
+    if(w.status!=='playing'||!this.selected||!ultimateDefinitions(w.hero.ultimate).some(d=>d.id===this.selected)||this.charge<C.charges||w.elapsed<this.activeUntil||this.casting)return false;
     const nodes=this.selected==='lightning'?chainStorm(w.player,w.facing,w.combatTargets,this.viewport.width,this.viewport.height):[];
     if(this.selected==='lightning'&&!nodes.length)return false;
     this.charge=0;this.sequence++;this.started=w.elapsed;this.origin={x:w.player.x,y:w.player.y};this.direction={...w.facing};this.hits.clear();this.spent.clear();this.nextHit.clear();

@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
+import { Head, Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 import { useProject } from '@/composables/useProject';
 import { splitWordmark } from '@game/presentation';
-import { CHARACTERS } from '@game/config/characters';
-import { isPublicCharacter } from '@game/bootstrap/publicCharacters';
+import { gameDefinition, publicHeroes } from '@game/content/registry';
 
 defineOptions({ name: 'WelcomePage' });
 const project = useProject();
 const home = computed(() => project.value.homepage);
 const wordmark = computed(() => splitWordmark(home.value.title));
-const heroes = (['mage', 'warrior'] as const).filter(isPublicCharacter);
+const page = usePage<{ gameContentPreset: string }>();
+const content = computed(() => gameDefinition(page.props.gameContentPreset));
+const heroes = computed(() => publicHeroes(content.value).map(hero => ({
+    ...hero,
+    marketing: hero.id === 'mage' || hero.id === 'warrior' ? home.value.heroes[hero.id] : {
+        title: [hero.name], description: hero.description, traits: [hero.hp + ' HP'],
+    },
+})));
 </script>
 <template>
     <Head :title="home.pageTitle" />
@@ -37,12 +43,12 @@ const heroes = (['mage', 'warrior'] as const).filter(isPublicCharacter);
             <p><template v-for="(line, index) in home.heroes.description" :key="index"><br v-if="index" />{{ line }}</template></p>
         </div>
         <div class="hero-grid">
-            <article v-for="(hero, index) in heroes" :key="hero" class="hero-card" :class="hero">
-                <div class="hero-card-top"><div class="hero-number">{{ String(index + 1).padStart(2, '0') }} / {{ CHARACTERS[hero].name.toUpperCase() }}</div><span class="hero-sigil" aria-hidden="true">{{ hero === 'mage' ? '✧' : '⚔' }}</span></div>
-                <h3><template v-for="(line, lineIndex) in home.heroes[hero].title" :key="lineIndex"><br v-if="lineIndex" />{{ line }}</template></h3>
-                <p>{{ home.heroes[hero].description }}</p>
-                <div class="hero-traits"><span v-for="(trait, traitIndex) in home.heroes[hero].traits" :key="traitIndex">{{ trait }}</span></div>
-                <a href="/play">Play as {{ CHARACTERS[hero].name }} <span aria-hidden="true">↗</span></a>
+            <article v-for="(hero, index) in heroes" :key="hero.id" class="hero-card" :class="hero.visual">
+                <div class="hero-card-top"><div class="hero-number">{{ String(index + 1).padStart(2, '0') }} / {{ hero.name.toUpperCase() }}</div><span class="hero-sigil" aria-hidden="true">{{ hero.visual === 'mage' ? '✧' : '⚔' }}</span></div>
+                <h3><template v-for="(line, lineIndex) in hero.marketing.title" :key="lineIndex"><br v-if="lineIndex" />{{ line }}</template></h3>
+                <p>{{ hero.marketing.description }}</p>
+                <div class="hero-traits"><span v-for="(trait, traitIndex) in hero.marketing.traits" :key="traitIndex">{{ trait }}</span></div>
+                <a href="/play">Play as {{ hero.name }} <span aria-hidden="true">↗</span></a>
             </article>
         </div>
     </section>

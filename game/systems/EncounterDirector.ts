@@ -1,11 +1,10 @@
 import { ENCOUNTER_DIRECTOR as C, bossAggressionAt } from '../config/encounterDirector';
-import type { ScheduledBossKind as BossKind } from '../config/enemyDefinitions';
 import type { World } from './World';
 import { SURVIVAL_ENRAGE } from '../config/survivalEnrage';
 import { encounterWindowAt } from './encounterSchedule';
 export interface EncounterEvent {
   minute: number; at: number; label: string; requestedBosses: number; requestedGuardians: number;
-  bosses: { id: number; kind: BossKind }[]; guardians: number[]; skippedBosses: number; skippedGuardians: number;
+  bosses: { id: number; kind: string }[]; guardians: number[]; skippedBosses: number; skippedGuardians: number;
   aggression: ReturnType<typeof bossAggressionAt>; missedMinutes: number;
 }
 export class EncounterDirector {
@@ -20,7 +19,12 @@ export class EncounterDirector {
     if (this.notice && w.elapsed >= this.notice.until) this.notice = null;
     const now=w.elapsed+1e-7;
     if (now < this.nextAt) return;
-    const window = encounterWindowAt(w.elapsed), at = window.at, minute = at / 60, plan = window.plan;
+    const schedule = w.content.encounters;
+    const window = schedule.kind === 'grove' ? encounterWindowAt(w.elapsed) : (() => {
+      const plan = [...schedule.milestones].reverse().find(event => event.at <= now)!;
+      return { at: plan.at, plan, nextAt: schedule.milestones.find(event => event.at > now)?.at ?? Infinity };
+    })();
+    const at = window.at, minute = at / 60, plan = window.plan;
     const missedMinutes = Math.max(0, Math.floor((at-this.nextAt)/60));
     // Consume the current window once; no backlog or catch-up burst.
     this.nextAt = window.nextAt;
@@ -34,7 +38,8 @@ export class EncounterDirector {
     this.history.push(event); if (this.history.length > C.historyCap) this.history.shift();
     const skipped = event.skippedBosses + event.skippedGuardians;
     const clock=`${Math.floor(minute)}:${Number.isInteger(minute)?'00':'30'}`;
-    this.notice = { text: `${plan.label} · ${clock} · bosses ${bosses.length}/${plan.bosses.length} · Guardians ${guardians.length}/${plan.guardians}${skipped ? ' · occupied slots skipped' : ''}`, until: w.elapsed + C.noticeDuration };
+    const time = schedule.kind === 'grove' ? clock : `${Math.floor(at / 60)}:${String(Math.floor(at % 60)).padStart(2, '0')}`;
+    this.notice = { text: `${plan.label} · ${time} · bosses ${bosses.length}/${plan.bosses.length} · Guardians ${guardians.length}/${plan.guardians}${skipped ? ' · occupied slots skipped' : ''}`, until: w.elapsed + C.noticeDuration };
     if (w.bosses.length + w.guardians.length >= 4) this.reliefUntil = w.elapsed + C.reliefDuration;
   }
   crowded(w: World) { return w.bosses.length + w.guardianSystem.encounters.size >= 3; }

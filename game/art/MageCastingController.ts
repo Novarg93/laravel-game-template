@@ -82,7 +82,7 @@ export class MageCastingController {
     }
     const hurt = this.hp - w.player.hp >= 8, blink = this.mobility !== w.mobility.sequence;
     this.hp = w.player.hp; this.mobility = w.mobility.sequence;
-    if (w.character !== 'mage') { this.clear(); return; }
+    if (w.hero.visual !== 'mage') { this.clear(); return; }
     if (w.status === 'over') { this.interrupt('death', w.elapsed); return; }
     if (w.status !== 'playing') return;
     if (hurt) this.interrupt('hurt', w.elapsed);

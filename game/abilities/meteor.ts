@@ -5,7 +5,7 @@ import { denseGroup, groundTargets, validGroundTarget } from './targeting';
 export function meteor(w: World) {
   const rank = w.abilities.meteor.level;
   if (w.status !== 'playing' || rank < 1) return false;
-  const radius = (C.radiusBase + rank * C.radiusPerRank) * w.stats.area, targets = groundTargets(w, C.range);
+  const radius = (C.radiusBase + rank * C.radiusPerRank) * w.stats.area * w.abilityRadius('meteor'), targets = groundTargets(w, C.range);
   const first = denseGroup(w, targets, radius, true), slots = 24 - w.impacts.length - w.zones.length;
   if (!first || slots <= 0) return false;
   let group = first;

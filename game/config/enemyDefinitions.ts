@@ -17,4 +17,4 @@ export const ENEMY_NAMES: Record<EnemyKind, string> = { ashGuard: 'Ash Grove War
 export type ScheduledBossKind = 'charger' | 'sorcerer' | 'eclipse';
 export type BossKind = ScheduledBossKind | 'ashGuard';
 export type RegularKind = Exclude<EnemyKind, BossKind | 'guardian'>;
-export function isBossKind(kind: EnemyKind): kind is BossKind { return kind === 'charger' || kind === 'sorcerer' || kind === 'eclipse' || kind === 'ashGuard'; }
+export function isBossKind(kind: string): kind is BossKind { return kind === 'charger' || kind === 'sorcerer' || kind === 'eclipse' || kind === 'ashGuard'; }

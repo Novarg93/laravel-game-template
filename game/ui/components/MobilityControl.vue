@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Snapshot } from '@game/systems/World';
+import { HEROES } from '../../content/heroes';
 import { useInputDevice } from '../inputDevice';
 const inputDevice = useInputDevice();
 defineProps<{ state: Snapshot; inline?: boolean }>();
@@ -8,7 +9,7 @@ function keyboardClick(event: MouseEvent) { if (event.detail === 0) emit('activa
 </script>
 <template>
   <component :is="inline ? 'div' : 'button'" :role="inline ? 'listitem' : undefined" :class="[inline ? 'mobility-slot skill-slot' : 'mobility-control', { ready: state.mobility.readyIn === 0 }]" :disabled="inline ? undefined : state.status !== 'playing' || state.mobility.readyIn > 0" :aria-label="`${state.mobility.name} · ${inputDevice === 'gamepad' ? 'X' : 'Space'} · ${state.mobility.specialization ? state.mobility.specialization + ' ' + state.mobility.rank + ' · ' : ''}${state.mobility.readyIn > 0 ? state.mobility.readyIn.toFixed(1) + ' seconds' : 'ready'}`" :title="`${state.mobility.specialization ?? state.mobility.name} · cooldown ${(state.mobility.readyIn > 0 ? state.mobility.castCooldown : state.mobility.cooldown).toFixed(2)}s`" @pointerdown.prevent="!inline && emit('activate')" @click="!inline && keyboardClick($event)">
-    <span aria-hidden="true">{{ state.character === 'mage' ? '◇' : '➤' }}</span><b>{{ inline ? (inputDevice === 'gamepad' ? 'X' : 'SPACE') : state.mobility.name }}</b><small>{{ state.mobility.readyIn > 0 ? state.mobility.readyIn.toFixed(1) + 's' : 'READY' }}</small><i v-if="inline && state.mobility.rank">{{ state.mobility.rank }}</i>
+    <span aria-hidden="true">{{ HEROES[state.character].mobility === 'blink' ? '◇' : '➤' }}</span><b>{{ inline ? (inputDevice === 'gamepad' ? 'X' : 'SPACE') : state.mobility.name }}</b><small>{{ state.mobility.readyIn > 0 ? state.mobility.readyIn.toFixed(1) + 's' : 'READY' }}</small><i v-if="inline && state.mobility.rank">{{ state.mobility.rank }}</i>
   </component>
 </template>
 <style scoped>

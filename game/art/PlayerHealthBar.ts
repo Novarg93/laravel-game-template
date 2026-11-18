@@ -1,3 +1,4 @@
+import { HEROES } from '../content/heroes';
 import type Phaser from 'phaser';
 import type { World } from '../systems/World';
 
@@ -5,7 +6,7 @@ import type { World } from '../systems/World';
 export const PLAYER_HEALTH_BAR = { width: 34, height: 5, offsetY: -46, depth: 11, hpColor: 0x77cf8a, absorbColor: 0xb9eeff } as const;
 export function playerHealthLayout(w: Pick<World, 'player' | 'effectiveMaxHp' | 'absorb' | 'status' | 'character'>) {
   const c = PLAYER_HEALTH_BAR;
-  return { x: w.player.x - c.width / 2, y: w.player.y + (w.character==='mage'?-44:c.offsetY), width: c.width, height: c.height,
+  return { x: w.player.x - c.width / 2, y: w.player.y + (HEROES[w.character].visual==='mage'?-44:c.offsetY), width: c.width, height: c.height,
     hp: Math.max(0, Math.min(1, w.player.hp / w.effectiveMaxHp)), absorb: Math.max(0, Math.min(1, w.absorb / w.effectiveMaxHp)), visible: w.status !== 'menu' && w.status !== 'over' };
 }
 export class PlayerHealthBar {

@@ -35,7 +35,7 @@ class ProgressionController extends Controller
 
     public function start(Request $request, ProgressionService $service): JsonResponse
     {
-        return response()->json($service->start((int) $request->user()?->id, $request->only(['operation_id', 'client_run_id', 'character_id', 'biome_id', 'mode'])));
+        return response()->json($service->start((int) $request->user()?->id, $request->only(['operation_id', 'client_run_id', 'character_id', 'biome_id', 'mode', 'content_version', 'content_hash', 'preset'])));
     }
 
     public function finish(Request $request, string $run, ProgressionService $service): JsonResponse

@@ -8,7 +8,7 @@ import { denseGroup, groundTargets } from './targeting';
 export function frostNova(w: World) {
   const rank = w.abilities.frost.level;
   if (w.status !== 'playing' || rank < 1) return false;
-  const stats = frostNovaStats(rank, w.stats.area), group = denseGroup(w, groundTargets(w, C.range), stats.radius);
+  const stats = frostNovaStats(rank, w.stats.area * w.abilityRadius('frost')), group = denseGroup(w, groundTargets(w, C.range), stats.radius);
   if (!group) return false;
   const targets = w.combatTargets.filter(e => distance(group.center, e) <= stats.radius + e.radius);
   let duration: number = stats.root;

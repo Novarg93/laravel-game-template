@@ -47,7 +47,7 @@ export class AudioPresentation {
     if(!w.ultimate.casting){this.audio.stopEvent('ultimate.charge');this.audio.stopEvent('ultimate.overload');}
     if (w.status === 'over' && this.status !== 'over') { if(w.outcome==='victory')add('ui.start');else{add('player.death'); add('ui.gameOver');} }
     if (w.status === 'upgrade' && w.offerId !== this.offer) add('ui.upgrade');
-    if (w.status === 'playing' && w.mobility.sequence !== this.mobility) add(w.character === 'mage' ? 'player.blink' : 'player.dash');
+    if (w.status === 'playing' && w.mobility.sequence !== this.mobility) add(w.hero.combat === 'mage' ? 'player.blink' : 'player.dash');
     for (const event of w.feedbackEvents.splice(0)) {
       if (event.type === 'ability') { const cue = ABILITY_AUDIO[event.ability]; if (cue) add(cue); }
       else if (event.type === 'pickup') add(`pickup.${event.kind}`);
@@ -75,7 +75,7 @@ export class AudioPresentation {
       else if(cue==='ultimate-embers')add('ultimate.embers');
       else if(cue==='ultimate-singe')add('ultimate.singe');
       else if (cue === 'hurt' && w.status !== 'over') add('player.hurt');
-      else if (cue === 'shield') add(w.character==='warrior'?'ironSkin.trigger':'arcaneShield.trigger');
+      else if (cue === 'shield') add(w.hero.combat==='warrior'?'ironSkin.trigger':'arcaneShield.trigger');
       else if (cue === 'charge'&&!pending.has('mini.briarCharge')) add('encounter.charge');
     }
     for (const event of w.encounterDirector.history) if (event.minute > this.encounter) { if (event.bosses.length) add('encounter.bossArrive'); this.encounter = event.minute; }

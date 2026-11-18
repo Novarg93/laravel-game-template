@@ -62,7 +62,7 @@ export class FinalEncounter {
     if(next){this.pending=next;this.diagnostics.gates++;this.attack=this.makeAttack('phaseTransition',next==='phase3'?C.phase3Transform:C.transition);this.meteors=[];w.clearOwnedEffects(e.id);this.emit(next==='phase3'?'phase3Start':'ritualGate');}
   }
   private entity(w:World,kind:'ashGuard'|'guardian',at:Point,hp:number):Enemy{
-    const def=ENEMIES[kind],boss=kind==='ashGuard';
+    const def=w.enemyDefinition(kind) ?? ENEMIES[kind],boss=kind==='ashGuard';
     const e:Enemy={...at,id:w.id(),kind,hp,maxHp:hp,finalRole:boss?'boss':'guardian',born:w.elapsed,radius:boss?C.bodyRadius:def.radius,hitUntil:0,slowUntil:0,slowFactor:1,elite:false,speed:boss?C.speed:0,damage:0,score:def.score,xp:def.xp,shootAt:0,shootingAt:0,discovered:true,boss:boss?{phase:'approach',until:Infinity,direction:{x:0,y:1},aim:{...at}}:null};
     w.enemies.push(e);return e;
   }
@@ -72,7 +72,7 @@ export class FinalEncounter {
     this.phase='intro';this.started=w.elapsed;this.center=w.mobility.remaining>0?{...w.mobility.to}:{x:w.player.x,y:w.player.y};
     this.departing=w.enemies.slice(0,156).map(e=>({x:e.x,y:e.y,kind:e.kind,elite:e.elite}));
     w.clearHostileThreats();w.guardianSystem.clear(w);w.encounterDirector.clear();w.enemies=[];
-    this.boss=this.entity(w,'ashGuard',{x:this.center.x+170,y:this.center.y-40},C.hp);
+    this.boss=this.entity(w,'ashGuard',{x:this.center.x+170,y:this.center.y-40},w.enemyDefinition('ashGuard')?.hp ?? C.hp);
     this.attack=this.makeAttack('ritualEnter',C.intro);this.nextCombo=C.firstCombo;this.emit('spawnStart');
     w.sound('final-spawn');
   }

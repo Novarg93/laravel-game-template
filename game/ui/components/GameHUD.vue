@@ -6,6 +6,7 @@ import GameRadar from './GameRadar.vue';
 import RunArtifacts from './RunArtifacts.vue';
 import MobilityControl from './MobilityControl.vue';
 import { commands } from '@game/events/bridge';
+import { HEROES } from '../../content/heroes';
 import { RUN_LIMITS } from '@game/config/runLimits';
 import { xpPercent } from '../hudStatus';
 import { useInputDevice } from '../inputDevice';
@@ -17,8 +18,8 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
 <template>
   <header class="hud">
     <div class="vitals">
-      <b class="hero-name">✦ {{ state.character === 'warrior' ? 'WARRIOR' : 'MAGE' }}</b>
-      <div class="level-line"><small>LEVEL {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Experience" :aria-valuetext="state.level>=RUN_LIMITS.maxLevel?'Maximum level':undefined" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ state.level>=RUN_LIMITS.maxLevel?'MAX':xpPercent(state.xp, state.xpNext)+'%' }}</span></div>
+      <b class="hero-name">✦ {{ HEROES[state.character].name.toUpperCase() }}</b>
+      <div class="level-line"><small>LEVEL {{ state.level }}</small><span class="xp-compact" role="progressbar" aria-label="Experience" :aria-valuetext="state.level >= (state.objective?.maxLevel ?? RUN_LIMITS.maxLevel)?'Maximum level':undefined" :aria-valuenow="xpPercent(state.xp, state.xpNext)" aria-valuemin="0" aria-valuemax="100">{{ state.level >= (state.objective?.maxLevel ?? RUN_LIMITS.maxLevel)?'MAX':xpPercent(state.xp, state.xpNext)+'%' }}</span></div>
       <span class="health-accessibility" role="progressbar" aria-label="Health" :aria-valuenow="state.hp" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.hp) }} / {{ state.maxHp }}</span>
       <span v-if="state.absorb > 0" class="health-accessibility" role="progressbar" aria-label="Absorb" :aria-valuenow="state.absorb" aria-valuemin="0" :aria-valuemax="state.maxHp">{{ Math.ceil(state.absorb) }}</span>
     </div>
@@ -28,7 +29,8 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
       <button class="pause-button" aria-label="Pause" @click="emit('pause')">Ⅱ<small v-if="inputDevice === 'gamepad'" class="pause-key">START</small></button>
     </div>
   </header>
-  <EventTimeline v-if="!state.practice && state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
+  <p v-if="state.objective && state.status !== 'over'" class="content-objective">{{ state.objective.description }}</p>
+  <EventTimeline v-else-if="!state.practice && state.status !== 'over' && state.finalEncounter.phase==='inactive'" :state="state" />
   <BiomePhaseNotice v-if="!state.practice" :state="state" />
   <div class="run-extras"><BuffDock :state="state" /><RunArtifacts :state="state" /></div>
   <GameRadar />
@@ -42,6 +44,7 @@ defineProps<{ state: Snapshot }>(); const emit = defineEmits<{ pause: [] }>();
   <div class="control-hint">{{ inputDevice === 'gamepad' ? 'LEFT STICK' : 'W A S D' }} <span>move</span> <kbd>{{ inputDevice === 'gamepad' ? 'X' : 'SPACE' }}</kbd> <span>{{ state.mobility.name }}</span> <kbd>{{ inputDevice === 'gamepad' ? 'START' : 'ESC' }}</kbd> <span>pause</span></div>
 </template>
 <style scoped>
+.content-objective{position:absolute;top:76px;left:50%;transform:translateX(-50%);margin:0;color:#f1e5cb;text-shadow:0 2px #10262c;font:700 10px monospace;pointer-events:none}
 .pause-button .pause-key{display:block;font:7px/1 monospace;margin-top:3px;color:#f1e5cb;letter-spacing:0}
 .enrage-indicator{color:#efb18b!important;letter-spacing:.08em}.enrage-start{display:block;margin-top:6px;color:#f3ce9b;font:700 9px/1.3 monospace;text-shadow:0 2px #10262c;pointer-events:none}@media(max-width:600px){.enrage-start{font-size:7px;margin-top:5px}}
 .hero-name{font:700 11px monospace;color:#f1e5cb}.level-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}.level-line small{margin:0;color:#d8e5e4;font:10px monospace}.xp-compact{font:700 11px monospace;color:#85d4cd;border-left:1px solid #819cae66;padding-left:8px}.health-accessibility{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
