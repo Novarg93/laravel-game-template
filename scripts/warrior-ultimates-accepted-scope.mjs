@@ -6,7 +6,7 @@ import process from 'node:process';
 
 const root = 'docs/verification/warrior-ultimates-accepted-v1';
 const baseline = JSON.parse(readFileSync(`${root}/runtime-baseline.json`, 'utf8'));
-const changed = ['public/assets/hd/warrior-ultimates-v1/0.json', 'public/assets/hd/warrior-ultimates-v1/0.png', 'src/game/abilities/tickAbilities.ts', 'src/game/art/WarBannerArt.ts', 'src/game/art/WarriorHeroAnimation.ts', 'src/game/art/warriorUltimatesManifest.json', 'src/game/art/warriorUltimatesPack.ts', 'src/game/config/ultimates.ts', 'src/game/systems/MobilitySystem.ts', 'src/game/ultimates/UltimateSystem.ts'];
+const changed = ['public/game-assets/hd/warrior-ultimates-v1/0.json', 'public/game-assets/hd/warrior-ultimates-v1/0.png', 'game/abilities/tickAbilities.ts', 'game/art/WarBannerArt.ts', 'game/art/WarriorHeroAnimation.ts', 'game/art/warriorUltimatesManifest.json', 'game/art/warriorUltimatesPack.ts', 'game/config/ultimates.ts', 'game/systems/MobilitySystem.ts', 'game/ultimates/UltimateSystem.ts'];
 const hash = file => createHash('sha256').update(readFileSync(file)).digest('hex');
 const proofPath = `${root}/integration-verification.json`;
 if (process.argv.includes('--record')) {

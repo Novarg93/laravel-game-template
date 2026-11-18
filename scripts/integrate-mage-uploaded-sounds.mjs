@@ -6,7 +6,7 @@ import process from 'node:process';
 import console from 'node:console';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
 const {chromium}=await import('@playwright/test');
-const sourceRoot='art/main-hero-mage-v2/sounds',output='art/generated/mage-uploaded-sounds-v1',assets='public/assets/audio/mage-sfx-uploaded-v1';
+const sourceRoot='art/main-hero-mage-v2/sounds',output='art/generated/mage-uploaded-sounds-v1',assets='public/game-assets/audio/mage-sfx-uploaded-v1';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const walk=async d=>{const out=[];for(const e of await readdir(d,{withFileTypes:true})){const f=`${d}/${e.name}`;if(e.isDirectory())out.push(...await walk(f));else out.push(f);}return out;};
 await mkdir(output,{recursive:true});
@@ -39,6 +39,6 @@ try{
 }finally{await browser.close();}
 await mkdir(assets,{recursive:true});for(const e of entries)await copyFile(e.source,e.file);
 const data=Object.fromEntries(entries.map(e=>[e.id,{file:e.file.replace('public/',''),sha256:e.sha256,gain:e.gain,seconds:e.analysis.seconds}]));
-await writeFile('src/game/audio/mageUploadedSamples.ts',`// User-supplied Mage sounds; originals preserved in art/main-hero-mage-v2/sounds.\nexport const MAGE_UPLOADED_SAMPLES = ${JSON.stringify(data,null,2)} as const;\n`);
+await writeFile('game/audio/mageUploadedSamples.ts',`// User-supplied Mage sounds; originals preserved in art/main-hero-mage-v2/sounds.\nexport const MAGE_UPLOADED_SAMPLES = ${JSON.stringify(data,null,2)} as const;\n`);
 await writeFile(`${output}/manifest.json`,JSON.stringify({version:1,source:'user supplied',thunder:'lightning ultimate release',originalBytesPreserved:true,entries},null,2)+'\n');
 console.log(JSON.stringify({files:entries.length,bytes:entries.reduce((n,e)=>n+e.bytes,0),entries:entries.map(e=>({id:e.id,seconds:e.analysis.seconds,rms:e.analysis.rms,peak:e.analysis.peak,gain:e.gain}))}));

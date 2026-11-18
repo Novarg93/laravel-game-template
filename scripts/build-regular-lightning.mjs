@@ -4,7 +4,7 @@ import {createServer} from 'node:http';
 import {resolve} from 'node:path';
 import process from 'node:process';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
-const base='art/main-hero-mage/abilities/regular-lightning/chain-lightning',out='public/assets/hd/regular-lightning-v1',audit='art/generated/regular-lightning-v1';
+const base='art/main-hero-mage/abilities/regular-lightning/chain-lightning',out='public/game-assets/hd/regular-lightning-v1',audit='art/generated/regular-lightning-v1';
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex'),sources=Object.fromEntries(['png','gif'].map(ext=>[`${base}.${ext}`,hash(`${base}.${ext}`)]));
 const sheet=readPNG(base+'.png');process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
 const {chromium}=await import('@playwright/test'),server=createServer((_q,r)=>r.end('<!doctype html><body></body>'));
@@ -36,5 +36,5 @@ for(const [file,h]of Object.entries(sources))if(hash(file)!==h)throw Error('Sour
 mkdirSync(out,{recursive:true});mkdirSync(audit,{recursive:true});
 const manifest={version:1,width,height,rgbaBytes:width*height*4,canvas:{width:clip.width,height:clip.height},padding,columns,sources,frames:clip.frames,durationMs:clip.frames.reduce((n,f)=>n+f.durationMs,0)};
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height}}},null,2)+'\n');
-writeFileSync('src/game/art/regularLightningManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/regularLightningManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({canvas:manifest.canvas,frames:clip.frames.length,durationMs:manifest.durationMs,timings:clip.frames.map(f=>f.durationMs)},null,2));

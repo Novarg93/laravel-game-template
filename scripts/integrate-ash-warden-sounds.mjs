@@ -5,7 +5,7 @@ import {Buffer} from 'node:buffer';
 import {resolve} from 'node:path';
 import process from 'node:process';
 import console from 'node:console';
-const root='art/final-boss/sound',output='art/generated/ash-warden-uploaded-sounds-v1',assets='public/assets/audio/ash-warden-uploaded-v1';
+const root='art/final-boss/sound',output='art/generated/ash-warden-uploaded-sounds-v1',assets='public/game-assets/audio/ash-warden-uploaded-v1';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const walk=async d=>{const files=[];for(const e of await readdir(d,{withFileTypes:true})){const p=`${d}/${e.name}`;if(e.isDirectory())files.push(...await walk(p));else files.push(p);}return files;};
 await mkdir(output,{recursive:true});
@@ -33,6 +33,6 @@ try{
 }finally{await browser.close();}
 await mkdir(assets,{recursive:true});for(const e of entries)await copyFile(e.source,e.file);
 const data=Object.fromEntries(entries.map(e=>[e.id,{file:e.file.replace('public/',''),sha256:e.sha256,gain:e.gain,seconds:e.analysis.seconds}]));
-await writeFile('src/game/audio/ashWardenSamples.ts',`// User-supplied Ash Warden WAVs, preserved byte-for-byte from art/final-boss/sound.\nexport const ASH_WARDEN_SAMPLES = ${JSON.stringify(data,null,2)} as const;\n`);
+await writeFile('game/audio/ashWardenSamples.ts',`// User-supplied Ash Warden WAVs, preserved byte-for-byte from art/final-boss/sound.\nexport const ASH_WARDEN_SAMPLES = ${JSON.stringify(data,null,2)} as const;\n`);
 await writeFile(`${output}/manifest.json`,JSON.stringify({version:1,source:'user supplied',originalBytesPreserved:true,swing:'both horizontal variants and thrust',slam:'south / north',entries},null,2)+'\n');
 console.log(JSON.stringify({files:entries.length,bytes:entries.reduce((n,e)=>n+e.bytes,0),entries:entries.map(e=>({id:e.id,gain:e.gain,seconds:e.analysis.seconds}))}));

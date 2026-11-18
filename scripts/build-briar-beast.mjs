@@ -5,7 +5,7 @@ import {createServer} from 'node:http';
 import process from 'node:process';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const root='art/armored-briar-beast',output='public/assets/hd/briar-beast-v1',audit='art/generated/briar-beast-v1';
+const root='art/armored-briar-beast',output='public/game-assets/hd/briar-beast-v1',audit='art/generated/briar-beast-v1';
 const inputs={walk:'walking/make_walking_animati...-642940903-0',charge:'charge/make_walking_animati...-1716663340-0',attack:'attack/make_animation_of_at...-628910143-0'};
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
 const sources=Object.fromEntries(readdirSync(root,{recursive:true}).filter(f=>/\.(png|gif)$/.test(f)).map(f=>[`${root}/${f.replaceAll('\\','/')}`,hash(`${root}/${f}`)]));
@@ -71,5 +71,5 @@ for(const [file,digest]of Object.entries(sources))if(hash(file)!==digest)throw E
 mkdirSync(output,{recursive:true});writeFileSync(`${output}/atlas.png`,png(pixels,width,height));
 writeFileSync(`${output}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,authoring:'scripts/build-briar-beast.mjs',width,height,rgbaBytes:width*height*4,frameCount:entries.length,sourceCanvas:512,canvas:128,padding:2,bodyPivot:[64,64],sources,clips};
-writeFileSync('src/game/art/briarBeastManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/briarBeastManifest.json',JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,clips},null,2));

@@ -6,7 +6,7 @@ import process from 'node:process';
 import {readPNG, png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
 // Lossless import of user-authored sheets. GIF defines order/timing, PNG defines color.
-const root='art/rune-warden', output='public/assets/hd/rune-warden-v1', auditDir='art/generated/rune-warden-v1';
+const root='art/rune-warden', output='public/game-assets/hd/rune-warden-v1', auditDir='art/generated/rune-warden-v1';
 const inputs={walk:'anime_it_walking_rig...-1745306397-0',cast:'anime_it_casting_spe...-1154412044-0',volley:'skills/arcane-volley/Animate_this_exact_p...-1107651780-0','volley-impact':'skills/arcane-volley/make_animation_of_co...-981675602-0',judgement:'skills/runic-judgement/anime_explosion_of_t...-1338804019-0',blink:'skills/blink/anime_spawn_this_run...-780421823-0'};
 const statics={'judgement-rune':'skills/runic-judgement/make_a_rune_it_l_wil...-1072504761-0.png','blink-rune':'skills/blink/Create_a_pixel_art_t...-909001807-0.png'};
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
@@ -81,5 +81,5 @@ for(const [file,digest]of Object.entries(sources))if(hash(file)!==digest)throw E
 mkdirSync(output,{recursive:true});writeFileSync(`${output}/atlas.png`,png(pixels,width,height));
 writeFileSync(`${output}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:2,authoring:'scripts/build-rune-warden.mjs',width,height,rgbaBytes:width*height*4,frameCount:entries.length,sourceCanvas:512,canvas:128,padding:2,bodyPivot:[64,64],judgementPivot:[64,64],judgementDiameter:94,judgementHitFrame:12,volleyPivot:[104,64],sources,clips};
-writeFileSync('src/game/art/runeWardenManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/runeWardenManifest.json',JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,clips:Object.fromEntries(Object.entries(clips).map(([k,v])=>[k,{frames:v.frameCount,durationMs:v.durationsMs.reduce((a,b)=>a+b,0),colorDifferences:v.frames.reduce((n,f)=>n+f.colorDifferences,0)}]))}));

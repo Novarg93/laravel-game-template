@@ -6,7 +6,7 @@ const original=JSON.parse(readFileSync('art/generated/ash-warden-animation-libra
 const warden=JSON.parse(readFileSync('art/generated/ash-warden-pixellab-runtime-v1/integration-verification.json','utf8'));
 const audio=JSON.parse(readFileSync('art/generated/mage-sfx-elevenlabs-v1/integration-verification.json','utf8'));
 const baseline={...original,...warden.currentSHA256,...audio.currentSHA256};
-const allowed=['src/game/art/FinalBossArt.ts','src/game/art/ashWardenPixellabPack.ts','src/ui/components/UltimateControl.vue','src/style.css'].sort();
+const allowed=['game/art/FinalBossArt.ts','game/art/ashWardenPixellabPack.ts','game/ui/components/UltimateControl.vue','game/style.css'].sort();
 const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
 const files=[...walk('src'),...walk('public')].sort();
 const sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');

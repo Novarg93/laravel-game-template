@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 
 const load = path => JSON.parse(readFileSync(path, 'utf8'));
 const source = 'art/generated/warrior-animation-review-v1', archive = load(`${source}/manifest.json`);
-const runtime = load('src/game/art/warriorUltimatesManifest.json');
+const runtime = load('game/art/warriorUltimatesManifest.json');
 const registryPath = 'docs/art/PIXELLAB_ACCEPTED_GENERATIONS.json', registry = load(registryPath);
 const prefix = 'warrior-ultimates-accepted-v1-';
 assert(!registry.records.some(r => r.id.startsWith(prefix)), 'Approval already recorded');
 const records = Object.keys(runtime.clips).map(id => {
   const clip = archive.clips[id], jobFile = `${source}/source/jobs/${clip.selectedJob ?? id}.json`, job = load(jobFile);
   assert.equal(job.job_id, clip.jobId, id);
-  return { id: prefix + id, date: '2026-11-13', title: `Warrior ultimate: ${id}`, role: id.startsWith('gesture-') ? 'Accepted front body gesture, S/SE/E direct, SW/W mirrored' : 'Accepted ultimate effect, all eight gameplay directions', kind: 'animation', tool: job.tool, args: job.args, prompt: job.args.description ?? job.args.action, enhancedPrompt: job.enhanced_prompt ?? null, seed: job.args.seed ?? null, jobId: job.job_id, sourceReference: `${source}/${clip.inputReference}`, lastReference: job.lastReference ?? job.args.last_frame_url ?? null, jobFile, manifest: `${source}/manifest.json`, runtimeManifest: 'src/game/art/warriorUltimatesManifest.json', clip: id, playbackFrames: clip.frames, frameMs: clip.frameMs, periodMs: clip.periodMs, pivot: clip.pivot, accepted: true };
+  return { id: prefix + id, date: '2026-11-13', title: `Warrior ultimate: ${id}`, role: id.startsWith('gesture-') ? 'Accepted front body gesture, S/SE/E direct, SW/W mirrored' : 'Accepted ultimate effect, all eight gameplay directions', kind: 'animation', tool: job.tool, args: job.args, prompt: job.args.description ?? job.args.action, enhancedPrompt: job.enhanced_prompt ?? null, seed: job.args.seed ?? null, jobId: job.job_id, sourceReference: `${source}/${clip.inputReference}`, lastReference: job.lastReference ?? job.args.last_frame_url ?? null, jobFile, manifest: `${source}/manifest.json`, runtimeManifest: 'game/art/warriorUltimatesManifest.json', clip: id, playbackFrames: clip.frames, frameMs: clip.frameMs, periodMs: clip.periodMs, pivot: clip.pivot, accepted: true };
 });
 registry.records.push(...records);
 registry.userDecisions ??= [];
@@ -23,5 +23,5 @@ entry += '\nГраница лечения, контактные линии/ос�
 writeFileSync(journalPath, readFileSync(journalPath, 'utf8') + entry);
 const poolPath = 'docs/classes/warrior/APPROVED_ANIMATION_POOL.json', pool = load(poolPath);
 pool.version++; pool.date = '2026-11-13';
-pool.acceptedUltimateRuntime = { accepted: true, integrated: true, acceptance: runtime.acceptance, manifest: 'src/game/art/warriorUltimatesManifest.json', concepts: runtime.sourceConcepts, clips: Object.keys(runtime.clips), northBodyReuse: runtime.northBodyReuse, registryIds: records.map(r => r.id) };
+pool.acceptedUltimateRuntime = { accepted: true, integrated: true, acceptance: runtime.acceptance, manifest: 'game/art/warriorUltimatesManifest.json', concepts: runtime.sourceConcepts, clips: Object.keys(runtime.clips), northBodyReuse: runtime.northBodyReuse, registryIds: records.map(r => r.id) };
 writeFileSync(poolPath, JSON.stringify(pool, null, 2) + '\n');

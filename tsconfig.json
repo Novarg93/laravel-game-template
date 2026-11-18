@@ -3,7 +3,9 @@
     "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler", "strict": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"], "skipLibCheck": true, "noEmit": true,
     "esModuleInterop": true, "resolveJsonModule": true, "types": ["vite/client", "node"],
-    "noUnusedLocals": true, "noUnusedParameters": true
+    "jsx": "preserve", "jsxImportSource": "vue", "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": { "@/*": ["./resources/js/*"], "@game/*": ["./game/*"] }
   },
-  "include": ["src", "tests", "*.ts"]
+  "include": ["game", "resources/js", "tests/**/*.ts", "*.ts"]
 }

@@ -2,9 +2,9 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
-const root='art/generated/mage-phantom-cast-production-v1',pack=JSON.parse(readFileSync('src/game/art/magePhantomManifest.json')),audit=JSON.parse(readFileSync(root+'/source-audit.json'));
+const root='art/generated/mage-phantom-cast-production-v1',pack=JSON.parse(readFileSync('game/art/magePhantomManifest.json')),audit=JSON.parse(readFileSync(root+'/source-audit.json'));
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
-const atlas=readPNG('public/assets/hd/mage-phantom-v1/atlas.png'),meta=JSON.parse(readFileSync('public/assets/hd/mage-phantom-v1/atlas.json'));
+const atlas=readPNG('public/game-assets/hd/mage-phantom-v1/atlas.png'),meta=JSON.parse(readFileSync('public/game-assets/hd/mage-phantom-v1/atlas.json'));
 assert.equal(pack.durationMs,340);assert.equal(pack.durationsMs.reduce((a,b)=>a+b,0),340);assert.equal(pack.loop,false);assert.equal(pack.directions.length,8);assert.equal(audit.frames.length,112);
 assert.equal(pack.atlas.rgbaBytes,atlas.width*atlas.height*4);assert(pack.atlas.rgbaBytes<=2*1024*1024);
 let nativeFrames=0,partialAlphaPixels=0,minMargin=256;
@@ -29,7 +29,7 @@ for(const item of audit.frames){
 }
 for(let i=0;i<12;i++)assert.equal(hash(root+'/processed/south/'+String(i).padStart(2,'0')+'.png'),hash('art/generated/mage-phantom-cast-pixellab-v1/processed/frame-'+String(i).padStart(2,'0')+'.png'),'Accepted South changed');
 const before=JSON.parse(readFileSync('art/generated/mage-phantom-cast-pixellab-v1/validation/protected-before.json'));
-const allowed=new Set(['src/game/art/MageHeroAnimation.ts','src/game/art/MageHeroArt.ts','src/game/art/mageHeroLayers.ts','src/game/art/MageCastingController.ts','src/game/art/GameArt.ts','src/game/art/assetRegistry.ts','src/game/art/RegularLightningArt.ts','src/game/scenes/GameScene.ts','eslint.config.js']);
+const allowed=new Set(['game/art/MageHeroAnimation.ts','game/art/MageHeroArt.ts','game/art/mageHeroLayers.ts','game/art/MageCastingController.ts','game/art/GameArt.ts','game/art/assetRegistry.ts','game/art/RegularLightningArt.ts','game/scenes/GameScene.ts','eslint.config.js']);
 let protectedUnchanged=0;for(const [file,expected]of Object.entries(before)){if(allowed.has(file))continue;assert.equal(hash(file),expected,'Unrelated runtime/asset changed: '+file);protectedUnchanged++;}
 const result={pass:true,nativeFrames,atlasFrames:audit.frames.length,canvas:112,sourceCanvas:256,durationMs:340,rgbaBytes:pack.atlas.rgbaBytes,partialAlphaPixels,minMargin,protectedUnchanged,acceptedSouthUnchanged:true,domainAndOriginalAtlasesUnchanged:true};
 writeFileSync(root+'/validation.json',JSON.stringify(result,null,2)+'\n');globalThis.console.log(JSON.stringify(result));

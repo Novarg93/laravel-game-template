@@ -61,9 +61,9 @@ for(const [i,e]of entries.entries()){
   frames[e.name]={frame:{x,y,w:canvas,h:canvas},rotated:false,trimmed:false,sourceSize:{w:canvas,h:canvas},spriteSourceSize:{x:0,y:0,w:canvas,h:canvas}};
 }
 for(const [file,digest]of Object.entries(sources))if(hash(file)!==digest)throw Error(`Source changed: ${file}`);
-writeFileSync('public/assets/hd/guardian.png',png(pixels,width,height));
-writeFileSync('public/assets/hd/guardian.json',JSON.stringify({frames,meta:{image:'guardian.png',size:{w:width,h:height},authoring:'scripts/build-rootbound-guardian.mjs'}},null,2)+'\n');
+writeFileSync('public/game-assets/hd/guardian.png',png(pixels,width,height));
+writeFileSync('public/game-assets/hd/guardian.json',JSON.stringify({frames,meta:{image:'guardian.png',size:{w:width,h:height},authoring:'scripts/build-rootbound-guardian.mjs'}},null,2)+'\n');
 const manifest={version:1,model:'Rootbound Arcane Totem',width,height,canvas,columns,cell,padding:2,rgbaBytes:width*height*4,frameCount:entries.length,pivot:[64,64],releaseFrame:6,sources,clips};
-writeFileSync('src/game/art/guardianManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/guardianManifest.json',JSON.stringify(manifest,null,2)+'\n');
 writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{frames:c.frameCount,durationMs:c.durationsMs.reduce((a,b)=>a+b,0)}]))},null,2));

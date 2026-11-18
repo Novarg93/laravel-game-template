@@ -1,24 +1,49 @@
-# AGENTS.md — Pixel Survivor Codex instructions
+# AGENTS.md - Laravel Game Template
 
-This is a NEW and ISOLATED project. Before any work read `PLAN.md`, matching `tasks/NN-*.md` and `docs/PROGRESS.md`. Never touch sibling projects or parent directory. Communicate in Russian. Code and English identifiers may be English.
+Work only inside this independent repository. Never modify PixelSurvivor, game-base,
+sibling projects or Windows settings. Communicate in Russian; English code and
+identifiers are appropriate. The current user task takes precedence over historical
+Pixel Survivor plans and reports, including their old prohibitions against Laravel.
 
-## Autonomous execution
-- Implement current task thoroughly, tests included, without routine questions. Make reasonable decisions and record rationale in `docs/DECISIONS.md`.
-- Never claim something works without actually validating it. Prefer a small, shippable slice to an oversized unfinished abstraction.
-- Never ask for admin rights, credentials or payments. Never `git push`, deploy, remove external files, or alter Windows system settings. Do not invoke `--yolo`.
-- Never introduce in-game real-money purchases, tokens, ads, sign-in, Laravel backend or global leaderboards during this plan.
-- If missing asset: create original programmatic pixel art, do not scrape copyrighted sprites. Depend on well-maintained packages already specified in the plan.
-- After every meaningful edit: run relevant tests, fix type/lint/build failures. Do not suppress types or disable failing tests.
-- If you detect unrelated files or Laravel artisan/composer.json, stop immediately and explain that you are in wrong folder.
-- Do not spend more than 3 cycles repeating the same failed approach; diagnose, select alternate approach, or write blocker and stop.
-- Update `docs/PROGRESS.md` with implemented functions, files, tests, screenshots, blockers and next task.
-- Maintain `docs/art/PIXELLAB_PROMPT_JOURNAL.md`: after explicit user approval, append the exact selected image/animation prompt, tool, parameters, seed, job ID, source reference and accepted role. Preserve history and recommendations. Do not label unapproved trials or rejected AI probes as accepted; identify programmatic assets without inventing prompts.
-- For Warrior art generation, read `docs/art/PIXELLAB_GENERATION_GUIDE.md` first. The user-supplied SOUTH Whirlwind PNG and its 12-frame PixMiniMax + Enhance recipe are the accepted standard; preserve exact settings and never silently replace this standard with new trials.
-- For northern Warrior animations, the current user-selected source is cell 4 (row-major, 1-based) of `art/warrior/8-proections.png`: N/NE direct, NW mirrored. The previous shield-facing-camera northern reference is rejected. Generated clips from the new source still require user selection.
-- Only create `docs/done/NN.done` after meeting task-specific acceptance criteria; runner will independently verify. Do not mark tasks completed just because command ran.
+## Architecture
+- Laravel is the primary application at the repository root. Keep one application.
+- Phaser and its Vue game interface live in `game/`, never `packages/game/`.
+- Website UI lives in `resources/`; Phaser owns gameplay, collision and scene timing.
+- Preserve `PlatformPort`: game -> platform adapter -> session-authenticated internal
+  Laravel routes -> existing services. No database access from the game.
+- Browser JSON routes live under `/internal`, using the web middleware stack,
+  existing authorization, verification, validation, throttling and CSRF protection.
+  There is no public versioned API or separate mobile backend.
+- Keep external payment webhook URLs, signature checks and CSRF exceptions intact.
+- Use one Node dependency installation and lockfile. Keep Phaser out of website SSR.
+- Serve approved runtime assets from `public/game-assets/`; preserve their bytes.
 
-## Architecture invariants
-- Phaser owns gameplay/collisions/scene timing. Vue owns interface. Event bridge updates UI snapshots at bounded rate.
-- Data-driven game balancing, seeded RNG where testable, bounded regular mobs and projectile counts.
-- Clean scene teardown/restart, explicit input/listener cleanup. No global uncontrolled intervals.
-- Canvas visual verification requires SCREENSHOT, not solely DOM snapshot.
+## Implementation and verification
+- Read the current task, relevant architecture documentation and `docs/PROGRESS.md`.
+  `PLAN.md` is historical gameplay context, not the current architecture mandate.
+- Implement autonomously; record material choices in `docs/DECISIONS.md`.
+- Preserve business functionality, financial history formats, exactly-once grants,
+  inventory consistency, idempotency and recovery. Do not rewrite financial services
+  or change gameplay balance during structural work.
+- Never use production/development databases for destructive tests. Use isolated
+  SQLite or explicitly guarded MySQL test databases. Never copy credentials or
+  private runtime data into Git.
+- Run relevant tests after meaningful changes, fix type/lint/build failures, and
+  report actual evidence and limitations. Never disable assertions to pass a check.
+- Diagnose after at most three failed repetitions of an approach.
+- Update `docs/PROGRESS.md` with changes, checks, screenshots, blockers and next work.
+- Verify Canvas visually with screenshots, not only DOM snapshots. Preserve bounded
+  entity counts, event snapshots and explicit scene/input/listener cleanup.
+- Do not create task completion markers before all acceptance criteria pass.
+- Do not commit, push, deploy, request admin rights/credentials/payments, or invoke
+  `--yolo` without explicit user authorization. Do not send messages externally.
+
+## Art provenance
+- Do not regenerate assets during an architecture refactor. Keep historical art
+  approvals, prompts, seeds, job IDs and source references unchanged.
+- Maintain `docs/art/PIXELLAB_PROMPT_JOURNAL.md`: append accepted prompts only after
+  explicit user approval; distinguish programmatic assets and rejected trials.
+- Before Warrior generation read `docs/art/PIXELLAB_GENERATION_GUIDE.md`. Preserve
+  the accepted SOUTH Whirlwind 12-frame PixMiniMax + Enhance recipe. Northern source
+  is cell 4 of `art/warrior/8-proections.png`: N/NE direct, NW mirrored. New clips
+  require user selection; the shield-facing-camera reference remains rejected.

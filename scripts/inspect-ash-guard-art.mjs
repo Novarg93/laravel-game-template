@@ -2,12 +2,12 @@ import {resolve} from 'node:path';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import process from 'node:process';
 import {Buffer} from 'node:buffer';
-import {ashLayout,ASH_CLIPS} from '../src/game/art/ashGuardPack.ts';
+import {ashLayout,ASH_CLIPS} from '../game/art/ashGuardPack.ts';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
 const {chromium}=await import('@playwright/test'),browser=await chromium.launch({channel:'chromium',headless:true});
 try{
-  const page=await browser.newPage(),layout=ashLayout(),png=readFileSync('public/assets/hd/ash-guard.png').toString('base64');
-  const magePng=readFileSync('public/assets/hd/mage.png').toString('base64'),mageFrame=JSON.parse(readFileSync('public/assets/hd/mage.json','utf8')).frames['mage-down-idle-0'].frame;
+  const page=await browser.newPage(),layout=ashLayout(),png=readFileSync('public/game-assets/hd/ash-guard.png').toString('base64');
+  const magePng=readFileSync('public/game-assets/hd/mage.png').toString('base64'),mageFrame=JSON.parse(readFileSync('public/game-assets/hd/mage.json','utf8')).frames['mage-down-idle-0'].frame;
   const result=await page.evaluate(async({layout,png,clips,magePng,mageFrame})=>{
     const atlas=new globalThis.Image();atlas.src='data:image/png;base64,'+png;await atlas.decode();
     const canvas=globalThis.document.createElement('canvas');canvas.width=1120;canvas.height=Object.keys(clips).length*250;const c=canvas.getContext('2d');c.imageSmoothingEnabled=false;c.fillStyle='#243139';c.fillRect(0,0,canvas.width,canvas.height);

@@ -2,8 +2,8 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const root='art/main-hero-mage-v2/animation/runing',out='public/assets/hd/mage-run-v2',canvas=96,columns=8;
-const idle=JSON.parse(readFileSync('src/game/art/mageIdleManifest.json','utf8'));
+const root='art/main-hero-mage-v2/animation/runing',out='public/game-assets/hd/mage-run-v2',canvas=96,columns=8;
+const idle=JSON.parse(readFileSync('game/art/mageIdleManifest.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex'),sources={},clips={},entries=[],stopEntries={},resumes={};
 const difference=(a,b)=>{let d=0;for(let i=0;i<a.length;i++)d+=Math.abs(a[i]-b[i]);return d;};
 function closest(p,frames){let best=0,d=Infinity;for(const [i,f]of frames.entries()){const n=difference(p,f.pixels);if(n<d){d=n;best=i;}}return best;}
@@ -36,4 +36,4 @@ const width=columns*canvas,height=Math.ceil(entries.length/columns)*canvas,pixel
 for(const [i,e]of entries.entries()){const x=i%columns*canvas,y=Math.floor(i/columns)*canvas;for(let row=0;row<canvas;row++)pixels.set(e.pixels.subarray(row*canvas*4,(row+1)*canvas*4),((y+row)*width+x)*4);frames[e.name]={frame:{x,y,w:canvas,h:canvas},rotated:false,trimmed:false,spriteSourceSize:{x:0,y:0,w:canvas,h:canvas},sourceSize:{w:canvas,h:canvas}};}
 mkdirSync(out,{recursive:true});writeFileSync(out+'/atlas.png',png(pixels,width,height));writeFileSync(out+'/atlas.json',JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,authoring:'scripts/build-mage-run-v2.mjs',canvas,frameCount:entries.length,displaySize:idle.displaySize,referenceSpeed:135,width,height,rgbaBytes:width*height*4,sourcePixelsUnmodified:true,sources,clips,stopEntries,resumes};
-writeFileSync('src/game/art/mageRunManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes}));
+writeFileSync('game/art/mageRunManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes}));

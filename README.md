@@ -1,170 +1,128 @@
-# Pixel Survivor
+# Laravel Game Template
 
-Играбельная одиночная survivors-игра с оригинальным пиксельным миром. Vue 3 + TypeScript + Phaser 4.2.1. Магия атакует автоматически: двигайтесь, собирайте кристаллы опыта, выбирайте улучшения и уклоняйтесь от атак.
+An independent Laravel application with an embedded Phaser game. Laravel owns the
+website, sessions, accounts, commerce, payments and administration. The game owns
+simulation and rendering and communicates through the existing `PlatformPort`.
 
-Текущая версия включает Mage V2, финального босса Ash Warden с тренировочным
-боем, пять принятых музыкальных тем и локальные звуки способностей героя/босса.
-Тайный щит использует новый мягкий звук с уменьшенной громкостью; Frost Nova —
-новый пользовательский WAV. Все игровые
-ассеты загружаются локально, подключение к ElevenLabs во время игры не требуется.
-Проверки: `npm.cmd run check`, `npm.cmd run test:e2e`,
-`npm.cmd run test:e2e:production`. Сводка — [TEST_REPORT](docs/TEST_REPORT.md).
-
-## Gameplay Pacing / Guardian / Mobility
-
-В публичном MVP доступен **Mage**. Карточка **Warrior — В разработке** остаётся
-доступной для фокуса и сообщения, но не выбирает героя. Код Warrior сохранён;
-боевые E2E используют явный DEV-only fixture `selectTestCharacter`, отсутствующий
-в production API. Публичные команды запуска всегда выбирают Mage.
-
-Level Up показывает три карточки с оригинальными пиксельными эмблемами,
-цветами способностей, рангом и основным бонусом. `projectiles` относится
-к Fireball; общие бонусы имеют самостоятельные иконки и нейтральные темы.
-В HUD — компактная лента **запланированных** событий Encounter Director.
-Центр означает сейчас, слева последние 60 секунд, справа ближайшие 60 секунд.
-Пиксельные иконки обозначают боссов, Guardian, Enrage и Phase II; значки 2/3 —
-количество. Лента использует игровые snapshots, замирает на паузе/Level Up и
-не гарантирует появление при занятых слотах. [Карусель: проверки и PNG](docs/COMPACT_TIMELINE_QA.md).
-
-До 10:00 действует ранний Encounter Director: Charger на 3:00, Sorcerer на
-5:00, два босса на 7:00 и три на 9:00. С 10:00 Survival Enrage усиливает
-обычных врагов каждые 30 секунд, с 10:30 запрашивает одного босса каждые
-30 секунд. С 15:00 Phase II продолжает линейный рост от базы 15:00 и
-запрашивает трёх боссов каждые 30 секунд, заполняя только свободные слоты.
-Лимиты — 150 обычных врагов, 3 босса, 3 Guardian, без очередей пропущенных волн.
-Новые поздние боссы получают собственный профиль при появлении; живые не
-усиливаются повторно. Минимальные предупреждения и пределы скорости сохранены.
-Space или отдельная touch-кнопка: Warrior **Dash** (4 s), Mage **Blink** (6 s).
-Можно нажимать вторым пальцем при удерживаемом джойстике. Guardian активен
-сразу при появлении и выпускает предупреждённые самонаводящиеся сферы.
-Arcane Shield даёт ограниченный Absorb от maxHP, а не абсолютную неуязвимость.
-Все10 автоматических умений получили визуальное развитие rankI–V.
-[Таблица темпа, проверки, скриншоты и ограничения](docs/gameplay/REPORT.md).
-[Актуальный Endgame 2.0: аудит, таблицы и QA](docs/enrage2/REPORT.md).
-
-## Phase 2
-
-Перед забегом выберите **Mage / Warrior** и **Рощу осколков / Dark Forest**. Warrior начинает с 150 HP, 18% брони и Cleave, затем открывает Whirlwind, Ground Stomp, Piercing Throw и Shield Block. Space — Charge. Копьё выпускается после замаха, пробивает несколько разных целей и задевает полосу шириной 28px с бонусами площади. Shield Block поглощает вражеские снаряды и даёт Absorb 20–40% maxHP без накопления. Cleave наносит урон на контакте меча; ноги продолжают бег при Cleave/Stomp/Block/Throw/Charge, Whirlwind использует цельный клип. Charge отменяет незавершённый замах. С уровня30 и времени5:00 воин выбирает одну из трёх ульт на Q: **Знамя авангарда**, **Три ветви разлома**, **Таранное копьё**. Все принятые анимации подключены в8направлениях. Знамя устанавливается за0,45с, затем15с лечит10% maxHP/с в радиусе140px; Earthbreaker наносит4волны по трём ветвям, Ruin пробивает цели тяжёлым копьём. Первый заряд готов, затем10 успешных рывков. [Принятые ультимейты](docs/classes/warrior/ULTIMATES_ACCEPTED_V1_REPORT.md), [интеграция навыков](docs/classes/warrior/SKILLS_RUNTIME_V1_REPORT.md), [Cleave](docs/classes/warrior/CLEAVE_SYNC_V3_REPORT.md), [усиления/Absorb](docs/classes/warrior/BUFFS_V4_REPORT.md).
-
-После III ранга магу доступны пять однократных эволюций: взрыв огня, накопительная заморозка, вторичные молнии, горящая область метеора и импульс щита. На уровне по-прежнему ровно три случайных бесплатных выбора.
-
-Рывковик заранее показывает направление; осколочник создаёт до двух слабых детей без повторного деления. Элитные свойства: золотая метка Frenzy предупреждает ускорение, голубой круг Shielded означает временную защиту, розовый Volatile оставляет предупреждение перед посмертным взрывом. Хранитель затмения появляется вместе с Charger на 7:00; ниже половины HP его атаки меняются.
-
-Частота обычного спавна выросла на 30% через interval/1.3. Лимиты сохранены. В настройках есть интенсивность косметических эффектов и цифры урона; предупреждения атак остаются видимыми при нулевой интенсивности. После смерти показаны обычные/элитные/boss kills, фактически снятое HP по умениям и способность с наибольшим суммарным уроном. Старые локальные рекорды мигрируют в schema2.
-
-План — [PHASE2](docs/PHASE2.md), проверка — [PHASE2_TEST_REPORT](docs/PHASE2_TEST_REPORT.md). Старый `run-stages.ps1` рассчитан на Phase 1 и после добавления задач 12–19 **не используется**. Вторая фаза выполнена в одной сессии; отдельный runner для новых сессий не требуется.
-
-## Phase 3 — хранители, артефакты и радар
-
-Guardian появляется по расписанию: один на 4:00 и 6:00, два на 8:00,
-до трёх в минутных волнах после 10:00. Он неподвижен, сразу активен и
-отмечен золотой звездой на радаре. После короткой подготовки выпускает
-медленную сферу, через 10 секунд — быструю; далее чередует, не превышая
-двух сфер на владельца. Сферы поворачивают с ограниченной скоростью и
-исчезают при попадании, истечении срока/дистанции или завершении encounter.
-Каждый успешный Guardian получает +10% скорости, поворота и номинального
-TTL сфер от базы, линейно до ×2. За полностью побеждённую волну выдаётся
-один автоматический артефакт. Уход из зоны очищает encounter без награды.
-
-Пять артефактов дают за копию: **+10% maxHP, +8% урона, +7% скорости, −6% перезарядки, +15% XP**. Максимум три копии каждого вида. Они складываются внутри своего типа, затем умножают обычные улучшения; временные Haste/Fury работают поверх них. Бонусы показаны отдельно от временных эффектов, после смерти и рестарта сбрасываются. При полном наборе 15/15 Guardian продолжают появляться, без выдачи новых сверхлимитных артефактов.
-
-Радар180×180 на desktop держит игрока в центре и показывает направление, обычных врагов/элит, три вида боссов, хранителя, лечение, временный лут, артефакты и сундуки. В touch-layout радар скрыт. Его радиус — два больших размера логической области в мировых координатах. Обновление до5Hz по игровому времени; история мира не хранится. Карта остаётся бесконечной.
-
-Периодические сундуки заменены хранителями. Сундуки после боссов сохранены и выдают расходуемые награды; артефакты используют свой отдельный пул. Детали проверки — [PHASE3_TEST_REPORT](docs/PHASE3_TEST_REPORT.md).
-
-## Предметы и сундуки
-
-С обычного врага с вероятностью **0,3%**, с элитного — **12%** выпадает один случайный предмет. Подойдите, чтобы подобрать: красное зелье лечит **30% максимального HP**, золотые ботинки дают **+50% скорости на 10 секунд**, красный меч — **+50% урона на 10 секунд**, синий кристалл мгновенно собирает доступный опыт. На земле одновременно до шести предметов, они исчезают через 25 игровых секунд.
-
-Ботинки и меч работают вместе. Повторный подбор обновляет десятисекундный таймер; бонус не складывается. Иконки с оставшимся временем находятся в HUD. Пауза и выбор улучшения останавливают время усилений; смерть и новый забег сбрасывают их.
-
-Каждый убитый босс оставляет сундук. Подойдите к сундуку: он выдаст одну доступную расходуемую награду из отдельного пула. Одновременно существуют до четырёх сундуков, срок жизни —60 игровых секунд. При переполнении новый сундук босса заменяет старейший сундук. Периодический спавн сундуков на карте заменён Rare Guardian в Phase3.
-
-Механики и проверка описаны в [LOOT_TEST_REPORT](docs/LOOT_TEST_REPORT.md). Баланс находится в `LOOT_BALANCE`, пулы наград — в `src/game/loot/lootPools.ts`.
-
-## Запуск
-
-Нужен Node.js **22.13+** (проверено на 22.16.0), npm 10+. Всё выполняется в этой папке.
-
-```powershell
-npm install
-npm run dev
+```text
+app/              Laravel models, services, controllers, policies and Filament
+bootstrap/        Laravel bootstrap and generated production SSR bundle
+config/           Business and provider configuration
+database/         Existing migrations, seeders and factories
+game/             Phaser runtime, balance, art definitions, audio, input and Vue HUD
+resources/        Inertia website, browser platform adapter, Blade and CSS
+routes/           Website, internal browser routes, provider callbacks and commands
+public/           Web document root; approved assets in game-assets/
+tests/            Laravel, Vitest and Playwright tests
+scripts/          Catalog export, game tools and isolated browser test runner
 ```
 
-Откройте **http://127.0.0.1:5173**. Для точного воспроизведения зависимостей вместо `npm install` можно выполнить `npm ci --ignore-scripts`. Кэш npm остаётся в `.npm-cache` проекта.
+## Requirements and installation
 
-```powershell
-npm run check
-npm run build
-npm run preview
+Use PHP **8.4.1+** with the extensions required by `composer.lock`, Composer 2,
+Node **22.13+**, and npm 10+. The locked Symfony dependencies require PHP 8.4.1;
+PHP 8.3 cannot install this existing dependency set. No global package installation
+or second Node dependency directory is needed.
+
+From this repository root, for a **new local copy**:
+
+```sh
+composer install
+npm ci
+cp .env.example .env
+php artisan key:generate
 ```
 
-`check` последовательно запускает строгую типизацию Vue/TS, ESLint, Vitest и production build. `preview` открывает собранную игру на http://127.0.0.1:4173. Доступны также `npm run typecheck`, `npm run lint`, `npm test`.
+Configure a new database in `.env`. For SQLite create `database/database.sqlite`
+as an empty file, then run `php artisan migrate`. For an existing database first
+review its configuration and migrations; do not reset it. No private `.env`, database,
+provider secrets or session data belong in Git.
 
-## Браузерные тесты
+On Windows use `npm.cmd` if PowerShell blocks `npm.ps1`. Select a compatible PHP
+in your current shell's PATH; do not bypass Composer's platform checks.
 
-Один раз скачайте Chromium внутрь проекта:
+## Development and production builds
 
-```powershell
-$env:PLAYWRIGHT_BROWSERS_PATH = Join-Path (Get-Location) '.browsers'
-npx playwright install chromium
-npm run test:e2e
+Herd can serve the root application's `public/` directory. Otherwise use
+`php artisan serve` in one terminal. Run `npm run dev` in another terminal for
+Laravel Vite, Vue, Tailwind, Wayfinder and Inertia development SSR on port 5174.
+Visit the Laravel URL, including `/play` for the game.
+
+```sh
+npm run build        # Laravel website and game client entries -> public/build
+npm run build:ssr    # client plus Inertia production SSR -> bootstrap/ssr
+php artisan inertia:start-ssr
 ```
 
-На macOS/Linux: `PLAYWRIGHT_BROWSERS_PATH="$PWD/.browsers" npx playwright install chromium`, затем `npm run test:e2e`. Браузерные системные библиотеки должны уже присутствовать; установка с правами администратора не выполняется.
+The production document root is **public/**. Keep the SSR process and the existing
+queue worker supervised in your deployment environment. Serve `/game-assets/*`
+directly with Nginx/Apache; private storage is not a public asset directory. The
+architecture report includes deployment examples. No deployment is performed here.
 
-E2E runner поднимает локальный Vite и завершает свой процесс. Если Pixel Survivor уже запущен на этом порту, runner использует его и оставляет работающим; другой сервис не завершает. Последний полный набор из 262 сценариев прошёл за 27,5 минуты с `--workers=2`; по умолчанию один worker, и время больше. Быстрый набор: `npm run test:e2e -- game.spec.ts`, компактная лента: `npm run test:e2e -- compact-timeline.spec.ts`. Отчёт по умолчанию — `playwright-report/index.html`; полный HTML, результаты и PNG — [Compact Timeline QA](docs/COMPACT_TIMELINE_QA.md), `screenshots/compact-timeline/` и `docs/compact-timeline/`.
+The optional guest game harness uses the same dependencies and Vite configuration:
 
-Отдельная проверка собранного релиза: `npm run build`, затем `npm run test:e2e:production` (порт 4173). Она проверяет реальную атаку, UI/resize, отсутствие тестового доступа и внешних/пропавших ресурсов. Именованная команда избегает перехвата npm флага `--production` в Windows PowerShell.
+```sh
+npm run dev:game     # port 5173, standalone guest game
+npm run build:game   # optional standalone test build -> dist
+npm run preview:game
+```
 
-## Управление и механика
+The standalone harness has no account commerce adapter. `/play` installs the existing
+HTTP adapter for signed-in users and preserves guest local gameplay for guests.
 
-На телефонах и планшетах с сенсорным управлением игра работает только горизонтально.
-В portrait показана заглушка «Поверните устройство горизонтально», симуляция
-остановлена. Возврат в landscape возобновляет паузу поворота; ручная пауза и
-выбор улучшения сохраняются. «Начать забег» запрашивает fullscreen непосредственно
-при нажатии, затем пытается закрепить landscape. Отказ или отсутствие этих API
-не мешают игре. После выхода из fullscreen автоматического повторного запроса нет.
-Touch-layout: компактные HUD/Timeline, камера показывает на 30% больше поля по каждой оси относительно предыдущего мобильного масштаба, джойстик слева,
-Blink80px справа, пять иконок автоматических способностей по центру. Можно держать
-джойстик одним пальцем, нажимать Blink и выбирать улучшение другим.
+## Browser communication and payments
 
-- **WASD / стрелки** — движение, на телефоне — джойстик слева внизу. Целиться мышью не нужно.
-- **Esc / P** — пауза. При потере фокуса игра ставится на паузу; продолжение вручную.
-- **Геймпад Xbox / PlayStation** (браузерный `standard` mapping): левый стик — аналоговое движение; **X / Square** — Dash/Blink; **D-Pad** — меню; **A / Cross** — подтвердить; **LB/RB (L1/R1)** — карточки; **Start / Options** — пауза. **B / Circle** не назначена. Настройки: D-Pad вверх/вниз — поле, влево/вправо — значение. После blur, паузы и рестарта сначала отпустите стик; через Level Up удержанный стик сохраняется. При совместном вводе приоритет WASD → touch → стик.
-- Подключите контроллер и нажмите на нём кнопку, если браузер ещё его не видит. Требуется HTTPS или localhost, разрешённый Gamepad API и стандартная раскладка. Физические контроллеры требуют отдельной ручной проверки: [раскладка, QA и инструкция](docs/GAMEPAD_QA.md).
-- Подбирайте бирюзовые XP-кристаллы: уровень предлагает **три бесплатных улучшения**, выбор мышью, **1/2/3** или Tab/Enter. Время останавливается до выбора.
-- Начальная способность — **Огненный шар**. Откройте **Морозный круг**, **Цепную молнию**, **Метеор** и **Тайный щит** через улучшения. Развивайте их до V ранга.
-- Огонь V + «Жар углей» III даёт дополнительный пробивающий снаряд. Мороз V + «Широкий круг» III усиливает замедление и урон.
-- Ростки преследуют, бегуны обходят быстрее, каменные големы выдерживают урон, стрелки держат дистанцию. Элиты обведены золотом.
-- Розовые снаряды/рунные круги опасны. Таран показывает подготовку и вспышку перед рывком. После атаки есть окно восстановления.
-- Boss/Guardian расписание независимо; занятые слоты пропускаются, живые противники не удаляются. С **15:00** продолжается Phase II Enrage, экрана автоматической победы нет.
-- В настройках есть громкость, mute и масштаб пикселей. Короткие SFX синтезируются локально после нажатия кнопки.
+All former browser `/api/v1` requests now use **/internal/** through
+`resources/js/lib/internalRoutes.ts`. These are web session routes with verified
+email, CSRF tokens on mutations, ownership, policies, throttling, validation and
+private/no-store responses. There is no mobile API, token authentication or Sanctum.
+Website page URLs are preserved.
 
-Результат показывает время, уровень, убийства по типам и сборку. **LOCAL / THIS BROWSER** — десять лучших результатов в `localStorage` этого браузера. Это личная история: она не защищена от ручного редактирования и не отправляется на сервер. Очки даются только за убийства.
+External signed callbacks stay at `POST /webhook` (Stripe) and
+`POST /payments/webhooks/{provider}`. They keep their existing signature checks,
+raw payload, idempotency and CSRF exceptions. They do not require browser sessions.
+Existing payment providers and sandbox/DEV guards are retained; this refactor does
+not introduce live payment support.
 
-## Устройство проекта
+## Validation
 
-| Каталог | Содержимое |
-|---|---|
-| `src/game/scenes` | Phaser loop, input, camera, рендер/cleanup |
-| `src/game/systems` | Симуляция, combat, XP, upgrades, director, bosses, pools, chunks, score |
-| `src/game/abilities` | Пять модулей автоматической магии |
-| `src/game/config` | Баланс и характеристики врагов |
-| `src/game/art` | Оригинальные матрицы пикселей/анимации |
-| `src/game/services` | Локальное сохранение и синтез звука |
-| `src/ui` | Vue UI, модальные окна, HUD, джойстик |
-| `tests/unit`, `tests/e2e` | Механика и настоящие браузерные сценарии |
-| `docs` | Прогресс, решения, баланс, отчёт, скриншоты/замеры |
+```sh
+php artisan route:list
+php artisan test                    # isolated in-memory SQLite
+composer lint:check                 # Pint
+composer types:check                # PHPStan
+composer test:mysql                 # guarded, isolated MySQL test database only
+npm run typecheck:runtime            # all website/game source, strict unused checks
+npm run typecheck                    # full source + existing test code
+npm run lint
+npm test                            # complete existing Vitest suite; no skipped tests
+npm run test:catalog
+npm run test:browser                 # new temporary SQLite DB and local HTTP server
+npm run test:e2e -- laravel-first-game.spec.ts
+```
 
-Phaser владеет игровым временем и столкновениями. Vue получает ограниченные снимки до 10 Гц. Все ресурсы поставляются с приложением или генерируются в нём; после установки нет CDN, API и внешних запросов игрового runtime. Для первого запуска и перезагрузки нужен локальный dev/preview-сервер; service worker и установка PWA не входят в MVP.
+Install the local browser binary with
+`PLAYWRIGHT_BROWSERS_PATH=.browsers npx playwright install chromium` (PowerShell:
+`$env:PLAYWRIGHT_BROWSERS_PATH = "$PWD/.browsers"` before running the command).
+`test:browser` creates a fresh database below `storage/framework/testing/` and
+synthetic test accounts, and stops its server afterwards. It does not migrate or
+reset your configured development database.
 
-В dev-режиме `?debug=1` включает метрики. `?test=1` включает тестовый доступ к симуляции; в production он отсутствует.
+**Current validation limitations:** QA fixed 12 stale runtime expectations and
+restored collection of 84 historical tests. Full Vitest still has 29 failing files,
+38 failed assertions and one collection error (1147 tests pass). Missing historical
+Warrior proofs/review sources, incompatible old byte/scope/replay fixtures and
+MySQL authentication block full acceptance. Full test-code TypeScript retains
+10 diagnostics from unavailable review modules. No checks were skipped or weakened.
+Runtime types, lint, client/SSR/standalone builds, SQLite tests and the browser/game
+smoke checks pass. This template is **not declared production-ready**. See
+[QA stabilization](docs/architecture/QA_STABILIZATION.md) for the exact failure tables
+and private test-credential setup commands.
 
-## Проверенные границы
+## Copying for another game
 
-Не более 150 обычных врагов, 3 боссов, 96 снарядов (вражеских до 48), 240 XP-кристаллов, 96 кратких эффектов; 24 общих отложенных/горящих области и 24 переиспользуемые цифры урона. Дальние чанки/сущности освобождаются. Подробности — [BALANCE](docs/BALANCE.md), результаты — [TEST_REPORT](docs/TEST_REPORT.md), состояние — [PROGRESS](docs/PROGRESS.md).
-
-Декорации не блокируют движение. Поддержка мобильного устройства проверяется эмуляцией viewport и Pointer Events; реальные iOS/Android и Safari требуют отдельного прогона. Автоматические smoke/ускоренные симуляции не заменяют ручной балансировки полных 15–20-минутных забегов. Замер FPS относится только к указанному в отчёте устройству. Bundle Phaser сравнительно крупный; Vite сообщает об этом при build.
-
-Следующая возможная фаза: дополнительные карты/персонажи, дальнейший баланс, PWA и тесты на реальных мобильных устройствах. Серверная часть и глобальный рейтинг потребовали бы отдельного плана; в этой версии их нет.
+See [Laravel-first architecture and migration report](docs/architecture/LARAVEL_FIRST_RESTRUCTURE.md)
+for the route map, file map, configuration points, security invariants, validation
+results and copying checklist. Read `AGENTS.md` before changing this template.
+`PLAN.md` and historical Pixel Survivor art reports describe the original game;
+they do not prohibit the current Laravel-first architecture.

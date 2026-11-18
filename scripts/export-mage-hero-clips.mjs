@@ -1,7 +1,7 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 import {encodeGif} from '../art/generated/ash-warden-directions-v1/gif.mjs';
-const root='art/main-hero-mage/casting/directions-pixminimax-v2',pack=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8')),selection=JSON.parse(readFileSync(root+'/selection.json','utf8')),requests=JSON.parse(readFileSync(root+'/requests.json','utf8')),exports=[];
+const root='art/main-hero-mage/casting/directions-pixminimax-v2',pack=JSON.parse(readFileSync('game/art/mageHeroManifest.json','utf8')),selection=JSON.parse(readFileSync(root+'/selection.json','utf8')),requests=JSON.parse(readFileSync(root+'/requests.json','utf8')),exports=[];
 for(const q of requests){
   const id=selection[q.id]??q.id,path=root+'/'+id;
   // These exports document the archived generation, even when active movement

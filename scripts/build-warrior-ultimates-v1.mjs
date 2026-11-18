@@ -5,7 +5,7 @@ import { readPNG, png } from '../art/generated/warrior-concept-pack-v1/source/pn
 import { emptyHandSource } from './warrior-empty-hand-sources.mjs';
 
 const source = 'art/generated/warrior-animation-review-v1';
-const out = 'public/assets/hd/warrior-ultimates-v1';
+const out = 'public/game-assets/hd/warrior-ultimates-v1';
 const review = JSON.parse(readFileSync(`${source}/manifest.json`, 'utf8'));
 const ids = ['gesture-earthbreaker', 'gesture-ruin', 'vfx-earthbreaker', 'vfx-spear-of-ruin', 'gesture-banner', 'vfx-war-banner'];
 const clips = {}, frames = {}, locations = {};
@@ -30,5 +30,5 @@ for (const id of ids) {
 const image = png(pixels, width, height);
 writeFileSync(`${out}/0.png`, image);
 writeFileSync(`${out}/0.json`, JSON.stringify({ frames, meta: { image: '0.png', size: { w: width, h: height }, scale: '1' } }));
-writeFileSync('src/game/art/warriorUltimatesManifest.json', JSON.stringify({ version: 2, source, reviewStatus: 'accepted-user-integration', acceptance: { date: '2026-11-13', text: 'давай интегрировать принятые варианты ультмейтов в игру', review: 'art/generated/warrior-ultimates-animation-review-v1/viewer.html' }, sourceConcepts: { banner: 'war-banner-a', earthbreaker: 'earthbreaker-a', ruin: 'spear-of-ruin-b' }, width, height, atlasSHA256: hash(image), clips, locations, northBodyReuse: { banner: 'north-block', earthbreaker: 'north-stomp', ruin: 'north-throw', source: 'src/game/art/warriorSkillsManifest.json', selectedBaseCell: 4 } }, null, 2) + '\n');
+writeFileSync('game/art/warriorUltimatesManifest.json', JSON.stringify({ version: 2, source, reviewStatus: 'accepted-user-integration', acceptance: { date: '2026-11-13', text: 'давай интегрировать принятые варианты ультмейтов в игру', review: 'art/generated/warrior-ultimates-animation-review-v1/viewer.html' }, sourceConcepts: { banner: 'war-banner-a', earthbreaker: 'earthbreaker-a', ruin: 'spear-of-ruin-b' }, width, height, atlasSHA256: hash(image), clips, locations, northBodyReuse: { banner: 'north-block', earthbreaker: 'north-stomp', ruin: 'north-throw', source: 'game/art/warriorSkillsManifest.json', selectedBaseCell: 4 } }, null, 2) + '\n');
 globalThis.console.log(`Packed ${names.length} original RGBA frames into ${width}x${height}; no generated pixels.`);

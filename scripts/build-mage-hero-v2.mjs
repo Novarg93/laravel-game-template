@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import process from 'node:process';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const input='art/generated/mage-hero-v2',generated='art/main-hero-mage/casting/directions-pixminimax-v2',model='art/main-hero-mage/abilities/hero-model',out='public/assets/hd/mage-hero-v2';
+const input='art/generated/mage-hero-v2',generated='art/main-hero-mage/casting/directions-pixminimax-v2',model='art/main-hero-mage/abilities/hero-model',out='public/game-assets/hd/mage-hero-v2';
 const directions=['south','south-east','east','north-east','north','north-west','west','south-west'];
 const originals=JSON.parse(readFileSync(input+'/sources.json','utf8')),selection=JSON.parse(readFileSync(generated+'/selection.json','utf8'));
 const frameOverrides=JSON.parse(readFileSync(generated+'/frame-overrides.json','utf8'));
@@ -93,7 +93,7 @@ if(runCycles){
   }
   manifest.runStops=stops;manifest.runResumes=resumes;
 }
-writeFileSync('src/game/art/mageHeroManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/mageHeroManifest.json',JSON.stringify(manifest,null,2)+'\n');
 const audits=entries.map(e=>({name:e.name,source:e.source,page:locations[e.name],crop:e.crop,pixelHash:e.pixelHash,visible:e.visible}));
 writeFileSync(input+'/runtime-audit.json',JSON.stringify({manifest,frames:audits},null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,clips:Object.keys(clips).length,pages:manifest.pages,rgbaBytes:manifest.rgbaBytes},null,2));

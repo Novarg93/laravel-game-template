@@ -4,7 +4,7 @@ import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
 // Original PixelLab recipe supplies four exact flight cels. This authoring pass
 // adds a small ignition and a short impact using the same five flat colours.
-const root='art/generated/mage-fireball-v2',source=`${root}/source`,out='public/assets/hd/mage-fireball-v2';
+const root='art/generated/mage-fireball-v2',source=`${root}/source`,out='public/game-assets/hd/mage-fireball-v2';
 const canvas={width:112,height:84},pivot={x:65,y:42},padding=2,columns=4;
 const palette=['#794132','#b85b35','#e88344','#fba35e','#ffe0a3'];
 const colors=palette.map(hex=>[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)).concat(255));
@@ -54,6 +54,6 @@ for(const [i,e]of entries.entries()){
 const manifest={version:2,authoring:'scripts/build-mage-fireball-v2.mjs',width,height,rgbaBytes:width*height*4,frameCount:entries.length,canvas,pivot,padding,columns,palette,sources,clips};
 mkdirSync(out,{recursive:true});mkdirSync(`${root}/prepared`,{recursive:true});
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
-writeFileSync('src/game/art/fireballManifestV2.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${root}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/fireballManifestV2.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${root}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
 for(const e of entries)writeFileSync(`${root}/prepared/${e.name}.png`,png(e.pixels,112,84));
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{frames:c.frameCount,durationMs:c.durationsMs.reduce((a,b)=>a+b,0)}]))},null,2));

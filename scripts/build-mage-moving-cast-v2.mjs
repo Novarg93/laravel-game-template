@@ -2,11 +2,11 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const out='public/assets/hd/mage-moving-cast-v2',canvas=96,padding=2,width=768;
-const cast=JSON.parse(readFileSync('src/game/art/mageCastManifestV2.json','utf8')),run=JSON.parse(readFileSync('src/game/art/mageRunManifestV2.json','utf8'));
+const out='public/game-assets/hd/mage-moving-cast-v2',canvas=96,padding=2,width=768;
+const cast=JSON.parse(readFileSync('game/art/mageCastManifestV2.json','utf8')),run=JSON.parse(readFileSync('game/art/mageRunManifestV2.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex'),sources={},originals=[];
 for(const [pack,name]of [[cast,'cast'],[run,'run']]){
- const file='public/assets/hd/mage-'+name+'-v2/atlas',atlas=readPNG(file+'.png'),data=JSON.parse(readFileSync(file+'.json','utf8'));sources[file+'.png']=hash(readFileSync(file+'.png'));sources[file+'.json']=hash(readFileSync(file+'.json'));
+ const file='public/game-assets/hd/mage-'+name+'-v2/atlas',atlas=readPNG(file+'.png'),data=JSON.parse(readFileSync(file+'.json','utf8'));sources[file+'.png']=hash(readFileSync(file+'.png'));sources[file+'.json']=hash(readFileSync(file+'.json'));
  const clips=name==='run'?Object.entries(pack.clips).flatMap(([body,c])=>['run-start','run','run-stop'].map(m=>[body,c[m]])):Object.entries(pack.clips);
  for(const [id,clip]of clips)for(const [index,f]of clip.frames.entries()){
   const r=data.frames[f.frame].frame,pixels=new Uint8Array(canvas*canvas*4);for(let y=0;y<canvas;y++)pixels.set(atlas.pixels.subarray(((r.y+y)*atlas.width+r.x)*4,((r.y+y)*atlas.width+r.x+canvas)*4),y*canvas*4);
@@ -37,4 +37,4 @@ const height=Math.ceil((y+row+padding)/4)*4;if(height>2048)throw Error('Moving c
 const pixels=new Uint8Array(width*height*4),frames={};for(const e of entries){for(let yy=0;yy<e.crop.h;yy++)pixels.set(e.pixels.subarray(((e.crop.y+yy)*canvas+e.crop.x)*4,((e.crop.y+yy)*canvas+e.crop.x+e.crop.w)*4),((e.at.y+yy)*width+e.at.x)*4);frames[e.name]={frame:{...e.at,w:e.crop.w,h:e.crop.h},rotated:false,trimmed:true,spriteSourceSize:e.crop,sourceSize:{w:canvas,h:canvas}};}
 mkdirSync(out,{recursive:true});writeFileSync(out+'/upper.png',png(pixels,width,height));writeFileSync(out+'/upper.json',JSON.stringify({frames,meta:{image:'upper.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,authoring:'scripts/build-mage-moving-cast-v2.mjs',canvas,seam,handBottom,overlapRows:1,width,height,rgbaBytes:width*height*4,anchors,sources,frames:entries.map(e=>({frame:e.name,retained:e.retained,removed:e.removed,pixelSha256:hash(e.pixels)})),originalArtUnmodified:true};
-writeFileSync('src/game/art/mageMovingCastManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({seam,handBottom,upperFrames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,anchors:Object.keys(anchors).length}));
+writeFileSync('game/art/mageMovingCastManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({seam,handBottom,upperFrames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,anchors:Object.keys(anchors).length}));

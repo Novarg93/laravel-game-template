@@ -1,7 +1,7 @@
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
-const root='art/main-hero-mage/abilities/fireball',out='public/assets/hd/mage-fireball-v1',audit='art/generated/mage-fireball-v1';
+const root='art/main-hero-mage/abilities/fireball',out='public/game-assets/hd/mage-fireball-v1',audit='art/generated/mage-fireball-v1';
 const canvas={width:112,height:84},pivot={x:65,y:42},padding=2,columns=8,entries=[],clips={},sources={};
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
 for(const id of ['forming','idle','explosion']){
@@ -31,5 +31,5 @@ for(const [file,digest]of Object.entries(sources))if(hash(file)!==digest)throw E
 const manifest={version:1,authoring:'scripts/build-mage-fireball.mjs',width,height,rgbaBytes:width*height*4,frameCount:entries.length,canvas,pivot,padding,columns,sources,clips};
 mkdirSync(out,{recursive:true});mkdirSync(audit,{recursive:true});
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
-writeFileSync('src/game/art/fireballManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/fireballManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{frames:c.frameCount,durationMs:c.durationsMs.reduce((a,b)=>a+b,0)}]))},null,2));

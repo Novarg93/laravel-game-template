@@ -3,8 +3,8 @@ import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 import {gifFrameDurations} from './lib/gif-frame-durations.mjs';
 
-const root='art/main-hero-mage-v2/animation/casting',out='public/assets/hd/mage-cast-v2',canvas=96,columns=8;
-const idle=JSON.parse(readFileSync('src/game/art/mageIdleManifest.json','utf8')),hash=b=>createHash('sha256').update(b).digest('hex'),sources={},clips={},entries=[];
+const root='art/main-hero-mage-v2/animation/casting',out='public/game-assets/hd/mage-cast-v2',canvas=96,columns=8;
+const idle=JSON.parse(readFileSync('game/art/mageIdleManifest.json','utf8')),hash=b=>createHash('sha256').update(b).digest('hex'),sources={},clips={},entries=[];
 const specs=[['north','north','north',3,8],['north-east','north','north-east',3,8],['north-west','north','north-west',5,8],['south-v1','south','v1',5,7],['south-v2','south','v2',3,6],['east-v1','east','v1',2,8],['east-v2','east','v2',3,4]];
 function handMark(pixels,id){
  const mask=new Uint8Array(canvas*canvas),components=[];
@@ -35,4 +35,4 @@ const width=columns*canvas,height=Math.ceil(entries.length/columns)*canvas,pixel
 for(const [i,e]of entries.entries()){const x=i%columns*canvas,y=Math.floor(i/columns)*canvas;for(let row=0;row<canvas;row++)pixels.set(e.pixels.subarray(row*canvas*4,(row+1)*canvas*4),((y+row)*width+x)*4);frames[e.name]={frame:{x,y,w:canvas,h:canvas},rotated:false,trimmed:false,spriteSourceSize:{x:0,y:0,w:canvas,h:canvas},sourceSize:{w:canvas,h:canvas}};}
 mkdirSync(out,{recursive:true});writeFileSync(out+'/atlas.png',png(pixels,width,height));writeFileSync(out+'/atlas.json',JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,authoring:'scripts/build-mage-cast-v2.mjs',canvas,frameCount:entries.length,displaySize:idle.displaySize,width,height,rgbaBytes:width*height*4,sourcePixelsUnmodified:true,sources,clips};
-writeFileSync('src/game/art/mageCastManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,bytes:manifest.rgbaBytes,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{firstIdle:c.firstPoseMatchesIdle,palm:c.frames[c.releaseFrame].hand}]))}));
+writeFileSync('game/art/mageCastManifestV2.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,bytes:manifest.rgbaBytes,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{firstIdle:c.firstPoseMatchesIdle,palm:c.frames[c.releaseFrame].hand}]))}));

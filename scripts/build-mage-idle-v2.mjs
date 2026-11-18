@@ -3,11 +3,11 @@ import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 import {gifFrameDurations} from './lib/gif-frame-durations.mjs';
 
-const root='art/main-hero-mage-v2/animation/idle',out='public/assets/hd/mage-idle-v2';
+const root='art/main-hero-mage-v2/animation/idle',out='public/game-assets/hd/mage-idle-v2';
 const hash=b=>createHash('sha256').update(b).digest('hex'),canvas=96,columns=4;
 function bounds(pixels,width=canvas){let left=width,top=Infinity,right=-1,bottom=-1,partial=0;for(let k=0;k<pixels.length;k+=4)if(pixels[k+3]){const x=k/4%width,y=Math.floor(k/4/width);left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);if(pixels[k+3]!==255)partial++;}return{left,top,right,bottom,partial};}
-const old=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8')),oldName=old.clips['idle-south'].frames[0],page=old.locations[oldName];
-const oldAtlas=readPNG(`public/assets/hd/mage-hero-v2/${page}.png`),oldRect=JSON.parse(readFileSync(`public/assets/hd/mage-hero-v2/${page}.json`,'utf8')).frames[oldName].frame,oldPixels=new Uint8Array(oldRect.w*oldRect.h*4);
+const old=JSON.parse(readFileSync('game/art/mageHeroManifest.json','utf8')),oldName=old.clips['idle-south'].frames[0],page=old.locations[oldName];
+const oldAtlas=readPNG(`public/game-assets/hd/mage-hero-v2/${page}.png`),oldRect=JSON.parse(readFileSync(`public/game-assets/hd/mage-hero-v2/${page}.json`,'utf8')).frames[oldName].frame,oldPixels=new Uint8Array(oldRect.w*oldRect.h*4);
 for(let y=0;y<oldRect.h;y++)oldPixels.set(oldAtlas.pixels.subarray(((oldRect.y+y)*oldAtlas.width+oldRect.x)*4,((oldRect.y+y)*oldAtlas.width+oldRect.x+oldRect.w)*4),y*oldRect.w*4);
 const oldBounds=bounds(oldPixels,oldRect.w),visibleHeightWorld=(oldBounds.bottom-oldBounds.top+1)*old.displaySize/old.canvas;
 const sources={},clips={},entries=[];
@@ -32,4 +32,4 @@ const width=columns*canvas,height=Math.ceil(entries.length/columns)*canvas,pixel
 for(const [i,e]of entries.entries()){const x=i%columns*canvas,y=Math.floor(i/columns)*canvas;for(let row=0;row<canvas;row++)pixels.set(e.pixels.subarray(row*canvas*4,(row+1)*canvas*4),((y+row)*width+x)*4);frames[e.name]={frame:{x,y,w:canvas,h:canvas},rotated:false,trimmed:false,spriteSourceSize:{x:0,y:0,w:canvas,h:canvas},sourceSize:{w:canvas,h:canvas}};}
 mkdirSync(out,{recursive:true});writeFileSync(out+'/atlas.png',png(pixels,width,height));writeFileSync(out+'/atlas.json',JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const base=clips.front.frames[0].bounds,manifest={version:1,authoring:'scripts/build-mage-idle-v2.mjs',canvas,frameCount:entries.length,displaySize:visibleHeightWorld/(base.bottom-base.top+1)*canvas,visibleHeightWorld,width,height,rgbaBytes:width*height*4,sourcePixelsUnmodified:true,sources,clips};
-writeFileSync('src/game/art/mageIdleManifest.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,periodMs:clips.front.periodMs,displaySize:manifest.displaySize,visibleHeightWorld,rgbaBytes:manifest.rgbaBytes}));
+writeFileSync('game/art/mageIdleManifest.json',JSON.stringify(manifest,null,2)+'\n');globalThis.console.log(JSON.stringify({frames:entries.length,periodMs:clips.front.periodMs,displaySize:manifest.displaySize,visibleHeightWorld,rgbaBytes:manifest.rgbaBytes}));

@@ -11,7 +11,7 @@ if(process.argv.includes('--record-empty-hand')){
  const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
  assert.deepEqual([...walk('src'),...walk('public')].sort(),Object.keys(baseline).sort());
  const changed=Object.keys(baseline).filter(f=>hash(f)!==baseline[f]).sort();
- assert.deepEqual(changed,['public/assets/hd/warrior-skills-v1/5.png','public/assets/hd/warrior-skills-v1/6.png','public/assets/hd/warrior-ultimates-v1/0.png','src/game/art/warriorSkillsManifest.json','src/game/art/warriorUltimatesManifest.json']);
+ assert.deepEqual(changed,['public/game-assets/hd/warrior-skills-v1/5.png','public/game-assets/hd/warrior-skills-v1/6.png','public/game-assets/hd/warrior-ultimates-v1/0.png','game/art/warriorSkillsManifest.json','game/art/warriorUltimatesManifest.json']);
  writeFileSync(`${root}/integration-verification.json`,JSON.stringify({baselineFiles:Object.keys(baseline).length,changed,added:[],unchanged:Object.keys(baseline).length-changed.length,currentSHA256:Object.fromEntries(changed.map(f=>[f,hash(f)]))},null,2)+'\n');
 }
 const proof=JSON.parse(readFileSync(`${root}/integration-verification.json`,'utf8'));

@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 import {encodeGif} from '../art/generated/ash-warden-directions-v1/gif.mjs';
-const root='art/main-hero-mage/abilities/hero-model/run-cycle-v2',requests=JSON.parse(readFileSync(root+'/requests.json','utf8')),selection={},audits=[],pack=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8'));
+const root='art/main-hero-mage/abilities/hero-model/run-cycle-v2',requests=JSON.parse(readFileSync(root+'/requests.json','utf8')),selection={},audits=[],pack=JSON.parse(readFileSync('game/art/mageHeroManifest.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 for(const q of requests){
  const path=root+'/'+q.direction;if(!existsSync(path+'/result.json'))continue;

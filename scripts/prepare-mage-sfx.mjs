@@ -6,7 +6,7 @@ import {Buffer} from 'node:buffer';
 import console from 'node:console';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
 const {chromium}=await import('@playwright/test');
-const directory='art/generated/mage-sfx-elevenlabs-v1',runtime='public/assets/audio/mage-sfx-v1';
+const directory='art/generated/mage-sfx-elevenlabs-v1',runtime='public/game-assets/audio/mage-sfx-v1';
 const request=JSON.parse(await readFile(`${directory}/request.json`,'utf8'));
 const generations=JSON.parse(await readFile(`${directory}/generations.json`,'utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');

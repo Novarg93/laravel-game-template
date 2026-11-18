@@ -2,7 +2,7 @@
 import process from 'node:process';
 import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
-import { runnerLayout } from '../src/game/art/runnerPack.ts';
+import { runnerLayout } from '../game/art/runnerPack.ts';
 process.env.PLAYWRIGHT_BROWSERS_PATH ??= resolve('.browsers');
 const { chromium } = await import('@playwright/test');
 const browser = await chromium.launch({ channel: 'chromium', headless: true });
@@ -17,7 +17,7 @@ try {
       frames.push({ name, count, edgeCount: edges.length, edges: edges.slice(0, 12) });
     }
     return frames;
-  }, { data: 'data:image/png;base64,' + readFileSync('public/assets/hd/runner.png').toString('base64'), layout: runnerLayout() });
+  }, { data: 'data:image/png;base64,' + readFileSync('public/game-assets/hd/runner.png').toString('base64'), layout: runnerLayout() });
   const bad = result.filter(f => f.edgeCount || f.count < 350);
   globalThis.console.log(JSON.stringify({ frames: result.length, bad }, null, 2)); if (bad.length) process.exitCode = 1;
 } finally { await browser.close(); }

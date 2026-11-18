@@ -4,7 +4,7 @@ import {createServer} from 'node:http';
 import {resolve} from 'node:path';
 import process from 'node:process';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
-const root='art/main-hero-mage/abilities/ult-lightning',out='public/assets/hd/lightning-ultimate-v1',audit='art/generated/lightning-ultimate-v1';
+const root='art/main-hero-mage/abilities/ult-lightning',out='public/game-assets/hd/lightning-ultimate-v1',audit='art/generated/lightning-ultimate-v1';
 const ids={sky:'lightning-strike',beam:'ultimate-hand-lightning',branch:'secondary-chain',impact:'electric-impact'},sources={},clips={},entries=[];
 const hash=f=>createHash('sha256').update(readFileSync(f)).digest('hex');
 process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');const {chromium}=await import('@playwright/test');
@@ -44,7 +44,7 @@ for(const [f,h]of Object.entries(sources))if(hash(f)!==h)throw Error('Source cha
 mkdirSync(out,{recursive:true});mkdirSync(audit,{recursive:true});
 const manifest={version:1,width,height,rgbaBytes:width*height*4,padding,columns,frameCount:entries.length,sources,clips};
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height}}},null,2)+'\n');
-writeFileSync('src/game/art/lightningUltimateManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/lightningUltimateManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/pixel-audit.json`,JSON.stringify(manifest,null,2)+'\n');
 // Native contact sheet for the GIF-only impact; no generated or retouched pixels.
 const impact=entries.filter(e=>e.name.startsWith('ultimate-impact-')),ic=4,iw=impact[0].w,ih=impact[0].h,contact=new Uint8Array(ic*iw*Math.ceil(impact.length/ic)*ih*4);
 for(const [i,e]of impact.entries())for(let y=0;y<ih;y++)contact.set(e.pixels.subarray(y*iw*4,(y+1)*iw*4),((Math.floor(i/ic)*ih+y)*ic*iw+i%ic*iw)*4);

@@ -8,7 +8,7 @@ async function existing() {
 }
 const previous=await existing();
 if(previous && !previous.includes('<title>Pixel Survivor</title>'))throw new Error(`Port ${port} belongs to a different application`);
-const server=previous?undefined:spawn(process.execPath,['node_modules/vite/bin/vite.js',...(production?['preview']:[]),'--host','127.0.0.1','--port',port,'--strictPort'],{stdio:'inherit',windowsHide:true});
+const server=previous?undefined:spawn(process.execPath,['node_modules/vite/bin/vite.js',...(production?['preview']:[]),'--mode','game','--host','127.0.0.1','--port',port,'--strictPort'],{stdio:'inherit',windowsHide:true});
 if(previous)globalThis.console.log(`Reusing existing Pixel Survivor server on ${port}; it will remain running.`);
 let serverExited=false;server?.on('exit',()=>{serverExited=true;});
 try {

@@ -6,8 +6,8 @@ import assert from 'node:assert/strict';
 import { beforeAcceptedUltimatesHash } from './warrior-ultimates-accepted-scope.mjs';
 import { readPNG } from '../art/generated/warrior-concept-pack-v1/source/png.mjs';
 
-const m = JSON.parse(readFileSync('src/game/art/warriorUltimatesManifest.json', 'utf8'));
-const root = 'public/assets/hd/warrior-ultimates-v1';
+const m = JSON.parse(readFileSync('game/art/warriorUltimatesManifest.json', 'utf8'));
+const root = 'public/game-assets/hd/warrior-ultimates-v1';
 const atlas = readPNG(`${root}/0.png`), data = JSON.parse(readFileSync(`${root}/0.json`, 'utf8'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 assert.equal(sha(readFileSync(`${root}/0.png`)), m.atlasSHA256);

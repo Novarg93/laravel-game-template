@@ -5,7 +5,7 @@ import {createServer} from 'node:http';
 import process from 'node:process';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const root='art/astral-revenant',output='public/assets/hd/astral-revenant-v1',audit='art/generated/astral-revenant-v1';
+const root='art/astral-revenant',output='public/game-assets/hd/astral-revenant-v1',audit='art/generated/astral-revenant-v1';
 const inputs={walk:'walking/make_animation_of_mo...-265563492-0',cast:'casting/make_animation_of_ca...-2047300936-0','volley-flight':'projectile/make_animation_of_th...-460760605-0','volley-impact':'projectile/make_animation_of_th...-663521443-0','flame-spawn':'ground-blast/spawn','flame-idle':'ground-blast/idle','flame-appear':'ground-blast/spawn-b/spawn'};
 const statics={'volley-static':'projectile/generate_necrotic_pr...-62937138-0.png'};
 const hash=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
@@ -90,5 +90,5 @@ for(const [file,digest]of Object.entries(sources))if(hash(file)!==digest)throw E
 mkdirSync(output,{recursive:true});writeFileSync(`${output}/atlas.png`,png(pixels,width,height));
 writeFileSync(`${output}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,authoring:'scripts/build-astral-revenant.mjs',width,height,rgbaBytes:width*height*4,frameCount:entries.length,sourceCanvas:512,canvas:128,padding:2,bodyPivot:[64,64],sources,clips};
-writeFileSync('src/game/art/astralRevenantManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/astralRevenantManifest.json',JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,width,height,rgbaBytes:manifest.rgbaBytes,clips:Object.fromEntries(Object.entries(clips).map(([id,c])=>[id,{frames:c.frameCount,durationMs:c.durationsMs.reduce((a,b)=>a+b,0),atlasClip:c.atlasClip}]))},null,2));

@@ -5,8 +5,8 @@ const root='art/generated/miniboss-assets-audio-v1',sha=p=>createHash('sha256').
 const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
 const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
 const files=[...walk('src'),...walk('public')].sort(),changed=files.filter(p=>baseline[p]&&sha(p)!==baseline[p]),added=files.filter(p=>!baseline[p]);
-const allowedChanged=['src/game/art/GameArt.ts','src/game/art/assetRegistry.ts','src/game/audio/AudioPresentation.ts','src/game/audio/catalog.ts','src/game/audio/samples.ts'].sort();
-const allowedAdded=['src/game/art/runeWardenAccepted.ts','src/game/audio/MinibossAudio.ts','src/game/audio/minibossSamples.ts',...['mini-rune-cast','mini-teleport','mini-astral-cast','mini-briar-charge','mini-briar-melee','mini-totem-cast'].map(id=>`public/assets/audio/miniboss-v1/${id}.wav`),'public/assets/hd/rune-warden-v2/atlas.png','public/assets/hd/rune-warden-v2/atlas.json'].sort();
+const allowedChanged=['game/art/GameArt.ts','game/art/assetRegistry.ts','game/audio/AudioPresentation.ts','game/audio/catalog.ts','game/audio/samples.ts'].sort();
+const allowedAdded=['game/art/runeWardenAccepted.ts','game/audio/MinibossAudio.ts','game/audio/minibossSamples.ts',...['mini-rune-cast','mini-teleport','mini-astral-cast','mini-briar-charge','mini-briar-melee','mini-totem-cast'].map(id=>`public/game-assets/audio/miniboss-v1/${id}.wav`),'public/game-assets/hd/rune-warden-v2/atlas.png','public/game-assets/hd/rune-warden-v2/atlas.json'].sort();
 if(Object.keys(baseline).some(p=>!files.includes(p))||JSON.stringify(changed)!==JSON.stringify(allowedChanged)||JSON.stringify(added)!==JSON.stringify(allowedAdded))throw Error(JSON.stringify({changed,added}));
 const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,currentSHA256:Object.fromEntries([...changed,...added].map(p=>[p,sha(p)]))};
 writeFileSync(`${root}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({files:files.length,changed,added:added.length,unchanged:report.unchanged}));

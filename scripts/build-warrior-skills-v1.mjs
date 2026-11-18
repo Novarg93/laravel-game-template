@@ -4,7 +4,7 @@ import {Buffer} from 'node:buffer';
 import {readPNG,png} from '../art/generated/warrior-concept-pack-v1/source/png.mjs';
 import {emptyHandSource} from './warrior-empty-hand-sources.mjs';
 
-const source='art/generated/warrior-skills-directions-review-v5',out='public/assets/hd/warrior-skills-v1';
+const source='art/generated/warrior-skills-directions-review-v5',out='public/game-assets/hd/warrior-skills-v1';
 const review=JSON.parse(readFileSync(`${source}/manifest.json`,'utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const canvas=192,stride=194,columns=5,perPage=25,pages=[],locations={};
@@ -34,4 +34,4 @@ for(let offset=0;offset<entries.length;offset+=perPage){
  pages.push({index,width,height,sha256:hash(image)});
 }
 const clips=Object.fromEntries(Object.entries(review.clips).map(([id,c])=>[id,{frames:c.frames,frameMs:c.frameMs,periodMs:c.periodMs,impactFrame:c.impactFrame,pivot:c.pivot,jobId:c.jobId,accepted:true}]));
-writeFileSync('src/game/art/warriorSkillsManifest.json',JSON.stringify({version:1,source,accepted:true,approvalDate:'2026-11-13',canvas,displaySize:96,pages,locations,clips,routes:Object.fromEntries(Object.entries(review.routes).map(([d,r])=>[d,{...r,accepted:true}])),skills:review.skills,crack:{...review.crack,accepted:true}},null,2)+'\n');
+writeFileSync('game/art/warriorSkillsManifest.json',JSON.stringify({version:1,source,accepted:true,approvalDate:'2026-11-13',canvas,displaySize:96,pages,locations,clips,routes:Object.fromEntries(Object.entries(review.routes).map(([d,r])=>[d,{...r,accepted:true}])),skills:review.skills,crack:{...review.crack,accepted:true}},null,2)+'\n');

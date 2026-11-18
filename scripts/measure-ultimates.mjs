@@ -1,8 +1,8 @@
 import { register } from 'node:module';
 import { mkdirSync, writeFileSync } from 'node:fs';
 register('./ts-art-loader.mjs', import.meta.url);
-const { World } = await import('../src/game/systems/World.ts');
-const { applyUpgrade } = await import('../src/game/systems/UpgradeSystem.ts');
+const { World } = await import('../game/systems/World.ts');
+const { applyUpgrade } = await import('../game/systems/UpgradeSystem.ts');
 const hp = [900, 1020, 1200].map(time => {
   const w = new World(12345, { spawnRate: 0 }); w.elapsed = time;
   const rows = [];

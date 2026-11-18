@@ -4,7 +4,7 @@ import {Buffer} from 'node:buffer';
 import {readPNG,png} from '../art/generated/warrior-concept-pack-v1/source/png.mjs';
 
 // Exact accepted review pixels, packed once; repeated playback poses are references.
-const source='art/generated/warrior-movement-attacks-review-v5',out='public/assets/hd/warrior-hero-v1';
+const source='art/generated/warrior-movement-attacks-review-v5',out='public/game-assets/hd/warrior-hero-v1';
 const review=JSON.parse(readFileSync(source+'/manifest.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const chargeRoot='art/generated/warrior-north-skills-review-v1',chargeReview=JSON.parse(readFileSync(chargeRoot+'/manifest.json','utf8')),charge=chargeReview.clips['front-charge'];
@@ -31,4 +31,4 @@ for(const group of groups){const names=Object.keys(group.frames);for(let offset=
 const clips=Object.fromEntries(Object.entries(review.clips).map(([id,c])=>{const frameMs=c.motion==='attack'?60:c.frameMs;return[id,{frames:c.frames,frameMs,sourceFrameMs:c.frameMs,periodMs:c.frames.length*frameMs,impactFrame:c.playbackImpactFrame,pivot:c.pivot,loop:c.loop,jobId:c.jobId,frameMap:c.frameMap,sourceFrameCount:c.sourceFrameCount}];}));
 clips['legacy-charge']={frames:Object.keys(chargeFrames),frameMs:20,sourceFrameMs:charge.frameMs,periodMs:180,impactFrame:4,pivot:charge.pivot,loop:false,jobId:charge.jobId,frameMap:charge.sourceFrames.map((_,i)=>i),sourceFrameCount:charge.sourceFrames.length};
 const routes=Object.fromEntries(Object.entries(review.routes).map(([direction,r])=>[direction,{group:r.group,flipX:r.flip,accepted:true}]));
-writeFileSync('src/game/art/warriorHeroManifest.json',JSON.stringify({version:2,source:source+'/manifest.json',chargeSource:chargeRoot+'/manifest.json',accepted:true,canvas,displaySize:96,sourcePixelsUnmodified:true,sourceFrameCount:Object.keys(locations).length,playbackFrameCount:Object.values(clips).reduce((n,c)=>n+c.frames.length,0),pages,locations,clips,routes,sources:review.sources},null,2)+'\n');
+writeFileSync('game/art/warriorHeroManifest.json',JSON.stringify({version:2,source:source+'/manifest.json',chargeSource:chargeRoot+'/manifest.json',accepted:true,canvas,displaySize:96,sourcePixelsUnmodified:true,sourceFrameCount:Object.keys(locations).length,playbackFrameCount:Object.values(clips).reduce((n,c)=>n+c.frames.length,0),pages,locations,clips,routes,sources:review.sources},null,2)+'\n');

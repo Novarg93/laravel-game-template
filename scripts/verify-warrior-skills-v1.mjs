@@ -7,16 +7,16 @@ import {Buffer} from 'node:buffer';
 import process from 'node:process';
 import {readPNG} from '../art/generated/warrior-concept-pack-v1/source/png.mjs';
 
-const root='art/generated/warrior-skills-runtime-v1',m=JSON.parse(readFileSync('src/game/art/warriorSkillsManifest.json','utf8'));
+const root='art/generated/warrior-skills-runtime-v1',m=JSON.parse(readFileSync('game/art/warriorSkillsManifest.json','utf8'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const allowed=[
- 'src/game/abilities/definitions.ts','src/game/abilities/tickAbilities.ts','src/game/abilities/warrior.ts',
- 'src/game/art/GameArt.ts','src/game/art/WarriorHeroAnimation.ts','src/game/art/WarriorMagic.ts','src/game/art/assetRegistry.ts','src/game/art/warriorHeroPack.ts',
- 'src/game/systems/MobilitySystem.ts','src/game/systems/UpgradeSystem.ts','src/game/systems/World.ts',
- 'src/ui/upgradeCards.ts','src/ui/upgradeEmblems.ts',
+ 'game/abilities/definitions.ts','game/abilities/tickAbilities.ts','game/abilities/warrior.ts',
+ 'game/art/GameArt.ts','game/art/WarriorHeroAnimation.ts','game/art/WarriorMagic.ts','game/art/assetRegistry.ts','game/art/warriorHeroPack.ts',
+ 'game/systems/MobilitySystem.ts','game/systems/UpgradeSystem.ts','game/systems/World.ts',
+ 'game/ui/upgradeCards.ts','game/ui/upgradeEmblems.ts',
 ];
-const additions=[...Array.from({length:7},(_,i)=>[`public/assets/hd/warrior-skills-v1/${i}.json`,`public/assets/hd/warrior-skills-v1/${i}.png`]).flat(),
- 'src/game/art/WarriorSkillArt.ts','src/game/art/warriorSkillsManifest.json','src/game/art/warriorSkillsPack.ts','src/game/config/warriorAbilities.ts'].sort();
+const additions=[...Array.from({length:7},(_,i)=>[`public/game-assets/hd/warrior-skills-v1/${i}.json`,`public/game-assets/hd/warrior-skills-v1/${i}.png`]).flat(),
+ 'game/art/WarriorSkillArt.ts','game/art/warriorSkillsManifest.json','game/art/warriorSkillsPack.ts','game/config/warriorAbilities.ts'].sort();
 const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
 const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
 const later=JSON.parse(readFileSync('art/generated/warrior-cleave-sync-v3/integration-verification.json','utf8'));
@@ -28,7 +28,7 @@ for(const p of [...Object.keys(baseline),...additions])assert.equal(historicalRu
 if(process.argv.includes('--record'))throw Error('Historical skill proof is immutable; record the current v4 proof instead');
 const pages=new Map();
 for(const page of m.pages){
- const path=`public/assets/hd/warrior-skills-v1/${page.index}.png`;assert.equal(sha(readFileSync(path)),page.sha256);
+ const path=`public/game-assets/hd/warrior-skills-v1/${page.index}.png`;assert.equal(sha(readFileSync(path)),page.sha256);
  pages.set(page.index,{raw:readPNG(path),atlas:JSON.parse(readFileSync(path.replace('.png','.json'),'utf8'))});
 }
 for(const[name,f]of Object.entries(m.locations)){

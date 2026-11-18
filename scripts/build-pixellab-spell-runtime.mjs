@@ -21,7 +21,7 @@ function pack(folder,clips){
   for(let row=0;row<128;row++)pixels.set(e.pixels.subarray(row*512,(row+1)*512),((y+row)*width+x)*4);
   frames[e.name]={frame:{x,y,w:128,h:128},rotated:false,trimmed:false,sourceSize:{w:128,h:128},spriteSourceSize:{x:0,y:0,w:128,h:128}};
  }
- const out=`public/assets/hd/${folder}`;mkdirSync(out,{recursive:true});writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
+ const out=`public/game-assets/hd/${folder}`;mkdirSync(out,{recursive:true});writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
  return {version:1,provider:'PixelLab AI',authoring:'scripts/build-pixellab-spell-runtime.mjs',approvedReview:`${source}/manifest.json`,canvas:128,width,height,padding,rgbaBytes:width*height*4,frameCount:entries.length,sources,clips};
 }
 const fire=pack('mage-fireball-pixellab-v1',{
@@ -37,6 +37,6 @@ const meteor=pack('mage-meteor-pixellab-v1',{
  ground:{source:'meteor-impact',indices:[7],durationsMs:[800],pivot:{x:47,y:68}}
 });
 Object.assign(meteor,{angleDegrees:review.meteorAngleDegrees,flightSize:128,impactSize:128,flightPivot:{x:47,y:68},groundPivot:{x:47,y:68},lightPivot:{x:64,y:64},lightRadius:60,lightOpacity:.4,lightBlend:'SCREEN',residueFrameIndex:0});
-writeFileSync('src/game/art/fireballManifestPixellab.json',JSON.stringify(fire,null,2)+'\n');writeFileSync('src/game/art/mageMeteorManifestPixellab.json',JSON.stringify(meteor,null,2)+'\n');
+writeFileSync('game/art/fireballManifestPixellab.json',JSON.stringify(fire,null,2)+'\n');writeFileSync('game/art/mageMeteorManifestPixellab.json',JSON.stringify(meteor,null,2)+'\n');
 const out='art/generated/mage-spells-pixellab-runtime-v1';mkdirSync(out,{recursive:true});writeFileSync(`${out}/audit.json`,JSON.stringify({fire,meteor},null,2)+'\n');
 globalThis.console.log(JSON.stringify({fire:{frames:fire.frameCount,bytes:fire.rgbaBytes},meteor:{frames:meteor.frameCount,bytes:meteor.rgbaBytes},sourcePixelsUnchanged:true}));

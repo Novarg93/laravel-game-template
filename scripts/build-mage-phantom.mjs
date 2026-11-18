@@ -1,7 +1,7 @@
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
-const root='art/generated/mage-phantom-cast-production-v1',out='public/assets/hd/mage-phantom-v1';
+const root='art/generated/mage-phantom-cast-production-v1',out='public/game-assets/hd/mage-phantom-v1';
 const directions=['south','south-east','east','north-east','north','north-west','west','south-west'];
 const vectors=[[0,1],[Math.SQRT1_2,Math.SQRT1_2],[1,0],[Math.SQRT1_2,-Math.SQRT1_2],[0,-1],[-Math.SQRT1_2,-Math.SQRT1_2],[-1,0],[-Math.SQRT1_2,Math.SQRT1_2]];
 const durationsMs=[20,20,20,30,30,30,40,40,30,30,30,20],shifts=[0,2,5,8,12,16,19,19,13,8,3,0];
@@ -44,6 +44,6 @@ writeFileSync(out+'/atlas.png',png(pixels,width,height));
 writeFileSync(out+'/atlas.json',JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,sharedAbilities:['fireball','lightning'],directions,sourceCanvas:256,canvas,displaySize:40,anchor:{x:canvas/2,y:canvas/4},durationMs:340,durationsMs,releaseFrame:6,loop:false,clips,atlas:{width,height,rgbaBytes:pixels.length},sampling:'Fixed nearest-neighbour 256→112, identical to Mage body; lossless alpha trim only, no bbox fit',manifestation:'Phase1 uses source facing; phase2 uses halfway facing; frames3–10 use target-facing generated gesture'};
 if(pixels.length>2*1024*1024)throw Error('Phantom atlas exceeds 2MiB budget');
-writeFileSync('src/game/art/magePhantomManifest.json',JSON.stringify(manifest,null,2)+'\n');
-writeFileSync(root+'/source-audit.json',JSON.stringify({sources,frames:entries.map(e=>({name:e.name,source:e.file,pixelHash:e.sha})),runtimeManifestHash:sha(readFileSync('src/game/art/magePhantomManifest.json'))},null,2)+'\n');
+writeFileSync('game/art/magePhantomManifest.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync(root+'/source-audit.json',JSON.stringify({sources,frames:entries.map(e=>({name:e.name,source:e.file,pixelHash:e.sha})),runtimeManifestHash:sha(readFileSync('game/art/magePhantomManifest.json'))},null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,unique:unique.length,atlas:[width,height],rgbaBytes:pixels.length,durationMs:340}));

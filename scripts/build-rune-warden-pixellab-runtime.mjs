@@ -18,9 +18,9 @@ for(const [i,e]of entries.entries()){
  for(let row=0;row<128;row++)pixels.set(e.pixels.subarray(row*512,(row+1)*512),((y+row)*width+x)*4);
  frames[e.name]={frame:{x,y,w:128,h:128},rotated:false,trimmed:false,sourceSize:{w:128,h:128},spriteSourceSize:{x:0,y:0,w:128,h:128}};
 }
-const out='public/assets/hd/rune-warden-pixellab-v1';mkdirSync(out,{recursive:true});
+const out='public/game-assets/hd/rune-warden-pixellab-v1';mkdirSync(out,{recursive:true});
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
 const manifest={version:1,provider:'PixelLab AI',authoring:'scripts/build-rune-warden-pixellab-runtime.mjs',approvedReview:`${root}/manifest.json`,canvas:128,width,height,padding,rgbaBytes:width*height*4,frameCount:entries.length,blinkOffsetY:23,sources,clips};
-writeFileSync('src/game/art/runeWardenVfxManifestPixellab.json',JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/runeWardenVfxManifestPixellab.json',JSON.stringify(manifest,null,2)+'\n');
 mkdirSync('art/generated/rune-warden-pixellab-runtime-v1',{recursive:true});writeFileSync('art/generated/rune-warden-pixellab-runtime-v1/audit.json',JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:entries.length,rgbaBytes:manifest.rgbaBytes,sourcePixelsUnchanged:true}));

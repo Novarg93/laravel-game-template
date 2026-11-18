@@ -4,7 +4,7 @@ import {Buffer} from 'node:buffer';
 import console from 'node:console';
 import assert from 'node:assert/strict';
 import {readPNG} from '../art/generated/warrior-concept-pack-v1/source/png.mjs';
-const m=JSON.parse(readFileSync('src/game/art/warriorHeroManifest.json')),review=JSON.parse(readFileSync(m.source)),root='public/assets/hd/warrior-hero-v1';
+const m=JSON.parse(readFileSync('game/art/warriorHeroManifest.json')),review=JSON.parse(readFileSync(m.source)),root='public/game-assets/hd/warrior-hero-v1';
 const hash=b=>createHash('sha256').update(b).digest('hex'),pages=m.pages.map(p=>{
  assert.equal(hash(readFileSync(`${root}/${p.index}.png`)),p.sha256);
  return {image:readPNG(`${root}/${p.index}.png`),data:JSON.parse(readFileSync(`${root}/${p.index}.json`))};

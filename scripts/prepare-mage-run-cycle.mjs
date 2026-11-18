@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import process from 'node:process';
-const pack=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8')),root='art/main-hero-mage/abilities/hero-model/run-cycle-v2';
+const pack=JSON.parse(readFileSync('game/art/mageHeroManifest.json','utf8')),root='art/main-hero-mage/abilities/hero-model/run-cycle-v2';
 mkdirSync(root,{recursive:true});
 if(existsSync(root+'/requests.json')){globalThis.console.log('Run-cycle-v2 requests already prepared; preserving original references and receipts.');process.exit(0);}
 const requests=[];

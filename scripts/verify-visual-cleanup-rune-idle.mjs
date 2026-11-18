@@ -5,8 +5,8 @@ const root='art/generated/visual-cleanup-rune-idle-v1',sha=p=>createHash('sha256
 const baseline=JSON.parse(readFileSync(`${root}/runtime-baseline.json`,'utf8'));
 const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${d}/${e.name}`):[`${d}/${e.name}`]);
 const files=[...walk('src'),...walk('public')].sort(),changed=files.filter(p=>baseline[p]&&sha(p)!==baseline[p]);
-const added=['public/assets/audio/miniboss-ambience-v1/beast-walking.wav','public/assets/audio/miniboss-ambience-v1/rune-presence.wav','src/game/audio/MinibossAmbience.ts','src/game/audio/minibossAmbienceSamples.ts'].sort();
-const allowed=['src/game/art/FireUltimateArt.ts','src/game/audio/AudioController.ts','src/game/audio/AudioPresentation.ts','src/game/audio/catalog.ts','src/game/audio/samples.ts','src/game/scenes/GameScene.ts'];
+const added=['public/game-assets/audio/miniboss-ambience-v1/beast-walking.wav','public/game-assets/audio/miniboss-ambience-v1/rune-presence.wav','game/audio/MinibossAmbience.ts','game/audio/minibossAmbienceSamples.ts'].sort();
+const allowed=['game/art/FireUltimateArt.ts','game/audio/AudioController.ts','game/audio/AudioPresentation.ts','game/audio/catalog.ts','game/audio/samples.ts','game/scenes/GameScene.ts'];
 if(JSON.stringify(files)!==JSON.stringify([...Object.keys(baseline),...added].sort())||JSON.stringify(changed)!==JSON.stringify(allowed))throw Error(JSON.stringify({changed,inventory:files.length}));
 const report={baselineFiles:Object.keys(baseline).length,changed,added,unchanged:Object.keys(baseline).length-changed.length,currentSHA256:Object.fromEntries([...changed,...added].map(p=>[p,sha(p)]))};
 writeFileSync(`${root}/integration-verification.json`,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({files:files.length,changed,unchanged:report.unchanged}));

@@ -6,7 +6,7 @@ import {Buffer} from 'node:buffer';
 import console from 'node:console';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=resolve('.browsers');
 const {chromium}=await import('@playwright/test'),browser=await chromium.launch({channel:'chromium',headless:true});
-const root='art/generated/mage-blink-v1',sources=['src/game/art/groveArtPack.ts','src/game/art/hdForest.ts','src/game/config/biomes.ts','src/game/utils/worldTiles.ts'];
+const root='art/generated/mage-blink-v1',sources=['game/art/groveArtPack.ts','game/art/hdForest.ts','game/config/biomes.ts','game/utils/worldTiles.ts'];
 try{
  const page=await browser.newPage();await page.goto((process.env.PIXEL_BLINK_BASE??'http://127.0.0.1:5187')+'/'+root+'/background-source.html');await page.waitForFunction(()=>globalThis.BLINK_BACKGROUNDS_READY);
  for(const id of ['grove','forest']){const url=await page.locator('#'+id).evaluate(c=>c.toDataURL());writeFileSync(`${root}/prepared/${id}.png`,Buffer.from(url.split(',')[1],'base64'));}

@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 const root='art/generated/ash-warden-north-meteor-review-v1',review=JSON.parse(readFileSync(`${root}/manifest.json`,'utf8')),hash=b=>createHash('sha256').update(b).digest('hex');
 if(!JSON.parse(readFileSync(`${root}/source/approval.json`,'utf8')).accepted)throw Error('No user acceptance');
-const out='public/assets/hd/ash-warden-pixellab-v1',audit='art/generated/ash-warden-pixellab-runtime-v1';mkdirSync(out,{recursive:true});mkdirSync(audit,{recursive:true});
+const out='public/game-assets/hd/ash-warden-pixellab-v1',audit='art/generated/ash-warden-pixellab-runtime-v1';mkdirSync(out,{recursive:true});mkdirSync(audit,{recursive:true});
 const pages=[],clips={},sources={};
 for(const [id,size,cols,ids] of [['north',256,3,['north-slam']],['meteor',128,8,['meteor-flight','landing-pulse','landing-impact']]]){
  const entries=[];
@@ -21,5 +21,5 @@ for(const [id,size,cols,ids] of [['north',256,3,['north-slam']],['meteor',128,8,
  pages.push({id,key:`ash-warden-pixellab-v1-${id}`,width,height,rgbaBytes:width*height*4,frameCount:entries.length,entries:entries.map(({frame,source,pixelSHA256})=>({frame,source,pixelSHA256}))});
 }
 const manifest={version:1,provider:'PixelLab',approvedReview:root+'/manifest.json',pages,rgbaBytes:pages.reduce((s,p)=>s+p.rgbaBytes,0),frameCount:60,padding:2,clips,sources,scene:review.scene};
-writeFileSync('src/game/art/ashWardenPixellabManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/audit.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/ashWardenPixellabManifest.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${audit}/audit.json`,JSON.stringify(manifest,null,2)+'\n');
 globalThis.console.log(JSON.stringify({frames:60,rgbaBytes:manifest.rgbaBytes,pages:pages.map(p=>({id:p.id,w:p.width,h:p.height})),sourcePixelsUnchanged:true}));

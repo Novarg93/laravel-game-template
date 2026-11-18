@@ -6,7 +6,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {inflateSync} from 'node:zlib';
 import {png} from '../art/generated/ash-warden-directions-v1/pixels.mjs';
-const root='art/generated/', out='public/assets/hd/ash-warden-v1';
+const root='art/generated/', out='public/game-assets/hd/ash-warden-v1';
 fs.mkdirSync(out,{recursive:true});
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const sources=new Map(),images=new Map(),textures=new Map(),clips={};
@@ -95,6 +95,6 @@ for(const [id,clip]of Object.entries(clips)){
   clip.totalMs=clip.durationsMs.reduce((a,b)=>a+b,0);
   clip.interruptPolicy=id==='death-a'?'terminal-uninterruptible; pause-holds; freeze-cleared':id.startsWith('vfx-')||id.startsWith('meteor-')||id.startsWith('charge-start')||id.startsWith('charge-stop')?'world-instance; pause-holds; death-cancels-hostile':'personal-clock; freeze-and-pause-hold; phase-gate-or-death-may-interrupt';
 }
-fs.writeFileSync('src/game/art/ashWardenManifest.json',JSON.stringify(manifest));
+fs.writeFileSync('game/art/ashWardenManifest.json',JSON.stringify(manifest));
 fs.writeFileSync(out+'/manifest.json',JSON.stringify({...manifest,clips:undefined,locations:undefined},null,2));
 globalThis.console.log(JSON.stringify({pages:pages.length,rgbaBytes:bytes,uniqueTextures:textures.size,clips:Object.keys(clips).length,sourceFiles:sources.size}));

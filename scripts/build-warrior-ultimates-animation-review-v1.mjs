@@ -4,9 +4,9 @@ import { Buffer } from 'node:buffer';
 
 const out='art/generated/warrior-ultimates-animation-review-v1';
 const load=file=>JSON.parse(readFileSync(file,'utf8'));
-const ult=load('src/game/art/warriorUltimatesManifest.json');
-const skills=load('src/game/art/warriorSkillsManifest.json');
-const hero=load('src/game/art/warriorHeroManifest.json');
+const ult=load('game/art/warriorUltimatesManifest.json');
+const skills=load('game/art/warriorSkillsManifest.json');
+const hero=load('game/art/warriorHeroManifest.json');
 const archive=load('art/generated/warrior-animation-review-v1/manifest.json');
 const images={},clips={};
 function add(id,manifest,sourceId,kind){

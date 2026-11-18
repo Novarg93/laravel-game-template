@@ -16,12 +16,12 @@ try{
       for(let i=0;i<data.length;i++){hash=Math.imul(hash^data[i],16777619);if(i%4===3&&data[i]){pixels++;if(data[i]!==255)soft++;const n=(i-3)/4,x=n%f.w,y=Math.floor(n/f.w);if(!x||!y||x===f.w-1||y===f.h-1)border++;}}
       return{name,pixels,border,soft,hash:hash>>>0};
     });
-  },{data:'data:image/png;base64,'+readFileSync('public/assets/hd/mage-casting.png').toString('base64'),manifest:JSON.parse(readFileSync('public/assets/hd/mage-casting.json','utf8'))});
+  },{data:'data:image/png;base64,'+readFileSync('public/game-assets/hd/mage-casting.png').toString('base64'),manifest:JSON.parse(readFileSync('public/game-assets/hd/mage-casting.json','utf8'))});
   const bad=frames.filter(f=>f.border||f.soft||f.pixels<(f.name.startsWith('body-')?500:100));
   mkdirSync('docs/mage-casting',{recursive:true});writeFileSync('docs/mage-casting/PIXEL_QA.json',JSON.stringify({frames,bad},null,2));
-  const old=JSON.parse(readFileSync('public/assets/hd/mage.json','utf8'));
+  const old=JSON.parse(readFileSync('public/game-assets/hd/mage.json','utf8'));
   const originalLayout={width:old.meta.size.w,height:old.meta.size.h,frames:Object.entries(old.frames).map(([name,{frame}])=>{const match=/^mage-(down|up|side)-(idle|walk|hurt|death)-(\d)$/.exec(name);return{name,frame,facing:match?.[1]??'',pose:match?.[2]??'fireball',index:Number(match?.[3]??name.split('-').at(-1))};})};
-  const original=await page.evaluate(drawMageAtlas,originalLayout), originalUnchanged=Buffer.from(original.split(',')[1],'base64').equals(readFileSync('public/assets/hd/mage.png'));
+  const original=await page.evaluate(drawMageAtlas,originalLayout), originalUnchanged=Buffer.from(original.split(',')[1],'base64').equals(readFileSync('public/game-assets/hd/mage.png'));
   writeFileSync('docs/mage-casting/ORIGINAL_REPRODUCIBILITY.json',JSON.stringify({originalMagePngReproducedByteForByte:originalUnchanged},null,2));
   if(!originalUnchanged)throw new Error('Original Mage source must still reproduce its accepted PNG');
   globalThis.console.log(JSON.stringify({frames:frames.length,bad},null,2));if(bad.length)process.exitCode=1;

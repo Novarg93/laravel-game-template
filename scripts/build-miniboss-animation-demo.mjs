@@ -8,8 +8,8 @@ const baselinePath=`${root}/source/runtime-baseline.json`;
 if(!existsSync(baselinePath))writeFileSync(baselinePath,JSON.stringify(Object.fromEntries([...walk('src'),...walk('public')].map(p=>[p,hash(readFileSync(p))])),null,2)+'\n');
 const sources={},atlases={};
 function asset(file,name){const target=`assets/${name}`;copyFileSync(file,`${root}/${target}`);sources[file]={sha256:hash(readFileSync(file)),copy:target};return target;}
-for(const id of ['briar-beast','rune-warden','astral-revenant']){const p=`public/assets/hd/${id}-v1/atlas`;atlases[id]={image:asset(p+'.png',id+'.png'),frames:read(p+'.json').frames};sources[p+'.json']={sha256:hash(readFileSync(p+'.json'))};}
-atlases.archive={image:asset('public/assets/hd/bosses.png','archive.png'),frames:read('public/assets/hd/bosses.json').frames};sources['public/assets/hd/bosses.json']={sha256:hash(readFileSync('public/assets/hd/bosses.json'))};
+for(const id of ['briar-beast','rune-warden','astral-revenant']){const p=`public/game-assets/hd/${id}-v1/atlas`;atlases[id]={image:asset(p+'.png',id+'.png'),frames:read(p+'.json').frames};sources[p+'.json']={sha256:hash(readFileSync(p+'.json'))};}
+atlases.archive={image:asset('public/game-assets/hd/bosses.png','archive.png'),frames:read('public/game-assets/hd/bosses.json').frames};sources['public/game-assets/hd/bosses.json']={sha256:hash(readFileSync('public/game-assets/hd/bosses.json'))};
 for(const [id,a]of Object.entries(atlases)){
  const image=readPNG(`${root}/${a.image}`);a.downloads={};mkdirSync(`${root}/frames/${id}`,{recursive:true});
  for(const [name,f]of Object.entries(a.frames)){
@@ -28,7 +28,7 @@ const extra={
  eclipse:[['volley-flight','Астральный снаряд · полёт',true,40],['volley-impact','Астральный снаряд · попадание',false,40],['flame-appear','Пламя · появление B',false,62],['flame-idle','Пламя · поддержание',true,62],['flame-spawn','Пламя · исчезновение / исходный Spawn A',false,62],['volley-static','Астральный снаряд · старт',false,40]]
 };
 for(const b of bosses){
- const path=`src/game/art/${b.manifest}Manifest.json`,m=read(path);sources[path]={sha256:hash(readFileSync(path))};b.clips=[];
+ const path=`game/art/${b.manifest}Manifest.json`,m=read(path);sources[path]={sha256:hash(readFileSync(path))};b.clips=[];
  const add=(id,label,type,frames,durations,loop,note='',size=128*b.worldScale)=>b.clips.push({id,label,type,frames,durationsMs:durations,loop,note,size,atlas:b.atlas});
  const body=(id,label,source=id,loop=true)=>{const c=m.clips[source];add(id,label,'body',Object.fromEntries(['left','right'].map(d=>[d,Array.from({length:c.frameCount},(_,i)=>`${b.id}-1-${d}-${source}-${i}`)])),c.durationsMs,loop);};
  const idle=Object.fromEntries(['left','right'].map(d=>[d,[`${b.id}-1-${d}-${b.id==='charger'?'idle':'walk'}-0`]]));

@@ -3,9 +3,9 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {readPNG,png} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 
-const input='art/generated/mage-ability-vfx-v1',out='public/assets/hd/mage-ability-vfx-v1';
+const input='art/generated/mage-ability-vfx-v1',out='public/game-assets/hd/mage-ability-vfx-v1';
 const audit=JSON.parse(readFileSync(`${input}/source-audit.json`,'utf8'));
-const tuning=JSON.parse(readFileSync('src/game/config/mageAbilityTuning.json','utf8'));
+const tuning=JSON.parse(readFileSync('game/config/mageAbilityTuning.json','utf8'));
 const ground=audit.find(s=>s.id==='599290415');
 if(!ground)throw Error('Required Meteor V2 ground impact GIF/PNG 599290415 is missing');
 const explosion=audit.find(s=>s.id==='686437158');
@@ -72,5 +72,5 @@ for(const e of packed.placed){
 }
 mkdirSync(out,{recursive:true});writeFileSync(`${out}/atlas.png`,png(pixels,width,height));
 writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
-writeFileSync('src/game/art/mageAbilityManifest.json',JSON.stringify({version:6,authoring:'scripts/build-mage-ability-vfx.mjs',width,height,rgbaBytes:width*height*4,modelCanvas,padding,meteorModelWorldSize:20*tuning.meteorModelScale,sampling:'Frost: native 1:1 pixels, lossless transparent trim; Meteor: verified 4:1 nearest-neighbor; fixed full canvases and padding',clips,notes:['Regular Frost Nova uses the approved native 512px HD VFX; Ultimate keeps its original 146px source.','Frost Nova and Ultimate use authored JSON timing and PNG colors, forward once.','Frost source filenames and tag names are not unique between clips; runtime names use explicit ability IDs.','Meteor flight, landing pixels, contact pivot, playback and sizes are preserved.','No per-frame fitting, tinting or additive blend for authored Frost pixels.']},null,2)+'\n');
+writeFileSync('game/art/mageAbilityManifest.json',JSON.stringify({version:6,authoring:'scripts/build-mage-ability-vfx.mjs',width,height,rgbaBytes:width*height*4,modelCanvas,padding,meteorModelWorldSize:20*tuning.meteorModelScale,sampling:'Frost: native 1:1 pixels, lossless transparent trim; Meteor: verified 4:1 nearest-neighbor; fixed full canvases and padding',clips,notes:['Regular Frost Nova uses the approved native 512px HD VFX; Ultimate keeps its original 146px source.','Frost Nova and Ultimate use authored JSON timing and PNG colors, forward once.','Frost source filenames and tag names are not unique between clips; runtime names use explicit ability IDs.','Meteor flight, landing pixels, contact pivot, playback and sizes are preserved.','No per-frame fitting, tinting or additive blend for authored Frost pixels.']},null,2)+'\n');
 globalThis.console.log(`Mage VFX: ${entries.length} frames, ${width}x${height}, ${width*height*4} RGBA bytes; fixed Meteor model size ${20*tuning.meteorModelScale} world units`);

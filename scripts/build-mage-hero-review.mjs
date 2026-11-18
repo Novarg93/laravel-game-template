@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync} from 'node:fs';
-const pack=JSON.parse(readFileSync('src/game/art/mageHeroManifest.json','utf8'));
-const atlas=Object.fromEntries(pack.pages.map(p=>[p.index,JSON.parse(readFileSync(`public/assets/hd/mage-hero-v2/${p.index}.json`,'utf8')).frames]));
+const pack=JSON.parse(readFileSync('game/art/mageHeroManifest.json','utf8'));
+const atlas=Object.fromEntries(pack.pages.map(p=>[p.index,JSON.parse(readFileSync(`public/game-assets/hd/mage-hero-v2/${p.index}.json`,'utf8')).frames]));
 const review={directions:pack.directions,canvas:pack.canvas,clips:pack.clips,locations:pack.locations,atlas,pages:pack.pages.map(p=>p.index)};
 const html=`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mage V2 — восемь направлений</title>
 <style>body{margin:0;background:#111d27;color:#ebecd6;font:16px system-ui}header{padding:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}h1{font-size:20px;margin:0}select,button,input{font:inherit}canvas{display:block;width:min(100%,1280px);height:auto;image-rendering:pixelated}p{padding:0 16px;color:#afc5c9}a{color:#f3cc78}</style>
@@ -9,7 +9,7 @@ const html=`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="vie
 <script>
 const data=${JSON.stringify(review)},canvas=document.querySelector('#canvas'),g=canvas.getContext('2d'),motion=document.querySelector('#motion'),speed=document.querySelector('#speed'),slider=document.querySelector('#frame'),pause=document.querySelector('#pause');
 const images=new Map();let paused=false,time=0,scrubFrame=null,previous=performance.now();
-for(const page of data.pages){const im=new Image();im.src=(location.protocol==='file:'?'../../../public':'')+'/assets/hd/mage-hero-v2/'+page+'.png';images.set(page,im);}
+for(const page of data.pages){const im=new Image();im.src=(location.protocol==='file:'?'../../../public':'')+'/game-assets/hd/mage-hero-v2/'+page+'.png';images.set(page,im);}
 motion.onchange=()=>{time=0;slider.value=0;scrubFrame=null;slider.max=Math.max(...data.directions.map(d=>data.clips[motion.value+'-'+d].frames.length))-1;};pause.onclick=()=>{paused=!paused;if(!paused)scrubFrame=null;pause.textContent=paused?'Продолжить':'Пауза';};slider.oninput=()=>{paused=true;pause.textContent='Продолжить';scrubFrame=Number(slider.value);};motion.onchange();
 function draw(now){
  if(!paused)time+=(now-previous)/1000*Number(speed.value);previous=now;

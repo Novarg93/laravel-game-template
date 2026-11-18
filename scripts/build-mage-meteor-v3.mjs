@@ -2,7 +2,7 @@ import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {png,readPNG} from '../art/generated/ash-warden-walk-rd-v2/png-io.mjs';
 import {METEOR_ART,METEOR_PALETTE,meteorArtwork} from './mage-meteor-art-source.mjs';
-const root='art/generated/mage-meteor-v3',out='public/assets/hd/mage-meteor-v3',padding=2,cell=132,columns=6;
+const root='art/generated/mage-meteor-v3',out='public/game-assets/hd/mage-meteor-v3',padding=2,cell=132,columns=6;
 mkdirSync(out,{recursive:true});mkdirSync(`${root}/source`,{recursive:true});
 const clips={},entries=[];const digest=b=>createHash('sha256').update(b).digest('hex');
 for(const [id,clip]of Object.entries(meteorArtwork())){
@@ -23,7 +23,7 @@ for(const [i,e]of entries.entries()){
 }
 const manifest={version:3,authoring:'scripts/mage-meteor-art-source.mjs',...METEOR_ART,padding,width,height,rgbaBytes:width*height*4,palette:METEOR_PALETTE,clips,sourceSHA256:digest(readFileSync('scripts/mage-meteor-art-source.mjs')),notes:['Original Mage slate shard, not derived from Ash Warden art.','Model tail and movement share a 45 degree top-right axis.','Illumination is an independent 12-frame RGBA animation; anticipation0..7, landing fade8..11.','Hard alpha on rock/impact; only illumination has a sampled alpha feather.']};
 writeFileSync(`${out}/atlas.png`,png(pixels,width,height));writeFileSync(`${out}/atlas.json`,JSON.stringify({frames,meta:{image:'atlas.png',size:{w:width,h:height},scale:'1'}},null,2)+'\n');
-writeFileSync('src/game/art/mageMeteorManifestV3.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${root}/animation.json`,JSON.stringify(manifest,null,2)+'\n');
+writeFileSync('game/art/mageMeteorManifestV3.json',JSON.stringify(manifest,null,2)+'\n');writeFileSync(`${root}/animation.json`,JSON.stringify(manifest,null,2)+'\n');
 // Each clip gets a separate editable Aseprite file; GIF light preview is composited
 // on Grove because GIF cannot preserve the authored fractional alpha.
 const lua=['local root=app.params["root"]'];
@@ -37,10 +37,10 @@ for(const [id,clip]of Object.entries(clips)){
 writeFileSync(`${root}/source/export.lua`,lua.join('\n')+'\n');
 // Read-only comparison crops from the actual integrated boss, never a source
 // for the Mage drawing. Undo transparent atlas trim using its authored offsets.
-const boss=JSON.parse(readFileSync('src/game/art/ashWardenManifest.json','utf8'));
+const boss=JSON.parse(readFileSync('game/art/ashWardenManifest.json','utf8'));
 for(const [id,clip,index]of [['boss-flight','meteor-fall',0],['boss-impact','meteor-impact',2]]){
  const layer=boss.clips[clip].frames[index].layers[0],page=boss.locations[layer.frame];
- const atlas=JSON.parse(readFileSync(`public/assets/hd/ash-warden-v1/${page}.json`,'utf8')),source=readPNG(`public/assets/hd/ash-warden-v1/${page}.png`),entry=atlas.frames[layer.frame],f=entry.frame;
+ const atlas=JSON.parse(readFileSync(`public/game-assets/hd/ash-warden-v1/${page}.json`,'utf8')),source=readPNG(`public/game-assets/hd/ash-warden-v1/${page}.png`),entry=atlas.frames[layer.frame],f=entry.frame;
  const full=new Uint8Array(128*128*4),offset=entry.spriteSourceSize;
  if(entry.rotated)throw Error('Unexpected rotated boss reference');
  for(let y=0;y<f.h;y++)full.set(source.pixels.subarray(((f.y+y)*source.width+f.x)*4,((f.y+y)*source.width+f.x+f.w)*4),((offset.y+y)*128+offset.x)*4);

@@ -2,11 +2,11 @@
 // damage simulation, timers, generation or writes to runtime assets.
 import {loadProjectTs} from './lib/load-project-ts.mjs';
 export function bossLibraryScenes(normalize){
- const {WARDEN,wardenPose,wardenIndex}=loadProjectTs('src/game/art/ashWardenPack.ts');
- const {MELEE_COMBO,meleeComboView}=loadProjectTs('src/game/art/meleeComboPack.ts');
- const {FLAME_STRIKE,FLAME_STRIKE_TEXTURE,flameStrikeView}=loadProjectTs('src/game/art/flameStrikePack.ts');
- const {FINAL_BOSS:C}=loadProjectTs('src/game/config/finalBoss.ts');
- const {FinalEncounter}=loadProjectTs('src/game/systems/FinalEncounter.ts');
+ const {WARDEN,wardenPose,wardenIndex}=loadProjectTs('game/art/ashWardenPack.ts');
+ const {MELEE_COMBO,meleeComboView}=loadProjectTs('game/art/meleeComboPack.ts');
+ const {FLAME_STRIKE,FLAME_STRIKE_TEXTURE,flameStrikeView}=loadProjectTs('game/art/flameStrikePack.ts');
+ const {FINAL_BOSS:C}=loadProjectTs('game/config/finalBoss.ts');
+ const {FinalEncounter}=loadProjectTs('game/systems/FinalEncounter.ts');
  const scenes=[],directions={south:{x:0,y:1},north:{x:0,y:-1},east:{x:1,y:0},west:{x:-1,y:0}};
  function sample(spec,t,phase){
   const state=spec.state(t,phase),f=Object.assign(Object.create(FinalEncounter.prototype),{phase,pending:null,moving:false,bossClock:t,boss:{x:0,y:0},attack:{kind:'approach',age:t,direction:{x:1,y:0},meleeVariant:'b'},...state});
